@@ -1,0 +1,258 @@
+
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @*<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />*@
+    <!-- Magnific Popup core CSS file -->
+
+    <title>PBeBank</title>
+
+</head>
+<body class="bg-gradient">
+    <div class="container pt-5 ">
+        <div class="row bg-white  vh-90 shadow">
+            <div class="col-12 col-lg-5 d-flex p-5 position-relative h-100">
+                <img class="img-fluid pb-5 ps-5 start-0 position-absolute pb-logoLogin" src="~/Images/WebsiteImages/pb_logo.png" />
+                <img class="img-fluid pb-5 pe-5 end-0 position-absolute pbe-logoLogin" src="~/Images/WebsiteImages/pbe-logo.png" />
+                <div class="my-auto">
+                    <div class="title ">
+                        <h3>Public Bank eBanking</h3>
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsa eos
+                            nesciunt
+                        </p>
+                    </div>
+                    <div class="login-form ">
+                        <div class="w-100 pt-2">
+                            <label for="exampleInputEmail1" class="form-label">User ID</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp">
+                            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-smt mt-3 w-100">
+                            Next
+                        </button>
+                        <div class="text-center mt-2">
+                            <a href="#" class="text-danger pt-1"><p>Forget Password ?</p></a>
+                        </div>
+                    </div>
+                    <div hidden class="login-form-2">
+                        <div class="w-100 pt-2">
+                            <img src="~/Images/WebsiteImages/PLPServlet.jpg">
+                            <div class="form-check form-switch mt-4">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                <label class="form-check-label" for="flexSwitchCheckChecked">
+                                    Is this your login
+                                    Phrase
+                                </label>
+                            </div>
+                            <div class="my-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <div id="passwordHelpBlock" class="form-text">
+                                    Please make sure your login phrase is correct.
+                                </div>
+                            </div>
+                            <div class="pb-5">
+                                <a href="@Url.Action("Index3", "Home")" type="submit" class="btn btn-primary mt-3  w-100 text-center">
+                                    Login
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 p-5 d-none d-lg-block col-lg-7 position-relative last-row-2 bg-dark">
+                <div class="row" style="height:70vh;">
+                    <div class="col-12 my-auto">
+                        <div>
+                            <div class="title-2">
+                                <h3 class="pt-1 text-white">Latest Announcements that might interest you</h3>
+                                <p class="text-white-50 mb-5">
+                                    Click on the news to enlarge
+                                </p>
+                            </div>
+                            <div class="swiper-container ">
+                                <!-- Additional required rapper -->
+                                <div class="swiper-wrapper pb-5" style="height:inherit">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <a class="news" href="~/Images/Advertisment/news.jpg" date-source="~/Images/Advertisment/news.jpg">
+                                            <div class="shadow bg-white sample" href="#">
+                                                <img class="img-fluid mb-2" src="~/Images/Advertisment/news.jpg" />
+                                                <h5 class="mt-2 px-3 text-black">Covid-19</h5>
+                                                <p class=" text-start px-3 pb-3 text-black">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsa eos
+                                                    nesciunt
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="news" href="~/Images/Advertisment/news1.jpg" date-source="~/Images/Advertisment/news1.jpg">
+                                            <div class="shadow bg-white sample" href="#">
+                                                <img class="img-fluid  mb-2" src="~/Images/Advertisment/news1.jpg" />
+                                                <h5 class="mt-2 px-3 text-black">Continuous Support</h5>
+                                                <p class=" text-start px-3 pb-3 text-black">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsa eos
+                                                    nesciunt
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="news" href="~/Images/Advertisment/news2.jpg" date-source="~/Images/Advertisment/news2.jpg">
+                                            <div class="shadow bg-white sample" href="#">
+                                                <img class="img-fluid  mb-2" src="~/Images/Advertisment/news2.jpg" />
+                                                <h5 class="mt-2 px-3 text-black text-decoration-none">Hire Purchases</h5>
+                                                <p class=" text-start px-3 pb-3 text-black text-decoration-none">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsa eos
+                                                    nesciunt
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination" style="bottom:0 !important;"></div>
+
+                                <!-- If we need navigation buttons -->
+                                @*<div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>*@
+
+                                <!-- If we need scrollbar -->
+                                @*<div class="swiper-scrollbar"></div>*@
+                            </div>
+                        </div>
+                        <div class="position-absolute" style="bottom:10px; right:5%;">
+                            <div class="row justify-content-end mb-3">
+                                <div class="col-5">
+                                    <div class="row ">
+                                        <div class="col-3 g-1">
+                                            <img src="~/Images/SocialMediaIcons/instagram.svg" class="img-fluid rounded p-1" style="width: 85px;" />
+                                        </div>
+                                        <div class="col-3 g-1">
+                                            <img src="~/Images/SocialMediaIcons/youtube.svg" class="img-fluid rounded p-1" style="width: 85px;" />
+                                        </div>
+                                        <div class="col-3 g-1">
+                                            <img src="~/Images/SocialMediaIcons/linkedin.svg" class="img-fluid rounded p-1" style="width: 85px;" />
+                                        </div>
+                                        <div class="col-3 g-1">
+                                            <img src="~/Images/SocialMediaIcons/wechat.svg" class="img-fluid rounded p-1" style="width: 85px;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <ul class="text-end mb-0">
+                                    <li class="list-inline-item mb-2 mb-lg-0"><a class="text-muted text-decoration-none" href="#"><img style="width:50px" src="~/Images/Advertisment/bankinginfo.gif" /></a></li>
+                                    <li class="list-inline-item mb-2 mb-lg-0"><a class="text-muted text-decoration-none" href="#"><img style="width:50px" src="~/Images/Advertisment/insuranceinfo.gif" /></a></li>
+                                    <li class="list-inline-item mb-2 mb-lg-0"><a class="text-muted text-decoration-none" href="#"><img style="width:50px" src="~/Images/Advertisment/smeinfo.gif" /></a></li>
+                                    <li class="list-inline-item mb-2 mb-lg-0"><a class="text-muted text-decoration-none" href="#"><img style="width:50px" src="~/Images/Advertisment/housingwatch.gif" /></a></li>
+                                    <li class="list-inline-item mb-2 mb-lg-0"><a class="text-muted text-decoration-none" href="#"><img style="width:50px" src="~/Images/Advertisment/mybayar.gif" /></a></li>
+                                    <li class="list-inline-item mb-2 mb-lg-0"><a class="text-muted text-decoration-none" href="#"><img style="width:50px" src="~/Images/Advertisment/mifc.gif" /></a></li>
+                                    <li class="list-inline-item mb-2 mb-lg-0"><a class="text-muted text-decoration-none" href="#"><img style="width:50px" src="~/Images/Advertisment/akpk.gif" /></a></li>
+                                    <li class="list-inline-item mb-2 mb-lg-0"><a class="text-muted text-decoration-none" href="#"><img style="width:50px" src="~/Images/Advertisment/pidm_member.gif" /></a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <ul class="text-end">
+                                    <li class="list-inline-item" style="font-size:10px"><a class="text-white-50 text-decoration-none" href="#">Terms and Conditions</a></li>
+                                    <li class="list-inline-item" style="font-size:10px"><a class="text-white-50 text-decoration-none" href="#">Privacy</a></li>
+                                    <li class="list-inline-item" style="font-size:10px"><a class="text-white-50 text-decoration-none" href="#">Security</a></li>
+                                    <li class="list-inline-item" style="font-size:10px"><a class="text-white-50 text-decoration-none" href="#">Customer Service Charter</a></li>
+                                    <li class="list-inline-item" style="font-size:10px"><a class="text-white-50 text-decoration-none" href="#">Bank Negara Malaysia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/js")
+    @*<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>*@
+
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            slidesPerView: 2,
+            spaceBetween: 50,
+            loop: true,
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 30,
+                slideShadows: false,
+            },
+            autoplay: {
+                delay: 3000,
+            },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                },
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 40
+                }
+            },
+
+            //// Navigation arrows
+            //navigation: {
+            //    nextEl: '.swiper-button-next',
+            //    prevEl: '.swiper-button-prev',
+            //},
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+        $('.swiper-slide').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300,
+                opener: function (element) {
+                    return element.find('img');
+                }
+            }
+
+        });
+        $('.btn-smt').on('click', function () {
+            $('.login-form').attr('hidden', true);
+            $('.title').removeClass('pt-lg-9');
+            $('.title').addClass('pt-lg-5');
+            $('.login-form-2').attr('hidden', false);
+        })
+    </script>
+</body>
+</html>
