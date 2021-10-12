@@ -1,0 +1,1267 @@
+﻿<div class="row h-auto ">
+    <div class="col-12 mx-auto ">
+        <div class="container-fluid gx-0 gx-lg-0 mt-0 mt-lg-3 p-lg-5 p-4 ">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasDetailsPage"
+                 aria-labelledby="offCanvasDetailsPageLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title" id="offCanvasDetailsPageLabel">Account Details</h4>
+                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body mb-2">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>Personal 1</h1>
+                        </div>
+                        <div class="col-12 d-flex flex-row justify-content-between">
+                            <p>Savings Account</p>
+                            <p>3001198511</p>
+                        </div>
+                    </div>
+                    <div class="bankCardCon my-2">
+                    </div>
+                    <div class="accDetails my-3">
+                        <div class="row">
+                            <div class="col-8">
+                                Account No
+                            </div>
+                            <div class="col-4">
+                                3001198511
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                Account Type
+                            </div>
+                            <div class="col-4">
+                                Savings
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                Available Balance
+                            </div>
+                            <div class="col-4">
+                                300
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="accDetailsCollapse">
+                            <div class="row">
+                                <div class="col-8">
+                                    Currency
+                                </div>
+                                <div class="col-4">
+                                    MYR
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    Current Balance
+                                </div>
+                                <div class="col-4">
+                                    300.00
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">Hold Amount</div>
+                                <div class="col-4">34.00</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">Interest Paid YTD</div>
+                                <div class="col-4">0.00</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">Interest Accrual</div>
+                                <div class="col-4">0.00</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">Online Float</div>
+                                <div class="col-4">0.00</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">One Day Float</div>
+                                <div class="col-4">0.00</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">Other Float</div>
+                                <div class="col-4">0.00</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">OD Limit</div>
+                                <div class="col-4">0.00</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">Last Statement Date</div>
+                                <div class="col-4">04-10-2021</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="viewMoreCon text-center">
+                        <a class="viewMoreLink" data-bs-toggle="collapse" href="#accDetailsCollapse" role="button"
+                           aria-expanded="true" aria-controls="accDetailsCollapse">
+                            View More
+                        </a>
+                    </div>
+
+                    <div class="actionBtnGroup text-center actGrp actGrpCASA">
+                        <a class="btn btn-sm btn-primary mt-2 d-lg-inline-block d-none ">
+                            View Transaction History
+                        </a>
+                        <a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
+                            View Transaction History
+                        </a>
+                        <a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
+                            Print
+                        </a>
+                    </div>
+                    <div class="alert alert-info mt-2 mx-auto" role="alert">
+                        Note <br>
+                        <ul>
+                            <li>
+                                Any account inquiry made between 12 AM - 12.05 AM may not necessarily reflect the exact details.
+                            </li>
+                            <li>Protected by PIDM up to RM250, 000 for each depositor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row accMainLayout">
+                <div class="col-sm-12 col-xl-12 bodyCol row  justify-content-lg-between">
+                    <div class="leftBlock col-12 col-lg-6 p-0 ps-1">
+                        <h5>My Accounts</h5>
+                        <p class="text-muted">Click Account Type</p>
+                        <div class="rightBlock row">
+                            <div class="col-10">
+                                <ul class="nav nav-pills py-xl-3 my-xl-3 topNavbar">
+                                    <li class="nav-item" id="casa">
+                                        <a class="nav-link active" aria-current="page" href="#">
+                                            <span><i class="fas fa-id-card"></i></span>
+                                            <span class="ms-2">Savings & Current Account</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="pbc">
+                                        <a class="nav-link" aria-current="page" href="#">
+                                            <span><i class="fas fa-credit-card"></i></span>
+                                            <span class="ms-2 d-none">PB Cards</span>
+                                        </a>
+
+                                    </li>
+                                    <li class="nav-item" id="fd">
+                                        <a class="nav-link" aria-current="page" href="#">
+                                            <span><i class="fas fa-money-check-alt"></i></span>
+                                            <span class="ms-2 d-none">Fixed Deposit / Islamic Term Deposit</span>
+                                        </a>
+
+                                    </li>
+
+                                    <li hidden class="nav-item" id="rnid">
+                                        <a class="nav-link" aria-current="page" href="#">
+                                            <span><i class="fas fa-calculator"></i></span>
+                                            <span class="ms-2 d-none">PB R-NID / R-NIDC</span>
+                                        </a>
+
+                                    </li>
+                                    <li class="nav-item" id="gi">
+                                        <a class="nav-link" aria-current="page" href="#">
+                                            <span><i class="fas fa-coins"></i></span>
+                                            <span class="ms-2 d-none">Gold Investment</span>
+                                        </a>
+
+                                    </li>
+                                    <li class="nav-item" id="lf">
+                                        <a class="nav-link" aria-current="page" href="#">
+                                            <span><i class="fas fa-percentage"></i></span>
+                                            <span class="ms-2 d-none">Loan & Financing</span>
+                                        </a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-2 py-xl-3 my-xl-3 ">
+                                <a href="@Url.Action("Transactions","Home")" class="btn  btn-dark">PBeTransaction</a>
+                            </div>
+                        </div>
+                        <div class="bodyCon mt-5">
+
+                            <div class="accList" id="casaAcc">
+                                <div class="accTypeTitle ms-1">
+                                    <h5 class="mb-1">Savings & Current Account</h5>
+                                    <p class="text-muted">Tap any account to view more details</p>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0 active">
+
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox currentAcc p-0">
+                                                <span class="mx-auto"><i class="fas fa-id-card"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Current Account</p>
+                                                <p class="text-muted mb-0">3590065120</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 accBalance ">
+                                            <p class="text-end">RM 300.00</p>
+                                        </div>
+                                    </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc p-0">
+                                                <span class="mx-auto"><i class="fas fa-briefcase"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Savings Account</p>
+                                                <p class="text-muted mb-0">3001198511</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 1100.00</p>
+                                        </div>
+
+                                    </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox currentAcc p-0">
+                                                <span class="mx-auto"><i class="fas fa-briefcase"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Current Account</p>
+                                                <p class="text-muted mb-0">3001320213</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 35,000.00</p>
+                                        </div>
+
+                                    </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc p-0">
+                                                <span class="mx-auto"><i class="fas fa-id-card"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Savings Account</p>
+                                                <p class="text-muted mb-0">4000151818</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 5750.00</p>
+                                        </div>
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <div class="accList d-none" id="pbCard">
+                                <div class="accTypeTitle ms-1">
+                                    <h5 class="mb-1">PB Cards</h5>
+                                    <p class="text-muted">Tap any account to view more details</p>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc p-0">
+                                                <span class="mx-auto"><i class="fas fa-chart-line"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Visa Credit Card</p>
+                                                <p class="text-muted mb-0">4366880090092110</p>
+                                                <p class="d-none">Active</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 1100.00</p>
+                                        </div>
+
+                                    </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc p-0">
+                                                <span class="mx-auto"><i class="fas fa-chart-line"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">MasterCard</p>
+                                                <p class="text-muted mb-0">4366880090075115</p>
+                                                <p class="d-none">Active</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 6398.20</p>
+                                        </div>
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <div class="accList d-none" id="fixedDepositList">
+                                <div class="accTypeTitle ms-1">
+                                    <h5 class="mb-1">Fixed Deposit / Islamic Term Deposit</h5>
+                                    <p class="text-muted">Tap any account to view more details</p>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc activeAcc p-0">
+                                                <span><i class="fas fa-coins"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Fixed Deposit</p>
+                                                <p class="text-muted mb-0">1141406607</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 222, 179.83</p>
+                                        </div>
+
+                                    </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0 dormant">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc dormantAcc p-0">
+                                                <span><i class="fas fa-star-and-crescent"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Islamic Term Deposit</p>
+                                                <p class="text-muted mb-0">7024015960</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 6398.20</p>
+                                        </div>
+                                    </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0 dormant">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc dormantAcc p-0">
+                                                <span><i class="fas fa-coins"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Fixed Deposit</p>
+                                                <p class="text-muted mb-0">7000015320</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 6398.20</p>
+                                        </div>
+
+                                    </li>
+
+
+                                </ul>
+
+                            </div>
+                            <div class="accList d-none" id="r-nidList">
+                                <div class="accTypeTitle ms-1">
+                                    <h5 class="mb-1">Savings & Current Account</h5>
+                                    <p class="text-muted">Tap any account to view more details</p>
+                                </div>
+                                <ul class="list-group">
+
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox dormantAcc p-0">
+                                                <span><i class="fas fa-times-circle"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Dormant / Inactive</p>
+                                                <p class="text-muted mb-0">7024015960</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 6398.20</p>
+                                        </div>
+                                    </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox activeAcc p-0">
+                                                <span><i class="fas fa-check-circle"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Active</p>
+                                                <p class="text-muted mb-0">1151403609</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 156,333.87</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="accList d-none" id="goldList">
+                                <div class="accTypeTitle ms-1">
+                                    <h5 class="mb-1">Gold Investment</h5>
+                                    <p class="text-muted">Tap any account to view more details</p>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0 dormant">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc dormantAcc p-0">
+                                                <span><i class="fas fa-coins"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">
+                                                    Gold Investment
+                                                </p>
+                                                <p class="text-muted mb-0 accNum">6591580202</p>
+                                            </div>
+                                            <p hidden class="statementGold">11/10/2027</p>
+                                        </div>
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">
+                                                1,065 Grams
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc activeAcc p-0">
+                                                <span><i class="fas fa-coins"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Gold Investment</p>
+                                                <p class="text-muted mb-0 accNum">1151403609</p>
+                                            </div>
+                                            <p hidden class="statementGold">11/10/2024</p>
+                                        </div>
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">0,205 Grams</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="accList d-none" id="loanList">
+                                <div class="accTypeTitle ms-1">
+                                    <h5 class="mb-1">Gold Investment</h5>
+                                    <p class="text-muted">Tap any account to view more details</p>
+                                </div>
+                                <ul class="list-group">
+
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc p-0">
+                                                <span><i class="fas fa-percentage"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Housing Loan</p>
+                                                <p class="text-muted mb-0">90014</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 23, 769.91</p>
+                                        </div>
+                                    </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox savingAcc p-0">
+                                                <span><i class="fas fa-percentage"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum">
+                                                <p class="mb-0">Car Loan</p>
+                                                <p class="text-muted mb-0">90010</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 accBalance">
+                                            <p class="text-end">RM 230,721.24</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accDetailsCon h-100 col-5 px-5  bg-white py-4 rounded-8 shadow">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 id="accNameTitle" class="mb-5"></h4>
+                                @*<p class="text-muted mb-3"> Nullam accumsan ullamcorper odio, at pellentesque nulla rutrum eget.</p>*@
+
+                            </div>
+                        </div>
+                        <div id="CASAIllustration" class="row pt-4 justify-content-start pt-lg-2 pb-3">
+                            <div class="col-12 col-lg-12 px-lg-0 mx-auto" style="padding:0 2rem; max-width:360px">
+                                <div class="px-4 py-lg-45 py-3 bg-gradient-3 rounded-8" id="firstCard">
+                                    <div class="row h-100">
+                                        <div class="col-12 mt-2">
+                                            <p class="h4 text-white" id="accTypeTitle">Savings Account</p>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <p id="accNumberTitle" class="small text-white h1 mb-0">1234  1234  1234  1234</p>
+                                        </div>
+                                        <div class="col-8 mt-2">
+                                            <h3 class="mb-1 text-white cardBal" style="font-size:30px;">RM 300</h3>
+                                        </div>
+                                        <div class="col-4 pt-4" hidden style="margin-top:-17px;">
+                                            <div class="row">
+                                                <span class="text-end fw-bold small">
+                                                    valid till
+                                                </span>
+                                            </div>
+                                            <div class="row">
+                                                <p class="small text-end text-white mb-0">12/24</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 my-auto">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mt-5 ps-3 text-center">
+                                <a href="@Url.Action("CardSettings", "Home")" class="text-black" style="text-align:-webkit-center;">
+                                    <div hidden id="CardSettings" class="col-5 text-center ">
+                                        <div class="row border h-100 rounded-8 bg-white shadow-sm p-2">
+                                            <div class="col-lg-2 col-12  my-auto ">
+                                                <i class="ri-settings-2-line ri-xl" style="line-height:1.5"></i>
+                                            </div>
+                                            <div class="col-lg-10 col-12 my-auto">
+                                                <p class="text-center small mb-0">Card Settings</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div id="FDIllustration" hidden class="row pt-4 justify-content-start pt-lg-2 pb-5">
+                            <div class="col-12 col-lg-12 px-lg-0 mx-auto" style="padding:0 2rem; max-width:260px">
+                                <img class="img-fluid" src="~/Images/WebDecoratives/undraw_revenue_3osh.svg" />
+                            </div>
+                        </div>
+                        @*Bank Card*@
+                        <div id="IFDIllustration" hidden class="row pt-4 justify-content-start pt-lg-2 pb-5">
+                            <div class="col-12 col-lg-12 px-lg-0 mx-auto" style="padding:0 2rem; max-width:260px">
+                                <img class="img-fluid" src="~/Images/WebDecoratives/undraw_Investing_re_bov7.svg" />
+                            </div>
+                        </div>
+                        @*Bank Card*@
+                        <div id="RNIDIllustration" class="row d-none pt-4 justify-content-start pt-lg-2 pb-5">
+                            <div class="col-12 col-lg-12 px-lg-0 mx-auto" style="padding:0 2rem; max-width:260px">
+                                <img class="img-fluid" src="~/Images/WebDecoratives/undraw_Investing_re_bov7.svg" />
+                            </div>
+                        </div>
+                        <div id="GIIllustration" hidden class="row pt-4 justify-content-start pt-lg-2 pb-5">
+                            <div class="col-12 col-lg-12 px-lg-0 mx-auto" style="padding:0 2rem; max-width:260px">
+                                <img class="img-fluid" src="~/Images/WebDecoratives/undraw_personal_finance_tqcd.svg" />
+                            </div>
+                        </div>
+
+                        <div id="LFIllustration" hidden class="row pt-4 justify-content-start pt-lg-2 pb-5">
+                            <div class="col-12 col-lg-12 px-lg-0 mx-auto" style="padding:0 2rem; max-width:260px">
+                                <img class="img-fluid" src="~/Images/WebDecoratives/undraw_Calculator_0evy.svg" />
+                            </div>
+                        </div>
+
+                        <div class="accDetails my-3">
+                            <div class="casaAccDetails" id="casaAccDetails">
+                                <div class="row" id="accNumber">
+                                    <div class="col-8">
+                                        Account No
+                                    </div>
+                                    <div class="col-4">
+
+                                    </div>
+                                </div>
+                                <div class="row" id="accType">
+                                    <div class="col-8">
+                                        Account Type
+                                    </div>
+                                    <div class="col-4">
+                                    </div>
+                                </div>
+                                <div class="row" id="availableBalance">
+                                    <div class="col-8">
+                                        Available Balance
+                                    </div>
+                                    <div class="col-4">
+
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="accDetailsCollapse">
+                                    <div class="row" id="currency">
+                                        <div class="col-8">
+                                            Currency
+                                        </div>
+                                        <div class="col-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="row" id="curBalance">
+                                        <div class="col-8">
+                                            Current Balance
+                                        </div>
+                                        <div class="col-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="row" id="holdAmt">
+                                        <div class="col-8">Hold Amount</div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                    <div class="row" id="interestYTD">
+                                        <div class="col-8">Interest Paid YTD</div>
+                                        <div class="col-4">0.00</div>
+                                    </div>
+                                    <div class="row" id="interestAcc">
+                                        <div class="col-8">Interest Accrual</div>
+                                        <div class="col-4">0.00</div>
+                                    </div>
+                                    <div class="row" id="onlFloat">
+                                        <div class="col-8">Online Float</div>
+                                        <div class="col-4">0.00</div>
+                                    </div>
+                                    <div class="row" id="oneFloat">
+                                        <div class="col-8">One Day Float</div>
+                                        <div class="col-4">0.00</div>
+                                    </div>
+                                    <div class="row" id="otherFloat">
+                                        <div class="col-8">Other Float</div>
+                                        <div class="col-4">0.00</div>
+                                    </div>
+                                    <div class="row" id="ODLimit">
+                                        <div class="col-8">OD Limit</div>
+                                        <div class="col-4">0.00</div>
+                                    </div>
+                                    <div class="row" id="lastStmt">
+                                        <div class="col-8">Last Statement Date</div>
+                                        <div class="col-4">04-10-2021</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cardAccDetails d-none" id="cardAccDetails">
+                                <div class="row" id="pbcAccNumber">
+                                    <div class="col-8">
+                                        Account No
+                                    </div>
+                                    <div class="col-4">
+
+                                    </div>
+                                </div>
+                                <div class="row" id="pbcAccType">
+                                    <div class="col-8">
+                                        Account Type
+                                    </div>
+                                    <div class="col-4">
+                                    </div>
+                                </div>
+                                <div class="row" id="pbcAvailableBal">
+                                    <div class="col-8">
+                                        Available Balance
+                                    </div>
+                                    <div class="col-4">
+
+                                    </div>
+                                </div>
+                                <div class="collapse" id="accDetailsCollapse">
+                                    <div class="row" id="pbcAccHolder">
+                                        <div class="col-8">
+                                            Account Holder
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+                                    <div class="row" id="pbcOutstandingBal">
+                                        <div class="col-8">
+                                            Outstanding Balance
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+                                    <div class="row" id="pbcaAuthCharges">
+                                        <div class="col-8">
+                                            Authorised Charges
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+                                    <div class="row" id="pbcAllCardBal">
+                                        <div class="col-8">
+                                            All Cards Balance
+                                        </div>
+                                        <div class="col-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="row" id="pbcLastStmtDte">
+                                        <div class="col-8">Last Statement Date</div>
+                                        <div class="col-4">04-10-2021</div>
+                                    </div>
+                                    <div class="row" id="pbcLastStmtBal">
+                                        <div class="col-8">Last Statement Balance</div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                    <div class="row" id="pbcMinPayAmt">
+                                        <div class="col-8">Minimum Pay Amount</div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                    <div class="row" id="pbcPayDueDte">
+                                        <div class="col-8">Payment Due Date</div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                    <div class="row" id="pbcLastPayDte">
+                                        <div class="col-8">Last Payment Date</div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                    <div class="row" id="pbcLastPayAmt">
+                                        <div class="col-8">Last Payment Amount</div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="cardAccDetails d-none" id="depositDetails">
+                                <div class="row" id="depositAccNumber">
+                                    <div class="col-8">
+                                        Account No
+                                    </div>
+                                    <div class="col-4">
+
+                                    </div>
+                                </div>
+                                <div class="row" id="depositAccType">
+                                    <div class="col-8">
+                                        Account Type
+                                    </div>
+                                    <div class="col-4">
+                                    </div>
+                                </div>
+                                <div class="row" id="depositAvailableBal">
+                                    <div class="col-8">
+                                        Available Balance
+                                    </div>
+                                    <div class="col-4">
+
+                                    </div>
+                                </div>
+                                <div class="collapse" id="accDetailsCollapse">
+                                    <div class="row" id="depositAccHolderName">
+                                        <div class="col-8">
+                                            Account Holder
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+                                    <div class="row" id="depositCurrBal">
+                                        <div class="col-8">
+                                            Current Balance
+                                        </div>
+                                        <div class="col-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="row" id="depositHoldAmt">
+                                        <div class="col-8">Hold Amount</div>
+                                        <div class="col-4"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cardAccDetails d-none" id="goldDetails">
+                                <div class="row" id="goldAccNumber">
+                                    <div class="col-8">
+                                        Account No
+                                    </div>
+                                    <div class="col-4">
+
+                                    </div>
+                                </div>
+                                <div class="row" id="goldAccType">
+                                    <div class="col-8">
+                                        Account Type
+                                    </div>
+                                    <div class="col-4">
+                                    </div>
+                                </div>
+                                <div class="row" id="goldCurrBal">
+                                    <div class="col-8">
+                                        Current Balance
+                                    </div>
+                                    <div class="col-4">
+
+                                    </div>
+                                </div>
+                                <div class="collapse" id="accDetailsCollapse">
+                                    <div class="row" id="goldAccHolderName">
+                                        <div class="col-8">
+                                            Units
+                                        </div>
+                                        <div class="col-4">
+                                            <p class="mb-0">Grams</p>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="goldLastStmtDte">
+                                        <div class="col-8">
+                                            Last Statement Date
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="cardAccDetails d-none" id="loanDetails">
+                                <div class="row" id="loanAccNumber">
+                                    <div class="col-8">
+                                        Loan Type
+                                    </div>
+                                    <div class="col-4">
+
+                                    </div>
+                                </div>
+                                <div class="row" id="loanAmtDue">
+                                    <div class="col-8">Amount Due</div>
+                                    <div class="col-4"></div>
+                                </div>
+                                <div class="row" id="loanNoteNum">
+                                    <div class="col-8">
+                                        Account Number
+                                    </div>
+                                    <div class="col-4">
+
+                                    </div>
+                                </div>
+                                <div class="collapse" id="accDetailsCollapse">
+                                    <div class="row" id="loanAccHolder">
+                                        <div class="col-8">
+                                            Account Holder
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+                                    <div class="row" id="loanTermMnths">
+                                        <div class="col-8">
+                                            Term in Months
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+                                    <div class="row" id="loanLastPayDte">
+                                        <div class="col-8">Last Payment Date</div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                    <div class="row" id="loanNextPayDte">
+                                        <div class="col-8">Next Payment Date</div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                    <div class="row" id="loanAccType">
+                                        <div class="col-8">
+                                            Account Type
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+
+                                    <div class="row" id="loanLastPayAmt">
+                                        <div class="col-8">Last Payment Amount</div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                    <div class="row" id="loanOutstandingBal">
+                                        <div class="col-8">
+                                            Outstanding Balance
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+                                    <div class="row" id="loanAvlblRedraw">
+                                        <div class="col-8">
+                                            Available Redraw Amount
+                                        </div>
+                                        <div class="col-4">
+                                        </div>
+                                    </div>
+                                    <div class="row" id="loanInstallmentAmt">
+                                        <div class="col-8">
+                                            Installment Amount
+                                        </div>
+                                        <div class="col-4">
+
+                                        </div>
+                                    </div>
+                                    <div class="row" id="loanIntRate">
+                                        <div class="col-8">Interest / Profit Rate</div>
+                                        <div class="col-4"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="viewMoreCon text-center pb-3 mb-4 mt-4 border-bottom">
+                            <a class="viewMoreLink btn btn-sm btn-link-2" style="max-width:200px" data-bs-toggle="collapse" href="#accDetailsCollapse" role="button"
+                               aria-expanded="true" aria-controls="accDetailsCollapse">
+                                View More <i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+
+
+                        <div class="actionBtnGroup text-center actGrp" id="actGrpCASA">
+                            <a class="btn btn-sm btn-primary mt-2 d-lg-inline-block d-none" href="@Url.Action("CasaTran","Home")">
+                                View Transaction History
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
+                                View Unposted Transaction
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
+                                Print
+                            </a>
+                        </div>
+
+                        <div hidden class="actionBtnGroup text-center actGrp" id="actGrpCard">
+                            <a class="btn btn-sm btn-primary mt-2 d-lg-inline-block d-none " href="@Url.Action("CardTran","Home")">
+                                View Latest Statement
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
+                                View Unbilled Transaction
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
+                                Print
+                            </a>
+                        </div>
+
+                        <div hidden class="actionBtnGroup text-center actGrp" id="actGrpFD">
+                            <a class="btn btn-sm btn-primary mt-2 d-lg-inline-block d-none " href="@Url.Action("FDTran","Home")">
+                                View Transaction History
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
+                                Withdrawal/Placement
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
+                                Print Placement/Renewal Slip
+                            </a>
+                        </div>
+
+                        <div class="alert alert-info mt-2 mx-auto" role="alert">
+                            Note <br>
+                            <ul>
+                                <li>
+                                    Any account inquiry made between 12 AM - 12.05 AM may not necessarily reflect the exact
+                                    details.
+                                </li>
+                                <li>Protected by PIDM up to RM250, 000 for each depositor</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script>
+    $(document).ready(function () {
+
+        //declare variables
+        var accNameTitle = $('#accNameTitle');
+        var accTypeTitle = $('#accTypeTitle');
+        var accNumberTitle = $('#accNumberTitle');
+        var accNumber = $('#accNumber').find('.col-4');
+        var accType = $('#accType').find('.col-4');
+        var availableBalance = $('#availableBalance').find('.col-4');
+        var currency = $('#currency').find('.col-4');
+        var curBalance = $('#curBalance').find('.col-4');
+        var holdAmt = $('#holdAmt').find('.col-4');
+        var interestYTD = $('#interestYTD').find('.col-4');
+        var interestAcc = $('#interestAcc').find('.col-4');
+        var onlFloat = $('#onlFloat').find('.col-4');
+        var oneFloat = $('#oneFloat').find('.col-4');
+        var otherFloat = $('#otherFloat').find('.col-4');
+        var ODLimit = $('#ODLimit').find('.col-4');
+        var lastStmt = $('#lastStmt').find('.col-4');
+
+        // PB Card Variables
+        var pbcAccNumber = $('#pbcAccNumber').find('.col-4');
+        var pbcAccType = $('#pbcAccType').find('.col-4');
+        var pbcAvailableBal = $('#pbcAvailableBal').find('.col-4');
+        var pbcAccHolder = $('#pbcAccHolder').find('.col-4');
+        var pbcOutstandingBal = $('#pbcOutstandingBal').find('.col-4');
+        var pbcaAuthCharges = $('#pbcaAuthCharges').find('.col-4');
+        var pbcAllCardBal = $('#pbcAllCardBal').find('.col-4');
+        var pbcLastStmtDte = $('#pbcLastStmtDte').find('.col-4');
+        var pbcLastStmtBal = $('#pbcLastStmtBal').find('.col-4');
+        var pbcMinPayAmt = $('#pbcMinPayAmt').find('.col-4');
+        var pbcPayDueDte = $('#pbcPayDueDte').find('.col-4');
+        var pbcLastPayDte = $('#pbcLastPayDte').find('.col-4');
+        var pbcLastPayAmt = $('#pbcLastPayAmt').find('.col-4');
+
+        // FD Variables
+        var depositAccNumber = $('#depositAccNumber').find('.col-4');
+        var depositAccType = $('#depositAccType').find('.col-4');
+        var depositAccHolderName = $('#depositAccHolderName').find('.col-4');
+        var depositAvailableBal = $('#depositAvailableBal').find('.col-4');
+        var depositCurrBalance = $('#depositCurrBalance').find('.col-4');
+        var depositHoldAmt = $('#depositHoldAmt').find('.col-4');
+
+        // Gold Investment Variables
+        var goldAccNumber = $('#goldAccNumber').find('.col-4');
+        var goldAccType = $('#goldAccType').find('.col-4');
+        var goldAccHolderName = $('#goldAccHolderName').find('.col-4');
+        var goldCurrBal = $('#goldCurrBal').find('.col-4');
+        var goldLastStmtDate = $('#goldLastStmtDate').find('.col-4');
+
+        // Loan Variables
+        var loanAccNumber = $('#loanAccNumber').find('.col-4');
+        var loanAccType = $('#loanAccType').find('.col-4');
+        var loanNoteNum = $('#loanNoteNum').find('.col-4');
+        var loanAccHolder = $('#loanAccHolder').find('.col-4');
+        var loanTermMnths = $('#loanTermMnths').find('.col-4');
+        var loanLastPayDte = $('#loanLastPayDte').find('.col-4');
+        var loanNextPayDte = $('#loanNextPayDte').find('.col-4');
+        var loanAmtDue = $('#loanAmtDue').find('.col-4');
+        var loanLastPayAmt = $('#loanLastPayAmt').find('.col-4');
+        var loanOutstandingBal = $('#loanOutstandingBal').find('.col-4');
+        var loanAvlblRedraw = $('#loanAvlblRedraw').find('.col-4');
+        var loanInstallmentAmt = $('#loanInstallmentAmt').find('.col-4');
+        var loanIntRate = $('#loanIntRate').find('.col-4');
+
+
+        //set initial value first
+
+        // init of casa var
+        accNameTitle.html($(".accList ul .active").find(".accListTitleAndNum p:first-of-type").html());
+        accNumberTitle.html($(".accList ul .active").find(".accListTitleAndNum p:last-of-type").html());
+        accNumber.html($(".accList ul .active").find(".accListTitleAndNum p:last-of-type").html());
+
+        if ($(".accList ul .active").find(".iconBox").hasClass('savingAcc')) {
+            accType.html("Savings");
+            accTypeTitle.html("Savings Account");
+
+        } else if ($(".accList ul .active").find(".iconBox").hasClass('currentAcc')) {
+            accType.html("Current");
+            accTypeTitle.html("Current Account");
+        }
+        curBalance.html($(".accList ul .active").find(".accBalance p").html());
+        $('.cardBal').html($(".accList ul .active").find(".accBalance p").html());
+        availableBalance.html($(".accList ul .active").find(".accBalance p").html());
+
+        currency.html("MYR");
+
+
+
+
+
+
+        $('.topNavbar li').click(function () {
+
+            if ($(this).find('a').hasClass("active") == false) {
+                $(".topNavbar li a").removeClass("active");
+                $(this).find('a').addClass('active');
+                refreshActive(this);
+            }
+
+            $(this).find('a').addClass('active');
+            var currentHtml = $(this).find('a span:last-of-type').html();
+            $('.accTypeTitle h3').html(currentHtml);
+
+            $('.accList').each(function () {
+                $(this).children('ul').children('li').removeClass('active');
+            })
+
+            var elemId = $(this).attr('id');
+
+            switch (elemId) {
+                case 'casa':
+                    onTabClick('#casaAcc', '#casaAccDetails');
+                    break;
+
+                case 'pbc':
+                    onTabClick('#pbCard', '#cardAccDetails');
+                    break;
+
+                case 'fd':
+                    onTabClick('#fixedDepositList', '#depositDetails');
+                    break;
+                case 'gi':
+                    onTabClick('#goldList', '#goldDetails');
+                    break;
+                case 'lf':
+                    onTabClick('#loanList', '#loanDetails');
+                    break;
+                case 'rnid':
+                    $('.accList').not('#r-nidList').addClass('d-none');
+                    $('#r-nidList').removeClass('d-none');
+                    break;
+
+            }
+
+
+
+        });
+
+
+
+        $('.accList ul li').click(function () {
+            refreshListItemActive(this);
+            selectListItem(this, true);
+            // accNumberTitle.html($(this).find('.accListTitleAndNum p:last-of-type').text());
+
+        });
+
+        function selectListItem(listItem, itemClick) {
+
+            if (itemClick == true) {
+                var listId = $(listItem).parent().parent().attr('id');
+                // console.log(listId);
+            } else {
+                var temp = listItem;
+                var listId = temp;
+                listId = listId.replace("#", "");
+
+                console.log(listId);
+
+            }
+
+            $('.actGrp').each(function () {
+                $(this).attr('hidden', true);
+            })
+
+            switch (listId) {
+
+                case 'casaAcc':
+                    accNumber.html($(listItem).find('.accListTitleAndNum p:last-of-type').html());
+                    if ($(listItem).find(".iconBox").hasClass('savingAcc')) {
+                        accType.html("Savings");
+                        accTypeTitle.html("Savings");
+                    } else if ($(listItem).find(".iconBox").hasClass('currentAcc')) {
+                        accType.html("Current");
+                        accTypeTitle.html("Current");
+                    }
+
+                    curBalance.html($(listItem).find('.accBalance p').html());
+                    availableBalance.html($(listItem).find('.accBalance p').html());
+                    $('.cardBal').html($(listItem).find('.accBalance p').html());
+                    $('#CardSettings').attr('hidden', true);
+                    $('#firstCard').removeClass('bg-gradient-4');
+                    $('#firstCard').addClass('bg-gradient-3');
+                    $('#CASAIllustration').attr('hidden', false);
+                    $('#FDIllustration').attr('hidden', true);
+                    $('#GIIllustration').attr('hidden', true);
+                    $('#LFIllustration').attr('hidden', true);
+
+                    $('#IFDIllustration').attr('hidden', true);
+                    $('#actGrpCASA').attr('hidden', false);
+                    break;
+
+                case 'pbCard':
+                    accNumberTitle.html($(listItem).find(".accListTitleAndNum p:nth-of-type(2)").html());
+                    accTypeTitle.html($(listItem).find(".accListTitleAndNum p:last-of-type").html());
+                    pbcAccNumber.html($(listItem).find(".accListTitleAndNum p:nth-of-type(2)").html());
+                    pbcAccType.html($(listItem).find(".accListTitleAndNum p:last-of-type").html());
+                    pbcAvailableBal.html($(listItem).find(".accBalance p").html());
+                    $('.cardBal').html($(listItem).find('.accBalance p').html());
+                    $('#CardSettings').attr('hidden', false);
+                    $('#firstCard').removeClass('bg-gradient-3');
+                    $('#firstCard').addClass('bg-gradient-4');
+                    $('#CASAIllustration').attr('hidden', false);
+                    $('#FDIllustration').attr('hidden', true);
+                    $('#GIIllustration').attr('hidden', true);
+                    $('#IFDIllustration').attr('hidden', true);
+                    $('#LFIllustration').attr('hidden', true);
+
+                    $('#actGrpCard').attr('hidden', false);
+
+
+                    break;
+
+                case 'fixedDepositList':
+                    accNumberTitle.html($(listItem).find(".accListTitleAndNum p:last-of-type").html());
+                    accTypeTitle.html($(listItem).find(".accListTitleAndNum p:first-of-type").html());
+                    depositAccNumber.html($(listItem).find(".accListTitleAndNum p:last-of-type").html());
+                    depositAccType.html($(listItem).find(".accListTitleAndNum p:first-of-type").html());
+                    depositAvailableBal.html($(listItem).find(".accBalance p").html());
+                    $('#CardSettings').attr('hidden', true);
+                    $('#CASAIllustration').attr('hidden', true);
+                    $('#IFDIllustration').attr('hidden', true);
+                    $('#GIIllustration').attr('hidden', true);
+                    $('#FDIllustration').attr('hidden', false);
+                    $('#LFIllustration').attr('hidden', true);
+                    $('#actGrpFD').attr('hidden', false);
+
+
+                    break;
+
+                case 'goldList':
+                    accNameTitle.html("Gold");
+                    accNumberTitle.html($(listItem).find(".accListTitleAndNum p:first-of-type").html());
+                    accTypeTitle.html("Gold Investment");
+                    goldAccNumber.html($(listItem).find(".accListTitleAndNum p:last-of-type").html());
+                    goldAccType.html("Gold Investment");
+                    $('#goldLastStmtDte .col-4').html($(listItem).find(".statementGold").html());
+                    goldCurrBal.html($(listItem).find(".accBalance p").html());
+                    $('#CardSettings').attr('hidden', true);
+                    $('#CASAIllustration').attr('hidden', true);
+                    $('#FDIllustration').attr('hidden', true);
+                    $('#IFDIllustration').attr('hidden', true);
+                    $('#LFIllustration').attr('hidden', true);
+                    $('#GIIllustration').attr('hidden', false);
+                    $('#actGrpFD').attr('hidden', false);
+                    break;
+
+                case 'loanList':
+                    accNameTitle.html("Loan");
+                    accNumberTitle.html($(listItem).find(".accListTitleAndNum p:first-of-type").html());
+                    accTypeTitle.html("Note No: " + $(listItem).find(".accListTitleAndNum p:last-of-type").html());
+                    loanAccNumber.html($(listItem).find(".accListTitleAndNum p:first-of-type").html());
+                    loanNoteNum.html($(listItem).find(".accListTitleAndNum p:last-of-type").html());
+                    loanAmtDue.html($(listItem).find(".accBalance p").html());
+                    $('#CardSettings').attr('hidden', true);
+                    $('#CASAIllustration').attr('hidden', true);
+                    $('#FDIllustration').attr('hidden', true);
+                    $('#IFDIllustration').attr('hidden', true);
+                    $('#LFIllustration').attr('hidden', false);
+                    $('#GIIllustration').attr('hidden', true);
+                    break;
+
+            }
+
+            accNameTitle.html($(listItem).find('.accListTitleAndNum p:first-of-type').html());
+            $('#accTypeTitle').html($(listItem).find('.accListTitleAndNum p:first-of-type').html());
+
+        }
+
+        function onTabClick(tabId, tabDetailsId) {
+            $('.accList').not(tabId).addClass('d-none');
+            $(tabId).removeClass('d-none');
+            $('.accDetails').children().not(tabDetailsId).addClass('d-none');
+            $(tabDetailsId).removeClass('d-none');
+            $(tabId).find('ul li:first-of-type').addClass('active');
+            // console.log(tabId);
+            selectListItem(tabId, false);
+        }
+    });
+
+
+
+
+    function refreshListItemActive(activeEl) {
+        if ($(activeEl).hasClass("active") == false) {
+            $(".accList ul li").removeClass("active");
+            $(activeEl).addClass('active');
+        }
+    }
+
+    function refreshActive(activeEl) {
+        $('.topNavbar li a').find('span:last-of-type').addClass('d-none');
+        $(activeEl).find("a span:last-of-type").removeClass('d-none');
+        $(activeEl).find()
+    }
+</script>
