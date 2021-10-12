@@ -1,0 +1,202 @@
+﻿
+@{
+    ViewBag.Title = "MailingAddress";
+}
+<div class="d-none d-lg-block" style="height:5vh;"></div>
+
+
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
+    <div class="row mt-2 justify-content-center">
+        <div class="col-lg-10">
+            <div class="row justify-content-center ">
+                <div class="col-12 col-lg-5 text-center">
+                    <img class="mb-3 img-fluid " style="width:300px; margin-top:-3rem" src="~/Images/WebDecoratives/Work risk-free.svg" />
+                    <h3>Change Card Pin</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquamipsa eos
+                        nesciunt
+                    </p>
+                </div>
+                <div id="firstPage" class="col-12 col-lg-8 ">
+                    <div class="row mb-2">
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Select your account</label>
+                        <div class="col-sm-12 mb-2">
+
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Please select</option>
+                                <option value="">4000151818158236</option>
+                                <option value="">9577445338254589</option>
+                                <option value="">1235489818021458</option>
+                                <option value="">1235489158236111</option>
+                                <option value="">4533825382544453</option>
+                                <option value="">7445338254553684</option>
+                                <option value="">0248891234486685</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action("CardSettings", "Home")"> Back </a>
+                            <a id="firstNext" class="btn btn-primary  float-end"> Next </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div hidden id="secondPage" class="col-12 col-lg-8 ">
+                    <div class="row mb-2">
+                        <label for="tranAmount" class="col-sm-12 col-form-label">New Pin</label>
+                        <div class="col-sm-12">
+                            <input type="Number" class="form-control mb-2" placeholder="New Pin">
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label for="tranAmount" class="col-sm-12 col-form-label">OTP</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="PAC">
+                            <span>Didn't get the code</span>
+                            <a href="#" id="ResendPAC" class="text-decoration-none ms-3 mb-2">Resend(1/3)</a>
+                            <p class="text-muted">A 6 digit PAC will be sent to your registered mobile phone number *****6168. Please click "Request PAC" if you wish to proceed</p>
+                        </div>
+                        <div class="col-sm-3 text-end text-lg-center mt-0 mt-lg-0">
+                            <a class="btn btn-info pac text-white float-lg-end">Request PAC</a>
+                        </div>
+                        <div class="mt-0">
+
+
+                        </div>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action("CardSettings", "Home")"> Back </a>
+                            <a id="secondNext" class="btn btn-primary  float-end"> Next </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div hidden id="thirdPage" class="col-12 col-lg-8 mt-3 px-5">
+                    <div class="p-5 shadow bg-white rounded-8">
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Reference Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>RR232382989FH</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Name</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>Kwek Kian Sheng</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Accounting Holding Branch</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>KL Main Office</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Type of Account</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>Savings</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Account</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>xxxxxxxxx-xxxx</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start"> Print </a>
+                            <a id="secondNext" class="btn btn-primary  float-end"  href="@Url.Action("CardSettings", "Home")"> Complete </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+            
+        </div>
+
+    </div>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/js")
+<script>
+    $(document).ready(function () {
+        $('.mobileNav').each(function () {
+            $(this).removeClass('active');
+        })
+        $('.nav-link').each(function () {
+            $(this).removeClass('active');
+        })
+        $('.profile').each(function () {
+            $(this).addClass('active');
+        });
+        $('.profileMenu').addClass('active');
+
+        $('#firstNext').on('click', function () {
+            $('#secondPage').attr('hidden', false);
+            $('#firstPage').attr('hidden', true);
+            $('#thirdPage').attr('hidden', true);
+        });
+        $('.pac').on('click', function () {
+            Swal.fire(
+                'OTP is Sent!',
+                'OTP sent to your phone number 012 - * * * * 123',
+                'success'
+            )
+        })
+        $('#secondNext').on('click', function () {
+            Swal.fire(
+                'Success',
+                'Your Transaction Successfully Saved',
+                'success'
+            )
+
+            $('#thirdPage').attr('hidden', false);
+            $('#secondPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', true);
+        })
+    });
+</script>
+
+
