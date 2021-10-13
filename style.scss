@@ -590,9 +590,9 @@ a.disabled {
     /*margin: 0 auto;*/
 }
 
-.form-switch .form-check-input:focus {
+/*.form-switch .form-check-input:focus {
     background-image: url(/Images/circle.svg);
-}
+}*/
 
 .material-icons-two-tone {
     font-family: 'Material Icons Two Tone';
@@ -1429,7 +1429,7 @@ body {
                 & .list-group .list-group-item {
                     border-radius: 0.8rem;
                     color: $bg-dark-text;
-                    display: flex !important;
+                    display: flex;
                     align-items: start;
                     justify-content: center;
 
