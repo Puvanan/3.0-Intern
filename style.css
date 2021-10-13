@@ -430,9 +430,9 @@ a.disabled {
   width: 175px;
   /*margin: 0 auto;*/ }
 
-.form-switch .form-check-input:focus {
-  background-image: url(/Images/circle.svg); }
-
+/*.form-switch .form-check-input:focus {
+    background-image: url(/Images/circle.svg);
+}*/
 .material-icons-two-tone {
   font-family: 'Material Icons Two Tone';
   font-weight: normal;
@@ -975,7 +975,7 @@ body {
       .accMainLayout .bodyCol .bodyCon .accList .list-group .list-group-item {
         border-radius: 0.8rem;
         color: #333;
-        display: flex !important;
+        display: flex;
         align-items: start;
         justify-content: center; }
         .accMainLayout .bodyCol .bodyCon .accList .list-group .list-group-item .iconBox {
