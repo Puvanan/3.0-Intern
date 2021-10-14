@@ -1,0 +1,669 @@
+﻿
+@{
+    Layout = null;
+}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Login/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <title>PBeBank</title>
+
+</head>
+
+<body class="bg-gradient">
+
+    <div class="popup-screen">
+        <div class="popup-box shadow">
+            <i class="fas fa-times close-btn"></i>
+            <h1>CAUTION ! </h1>
+            <div class="popupimg">
+                <img src="~/Images/Advertisment/pop-up-image.jpg" class="popUpImg" alt="">
+            </div>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Recognizing these common signs
+                of a scam could help you avoid falling for one. Find out steps you can take if you were scammed.
+            </p>
+            <!-- <a href="#" class="btn">Close</a> -->
+        </div>
+    </div>
+
+    <div class="container-fluid py-2 text-center notice">
+        <marquee class="marquee" behavior="scroll" direction="left" height="20px" width="100%">
+            <h6>
+                <i class="fas fa-exclamation-triangle px-2"></i> Please be informed that from 2am-7am, 17th june 2020,
+                we will having system maintainence. <i class="fas fa-exclamation-triangle px-2"></i>
+            </h6>
+        </marquee>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-transparent">
+        <div class="container-fluid me-5 px-5">
+            <div class="navbar-header ">
+                <a class="navbar-brand" href="#">
+                    <img src="~/Images/WebsiteImages/pb_logo.png" alt="Public Bank">
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                 aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+
+                </div>
+                <div class="offcanvas-body">
+                    <div class="createAccCon">
+                        <img src="/assets/register-acc.png" alt="register_account">
+                    </div>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">
+                                <a class="nav-link" href="#">iBanking</a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">
+                                <a class="nav-link" href="#Announcements">Announcements</a>
+                            </button>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ms-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-4">
+                        <a class="nav-link px-2 text-black" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link px-2 text-black" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a class="nav-link px-2  rounded-3 bg-primary text-white" href="#">Register Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN BODY -->
+    <div class="row align-items-center justify-content-between mainBody">
+        <div class="col-lg">
+            <div class="container greetCon ms-5 px-5">
+                <h1 class="display-2 mb-0 text-center text-lg-start">Welcome to PB Engage MY</h1>
+                <div class="pCon mt-3">
+                    <p>
+                        With PBe, you can manage your money directly in-app and pay with your card no matter where you
+                        are. Try it now for free!
+                    </p>
+                </div>
+                <div class="row appBadge ms-1 mt-4">
+                    <div class="col-2 appleBtn text-center">
+                        <a href="https://apps.apple.com/us/app/pb-engage-my/id1477329428?itsct=apps_box_badge&amp;itscg=30200"
+                           style="display: inline-block; overflow: hidden; border-radius: 13px;">
+                            <img src="~/Images/SocialMediaIcons/badge-example-preferred.png"
+                                 alt="Download on the App Store" style="border-radius: 13px;">
+                        </a>
+                    </div>
+                    <div class="col-2 gPlayBtn">
+                        <a href='https://play.google.com/store/apps/details?id=com.engage.pbb.pbengage2my.release&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                            <img alt='Get it on Google Play'
+                                 src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg">
+            <div class="loginCon  shadow">
+
+                <div class="row flex-row flex-wrap justify-content-between align-items-center">
+                    <div class="title">
+                        <h2></h2>
+
+                    </div>
+                    <div class="pbeLogo"></div>
+                </div>
+
+                <div class="login-form ">
+                    <div class="user-id-con pt-2">
+                        <input required type="text" name="userIdInput" class="userIdInput form-control" placeholder="User ID">
+                        <label class="userIdLabel pe-2 ps-1">User ID</label>
+                    </div>
+                    <div class="disclaimerLogin p-2 ps-0">
+                        <p class="text-muted">
+                            By login, you agree to our <span>
+                                <a href="#" style="color: #333;">
+                                    Terms &
+                                    Conditions
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-smt mt-3 w-100">
+                        Next
+                    </button>
+                    <div class="text-center mt-2">
+                        <a href="#" class="text-danger pt-1">
+                            <p>Forget Password ?</p>
+                        </a>
+                    </div>
+                </div>
+                <div hidden class="login-form-2">
+                    <div class="pt-3">
+                        <div class="secImg">
+                            <img src="~/Images/WebsiteImages/PLPServlet.jpg" alt="sec-phrase">
+                        </div>
+
+                        <div class="form-check form-switch mt-1">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                Is this your login
+                                Phrase
+                            </label>
+                        </div>
+                        <div class="my-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <div id="passwordHelpBlock" class="form-text">
+                                Please make sure your login phrase is correct.
+                            </div>
+                        </div>
+                        <div class="pb-5">
+                            <a href="@Url.Action("Index3", "Home" )" type="submit"
+                               class="btn btn-primary mt-3  w-100 text-center">
+                                Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="chevronContainer mt-3">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+    </div>
+    <div class="announcementCon mt-5">
+        <div class="row myAnnouncement justify-content-center">
+            <h3 id="Announcements"></h3>
+            <h6>Click on the news to enlarge</h6>
+        </div>
+
+        <div class="wrapper">
+            @*<div class="item-bg"></div>*@
+
+            <div class="news-slider">
+                <div class="news-slider__wrp swiper-wrapper" style="height:675px">
+                    <div class="news-slider__item swiper-slide">
+                        <a class="news__item shadow" href="~/Images/Advertisment/news.jpg" date-source="~/Images/Advertisment/news.jpg">
+                            <div class="news-date">
+                                <span class="news-date__title">24</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Covid-19 Assistance
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+
+                            <div class="news__img">
+                                <img src="~/Images/Advertisment/news.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="news-slider__item swiper-slide">
+                        <a href="~/Images/Advertisment/news1.jpg" date-source="~/Images/Advertisment/news1.jpg" class="news__item shadow">
+                            <div class="news-date">
+                                <span class="news-date__title">25</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Continuous Support
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+
+                            <div class="news__img">
+                                <img src="~/Images/Advertisment/news1.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="news-slider__item swiper-slide">
+                        <a href="~/Images/Advertisment/news2.jpg" date-source="~/Images/Advertisment/news2.jpg" class="news__item shadow">
+                            <div class="news-date">
+                                <span class="news-date__title">26</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                               Hire Purchases
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+
+                            <div class="news__img">
+                                <img src="~/Images/Advertisment/news2.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="news-slider__item swiper-slide">
+                        <a href="~/Images/Advertisment/news.jpg" date-source="~/Images/Advertisment/news.jpg" class="news__item shadow">
+                            <div class="news-date">
+                                <span class="news-date__title">27</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Covid-19 Assistance
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+
+                            <div class="news__img">
+                                <img src="~/Images/Advertisment/news.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="news-slider__item swiper-slide">
+                        <a href="~/Images/Advertisment/news1.jpg" date-source="~/Images/Advertisment/news1.jpg" class="news__item shadow">
+                            <div class="news-date">
+                                <span class="news-date__title">28</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Continuos Support
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+
+                            <div class="news__img">
+                                <img src="~/Images/Advertisment/news1.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="news-slider__item swiper-slide">
+                        <a href="~/Images/Advertisment/news2.jpg" date-source="~/Images/Advertisment/news2.jpg" class="news__item shadow">
+                            <div class="news-date">
+                                <span class="news-date__title">29</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Hire Purchases
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+
+                            <div class="news__img">
+                                <img src="~/Images/Advertisment/news2.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="news-slider__ctr">
+
+                    <div class="news-slider__arrows ">
+                        <button class="news-slider__arrow news-slider-prev shadow">
+                            <span class="icon-font">
+                                <svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg>
+                            </span>
+                        </button>
+                        <button class="news-slider__arrow news-slider-next shadow">
+                            <span class="icon-font">
+                                <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="news-slider__pagination"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <svg hidden="hidden">
+            <defs>
+                <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+                    <title>arrow-left</title>
+                    <path d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z"></path>
+                </symbol>
+                <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+                    <title>arrow-right</title>
+                    <path d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z"></path>
+                </symbol>
+            </defs>
+        </svg>
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="container">
+        <footer class="footer mt-auto py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Terms & Conditions</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Privacy Notice</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Security Statement</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Customer Service Charter</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Bank Negara Malaysia</a></li>
+            </ul>
+            <div class="row justify-content-around">
+                <div class="col-lg">
+                    <ul class="text-center mb-0 mx-auto p-0">
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <a href="#" class="text-muted text-decoration-none">
+                                <img style="width: 50px" src="~/Images/Advertisment/bankinginfo.gif" alt="bankinginfo">
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <a href="#" class="text-muted text-decoration-none">
+                                <img style="width: 50px" src="~/Images/Advertisment/insuranceinfo.gif" alt="insuranceinfo">
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <a href="#" class="text-muted text-decoration-none">
+                                <img style="width: 50px" src="~/Images/Advertisment/smeinfo.gif" alt="smeinfo">
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <a href="#" class="text-muted text-decoration-none">
+                                <img style="width: 50px" src="~/Images/Advertisment/housingwatch.gif" alt="housingwatch">
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <a href="#" class="text-muted text-decoration-none">
+                                <img style="width: 50px" src="~/Images/Advertisment/mybayar.gif" alt="mybayar">
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <a href="#" class="text-muted text-decoration-none">
+                                <img style="width: 50px" src="~/Images/Advertisment/mifc.gif" alt="mifc">
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <a href="#" class="text-muted text-decoration-none">
+                                <img style="width: 50px" src="~/Images/Advertisment/akpk.gif" alt="akpk">
+                            </a>
+                        </li>
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <a href="#" class="text-muted text-decoration-none">
+                                <img style="width: 50px" src="~/Images/Advertisment/pidm_member.gif" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg">
+                    <ul class="text-center mb-0 mx-auto p-0 mt-3 mt-lg-0">
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <button class="social-link-btn btn-facebook">
+                                <span><i class="fab fa-facebook-f"></i></span>
+                            </button>
+                        </li>
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <button class="social-link-btn btn-instagram">
+                                <span><i class="fab fa-instagram"></i></span>
+                            </button>
+                        </li>
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <button class="social-link-btn btn-twitter">
+                                <span><i class="fab fa-twitter"></i></span>
+                            </button>
+                        </li>
+                        <li class="list-inline-item mb-2 mb-lg-0">
+                            <button class="social-link-btn btn-linkedin">
+                                <span><i class="fab fa-linkedin"></i></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-center text-muted mt-4">
+                Copyright &copy
+                <script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> Public Bank
+                Berhad 196501000672 (6463-H). ALL RIGHTS RESERVED.
+            </p>
+
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/js")
+    <script>
+        const popupScreen = document.querySelector(".popup-screen");
+        const popupBox = document.querySelector(".popup-box");
+        const closeBtn = document.querySelector(".close-btn");
+
+
+
+
+        $('.btn-smt').on('click', function () {
+            $('.login-form').attr('hidden', true);
+            $('.title').removeClass('pt-lg-9');
+            $('.login-form-2').attr('hidden', false);
+        });
+
+
+        //var bg = document.querySelector('.item-bg');
+        var items = document.querySelectorAll('.news__item');
+        var item = document.querySelector('.news__item');
+
+        function cLog(content) {
+            console.log(content)
+        }
+
+        if ($(window).width() > 800) {
+            $(document).on("mouseover", ".news__item", function (_event, _element) {
+
+                var newsItem = document.querySelectorAll('.news__item');
+                newsItem.forEach(function (element, index) {
+                    element.addEventListener('mouseover', function () {
+                        var x = this.getBoundingClientRect().left;
+                        var y = this.getBoundingClientRect().top;
+                        var width = this.getBoundingClientRect().width;
+                        var height = this.getBoundingClientRect().height;
+
+                        //$('.item-bg').addClass('active');
+                        $('.news__item').removeClass('active');
+                        // $('.news__item').removeClass('active');
+                    });
+
+                    element.addEventListener('mouseleave', function () {
+                        //$('.item-bg').removeClass('active');
+                        $('.news__item').removeClass('active');
+                    });
+
+                });
+
+            });
+        }
+
+
+        var swiper = new Swiper('.news-slider', {
+            effect: 'coverflow',
+            grabCursor: true,
+            loop: true,
+            centeredSlides: true,
+            keyboard: true,
+            spaceBetween: 0,
+            slidesPerView: 'auto',
+            speed: 300,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 0,
+                modifier: 3,
+                slideShadows: false
+            },
+            breakpoints: {
+                480: {
+                    spaceBetween: 0,
+                    centeredSlides: true
+                }
+            },
+            simulateTouch: true,
+            navigation: {
+                nextEl: '.news-slider-next',
+                prevEl: '.news-slider-prev'
+            },
+            pagination: {
+                el: '.news-slider__pagination',
+                clickable: true
+            },
+            on: {
+                init: function () {
+                    var activeItem = document.querySelector('.swiper-slide-active');
+
+                    var sliderItem = activeItem.querySelector('.news__item');
+
+                    $('.swiper-slide-active .news__item').addClass('active');
+                }
+            }
+        });
+
+        swiper.on('touchEnd', function () {
+            $('.news__item').removeClass('active');
+            $('.swiper-slide-active .news__item').addClass('active');
+        });
+
+        swiper.on('slideChange', function () {
+            $('.news__item').removeClass('active');
+        });
+
+        swiper.on('slideChangeTransitionEnd', function () {
+            $('.news__item').removeClass('active');
+            var activeItem = document.querySelector('.swiper-slide-active');
+
+            var sliderItem = activeItem.querySelector('.news__item');
+
+            $('.swiper-slide-active .news__item').addClass('active');
+
+        });
+
+
+
+        $('.swiper-slide').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300,
+                opener: function (element) {
+                    return element.find('img');
+                }
+            }
+
+        });
+
+
+
+        $(window).ready(function () {
+            $(".mainBody").waitForImages(function () {
+                console.log("images loaded");
+                $(".mainBody").addClass("multiply-dark-anim");
+                $(".col-lg").addClass("fade-in-anim");
+                $(".chevronContainer").addClass("fade-in-anim");
+            });
+
+            $(".popUpImg").waitForImages(function () {
+                console.log("pop up img loaded");
+                setTimeout(() => {
+                    popupScreen.classList.add("active");
+                }, 2000);
+
+            });
+
+
+
+        });
+
+        $(window).resize(function () {
+            if (window.innerWidth < 992) {
+                $(".marquee").attr({ scrollamount: 7 });
+            } else {
+                console.log("inner width big");
+                $(".marquee").attr({ scrollamount: 12 });
+            }
+        });
+
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".fixed-top");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+
+
+
+
+        // window.addEventListener("load",()=>{
+        //     setTimeout(()=>{
+
+        //     },2000); //popup screen
+        // });
+
+        closeBtn.addEventListener("click", () => {
+            popupScreen.classList.remove("active"); //close popup
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,849 @@
+﻿
+@{
+    ViewBag.Title = "TransferPay";
+}
+
+<div class="container-fluid gx-0 gx-lg-0 mt-0 mt-xxl-45 p-lg-3 p-4 ps-lg-5  bg-light rounded-8-lg">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-7 mt-lg-4 border-end-xl">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Transfer</h2>
+                </div>
+            </div>
+            <div id="PaymentType">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Choose a payment method</h5>
+                        <p class="small">All of the transfer type are free during this emco period</p>
+                    </div>
+                </div>
+                <div class="row mt-4 mt-lg-0 ">
+                    <div class="col-12 col-xl-10 mt-3">
+                        <div class="rounded-8 shadow-sm p-1 py-2 bg-white cardType">
+                            <a href="#">
+
+                                <div class="row h-100 px-3">
+                                    <div class="col-3 my-auto text-center bg-light-2 rounded-8" style="max-width:50px; padding: .6rem .8rem;">
+                                        <i class="ri-bank-line ri-lg text-primary"></i>
+                                    </div>
+                                    <div class="col-7 my-auto ps-3">
+                                        <h6 class="mb-0 text-black pt-2">Bank</h6>
+                                        <p class="smaller fs-lg-6 text-muted mb-1">Transfer within Bank or other banks</p>
+                                    </div>
+                                    <div class="col-2 ms-auto my-auto text-end">
+                                        <i class="ri-arrow-right-line text-primary ri-lg"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-10 mt-3">
+                        <div class="rounded-8 shadow-sm p-1 bg-white cardType">
+                            <a href="#">
+                                <div class="row h-100 px-3">
+                                    <div class="col-3 my-auto text-center bg-light-2 rounded-8" style="max-width:50px; padding: .6rem .8rem;">
+                                        <i class="ri-phone-line ri-lg text-primary"></i>
+                                    </div>
+                                    <div class="col-7 my-auto ps-3">
+                                        <h6 class="mb-0 text-black pt-2">Mobile</h6>
+                                        <p class="smaller fs-lg-6 text-muted mb-1">Transfer via DuitNow of a person's mobile</p>
+                                    </div>
+                                    <div class="col-2 ms-auto my-auto text-end">
+                                        <i class="ri-arrow-right-line text-primary ri-lg"></i>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-10 mt-3">
+                        <div class="rounded-8 shadow-sm p-1 bg-white cardType">
+                            <a href="#">
+
+                                <div class="row h-100 px-3">
+                                    <div class="col-3 my-auto text-center bg-light-2 rounded-8" style="max-width:50px; padding: .6rem .8rem;">
+                                        <i class="ri-user-star-line ri-lg text-primary"></i>
+                                    </div>
+                                    <div class="col-7 my-auto ps-3">
+                                        <h6 class="mb-0 text-black pt-2">ID Number</h6>
+                                        <p class="smaller fs-lg-6 text-muted mb-1">Transfer via DuitNow of a person's ID Number</p>
+                                    </div>
+                                    <div class="col-2 ms-auto my-auto text-end">
+                                        <i class="ri-arrow-right-line text-primary ri-lg"></i>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-10 mt-3">
+                        <div class="rounded-8 shadow-sm p-1 bg-white cardType">
+                            <a href="#">
+
+                                <div class="row h-100 px-3">
+                                    <div class="col-3 my-auto text-center bg-light-2 rounded-8" style="max-width:50px; padding: .6rem .8rem;">
+                                        <i class="ri-global-line ri-lg text-primary"></i>
+                                    </div>
+                                    <div class="col-7 my-auto ps-3">
+                                        <h6 class="mb-0 text-black pt-2">Overseas Account</h6>
+                                        <p class="smaller fs-lg-6 text-muted mb-1">Transfer to overseas banks</p>
+                                    </div>
+                                    <div class="col-2 ms-auto my-auto text-end">
+                                        <i class="ri-arrow-right-line text-primary ri-lg"></i>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-lg-10 text-center text-lg-end">
+                        <button disabled class="btn btn-primary mb-3 mb-lg-0 mt-0 mt-lg-0 float-lg-end btnNextPaymentType">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div hidden id="BeneInfo">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Beneficiary Information</h5>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <P class="mb-0">From Account</P>
+                    </div>
+                    <div class="col-12 col-lg-10 gx-0">
+                        <div class="row gx-0 swiper-container" style="padding: 10px 10px 25px 10px;">
+                            <div class="swiper-wrapper">
+                                <div class="col-12 swiper-slide">
+                                    <div class="bg-white shadow-sm rounded-8 px-2 py-3 account">
+                                        <div class="row h-100">
+                                            <div class="col-4 text-center my-auto">
+                                                <img style="width:50px;" src="~/Images/WebsiteImages/mastercard.svg" />
+                                            </div>
+                                            <div class="col-8 my-auto">
+                                                <h6 class="mb-0">RM 400.20</h6>
+                                                <p class="small mb-0">Savings Account</p>
+                                                <p hidden class="text-muted smaller ">1234 1234 1234 1234</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 swiper-slide">
+                                    <div class="bg-white shadow-sm rounded-8 px-2 py-3 account">
+                                        <div class="row h-100">
+                                            <div class="col-4 text-center my-auto">
+                                                <img style="width:50px;" src="~/Images/WebsiteImages/Visa_Inc.-Logo.wine.svg" />
+                                            </div>
+                                            <div class="col-8 my-auto">
+                                                <h6 class="mb-0">RM 720.20</h6>
+                                                <p class="small mb-0">Current Account</p>
+                                                <p hidden class="text-muted smaller ">1234 1234 1234 1234</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 swiper-slide">
+                                    <div class="bg-white shadow-sm rounded-8 px-2 py-3 account">
+                                        <div class="row h-100">
+                                            <div class="col-4 text-center my-auto">
+                                                <img style="width:50px;" src="~/Images/WebsiteImages/mastercard.svg" />
+                                            </div>
+                                            <div class="col-8 my-auto">
+                                                <h6 class="mb-0">RM 400.20</h6>
+                                                <p class="small mb-0">Savings Account</p>
+                                                <p hidden class="text-muted smaller ">1234 1234 1234 1234</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 swiper-slide">
+                                    <div class="bg-white shadow-sm rounded-8 px-2 py-3 account">
+                                        <div class="row h-100">
+                                            <div class="col-4 text-center my-auto">
+                                                <img style="width:50px;" src="~/Images/WebsiteImages/mastercard.svg" />
+                                            </div>
+                                            <div class="col-8 my-auto">
+                                                <h6 class="mb-0">RM 400.20</h6>
+                                                <p class="small mb-0">Savings Account</p>
+                                                <p hidden class="text-muted smaller ">1234 1234 1234 1234</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 col-lg-10">
+                        <div class="row mb-2">
+                            <label for="beneName" class="col-sm-12 col-form-label">Beneficiary Name</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="beneName">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="beneAcc" class="col-sm-12 col-form-label">Beneficiary Account Number</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="beneAcc">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="beneBank" class="col-sm-12 col-form-label">Beneficiary Bank</label>
+                            <div class="col-sm-12">
+                                <select class="form-select" id="beneBank" aria-label="Default select example">
+                                    <option disabled selected>Open this select menu</option>
+                                    <option value="ABB">Affin Bank</option>
+                                    <option value="AIB">Affin Islamic Bank Berhad</option>
+                                    <option value="AGR">Agrobank</option>
+                                    <option value="ARB">Al-Rajhi Bank (Malaysia) Berhad</option>
+                                    <option value="ABM">Alliance Bank</option>
+                                    <option value="ABMI">Alliance Islamic Bank (M) Berhad</option>
+                                    <option value="AMB">AmBank</option>
+                                    <option value="AMBI">AmIslamic Bank (M) Berhad</option>
+                                    <option value="BBB">Bangkok Bank Berhad</option>
+                                    <option value="BIM">Bank Islam</option>
+                                    <option value="BMM">Bank Muamalat (Malaysia) Berhad</option>
+                                    <option value="BKR">Bank Kerjasama Rakyat</option>
+                                    <option value="BOA">Bank of America (Malaysia) Berhad</option>
+                                    <option value="BOC">Bank of China (Malaysia) Berhad</option>
+                                    <option value="BOT">MUFG Bank (Malaysia)</option>
+                                    <option value="BSN">Bank Simpanan Nasional Berhad</option>
+                                    <option value="BNP">BNP Paribas Malaysia Berhad</option>
+                                    <option value="CCB">China Construction Bank (Malaysia) Berhad</option>
+                                    <option value="CIM">CIMB Bank Berhad</option>
+                                    <option value="CIMI">CIMB Islamic Bank Berhad</option>
+                                    <option value="CIT">Citibank Berhad</option>
+                                    <option value="DB">Deutsche Bank (Malaysia) Berhad</option>
+                                    <option value="HLB">Hong Leong Bank</option>
+                                    <option value="HLBI">Hong Leong Islamic Bank Berhad</option>
+                                    <option value="HSA">HSBC Amanah Malaysia Berhad</option>
+                                    <option value="HSB">HSBC Bank Malaysia Berhad</option>
+                                    <option value="ICB">Industrial and Commercial Bank of China (M) Berhad</option>
+                                    <option value="JPMC">JP Morgan Chase Bank Berhad</option>
+                                    <option value="KFH">Kuwait Finance House (Malaysia) Berhad</option>
+                                    <option value="MBB">Maybank</option>
+                                    <option value="MBBI">Maybank Islamic Berhad</option>
+                                    <option value="MCB">Mizuho Bank (Malaysia) Berhad</option>
+                                    <option value="MBS">MBSB Bank Berhad</option>
+                                    <option value="OCB">OCBC Bank (Malaysia) Berhad</option>
+                                    <option value="OCBI">OCBC Al-Amin Bank Berhad</option>
+                                    <option value="RHB">RHB Bank</option>
+                                    <option value="RHBI">RHB Islamic Bank Berhad</option>
+                                    <option value="SCB">Standard Chartered Bank (Malaysia) Berhad</option>
+                                    <option value="SCS">Standard Chartered Saadiq Berhad</option>
+                                    <option value="SMB">Sumitomo Mitsui Banking Corporation Malaysia Berhad</option>
+                                    <option value="UOB">United Overseas Bank Berhad</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-end">
+                                <a class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#contactList">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="ri-heart-2-line ri-1x pe-2"></i>
+                                        </div>
+                                        <div class="col-9"><p class="mb-0">Favourites</p></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-lg-10">
+                        <button class="btn btn-dark mb-3 mb-lg-0 mt-0 mt-lg-0  btnBackBeneType">Back</button>
+                        <button class="btn btn-primary mb-3 mb-lg-0 mt-0 mt-lg-0 float-end btnNextBeneType">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div hidden id="tranInfo">
+                <div class="row">
+                    <div class="col-lg-10 col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="mb-3">Transaction Information</h5>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="tranAmount" class="col-sm-12 col-form-label">Transaction Amount</label>
+                            <div class="col-sm-12">
+                                <input type="number" class="form-control" id="tranAmount">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="inputPassword3" class="col-sm-12 col-form-label">Payment Type</label>
+                            <div class="col-sm-12">
+                                <select class="form-select" id="paymentType" aria-label="Default select example">
+                                    <option disabled selected>Open this select menu</option>
+                                    <option value="1">Fund Transfer</option>
+                                    <option value="2">Loan Payment</option>
+                                    <option value="3">Hire Purchase Payment</option>
+                                    <option value="3">Credit Card Payment</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="ref" class="col-sm-12 col-form-label">Recipient Reference</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="ref">
+                            </div>
+                        </div>
+                        <div class="row justify-content-evenly mb-0">
+                            <label for="effDt" class="col-sm-12 col-form-label">Effective Date</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="effDt">
+                            </div>
+
+                            <div class="form-switch col-sm-6 mt-2 text-lg-start text-start ps-5 ps-lg-5">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Notify the Recepient</label>
+                            </div>
+                            <div class="form-switch col-sm-6 mt-2 ps-5 ps-lg-0 text-lg-end">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Recurring transfer field(s)</label>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <button class="btn btn-dark mb-3 mb-lg-0 mt-0 mt-lg-0  btnBackTranInfo">Back</button>
+                                <button class="btn btn-primary mb-3 mb-lg-0 mt-0 mt-lg-0 float-end btnNextPAC">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div hidden id="TranConfirm">
+                <div class="row">
+                    <div class="col-lg-10 col-12">
+
+                        <h5>Confirmation</h5>
+                        <div class="row ab-3">
+                            <label for="fromAccountCon" class="col-sm-3 col-form-label">From Account</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control small" id="fromAccountCon">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="paymentType" class="col-sm-3 col-form-label">Payment Type</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="paymentTypeCon">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="beneNameCon" class="col-sm-3 col-form-label">Beneficiary Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="beneNameCon">
+                            </div>
+                        </div>
+                        <div class="row ab-2">
+                            <label for="beneAccCon" class="col-sm-3 col-form-label">Beneficiary Account Number</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="beneAccCon">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="beneBankCon" class="col-sm-3 col-form-label">Beneficiary Bank</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="beneBankCon">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="tranAmount Con" class="col-sm-3 col-form-label">Transaction Amount </label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="tranAmountCon">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="refCon" class="col-sm-3 col-form-label">Recipient Reference</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="refCon">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label for="effDtCon" class="col-sm-3 col-form-label">Effective Date</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="effDtCon">
+                            </div>
+                        </div>
+
+                        <!-- enhanced ui for Authentication -->
+                        <div class="row mb-2">
+                            <label for="auth" class="col-sm-3 col-form-label">Approve this transacion with</label>
+                            <div class="col-sm-9">
+                                <select class="form-select" aria-label="Default select example" id="auth">
+
+                                    <option value="pac">PAC</option>
+                                    <option value="token">Hard Token</option>
+                                    <option value="secure">Secured SignIn</option>
+                                    <option value="noti">Push Notification</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-2" id="PAC">
+                            <label for="PAC" class="col-sm-3 col-form-label"> <img src="~/Images/WebsiteImages/otp.png" alt="" width="100" height="100"></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="PAC">
+                                <p class="text-muted">A 6 digit PAC will be sent to your registered mobile phone number *****6168. Please click "Request PAC" if you wish to proceed</p>
+                            </div>
+                            <div class="col-sm-3 text-end text-lg-center mt-0 mt-lg-0">
+                                <a class="btn btn-info pac text-white float-lg-end">Request PAC</a>
+                            </div>
+                        </div>
+                        <div class="row mb-2 d-none" id="token">
+                            <label for="hToken" class="col-sm-3 col-form-label"><img src="~/Images/WebsiteImages/securesigntoken.png" alt="" width="90" height="120"></label>
+                            <div class="col-sm-9">
+                                <p class="text-muted">Switch on your SecureSign token and follow the instrution below to generate on your SecureSign Code.</p>
+                                <ol>
+                                    <li>Press "sign" button. You will see a '1' display on the screen.</li>
+                                    <li>Enter xxxxx and press 'OK'.</li>
+                                    <li>You will see a '2" dispaly on screen.</li>
+                                    <li>Enter xxxx and press 'OK.'</li>
+                                    <li>The SecureSign will be displayed on screen.</li>
+                                </ol>
+                                <input type="text" class="form-control" id="hToken" placeholder="Enter your SecureSign Code">
+                            </div>
+                            <!-- <div class="col-sm-4 text-end text-lg-center mt-0 mt-lg-0">
+                    <a class="btn btn-info pac text-white float-lg-end">Submit</a>
+                </div> -->
+                        </div>
+                        <div class="row mb-2 d-none" id="noti">
+                            <label for="notification" class="col-sm-3 col-form-label"><img src="~/Images/WebsiteImages/success.png" alt="" width="90" height="90"></label>
+                            <div class="col-sm-6">
+                                <p>A push notification will be sent to your mobile phone. Please verify the details at your PB SecureSign screen before approving transaction.</p>
+                                <!-- <a class="btn btn-info pac text-white float-lg-end">Secure SignIn</a> -->
+                            </div>
+                            <div class="col-sm-3">
+                                <a class="btn btn-info text-white float-lg-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Push Notification</a>
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">PB SecureSign</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 d-flex justify-content-center">
+                                                            <img src="~/Images/WebsiteImages/animation_500_kugn1p08.gif" alt="" width="300" height="300">
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <p>Please check your mobile device (Iphone12) for a push notification to approve the transacion</p>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <div class="progress">
+                                                                <div class="progress-bar bg-danger active" role="progressbar" aria-valuenow="0"
+                                                                     aria-valuemin="0" aria-valuemax="100" style="width:0%">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2 d-none" id="secure">
+                            <label for="secure" class="col-sm-3 col-form-label"><img src="~/Images/WebsiteImages/kp2.png" alt="" width="90" height="90"></label>
+                            <div class="col-sm-9">
+                                <p class="text-muted">Open your PB engage mobile app and follow the instruction below to generate your SecurePac</p>
+                                <ol>
+                                    <li>Launch your PB engage mobile app.</li>
+                                    <li>From the side menu, select "PB SecureSign".</li>
+                                    <li>Verify the transaction details before you click "proceed".</li>
+                                    <li>Enter your SecurePIN or authentucate with your fingerpint/Face ID</li>
+                                    <li>The 6 digits SecurePAC will be displayed on the screen</li>
+                                </ol>
+                                <input type="text" class="form-control" id="secure" placeholder="Enter SecurePAC">
+                            </div>
+                        </div>
+                        <div class="row mt-2 pb-5 last-row">
+                            <div class="col-6 text-start text-lg-start mt-3">
+                                <button class="btn btn-dark mb-3 mb-lg-0 mt-0 mt-1g-0 btnBackPac">Back</button>
+                            </div>
+                            <div class="col-6 text-end text-lg-end mt-3">
+                                <button class="btn btn-success mb-3 mb-1g-0 mt-1g-0 tranBtn">Transfer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-lg-4 d-lg-block d-none">
+            <div class="row ps-lg-5">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-8">
+                            <h3>Quick Transfer</h3>
+                        </div>
+                        <div class="col-8">
+                            <div class="col-12 text-start text-lg-start mb-3 d-lg-none d-block">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label small" for="flexSwitchCheckDefault">Show Quick Links</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-muted">Click on the card, if you wished to transfer to the same person again</p>
+
+
+                    <div class=" mt-2 mr-5 d-none d-lg-block" id="quickTransfer" style="border-radius: 0.7rem;">
+                        <div class="row pt-3 border-bottom hoverable-bg-white shadow-none" id="1st">
+                            <div class="col-2">
+                                <div class="rounded-8 bg-info mx-auto contactIcon shadow-sm text-center">
+                                    <i class="ri-user-line ri-lg text-white"></i>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h6>Jason Lee</h6>
+                                <p class="text-muted" style="font-size:13px;margin-top:-7px">12 April 2021</p>
+                            </div>
+                            <div class="col-4 text-theme">RM 370.40</div>
+                        </div>
+                        <div class="row  pt-3 border-bottom hoverable-bg-white" id="2nd">
+                            <div class="col-2">
+                                <div class="rounded-8 bg-info mx-auto contactIcon shadow-sm text-center">
+                                    <i class="ri-user-line ri-lg text-white"></i>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h6>Mohd. Ali</h6>
+                                <p class="text-muted" style="font-size:13px;margin-top:-7px">11 April 2021</p>
+                            </div>
+                            <div class="col-4 text-theme">RM 150.40</div>
+                        </div>
+                        <div class="row  pt-3 border-bottom hoverable-bg-white" id="3rd">
+                            <div class="col-2">
+                                <div class="rounded-8 bg-info mx-auto contactIcon shadow-sm text-center">
+                                    <i class="ri-restaurant-line ri-lg text-white"></i>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h6>Food</h6>
+                                <p class="text-muted" style="font-size:13px;margin-top:-7px">11 April 2021</p>
+                            </div>
+                            <div class="col-4 text-theme">RM 2000.00</div>
+                        </div>
+                        <div class="row  pt-3 border-bottom hoverable-bg-white" id="4th">
+                            <div class="col-2">
+                                <div class="rounded-8 bg-info mx-auto contactIcon shadow-sm text-center">
+                                    <i class="ri-ship-line ri-lg text-white"></i>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h6>Transportation</h6>
+                                <p class="text-muted" style="font-size:13px;margin-top:-7px">11 April 2021</p>
+                            </div>
+                            <div class="col-4 text-theme">RM 170.40</div>
+                        </div>
+                        <div class="row  pt-3 hoverable-bg-white" id="5th">
+                            <div class="col-2">
+                                <div class="rounded-8 bg-info mx-auto contactIcon shadow-sm text-center">
+                                    <i class="ri-user-line ri-lg text-white"></i>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h6>Mohd. Ali</h6>
+                                <p class="text-muted" style="font-size:13px;margin-top:-7px">11 April 2021</p>
+                            </div>
+                            <div class="col-4 text-theme">RM 170.40</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ps-lg-5 mt-5">
+                <div class="col-12">
+                    <h3>Quick Link</h3>
+                    <p>Or do you want to make payment</p>
+                </div>
+                <div class="col-12 pb-3 ">
+                    <div class="rounded-8 me-2 shadow bg-warning py-0 py-lg-3 mt-0 ">
+                        <div class="text-center text-lg-end py-2 px-lg-3 position-relative ">
+                            <i class="img-fluid img-Quick mx-auto icons position-absolute bi-cart2 h2 text-dark" style="right: 70px; font-size: 60px; opacity: .3;"></i>
+                        </div>
+                        <div class="text-center text-lg-start px-lg-3 px-0">
+                            <h5 class=" mb-0 pt-2 pt-lg-4 d-none d-lg-block text-dark">Payment</h5>
+                            <p class="mb-0  small pt-2 text-dark">Credit card bills and many more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal gx-0 fade" id="contactList" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:2001">
+    <div class="modal-dialog modal-dialog-mobile-2 modal-lg">
+        <div class="modal-content bg-white p-lg-5 pt-lg-3 p-1">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title text-center flex-grow-1" id="exampleModalLabel">Favourites</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="swiper-container contactSwiper" style="padding: 10px 10px 25px 10px;">
+                            <div class="swiper-wrapper">
+
+                                <div class="col-md-12 swiper-slide">
+                                    <div class="border p-3 mx-0 mx-lg-0 text-center fav-card rounded-8 shadow-sm first-fav bg-white">
+                                        <div class="rounded-8 bg-dark mx-auto contactIcon shadow-sm">
+                                            <i class="ri-user-line ri-lg text-white"></i>
+                                        </div>
+                                        <h6 class="nameModal mb-0">Alouise Davey</h6>
+                                        <p class="mb-0 accModal small">9843798231</p>
+                                        <p class="text-muted mb-0 small">CIMB Bank</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 swiper-slide">
+                                    <div class="border p-3 mx-0 mx-lg-0 text-center fav-card rounded-8 shadow-sm second-fav bg-white">
+                                        <div class="rounded-8 bg-dark mx-auto contactIcon shadow-sm">
+                                            <i class="ri-user-line ri-lg text-white"></i>
+                                        </div>
+                                        <h6 class="nameModal mb-0">Edie Roddy</h6>
+                                        <p class="mb-0 small">9843798231</p>
+                                        <p class="text-muted small mb-0">AmBank</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 swiper-slide">
+                                    <div class="border p-3 mx-0 mx-lg-0 text-center fav-card rounded-8 shadow-sm third-fav bg-white">
+                                        <div class="rounded-8 bg-dark mx-auto contactIcon shadow-sm">
+                                            <i class="ri-user-line ri-lg text-white"></i>
+                                        </div>
+                                        <h6 class="nameModal mb-0">Kent Yvette</h6>
+                                        <p class="mb-0 small">9843798231</p>
+                                        <p class="text-muted small mb-0">MayBank</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 swiper-slide">
+                                    <div class="border p-3 mx-0 mx-lg-0 text-center fav-card rounded-8 shadow-sm forth-fav bg-white">
+                                        <div class="rounded-8 bg-dark mx-auto contactIcon shadow-sm">
+                                            <i class="ri-user-line ri-lg text-white"></i>
+                                        </div>
+                                        <h6 class="nameModal mb-0">Peter Yvette</h6>
+                                        <p class="mb-0 small">9843798231</p>
+                                        <p class="text-muted mb-0 small">MayBank</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination contactPagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>*@
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/js")
+<script>
+    $(document).ready(function () {
+
+    });
+    $('.cardType').on('click', function () {
+        $('.cardType').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+        $('.btnNextPaymentType').attr('disabled', false);
+    })
+    $('.account').on('click', function () {
+        $('.account').each(function () {
+            $(this).removeClass('border-danger');
+        })
+        $(this).addClass('border-danger');
+        $('.btnNextBeneType').attr('disabled', false);
+    })
+    $('.btnNextPaymentType').on('click', function () {
+        $('#PaymentType').attr('hidden', true);
+        $('#BeneInfo').attr('hidden', false);
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: '1.4',
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+            452: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1400: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
+        });
+    });
+    dateFormat = 'dd/mm/yyyy'
+    startDatePicker = flatpickr('#effDt', {
+        "minDate": new Date().fp_incr(0),
+        "maxDate": new Date().fp_incr(365),
+        "dateFormat": "d/m/Y",
+        onChange: function (selectedDates, dateStr, instance) {
+            //M.updateTextFields();
+        },
+    });
+    $('.btnNextPAC').on('click', function () {
+        $('#fromAccountCon').val('Savings Account (ends with 1234) RM 400.20');
+        $('#paymentTypeCon').val($('#paymentType option:selected').text());
+        $('#beneNameCon').val($('#beneName').val());
+        $('#beneAccCon').val($('#beneAcc').val());
+        $('#beneBankCon').val($('#beneBank option:selected').text());
+        $('#tranAmountCon').val($('#tranAmount').val());
+        $('#refCon').val($('#ref').val());
+        $('#effDtCon').val($('#effDt').val());
+        $('#TranConfirm').attr('hidden', false);
+        $('#tranInfo').attr('hidden', true);
+    })
+    $('.btnBackPac').on('click', function () {
+        $('#tranInfo').attr('hidden', false);
+        $('#TranConfirm').attr('hidden', true);
+    })
+    $('.btnBackBeneType').on('click', function () {
+        $('#PaymentType').attr('hidden', false);
+        $('#BeneInfo').attr('hidden', true);
+    })
+    $('.btnNextBeneType').on('click', function () {
+        $('#tranInfo').attr('hidden', false);
+        $('#BeneInfo').attr('hidden', true);
+    })
+    $('.btnBackTranInfo').on('click', function () {
+        $('#BeneInfo').attr('hidden', false);
+        $('#tranInfo').attr('hidden', true);
+    })
+    var myModalEl = document.getElementById('contactList');
+    myModalEl.addEventListener('shown.bs.modal', function (event) {
+        const swiper1 = new Swiper('.contactSwiper', {
+            // Optional parameters
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+            // If we need pagination
+            pagination: {
+                el: '.contactPagination',
+                clickable: true,
+            },
+            breakpoints: {
+                452: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    })
+    $('.first-fav').on('click', function () {
+        $('#beneName').val('Elouise Davey');
+        $('#beneAcc').val('9843798231');
+        $('#beneBank').val('CIM');
+        $('#contactList').modal('hide');
+    })
+    $('.second-fav').on('click', function () {
+        $('#beneName').val('Edie Roddy');
+        $('#beneAcc').val('9843798231');
+        $('#beneBank').val('AMB');
+        $('#contactList').modal('hide');
+    })
+    $('.third-fav').on('click', function () {
+        $('#beneName').val('Kent Yvette');
+        $('#beneAcc').val('9843798231');
+        $('#beneBank').val('MBB');
+        $('#contactList').modal('hide');
+    })
+
+    $('.pac').on('click', function () {
+        Swal.fire(
+            'PAC is Sent!',
+            'PAC sent to your phone number 012 - * * * * 123',
+            'success'
+        )
+        $('.tranBtn').attr('disabled', false);
+    })
+    $('.tranBtn').on('click', function () {
+        Swal.fire(
+            'Success',
+            'Your Transaction is Successful',
+            'success'
+        ).then(function () {
+            window.location = "@System.Configuration.ConfigurationManager.AppSettings["Baseurl"]" + "/Home/Transfer";
+        })
+    })
+    $("#auth").change(function () {
+            console.log("test");
+            var cases = $( "#auth option:selected" ).val();
+            if(cases =="pac")
+            $("#PAC").removeClass("d-none");
+            $("#secure").addClass("d-none");
+            $("#noti").addClass("d-none");
+            $("#token").addClass("d-none");
+            if(cases =="token"){
+                $("#token").removeClass("d-none");
+                $("#PAC").addClass("d-none");
+                $("#signin").addClass("d-none");
+                $("#noti").addClass("d-none");
+            }
+            if(cases =="secure"){
+                $("#secure").removeClass("d-none");
+                $("#PAC").addClass("d-none");
+                $("#token").addClass("d-none");
+                $("#noti").addClass("d-none");
+            }
+            if(cases =="noti"){
+                $("#noti").removeClass("d-none");
+                $("#PAC").addClass("d-none");
+                $("#token").addClass("d-none");
+                $("#secure").addClass("d-none");
+            }
+        }
+        );
+        
+        var progressBar = $('.progress-bar');
+        var progressNumber = 0;
+        
+        setInterval(function(){
+            progressNumber++;
+            progressBar.css('width' , progressNumber + '%');
+            progressBar.attr('aria-valuenow', progressNumber);
+        },500);
+</script>
