@@ -1,0 +1,472 @@
+<div class="d-none d-lg-block" style="height:5vh;"></div>
+
+
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
+
+    <div class="row mt-2 justify-content-center">
+
+        <div class="col-lg-10">
+
+            <div class="row justify-content-center ">
+
+                <div class="col-12 col-lg-5 text-center">
+
+                    <img class="mb-3 img-fluid " style="width:300px; margin-top:-3rem"
+                         src="~/Images/WebDecoratives/Work risk-free.svg" />
+                    <h3>Change Personal Details</h3>
+                    <p class="mb-4">
+                    </p>
+
+                </div>
+
+                <div id="firstPage" class="col-12 col-lg-8 ">
+
+                    <div class="row mb-2">
+
+                        <label for="occupation" class="col-sm-12 col-form-label">Occupation</label>
+
+                        <div class="col-sm-12 mb-2">
+
+                            <select class="form-select" id="occupation" disabled>
+                                <optgroup label="Accounting / Finance / Admin / HR"></optgroup>
+                                <option>ACCOUNTANT</option>
+                                <option>ADJUSTERS</option>
+                                <option>ADMINISTRATOR</option>
+                                <option>AGENT</option>
+                                <option>ANALYST / RESEARCHER</option>
+                                <option>AUCTIONEER</option>
+                                <option>AUDITOR</option>
+                                <option>BANKER</option>
+                                <option>BROKER</option>
+                                <option>CHIEF ACCOUNTANT</option>
+                                <option>CLERICAL / NONCLERICAL</option>
+                                <option>COMPANY SECRETARY</option>
+                                <option>COORDINATOR</option>
+                                <option>ECONOMIST</option>
+                                <option>FINANCIAL CONTROLLER</option>
+                                <option>INVESTOR</option>
+                                <option>OFFICE / BUSINESS EXEC</option>
+                                <option>OFFICER</option>
+                                <option>REMISIER</option>
+                                <option>SECRETARY</option>
+                                <option>STATISTICIAN / ACTUARIST</option>
+                                <option>STOCKBROKER</option>
+                                <option>SUPERVISOR</option>
+                                <option>VALUER</option>
+                                <optgroup label="Legal Services / Law Enforcement"></optgroup>
+                                <option>JUDGE / MAGISTRATE</option>
+                                <option>LAWYER</option>
+                                <option>TRUST & COMPANY SERVICE</option>
+                                <option>WARDEN</option>
+                                <optgroup label="Arts & Craft / Entertainment / Design"></optgroup>
+                                <option>ART & ANTIQUE DEALER</option>
+                                <option>ARTIST</option>
+                                <option>CARPENTER</option>
+                                <option>CHOREOGRAPHER / DANCER</option>
+                                <option>CIRCUS PERFORMER</option>
+                                <option>COMPOSER</option>
+                                <option>DECORATOR</option>
+                                <option>DESIGNER</option>
+                                <option>ENTERTAINER</option>
+                                <option>MAGICIAN</option>
+                                <option>MODEL</option>
+                                <option>PAINTER</option>
+                                <option>PHOTOGRAPHER</option>
+                                <option>TAILOR / DRESSMAKER</option>
+                                <option>TRANSLATOR / INTERPRETER</option>
+                                <option>UPHOLSTERER</option>
+                                <optgroup label="Engineering / Construction / ICT"></optgroup>
+                                <option>ARCHITECT / TOWN PLANNER</option>
+                                <option>CONTRACTOR</option>
+                                <option>DEVELOPER</option>
+                                <option>ELECTRICIAN / CHARGEMAN</option>
+                                <option>ENGINEER</option>
+                                <option>FOREMAN</option>
+                                <option>MECHANIC</option>
+                                <option>PLUMBER</option>
+                                <option>PROGRAMMER</option>
+                                <option>REAL ESTATE</option>
+                                <option>SUB-CONTRACTOR</option>
+                                <option>SURVEYOR</option>
+                                <option>TECHNICIAN</option>
+                                <option>TOWN PLANNER</option>
+                                <option>WELDER</option>
+                                <optgroup label="Agriculture / Manufacturing / Mining"></optgroup>
+                                <option>AQUACULTURE</option>
+                                <option>BUTCHER</option>
+                                <option>FARMER</option>
+                                <option>FISHERMAN</option>
+                                <option>FISHMONGER</option>
+                                <option>FORESTRY</option>
+                                <option>GARDENER</option>
+                                <option>HUNTER</option>
+                                <option>MANUFACTURER</option>
+                                <option>OPERATOR</option>
+                                <optgroup label="Education / Media / Training"></optgroup>
+                                <option>ADVISOR</option>
+                                <option>AUTHOR</option>
+                                <option>BIOGRAPHER</option>
+                                <option>CONSULTANT</option>
+                                <option>COPYWRITER</option>
+                                <option>EDITOR</option>
+                                <option>INSTRUCTOR</option>
+                                <option>JOURNALIST</option>
+                                <option>LIBRARIAN / CURATOR</option>
+                                <option>NEWSCASTER</option>
+                                <option>PRINCIPAL</option>
+                                <option>PROOF READER</option>
+                                <option>STUDENT</option>
+                                <option>TEACHER / LECTURER</option>
+                                <optgroup label="Tourism / F&B / Healthcare / Sports"></optgroup>
+                                <option>ATHLETE</option>
+                                <option>BEAUTICAN</option>
+                                <option>BELL BOY</option>
+                                <option>BUDGET HOTEL OPERATOR</option>
+                                <option>CATERING</option>
+                                <option>CHEF</option>
+                                <option>CHEMIST, PHYSICIST</option>
+                                <option>COACH</option>
+                                <option>DENTIST</option>
+                                <option>DOCTOR</option>
+                                <option>HAWKER</option>
+                                <option>NURSE</option>
+                                <option>OPTOMETRIST / OPTICIAN</option>
+                                <option>PHARMACIST</option>
+                                <option>PHYSICIAN</option>
+                                <option>PSYCHIATRIST</option>
+                                <option>PSYCHOLOGIST</option>
+                                <option>TOURIST GUIDE</option>
+                                <option>TRAVEL AGENT OWNER</option>
+                                <option>WAITER / WAITRESS</option>
+                                <optgroup label="Retail / Sales / Services"></optgroup>
+                                <option>BABYSITTER</option>
+                                <option>BAKER</option>
+                                <option>CASHIER</option>
+                                <option>DEALER / DISTRIBUTOR</option>
+                                <option>DETECTIVE</option>
+                                <option>DIRECT SALES</option>
+                                <option>FLORIST</option>
+                                <option>GAMING OPERATOR</option>
+                                <option>GENERAL WORKER</option>
+                                <option>GOLDSMITH</option>
+                                <option>GROCER</option>
+                                <option>HAIRDRESSER</option>
+                                <option>JEWELLER</option>
+                                <option>LABOURER</option>
+                                <option>LAUNDER / DRY CLEANER</option>
+                                <option>LOCKSMITH</option>
+                                <option>MAID / CLEANER</option>
+                                <option>MOBILE PHONE DEALER</option>
+                                <option>MONEY CHANGER</option>
+                                <option>MONEY LENDER</option>
+                                <option>NIGHT CLUB OPERATOR</option>
+                                <option>PAWN BROKER</option>
+                                <option>PROMOTER</option>
+                                <option>REFLEXOLOGY OPERATOR</option>
+                                <option>RETAILER</option>
+                                <option>SALESMAN / SALESGIRL</option>
+                                <option>SCRAP METAL DEALER</option>
+                                <option>SECURITY / BODY GUARD</option>
+                                <option>SHOP ASSISTANT</option>
+                                <option>SMALLHOLDER</option>
+                                <option>TRADER</option>
+                                <option>USED CAR DEALER</option>
+                                <option>WHOLESALER</option>
+                                <optgroup label="Trade / Logistics / Transport"></optgroup>
+                                <option>AIR HOSTESS</option>
+                                <option>ASTRONAUT / ASTRONOMER</option>
+                                <option>DESPATCH</option>
+                                <option>DRIVER</option>
+                                <option>EXPORTER / IMPORTER</option>
+                                <option>FACTORY WORKER</option>
+                                <option>FREIGHT FORWARDING</option>
+                                <option>PILOT</option>
+                                <option>POSTMAN</option>
+                                <option>SAILOR</option>
+                                <option>STOREKEEPER</option>
+                                <option>SUPPLIER</option>
+                                <optgroup label="Government / Religious / Social Services"></optgroup>
+                                <option>CLERGY</option>
+                                <option>DIPLOMAT</option>
+                                <option>GOVERNMENT SERVANTS</option>
+                                <option>NGO STAFF / VOLUNTEER</option>
+                                <option>PASTOR / PREACHER</option>
+                                <option>POLITICIAN</option>
+                                <option>PRIEST / NUN</option>
+                                <optgroup label="Other"></optgroup>
+                                <option>HOMEMAKER</option>
+                                <option>HOUSEWIFE</option>
+                                <option>RETIREE</option>
+                                <option>UNEMPLOYED</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <label for="memorableQuestion" class="col-sm-12 col-form-label">Memorable Question</label>
+
+                        <div class="col-sm-12 mb-2">
+
+                            <select class="form-select" aria-label="Default select example" disabled>
+                                <option>What is my mother's maiden name?</option>
+                                <option>What is my favourite food?</option>
+                                <option>What is my dream car?</option>
+                                <option>What is my favourite colour?</option>
+                                <option>What is my pet's name?</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <label class="col-sm-12 col-form-label">Memorable Answer</label>
+
+                        <div class="num-Book col-sm-12">
+                            <input type="text" class="form-control mb-2" placeholder="Memorable Answer" disabled>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <label class="col-sm-12 col-form-label">Home Tel Num</label>
+
+                        <div class="num-Book col-sm-12">
+                            <input type="Number" class="form-control mb-2" placeholder="Home Tel Num" disabled>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <label class="col-sm-12 col-form-label">Office Tel Num</label>
+
+                        <div class="num-Book col-sm-12">
+                            <input type="Number" class="form-control mb-2" placeholder="Office Tel Num" disabled>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <label class="col-sm-12 col-form-label">HP Num</label>
+
+                        <div class="num-Book col-sm-12">
+                            <input type="Number" class="form-control mb-2" placeholder="HP Num" disabled>
+                        </div>
+
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action(" ChequeBook", "Home" )">
+                                Back
+                            </a>
+                            @*<a id="modify-btn" class="btn btn-primary  float-end"> Modify </a>*@
+                            <a id="next-btn" class="btn btn-primary  float-end"> Next </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div hidden id="acknowledgement-screen" class="col-12 col-lg-8 mt-3 px-5">
+                    <div class="p-5 shadow bg-white rounded-8">
+
+                        <div class="row detailzRow d-flex mb-4">
+
+                            <div class="row logoRow">
+
+                                <div class="col-lg-2 col-2 checkIconDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+
+                                                <td id="success" style="vertical-align: middle;">
+                                                    <img src="~/Images/WebDecoratives/success.png" alt="" width="60px"
+                                                         height="60px">
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-10 checkTextDIV mt-1">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+
+                                                <td style="vertical-align: middle;">
+                                                    <h5 class="lbl1">Profile Details Updated Successful</h5>
+                                                    <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Reference Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>RR232382989FH</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Occupation</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>DOCTOR</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Memorable Question</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>What is my pet's name?</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Memorable Answer</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>Tom</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Home Tel Num</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>098765432</label>
+                            </div>
+
+                        </div>
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Office Tel Num</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>098765432</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>HP Num</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>0123456789</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start">Print</a>
+                            <a id="secondNext" class="btn btn-primary  float-end" href="@Url.Action("manageProfile","Home")">Complete</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script>
+    $(document).ready(function () {
+        $('#acknowledgement-screen').attr('hidden', true);
+
+        $("input").prop('disabled', false);
+        $("select").prop('disabled', false);
+    });
+
+
+    $('#next-btn').on('click', function () {
+        Swal.fire({
+            title: 'Do you want to save the changes?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Submit',
+            allowOutsideClick: false,
+            customClass: {
+                title: 'alertFontStyle'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Your profile is modified successfully!',
+                    icon: 'success',
+                    customClass: {
+                        title: 'alertFontStyle'
+                    }
+                }).then(function () {
+                    $('#firstPage').attr('hidden', true);
+                    $('#acknowledgement-screen').attr('hidden', false);
+                });
+            }
+        })
+
+
+
+    });
+</script>
