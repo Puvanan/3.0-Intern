@@ -1,5 +1,4 @@
-﻿<div class="d-none d-lg-block" style="height:5vh;"></div>
-
+<div class="d-none d-lg-block" style="height:5vh;"></div>
 
 <div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
     <div class="row mt-2 justify-content-center">
@@ -13,33 +12,66 @@
                     </p>
                 </div>
                 <div id="firstPage" class="col-12 col-lg-8 ">
-                    <div class="row mb-2">
-                        <label for="tranAmount" class="col-sm-12 col-form-label">Select your account</label>
-                        <div class="col-sm-12 mb-2">
 
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Please select</option>
-                                <option value="">4000151818158236</option>
-                                <option value="">9577445338254589</option>
-                                <option value="">1235489818021458</option>
-                                <option value="">1235489158236111</option>
-                                <option value="">4533825382544453</option>
-                                <option value="">7445338254553684</option>
-                                <option value="">0248891234486685</option>
+                    <div class="row mb-2 d-flex justify-content-center">
 
+                        <div class="col-sm-12 d-flex flex-wrap flex-row justify-content-between">
+                            <label class="col-sm-6 col-form-label">Select your account</label>
+                        </div>
+
+                        <div class="col-sm-9">
+
+                            <select id="choices-multiple-remove-button" multiple>
+                                <option class="choice-option">40001518</option>
+                                <option class="choice-option">95774453</option>
+                                <option class="choice-option">12354898</option>
+                                <option class="choice-option">12354891</option>
+                                <option class="choice-option">14680642</option>
+                                <option class="choice-option">54670423</option>
+                                <option class="choice-option">40054898</option>
+                                <option class="choice-option">95771468</option>
                             </select>
 
                         </div>
+
+                        <div class="form-check form-switch col-sm-3 text-end p-0 py-2 pe-2">
+                            <input class="form-check-input ms-2 p-0" type="checkbox" role="switch"
+                                   id="selectAllSwitch">
+                            <label class="form-check-label" for="selectAllSwitch">Select All Account</label>
+                        </div>
+
                     </div>
 
                     <div class="row my-5 last-row">
                         <div class="col-12">
-                            <a class="btn btn-dark float-start" href="@Url.Action("CardSettings", "Home" )">
+                            <a class="btn btn-dark float-start" href="@Url.Action(" CardSettings", "Home" )">
                                 Back
                             </a>
                             <a id="firstNext" class="btn btn-primary  float-end"> Next </a>
                         </div>
                     </div>
+
+                    <div class="row my-5">
+                        <div class="alert alert-info rounded-8 shadow" role="alert">
+                            <h3>Note</h3>
+                            <ul>
+                                <li>Important: Only one handphone number for all principal card.</li>
+                                <li>
+                                    Please be informed that updates can only be effected for address in Malaysia for
+                                    principal card.
+                                </li>
+                                <li>
+                                    For request to update to overseas address, kindly email to
+                                    custsvc@publicbank.com.my or make changes at branches.
+                                </li>
+                                <li>
+                                    Any changes to your mailing or email address will only be effective in your next
+                                    statement.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div hidden id="secondPage" class="col-12 col-lg-8 ">
@@ -54,16 +86,20 @@
                                     allowed)
                                 </label>
                                 <div class="col-sm-12 my-1">
-                                    <input type="text" id="mailing" class="form-control" name="mailing" value="POS 133, BATU 4 1/4,">
-                                    <input type="text" id="mailing" class="form-control" name="mailing" value="TANJUNG GADING,">
-                                    <input type="text" id="mailing" class="form-control" name="mailing" value="84000 TANGKAK, JOHOR.">
+                                    <input type="text" id="mailing" class="form-control" name="mailing"
+                                           value="POS 133, BATU 4 1/4,">
+                                    <input type="text" id="mailing" class="form-control" name="mailing"
+                                           value="TANJUNG GADING,">
+                                    <input type="text" id="mailing" class="form-control" name="mailing"
+                                           value="84000 TANGKAK, JOHOR.">
                                 </div>
                             </div>
 
                             <div class="row mb-2">
                                 <label class="col-sm-12 col-form-label">Postcode</label>
                                 <div class="col-sm-12 my-1">
-                                    <input type="text" id="postcode" class="form-control" name="postcode" value="84000">
+                                    <input type="text" id="postcode" class="form-control" name="postcode"
+                                           value="84000">
                                 </div>
                             </div>
 
@@ -92,7 +128,8 @@
                             <div class="row mb-2">
                                 <label class="col-sm-12 col-form-label">Email Address</label>
                                 <div class="col-sm-12 my-1">
-                                    <input type="text" id="email" class="form-control" name="email" value="publicbank@gmail.com">
+                                    <input type="text" id="email" class="form-control" name="email"
+                                           value="publicbank@gmail.com">
                                 </div>
                             </div>
 
@@ -100,11 +137,13 @@
                                 <label class="col-sm-12 col-form-label">Mobile Phone Number</label>
                                 <div class="col-sm-12 my-1 d-flex flex-wrap">
                                     <div class="col-lg-3 col-md-12 col-sm-12 col-12 rightReference1 my-1">
-                                        <input type="text" id="mobile1" class="form-control" name="mobile" value="+6">
+                                        <input type="text" id="mobile1" class="form-control" name="mobile"
+                                               value="+6">
                                     </div>
 
                                     <div class="col-lg-9 col-md-12 col-sm-12 col-12 rightReference1 my-1">
-                                        <input type="text" id="mobile2" class="form-control" name="mobile" value="0123456789">
+                                        <input type="text" id="mobile2" class="form-control" name="mobile"
+                                               value="0123456789">
                                     </div>
 
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-12 rightReference1 my-1">
@@ -125,7 +164,8 @@
                                     Number
                                 </label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 my-1">
-                                    <input type="text" class="form-control" id="home" name="home" value="03-45457575">
+                                    <input type="text" class="form-control" id="home" name="home"
+                                           value="03-45457575">
                                 </div>
                             </div>
 
@@ -136,7 +176,8 @@
                                     Number
                                 </label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 my-1">
-                                    <input type="text" id="office" class="form-control" name="office" value="03-57586954">
+                                    <input type="text" id="office" class="form-control" name="office"
+                                           value="03-57586954">
                                 </div>
                             </div>
 
@@ -163,7 +204,8 @@
                                         </label>
                                     </div>
 
-                                    <select hidden class="form-select branch-select mt-1" aria-label="Default select example" id="selectBranch">
+                                    <select class="form-select branch-select mt-1"
+                                            aria-label="Default select example" id="selectBranch">
 
                                         <option selected>Select Branch</option>
 
@@ -198,8 +240,12 @@
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" id="PAC">
                                     <span>Didn't get the code</span>
-                                    <a href="#" id="ResendPAC" class="text-decoration-none ms-3 mb-2">Resend(1/3)</a>
-                                    <p class="text-muted">A 6 digit PAC will be sent to your registered mobile phone number *****6168. Please click "Request PAC" if you wish to proceed</p>
+                                    <a href="#" id="ResendPAC"
+                                       class="text-decoration-none ms-3 mb-2">Resend(1/3)</a>
+                                    <p class="text-muted">
+                                        A 6 digit PAC will be sent to your registered mobile phone
+                                        number *****6168. Please click "Request PAC" if you wish to proceed
+                                    </p>
                                 </div>
                                 <div class="col-sm-3 text-end text-lg-center mt-0 mt-lg-0">
                                     <a class="btn btn-info pac text-white float-lg-end">Request PAC</a>
@@ -216,7 +262,7 @@
 
                     <div class="row my-5 last-row">
                         <div class="col-12">
-                            <a class="btn btn-dark float-start" href="@Url.Action("CardSettings", "Home" )">
+                            <a class="btn btn-dark float-start" href="@Url.Action(" CardSettings", "Home" )">
                                 Back
                             </a>
                             <a id="secondNext" class="btn btn-primary  float-end"> Submit </a>
@@ -224,7 +270,7 @@
                         </div>
                     </div>
                 </div>
-                
+
 
                 <div hidden id="fourthPage" class="col-12 col-lg-8 mt-3 px-5">
 
@@ -243,7 +289,8 @@
                                             <tr>
 
                                                 <td id="success" style="vertical-align: middle;">
-                                                    <img src="~/Images/WebDecoratives/success.png" alt="" width="60px" height="60px">
+                                                    <img src="~/Images/WebDecoratives/success.png" alt=""
+                                                         width="60px" height="60px">
                                                 </td>
 
                                             </tr>
@@ -350,6 +397,7 @@
         </div>
     </div>
 </div>
+
 @Scripts.Render("~/bundles/jquery")
 
 <script>
@@ -357,19 +405,75 @@
 
         $('.mobileNav').each(function () {
             $(this).removeClass('active');
-        })
+        });
 
         $('.nav-link').each(function () {
             $(this).removeClass('active');
-        })
+        });
 
         $('.profile').each(function () {
             $(this).addClass('active');
         });
 
         $('.profileMenu').addClass('active');
+
+
+
+
+
+        var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+            removeItemButton: true,
+            searchEnabled: true,
+            searchChoices: true,
+            searchResultLimit: 5,
+            placeholder: true,
+            selectAll: true,
+            placeholderValue: "Search or select account(s)",
+            // searchPlaceholderValue: null,
+            // renderChoiceLimit: 5,
+        });
+
+
+
     });
 
+    $('#secondNext').on('click', function () {
+        Swal.fire({
+            title: 'Do you want to submit the changes?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Submit',
+            allowOutsideClick: false,
+            customClass: {
+                title: 'alertFontStyle'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Your mailing address has been changed!',
+                    icon: 'success',
+                    customClass: {
+                        title: 'alertFontStyle'
+                    }
+                }).then(function () {
+                    $('#thirdPage').attr('hidden', false);
+                    $('#firstPage').attr('hidden', true);
+                });
+            }
+        })
+    });
+
+    $("#selectAllSwitch").change(function () {
+        if ($(this).is(":checked")) {
+            $(".choices").addClass('is-disabled');
+            $('.choices__list').attr('hidden', true);
+            $('.choices__input').attr('disabled', true);
+        } else {
+            $(".choices").removeClass('is-disabled');
+            $('.choices__list').attr('hidden', false);
+            $('.choices__input').attr('disabled', false);
+        }
+    });
 
     $('#firstNext').on('click', function () {
         $('#secondPage').attr('hidden', false);
@@ -386,13 +490,14 @@
         )
         $('#fourthPage').attr('hidden', false);
         $('#secondPage').attr('hidden', true);
-        $('#firstPage').attr('hidden', true);            
-    })
+        $('#firstPage').attr('hidden', true);
+    });
+
     $('.pac').on('click', function () {
         Swal.fire(
             'OTP is Sent!',
             'OTP sent to your phone number 012 - * * * * 123',
             'success'
         )
-    })
+    });
 </script>
