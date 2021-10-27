@@ -358,12 +358,1019 @@
     </div>
 </div>
 
+<div class="modal fade" id="cardTranModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-white">
+
+            <div class="row">
+                <div class="modal-body">
+                    <div class="rightBlock row rounded-8 border-0  m-3 mt-0">
+                        <div class="col-12 pt-4">
+                            <div class="row">
+
+                                <div class="col-lg-8 col-10">
+                                    <h3 class="text-muted">Account Number : </h3> <h2 class="text-dark" id="tranHistoryModal">3590065120</h2>
+
+                                    <p class="text-muted small mb-4">
+                                        Your transaction information, Mon pulvinar neque laoreet suspendisse interdum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="row d-flex flex-row mb-3" id="extraFilter">
+                                <div class="col-12 row justify-content-between">
+                                    <div class="col-4" id="date1">
+                                        <input type="datetime-local" class="form-control" style="background:white!important"
+                                               id="date1" placeholder="Select Date">
+                                    </div>
+                                    <div class="col-3 btn-group" id="advancedfilter">
+                                        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            More filter
+                                        </button>
+                                        <ul class="dropdown-menu ">
+                                            <h6 class="text-muted ms-2">by days</h6>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 30 days
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 90 days
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 120 days
+                                                </label>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-check form-switch col-12 d-flex justify-content-end align-items-center"
+                                             id="ViewPbeTransactionCard">
+                                            <input class="form-check-input" type="checkbox" id="ViewPbeTransactionCard">
+                                            <label class="form-check-label px-2 mt-1" for="PbeTransaction">
+                                                View Pbe Transaction
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex flex-row justify-content-between" id="selectType">
+                                <div class="col-6">
+                                    <button type="button"
+                                            class="btn btn-sm border border-2 border-danger text-danger rounded-pill active"
+                                            id="unbilledTran" data-bs-toggle="button" autocomplete="on">
+                                        <i class="fas fa-check px-2" id="unbilledTranTick"></i>Unbilled Transaction
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div class="row justify-content-center mt-4" id="table2">
+                                <!-- modal bootstrap enhanced  -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg ">
+                                        <div class="modal-content">
+                                            <div class="modal-header  bg-dark">
+                                                <h5 class="modal-title" id="exampleModalLabel">
+                                                    Transaction
+                                                    Details
+                                                </h5>
+                                                <button type="button" class="btn-close btn-close-white"
+                                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="row">
+                                                <div class="modal-body">
+                                                    <div class="row mb-2 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Reference
+                                                            Number:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">58321</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-2 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            From
+                                                            Account:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">
+                                                                432432324
+                                                                (Savings)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-2 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Beneficiary
+                                                            Bank:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text" class="col-form-label">
+                                                                Maybank
+                                                                Berhad
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Beneficiary
+                                                            Account
+                                                            Number:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">12332322000213</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Beneficiary
+                                                            Name:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">
+                                                                MUHAMMAD AIMAN
+                                                                BIN
+                                                                ISKANDAR
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Recipient
+                                                            Reference:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">0</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Other
+                                                            Payment Details:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">test</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">Amount:</label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text" class="col-form-label">
+                                                                RM
+                                                                5.00
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">Date/Time:</label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">
+                                                                07-09-2021
+                                                                11:29:00
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Payment
+                                                            Reference:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">test</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">Source:</label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">Mobile</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-primary">Print</button>
+                                                <button type="button" class="btn btn-primary"
+                                                        data-bs-dismiss="modal">
+                                                    Close
+                                                </button>
+                                                <button type="button" class="btn btn-outline-primary">
+                                                    Save as
+                                                    PDF
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--end-->
+                                <div class="col-12 table-responsive  mt-4">
+                                    <table id="transHistoryTableCard"
+                                           class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow  bg-white align-middle">
+                                        <thead class="bg-secondary text-white rounded-8">
+                                            <tr>
+                                                <th class="small">Card Used</th>
+                                                <th class="small">Posting Date</th>
+                                                <th class="small">Transaction Date</th>
+                                                <th class="small">Transaction Description</th>
+                                                <th class="small">Transaction Amount</th>
+                                                <th class="small">DR / CR</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>9101</td>
+                                                <td>02 SEP</td>
+                                                <td>21 SEP</td>
+                                                <td class="title">STATEMENT COPY FEE</td>
+                                                <td>RM1.00</td>
+                                                <td>DR</td>
+                                            </tr>
+                                            <tr class="pbc-data">
+                                                <td>9101</td>
+                                                <td>30 SEP</td>
+                                                <td>30 SEP</td>
+                                                <td class="title">CARD SERVICE TAX INVOICE: P33-1-200930-000001</td>
+                                                <td>RM25.00</td>
+                                                <td>DR</td>
+                                            </tr>
+                                            <tr class="unbilled-data">
+                                                <td>9101</td>
+                                                <td>01 OCT</td>
+                                                <td>01 OCT</td>
+                                                <td class="title">ANNUAL CARD FEE</td>
+                                                <td>RM138.00</td>
+                                                <td>DR</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table hidden id="etransHistoryTableCard"
+                                           class="table table-borderless table-hover p-lg-2 p-0 shadow  bg-white "
+                                           style="width:100%">
+                                        <thead class="bg-secondary text-white rounded-8">
+                                            <tr>
+                                                <th class="small">
+                                                    No.
+                                                </th>
+                                                <th class="small">Transaction Date</th>
+                                                <th class="small">Transaction Type</th>
+                                                <th class="small">Transaction Reference</th>
+                                                <th class="small">Corporation Code / Name</th>
+                                                <th class="small">Bill Account Reference</th>
+                                                <th class="small">Transaction Amount</th>
+                                                <th class="small">Source</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>29-SEP-21</td>
+                                                <td class="title">-</td>
+                                                <td>829588</td>
+                                                <td class="title">-</td>
+                                                <td class="title">-</td>
+                                                <td class="text-success">RM5.06</td>
+                                                <td class="text-success">Mobile</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>2</td>
+                                                <td>24-SEP-21</td>
+                                                <td class="title">JomPAY</td>
+                                                <td>907234</td>
+                                                <td class="title">FASHION VALET SDN BHD</td>
+                                                <td class="title">100135670</td>
+                                                <td class="text-success">RM200.00</td>
+                                                <td class="text-success">PBe</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>3</td>
+                                                <td>10-SEP-21</td>
+                                                <td class="title">-</td>
+                                                <td>646271</td>
+                                                <td class="title">-</td>
+                                                <td class="title">-</td>
+                                                <td class="text-success">RM5.58</td>
+                                                <td class="text-success">Mobile</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Print</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <button type="button" hidden class="btn btn-primary">Save as PDF</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="fdTranModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-white">
+
+            <div class="row">
+                <div class="modal-body">
+                    <div class="rightBlock row rounded-8 border-0  m-3 mt-0">
+                        <div class="col-12 pt-4">
+                            <div class="row">
+
+                                <div class="col-lg-8 col-10">
+                                    <h3 class="text-muted">Account Number : </h3> <h2 class="text-dark" id="tranHistoryModal">3590065120</h2>
+
+                                    <p class="text-muted small mb-4">
+                                        Your transaction information, Mon pulvinar neque laoreet suspendisse interdum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="row d-flex flex-row mb-3" id="extraFilter">
+                                <div class="col-12 row justify-content-between">
+                                    <div class="col-4" id="date1">
+                                        <input type="datetime-local" class="form-control" style="background:white!important"
+                                               id="date1" placeholder="Select Date">
+                                    </div>
+                                    <div class="col-3 btn-group" id="advancedfilter">
+                                        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            More filter
+                                        </button>
+                                        <ul class="dropdown-menu ">
+                                            <h6 class="text-muted ms-2">by days</h6>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 30 days
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 90 days
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 120 days
+                                                </label>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-check form-switch col-12 d-flex justify-content-end align-items-center"
+                                             id="ViewPbeTransaction">
+                                            <input class="form-check-input" type="checkbox" id="ViewPbeTransactionFD">
+                                            <label class="form-check-label px-2 mt-1" for="PbeTransactionFD">
+                                                View Pbe Transaction
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center mt-4" id="table2">
+                                <!-- modal bootstrap enhanced  -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg ">
+                                        <div class="modal-content">
+                                            <div class="modal-header  bg-dark">
+                                                <h5 class="modal-title" id="exampleModalLabel">
+                                                    Transaction
+                                                    Details
+                                                </h5>
+                                                <button type="button" class="btn-close btn-close-white"
+                                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="row">
+                                                <div class="modal-body">
+                                                    <div class="row mb-2 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Reference
+                                                            Number:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">58321</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-2 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            From
+                                                            Account:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">
+                                                                432432324
+                                                                (Savings)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-2 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Beneficiary
+                                                            Bank:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text" class="col-form-label">
+                                                                Maybank
+                                                                Berhad
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Beneficiary
+                                                            Account
+                                                            Number:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">12332322000213</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Beneficiary
+                                                            Name:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">
+                                                                MUHAMMAD AIMAN
+                                                                BIN
+                                                                ISKANDAR
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Recipient
+                                                            Reference:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">0</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Other
+                                                            Payment Details:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">test</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">Amount:</label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text" class="col-form-label">
+                                                                RM
+                                                                5.00
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">Date/Time:</label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">
+                                                                07-09-2021
+                                                                11:29:00
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">
+                                                            Payment
+                                                            Reference:
+                                                        </label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">test</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3 ms-4">
+                                                        <label for="paymentType"
+                                                               class="col-sm-4 col-form-label text-muted">Source:</label>
+                                                        <div class="col-sm-8">
+                                                            <label for="message-text"
+                                                                   class="col-form-label">Mobile</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-primary">Print</button>
+                                                <button type="button" class="btn btn-primary"
+                                                        data-bs-dismiss="modal">
+                                                    Close
+                                                </button>
+                                                <button type="button" class="btn btn-outline-primary">
+                                                    Save as
+                                                    PDF
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--end-->
+                                <div class="col-12 table-responsive  mt-4">
+                                    <table id="transHistoryTableFD"
+                                           class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow  bg-white align-middle">
+                                        <thead class="bg-secondary text-white rounded-8">
+                                            <tr>
+                                                <th class="small">Transaction Date</th>
+                                                <th class="small">Transaction Description</th>
+                                                <th class="small">Debit Amount</th>
+                                                <th class="small">Credit Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>29-SEP-21</td>
+                                                <td class="title">INT CR-INT CYCLE CD: 560655</td>
+                                                <td></td>
+                                                <td class="title">RM29.53</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>29-SEP-21</td>
+                                                <td class="title">INT CR-INT CYCLE CD: 000175</td>
+                                                <td></td>
+                                                <td class="title">RM221,917.80</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>29-SEP-21</td>
+                                                <td class="title">INTEREST TRANSFER CD: 000175</td>
+                                                <td>RM221,917.80</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>29-SEP-21</td>
+                                                <td class="title">INT CR-INT CYCLE CD: 001000</td>
+                                                <td>RM200.00</td>
+                                                <td class="title">0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table hidden id="etransHistoryTableFD"
+                                           class="table table-borderless table-hover p-lg-2 p-0 shadow  bg-white "
+                                           style="width:100%">
+                                        <thead class="bg-secondary text-white rounded-8">
+                                            <tr>
+                                                <th class="small">
+                                                    No.
+                                                </th>
+                                                <th class="small">Transaction Date</th>
+                                                <th class="small">Transaction Type</th>
+                                                <th class="small">Transaction Reference</th>
+                                                <th class="small">Corporation Code / Name</th>
+                                                <th class="small">Bill Account Reference</th>
+                                                <th class="small">Transaction Amount</th>
+                                                <th class="small">Source</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>29-SEP-21</td>
+                                                <td class="title">-</td>
+                                                <td>829588</td>
+                                                <td class="title">-</td>
+                                                <td class="title">-</td>
+                                                <td class="text-success">RM5.06</td>
+                                                <td class="text-success">Mobile</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>2</td>
+                                                <td>24-SEP-21</td>
+                                                <td class="title">JomPAY</td>
+                                                <td>907234</td>
+                                                <td class="title">FASHION VALET SDN BHD</td>
+                                                <td class="title">100135670</td>
+                                                <td class="text-success">RM200.00</td>
+                                                <td class="text-success">PBe</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>3</td>
+                                                <td>10-SEP-21</td>
+                                                <td class="title">-</td>
+                                                <td>646271</td>
+                                                <td class="title">-</td>
+                                                <td class="title">-</td>
+                                                <td class="text-success">RM5.58</td>
+                                                <td class="text-success">Mobile</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Print</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <button type="button" hidden class="btn btn-primary">Save as PDF</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="giTranModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-white">
+
+            <div class="row">
+                <div class="modal-body">
+                    <div class="rightBlock row rounded-8 border-0  m-3 mt-0">
+                        <div class="col-12 pt-4">
+                            <div class="row">
+
+                                <div class="col-lg-8 col-10">
+                                    <h3 class="text-muted">Account Number : </h3> <h2 class="text-dark" id="tranHistoryModal">3590065120</h2>
+
+                                    <p class="text-muted small mb-4">
+                                        Your transaction information, Mon pulvinar neque laoreet suspendisse interdum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="row d-flex flex-row mb-3" id="extraFilter">
+                                <div class="col-12 row justify-content-between">
+                                    <div class="col-4" id="date1">
+                                        <input type="datetime-local" class="form-control" style="background:white!important"
+                                               id="date1" placeholder="Select Date">
+                                    </div>
+                                    <div class="col-3 btn-group" id="advancedfilter">
+                                        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            More filter
+                                        </button>
+                                        <ul class="dropdown-menu ">
+                                            <h6 class="text-muted ms-2">by days</h6>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 30 days
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 90 days
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 120 days
+                                                </label>
+                                            </div>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center mt-4" id="table2">
+                                <div class="col-12 table-responsive  mt-4">
+                                    <table id="transHistoryTableFD"
+                                           class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow  bg-white align-middle">
+                                        <thead class="bg-secondary text-white rounded-8">
+                                            <tr>
+                                                <th class="small">Transaction Date</th>
+                                                <th class="small">Transaction Description</th>
+                                                <th class="small">Debit Unit</th>
+                                                <th class="small">Credit Unit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>29-SEP-21</td>
+                                                <td class="title">Credit Unit</td>
+                                                <td>0</td>
+                                                <td class="title">29.53</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>29-SEP-21</td>
+                                                <td class="title">Credit Unit</td>
+                                                <td>0</td>
+                                                <td class="title">221,917.80</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>29-SEP-21</td>
+                                                <td class="title">Debit Unit</td>
+                                                <td>221,917.80</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>29-SEP-21</td>
+                                                <td class="title">Credit Unit</td>
+                                                <td>200.00</td>
+                                                <td class="title">0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table hidden id="etransHistoryTableFD"
+                                           class="table table-borderless table-hover p-lg-2 p-0 shadow  bg-white "
+                                           style="width:100%">
+                                        <thead class="bg-secondary text-white rounded-8">
+                                            <tr>
+                                                <th class="small">
+                                                    No.
+                                                </th>
+                                                <th class="small">Transaction Date</th>
+                                                <th class="small">Transaction Type</th>
+                                                <th class="small">Transaction Reference</th>
+                                                <th class="small">Corporation Code / Name</th>
+                                                <th class="small">Bill Account Reference</th>
+                                                <th class="small">Transaction Amount</th>
+                                                <th class="small">Source</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>29-SEP-21</td>
+                                                <td class="title">-</td>
+                                                <td>829588</td>
+                                                <td class="title">-</td>
+                                                <td class="title">-</td>
+                                                <td class="text-success">RM5.06</td>
+                                                <td class="text-success">Mobile</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>2</td>
+                                                <td>24-SEP-21</td>
+                                                <td class="title">JomPAY</td>
+                                                <td>907234</td>
+                                                <td class="title">FASHION VALET SDN BHD</td>
+                                                <td class="title">100135670</td>
+                                                <td class="text-success">RM200.00</td>
+                                                <td class="text-success">PBe</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>3</td>
+                                                <td>10-SEP-21</td>
+                                                <td class="title">-</td>
+                                                <td>646271</td>
+                                                <td class="title">-</td>
+                                                <td class="title">-</td>
+                                                <td class="text-success">RM5.58</td>
+                                                <td class="text-success">Mobile</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Print</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <button type="button" hidden class="btn btn-primary">Save as PDF</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="lfTranModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-white">
+
+            <div class="row">
+                <div class="modal-body">
+                    <div class="rightBlock row rounded-8 border-0  m-3 mt-0">
+                        <div class="col-12 pt-4">
+                            <div class="row">
+
+                                <div class="col-lg-8 col-10">
+                                    <h3 class="text-muted">Account Number : </h3> <h2 class="text-dark" id="tranHistoryModal">3590065120</h2>
+
+                                    <p class="text-muted small mb-4">
+                                        Your transaction information, Mon pulvinar neque laoreet suspendisse interdum.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="row d-flex flex-row mb-3" id="extraFilter">
+                                <div class="col-12 row justify-content-between">
+                                    <div class="col-4" id="date1">
+                                        <input type="datetime-local" class="form-control" style="background:white!important"
+                                               id="date1" placeholder="Select Date">
+                                    </div>
+                                    <div class="col-3 btn-group" id="advancedfilter">
+                                        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            More filter
+                                        </button>
+                                        <ul class="dropdown-menu ">
+                                            <h6 class="text-muted ms-2">by days</h6>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 30 days
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 90 days
+                                                </label>
+                                            </div>
+                                            <div class="form-check ms-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Last 120 days
+                                                </label>
+                                            </div>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center mt-4" id="table2">
+                                <div class="col-12 table-responsive  mt-4">
+                                    <table id="transHistoryTableFD"
+                                           class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow  bg-white align-middle">
+                                        <thead class="bg-secondary text-white rounded-8">
+                                            <tr>
+                                                <th class="small">Transaction Date</th>
+                                                <th class="small">Transaction Type</th>
+                                                <th class="small">Transaction Description</th>
+                                                <th class="small">Debit Amount</th>
+                                                <th class="small">Credit Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>29-SEP-21</td>
+                                                <td class="title">614</td>
+                                                <td>PAYMENT LEE Y`N F`N</td>
+                                                <td class="title">0</td>
+                                                <td class="title">RM1.00</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                    <table hidden id="etransHistoryTableFD"
+                                           class="table table-borderless table-hover p-lg-2 p-0 shadow  bg-white "
+                                           style="width:100%">
+                                        <thead class="bg-secondary text-white rounded-8">
+                                            <tr>
+                                                <th class="small">
+                                                    No.
+                                                </th>
+                                                <th class="small">Transaction Date</th>
+                                                <th class="small">Transaction Type</th>
+                                                <th class="small">Transaction Reference</th>
+                                                <th class="small">Corporation Code / Name</th>
+                                                <th class="small">Bill Account Reference</th>
+                                                <th class="small">Transaction Amount</th>
+                                                <th class="small">Source</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>29-SEP-21</td>
+                                                <td class="title">-</td>
+                                                <td>829588</td>
+                                                <td class="title">-</td>
+                                                <td class="title">-</td>
+                                                <td class="text-success">RM5.06</td>
+                                                <td class="text-success">Mobile</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>2</td>
+                                                <td>24-SEP-21</td>
+                                                <td class="title">JomPAY</td>
+                                                <td>907234</td>
+                                                <td class="title">FASHION VALET SDN BHD</td>
+                                                <td class="title">100135670</td>
+                                                <td class="text-success">RM200.00</td>
+                                                <td class="text-success">PBe</td>
+                                            </tr>
+                                            <tr class="pbe-data">
+                                                <td>3</td>
+                                                <td>10-SEP-21</td>
+                                                <td class="title">-</td>
+                                                <td>646271</td>
+                                                <td class="title">-</td>
+                                                <td class="title">-</td>
+                                                <td class="text-success">RM5.58</td>
+                                                <td class="text-success">Mobile</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Print</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <button type="button" hidden class="btn btn-primary">Save as PDF</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-md modal-dialog-centered">
-        <div class="modal-content bg-white px-4">           
+        <div class="modal-content bg-white px-4">
             <div class="row pb-3 border-bottom">
                 <div class="col-12 text-center pb-4">
-                    <img src="~/Images/WebDecoratives/tick-success-svgrepo-com.svg"class="img-fluid"style="width:85px; margin-top:-40px" />
+                    <img src="~/Images/WebDecoratives/tick-success-svgrepo-com.svg" class="img-fluid" style="width:85px; margin-top:-40px" />
                 </div>
                 <div class="col-12 text-center">
                     <h3>RM 5.00</h3>
@@ -416,17 +1423,17 @@
                         </div>
                     </div>
                     @*<div class="row">
-                        <label for="paymentType" class="col-sm-5 text-start text-muted">Amount:</label>
-                        <div class="col-sm-7 text-end">
-                            <label for="message-text" class="col-form-label pt-0">RM 5.00</label>
-                        </div>
-                    </div>*@
+                            <label for="paymentType" class="col-sm-5 text-start text-muted">Amount:</label>
+                            <div class="col-sm-7 text-end">
+                                <label for="message-text" class="col-form-label pt-0">RM 5.00</label>
+                            </div>
+                        </div>*@
                     @*<div class="row">
-                        <label for="paymentType" class="col-sm-5 text-start text-muted">Date/Time:</label>
-                        <div class="col-sm-7 text-end">
-                            <label for="message-text" class="col-form-label pt-0">07-09-2021 11:29:00</label>
-                        </div>
-                    </div>*@
+                            <label for="paymentType" class="col-sm-5 text-start text-muted">Date/Time:</label>
+                            <div class="col-sm-7 text-end">
+                                <label for="message-text" class="col-form-label pt-0">07-09-2021 11:29:00</label>
+                            </div>
+                        </div>*@
                     <div class="row">
                         <label for="paymentType" class="col-sm-5 text-start text-muted">Payment Reference:</label>
                         <div class="col-sm-7 text-end">
@@ -586,7 +1593,7 @@
 
             <div class="row accMainLayout">
                 <div class="col-sm-12 col-xl-12 bodyCol row  justify-content-lg-between">
-                    <div class="leftBlock col-12 col-lg-6 p-0 ps-1">
+                    <div class="leftBlock col-12 col-lg-5 p-0 ps-1">
                         <h3>My Accounts</h3>
                         <p class="text-muted">Click Account Type</p>
                         <div class="rightBlock row">
@@ -658,69 +1665,183 @@
                                     <h5 class="ps-3 mb-4 text-success">Total Balance: RM42150.00</h5>
                                 </div>
                                 <ul class="list-group">
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0 active">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 pt-2 pb-3 px-0 zindex0 active">
                                         <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox currentAcc p-0">
+                                            <div class="iconBox currentAcc p-0 my-auto">
                                                 <span class="mx-auto"><i class="fas fa-id-card"></i></span>
                                             </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">Current Account</p>
-                                                <p class="text-muted mb-0">3590065120</p>
+                                            <div class="ms-2 accListTitleAndNum w-100">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input hidden class="accountName form-control mb-0 bg-white border-0 rounded-3" hidden  type="text" id="accountName"
+                                                               name="accountName" placeholder="Create Nickname" value="" disabled>
+                                                        <p class="initLabel pt-1 text-muted mb-0" style="padding-left: 0.75rem;">Current Account</p>
+
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span class="editBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </span>
+
+                                                        <span class="saveBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-save"></i> Save
+                                                        </span>
+
+                                                        <span class="cancelBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-times-circle"></i> Cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <p hidden>Current Account</p>
+                                                <p hidden>3590065120</p>
+                                                <div class="row">
+                                                    <p class="text-black fw-bold mb-0 ps-4">3590065120</p>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-4 accBalance ">
-                                            <p class="text-end">RM 300.00</p>
+                                        <div class="col-4 accBalance my-auto">
+                                            <p class="text-end text-success fw-bold mb-0">RM 300.00</p>
+                                            <div class="border border-1  ms-auto text-center rounded-3" style="max-width:120px">
+                                                <p class="mb-0 small text-dark">Current Account</p>
+                                            </div>
+
                                         </div>
                                     </li>
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 pt-2 pb-3 px-0 zindex0">
                                         <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox savingAcc p-0">
-                                                <span class="mx-auto"><i class="fas fa-briefcase"></i></span>
-                                            </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">Savings Account</p>
-                                                <p class="text-muted mb-0">3001198511</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-4 accBalance">
-                                            <p class="text-end">RM 1100.00</p>
-                                        </div>
-
-                                    </li>
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
-                                        <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox currentAcc p-0">
-                                                <span class="mx-auto"><i class="fas fa-briefcase"></i></span>
-                                            </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">Current Account</p>
-                                                <p class="text-muted mb-0">3001320213</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-4 accBalance">
-                                            <p class="text-end">RM 35,000.00</p>
-                                        </div>
-
-                                    </li>
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
-                                        <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox savingAcc p-0">
+                                            <div class="iconBox currentAcc p-0 my-auto">
                                                 <span class="mx-auto"><i class="fas fa-id-card"></i></span>
                                             </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">Savings Account</p>
-                                                <p class="text-muted mb-0">4000151818</p>
+                                            <div class="ms-2 accListTitleAndNum w-100">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input hidde class="accountName form-control mb-0 bg-white border-0 rounded-3" hidden  type="text" id="accountName"
+                                                               name="accountName" placeholder="Create Nickname" value="" disabled>
+                                                        <p class="initLabel pt-1 text-muted mb-0" style="padding-left: 0.75rem;">Savings Account</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span class="editBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </span>
+
+                                                        <span class="saveBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-save"></i> Save
+                                                        </span>
+
+                                                        <span class="cancelBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-times-circle"></i> Cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <p hidden>
+                                                    Savings Account
+                                                </p>
+                                                <p hidden>3001198511</p>
+                                                <div class="row">
+                                                    <p class="text-black fw-bold mb-0 ps-4">3001198511</p>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-4 accBalance">
-                                            <p class="text-end">RM 5750.00</p>
+                                        <div class="col-4 accBalance my-auto">
+                                            <p class="text-end text-success fw-bold mb-0">RM 1100.00</p>
+                                            <div class="border border-1 ms-auto text-center rounded-3" style="max-width:120px">
+                                                <p class="mb-0 small text-dark">Savings Account</p>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 pt-2 pb-3 px-0 zindex0 ">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox currentAcc p-0 my-auto">
+                                                <span class="mx-auto"><i class="fas fa-id-card"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum w-100">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input class="accountName form-control mb-0 bg-white border-0 rounded-3" hidden  type="text" id="accountName"
+                                                               name="accountName" placeholder="Create Nickname" value="" disabled>
+                                                        <p class="initLabel pt-1 text-muted mb-0" style="padding-left: 0.75rem;">Savings Account</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span class="editBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </span>
+
+                                                        <span class="saveBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-save"></i> Save
+                                                        </span>
+
+                                                        <span class="cancelBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-times-circle"></i> Cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <p hidden>
+                                                    Savings Account
+                                                </p>
+                                                <p hidden>4000151818</p>
+                                                <div class="row">
+                                                    <p class="text-black fw-bold mb-0 ps-4">4000151818</p>
+                                                </div>
+                                            </div>
                                         </div>
 
+                                        <div class="col-4 accBalance my-auto">
+                                            <p class="text-end text-success fw-bold mb-0">RM 5750.00</p>
+                                            <div class="border border-1  ms-auto text-center rounded-3" style="max-width:120px">
+                                                <p class="mb-0 small text-dark">Savings  Account</p>
+                                            </div>
+
+                                        </div>
                                     </li>
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 pt-2 pb-3 px-0 zindex0 ">
+                                        <div class="col-8 d-flex flex-row">
+                                            <div class="iconBox currentAcc p-0 my-auto">
+                                                <span class="mx-auto"><i class="fas fa-id-card"></i></span>
+                                            </div>
+                                            <div class="ms-2 accListTitleAndNum w-100">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input class="accountName form-control mb-0 bg-white border-0 rounded-3" hidden  type="text" id="accountName"
+                                                               name="accountName" placeholder="Create Nickname" value="" disabled>
+                                                        <p class="initLabel pt-1 text-muted mb-0" style="padding-left: 0.75rem;">Current Account</p>
+
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span class="editBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </span>
+
+                                                        <span class="saveBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-save"></i> Save
+                                                        </span>
+
+                                                        <span class="cancelBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-times-circle"></i> Cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <p hidden>
+                                                    Current Account
+                                                </p>
+                                                <p hidden>3001320213</p>
+                                                <div class="row">
+                                                    <p class="text-black fw-bold mb-0 ps-4">3001320213</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 accBalance my-auto">
+                                            <p class="text-end text-success fw-bold mb-0">RM 35,000.00</p>
+                                            <div class="border border-1 ms-auto text-center rounded-3" style="max-width:120px">
+                                                <p class="mb-0 small text-dark">Current Account</p>
+                                            </div>
+
+                                        </div>
+                                    </li>
+
 
 
                                 </ul>
@@ -744,39 +1865,99 @@
 
                                 </div>
                                 <ul class="list-group">
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 pt-2 pb-3 px-0 zindex0 active">
                                         <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox savingAcc p-0">
-                                                <span class="mx-auto"><i class="fas fa-chart-line"></i></span>
+                                            <div class="iconBox currentAcc p-0 my-auto">
+                                                <span class="mx-auto"><i class="fas fa-id-card"></i></span>
                                             </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">Visa Credit Card</p>
-                                                <p class="text-muted mb-0">4366880090092110</p>
-                                                <p class="d-none">Active</p>
+                                            <div class="ms-2 accListTitleAndNum w-100">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input class="accountName form-control mb-0 bg-white border-0 rounded-3" hidden  type="text" id="accountName"
+                                                               name="accountName" placeholder="Create Nickname" value="" disabled>
+                                                        <p class="initLabel pt-1 text-muted mb-0" style="padding-left: 0.75rem;">Visa Credit Card</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span class="editBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </span>
+
+                                                        <span class="saveBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-save"></i> Save
+                                                        </span>
+
+                                                        <span class="cancelBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-times-circle"></i> Cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <p hidden>
+                                                    Visa Credit Card
+                                                </p>
+                                                <p hidden>4366880090092110</p>
+                                                <div class="row">
+                                                    <p class="text-black fw-bold mb-0 ps-4">4366880090092110</p>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-4 accBalance">
-                                            <p class="text-end">RM 1100.00</p>
-                                        </div>
+                                        <div class="col-4 accBalance my-auto">
+                                            <p class="text-end text-success fw-bold mb-0">RM 1100.00</p>
+                                            <div class="border border-1  ms-auto text-center rounded-3" style="max-width:85px">
+                                                <p class="mb-0 small text-dark">
+                                                    Visa Card
+                                                </p>
+                                            </div>
 
+                                        </div>
                                     </li>
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 pt-2 pb-3 px-0 zindex0 active">
                                         <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox savingAcc p-0">
-                                                <span class="mx-auto"><i class="fas fa-chart-line"></i></span>
+                                            <div class="iconBox currentAcc p-0 my-auto">
+                                                <span class="mx-auto"><i class="fas fa-id-card"></i></span>
                                             </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">MasterCard</p>
-                                                <p class="text-muted mb-0">4366880090075115</p>
-                                                <p class="d-none">Active</p>
+                                            <div class="ms-2 accListTitleAndNum w-100">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input class="accountName form-control mb-0 bg-white border-0 rounded-3" hidden  type="text" id="accountName"
+                                                               name="accountName" placeholder="Create Nickname" value="" disabled>
+                                                        <p class="initLabel pt-1 text-muted mb-0" style="padding-left: 0.75rem;">MasterCard</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span class="editBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </span>
+
+                                                        <span class="saveBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-save"></i> Save
+                                                        </span>
+
+                                                        <span class="cancelBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-times-circle"></i> Cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <p hidden>
+
+                                                    MasterCard
+                                                </p>
+                                                <p hidden>4366880090075115</p>
+                                                <div class="row">
+                                                    <p class="text-black fw-bold mb-0 ps-4">4366880090075115</p>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-4 accBalance">
-                                            <p class="text-end">RM 6398.20</p>
-                                        </div>
+                                        <div class="col-4 accBalance my-auto">
+                                            <p class="text-end text-success fw-bold mb-0">RM 1100.00</p>
+                                            <div class="border border-1  ms-auto text-center rounded-3" style="max-width:90px">
+                                                <p class="mb-0 small text-dark">
 
+                                                    MasterCard
+                                                </p>
+                                            </div>
+
+                                        </div>
                                     </li>
 
 
@@ -786,58 +1967,101 @@
                                 <div class="accTypeTitle ms-1">
                                     <h5 class="mb-1">Fixed Deposit / Islamic Term Deposit</h5>
                                     <p class="text-muted">Tap any account to view more details</p>
-                                    <h5 class="mb-4 text-success">Total Balance: RM234976.23</h5>
                                 </div>
-
-                                <ul class="list-group">
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                <div class="col-12 ms-1 mt-2 mt-lg-0">
+                                    <p class="font-medium">Sum of Deposit Amounts: RM 234,976.23</p>
+                                </div>
+                                <ul class="list-group loanListAccordian">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 pt-2 pb-3 px-0 zindex0 active">
                                         <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox savingAcc activeAcc p-0">
-                                                <span><i class="fas fa-coins"></i></span>
+                                            <div class="iconBox currentAcc p-0 my-auto">
+                                                <span class="mx-auto"><i class="fas fa-star-and-crescent"></i></span>
                                             </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">Fixed Deposit</p>
-                                                <p class="text-muted mb-0">1141406607</p>
+                                            <div class="ms-2 accListTitleAndNum w-100">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input class="accountName form-control mb-0 bg-white border-0 rounded-3" hidden type="text"
+                                                               id="accountName" name="accountName" placeholder="Create Nickname" value="" disabled>
+                                                        <p class="initLabel pt-1 text-muted mb-0" style="padding-left: 0.75rem;">
+                                                            Islamic Term Deposit
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span class="editBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </span>
+
+                                                        <span class="saveBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-save"></i> Save
+                                                        </span>
+
+                                                        <span class="cancelBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-times-circle"></i> Cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <p hidden>Islamic Term Deposit</p>
+                                                <p hidden>7024015960</p>
+                                                <div class="row">
+                                                    <p class="text-black fw-bold mb-0 ps-4">7024015960</p>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-4 accBalance">
-                                            <p class="text-end">RM 222, 179.83</p>
-                                        </div>
+                                        <div class="col-4 accBalance my-auto">
+                                            <p class="text-end text-success fw-bold mb-0">RM 6398.20</p>
+                                            <div class="border border-1  ms-auto text-center rounded-3" style="max-width:150px">
+                                                <p class="mb-0 small text-dark">
+                                                    Islamic Term Deposit
+                                                </p>
+                                            </div>
 
+                                        </div>
                                     </li>
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0 dormant">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 pt-2 pb-3 px-0 zindex0 active">
                                         <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox savingAcc dormantAcc p-0">
-                                                <span><i class="fas fa-star-and-crescent"></i></span>
+                                            <div class="iconBox currentAcc p-0 my-auto">
+                                                <span class="mx-auto"><i class="fas fa-coins"></i></span>
                                             </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">Islamic Term Deposit</p>
-                                                <p class="text-muted mb-0">7024015960</p>
+                                            <div class="ms-2 accListTitleAndNum w-100">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input class="accountName form-control mb-0 bg-white border-0 rounded-3" hidden type="text"
+                                                               id="accountName" name="accountName" placeholder="Create Nickname" value="" disabled>
+                                                        <p class="initLabel pt-1 text-muted mb-0" style="padding-left: 0.75rem;">Fixed Deposit</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span class="editBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </span>
+
+                                                        <span class="saveBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-save"></i> Save
+                                                        </span>
+
+                                                        <span class="cancelBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-times-circle"></i> Cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <p hidden>Fixed Deposit</p>
+                                                <p hidden>7000015320</p>
+                                                <div class="row">
+                                                    <p class="text-black fw-bold mb-0 ps-4">7000015320</p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-4 accBalance">
-                                            <p class="text-end">RM 6398.20</p>
+
+                                        <div class="col-4 accBalance my-auto">
+                                            <p class="text-end text-success fw-bold mb-0">RM 6398.20</p>
+                                            <div class="border border-1  ms-auto text-center rounded-3" style="max-width:150px">
+                                                <p class="mb-0 small text-dark">
+                                                    Fixed Deposit
+                                                </p>
+                                            </div>
+
                                         </div>
                                     </li>
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0 dormant">
-                                        <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox savingAcc dormantAcc p-0">
-                                                <span><i class="fas fa-coins"></i></span>
-                                            </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">Fixed Deposit</p>
-                                                <p class="text-muted mb-0">7000015320</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-4 accBalance">
-                                            <p class="text-end">RM 6398.20</p>
-                                        </div>
-
-                                    </li>
-
-
                                 </ul>
 
                             </div>
@@ -885,38 +2109,92 @@
                                     <h5 class="mb-4 text-success">Total Balance: 1,270 Gram</h5>
                                 </div>
                                 <ul class="list-group">
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0 dormant">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 pt-2 pb-3 px-0 zindex0">
                                         <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox savingAcc dormantAcc p-0">
-                                                <span><i class="fas fa-coins"></i></span>
+                                            <div class="iconBox currentAcc p-0 my-auto">
+                                                <span class="mx-auto"><i class="fas fa-coins"></i></span>
                                             </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">
+                                            <div class="ms-2 accListTitleAndNum w-100">
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <input class="accountName form-control mb-0 bg-white border-0 rounded-3" hidden  type="text" id="accountName"
+                                                               name="accountName" placeholder="Create Nickname" value="" disabled>
+                                                        <p class="initLabel pt-1 text-muted mb-0" style="padding-left: 0.75rem;">Gold Investment</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span class="editBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </span>
+
+                                                        <span class="saveBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-save"></i> Save
+                                                        </span>
+
+                                                        <span class="cancelBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-times-circle"></i> Cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <p hidden>
                                                     Gold Investment
                                                 </p>
-                                                <p class="text-muted mb-0 accNum">6591580202</p>
+                                                <p hidden>6591580202</p>
+                                                <div class="row">
+                                                    <p class="text-black fw-bold mb-0 ps-4">6591580202</p>
+                                                </div>
                                             </div>
-                                            <p hidden class="statementGold">11/10/2027</p>
                                         </div>
-                                        <div class="col-4 accBalance">
-                                            <p class="text-end">
-                                                1,065 Grams
-                                            </p>
+
+                                        <div class="col-4 accBalance my-auto">
+                                            <p class="text-end text-success fw-bold mb-0">1,065 Grams</p>
+                                            <div class="border border-1 ms-auto text-center rounded-3" style="max-width:120px">
+                                                <p class="mb-0 small text-dark">Gold Investment</p>
+                                            </div>
+
                                         </div>
                                     </li>
-                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 py-3 px-0 zindex0">
+                                    <li class="row justify-content-between list-group-item shadow-sm my-2 mx-1 pt-2 pb-3 px-0 zindex0">
                                         <div class="col-8 d-flex flex-row">
-                                            <div class="iconBox savingAcc activeAcc p-0">
-                                                <span><i class="fas fa-coins"></i></span>
+                                            <div class="iconBox currentAcc p-0 my-auto">
+                                                <span class="mx-auto"><i class="fas fa-coins"></i></span>
                                             </div>
-                                            <div class="ms-2 accListTitleAndNum">
-                                                <p class="mb-0">Gold Investment</p>
-                                                <p class="text-muted mb-0 accNum">1151403609</p>
+                                            <div class="ms-2 accListTitleAndNum w-100">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input class="accountName form-control mb-0 bg-white border-0 rounded-3" hidden  type="text" id="accountName"
+                                                               name="accountName" placeholder="Create Nickname" value="" disabled>
+                                                        <p class="initLabel pt-1 text-muted mb-0" style="padding-left: 0.75rem;">Gold Investment</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span class="editBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-edit"></i> Edit
+                                                        </span>
+
+                                                        <span class="saveBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-save"></i> Save
+                                                        </span>
+
+                                                        <span class="cancelBtn badge bg-warning text-dark editBadge ms-1 mt-2 p-1">
+                                                            <i class="far fa-times-circle"></i> Cancel
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <p hidden>
+                                                    Gold Investment
+                                                </p>
+                                                <p hidden>1151403609</p>
+                                                <div class="row">
+                                                    <p class="text-black fw-bold mb-0 ps-4">1151403609</p>
+                                                </div>
                                             </div>
-                                            <p hidden class="statementGold">11/10/2024</p>
                                         </div>
-                                        <div class="col-4 accBalance">
-                                            <p class="text-end">0,205 Grams</p>
+
+                                        <div class="col-4 accBalance my-auto">
+                                            <p class="text-end text-success fw-bold mb-0">0,205 Grams</p>
+                                            <div class="border border-1 ms-auto text-center rounded-3" style="max-width:120px">
+                                                <p class="mb-0 small text-dark">Gold Investment</p>
+                                            </div>
+
                                         </div>
                                     </li>
                                 </ul>
@@ -1000,16 +2278,16 @@
                         </div>
                     </div>
 
-                    <div class="accDetailsCon h-100 col-5 ">
-                        <div class="px-5  bg-white py-4 rounded-8 shadow">
+                    <div class="accDetailsCon h-100 col-6 ">
+                        <div class="bg-white rounded-8 shadow" style="padding:2rem 4rem">
                             <div class="row">
                                 <div class="col-12">
-                                    <h4 id="accNameTitle" class="mb-5"></h4>
+                                    <h4 id="accNameTitle" hidden class="mb-5"></h4>
                                 </div>
                             </div>
                             <div id="CASAIllustration" class="row pt-4 justify-content-start pt-lg-2 pb-3">
                                 <div class="col-12 col-lg-12 px-lg-0 mx-auto" style="padding:0 2rem; max-width:360px">
-                                    <div class="px-4 py-lg-45 py-3 bg-gradient-3 rounded-8" id="firstCard">
+                                    <div class="px-4 py-lg-45 py-3 bg-gradient-3 rounded-8" style="height:200px" id="firstCard">
                                         <div class="row h-100">
                                             <div class="col-12 mt-2">
                                                 <p class="h4 text-white" id="accTypeTitle">Savings Account</p>
@@ -1034,25 +2312,32 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-4 my-auto">
-
+                                            <div class="col-4 my-auto text-end">
+                                                <img src="~/Images/WebDecoratives/contactless-white.png" class="img-fluid "  />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row justify-content-center mt-5 ps-3 text-center">
-                                    <a href="@Url.Action("CardSettings", "Home" )" class="text-black" style="text-align:-webkit-center;">
-                                        <div hidden id="CardSettings" class="col-5 text-center ">
-                                            <div class="row border h-100 rounded-8 bg-white shadow-sm p-2">
-                                                <div class="col-lg-2 col-12  my-auto ">
-                                                    <i class="ri-settings-2-line ri-xl" style="line-height:1.5"></i>
-                                                </div>
-                                                <div class="col-lg-10 col-12 my-auto">
-                                                    <p class="text-center small mb-0">Card Settings</p>
-                                                </div>
-                                            </div>
+                                <div class="row justify-content-center mt-5 text-center" style="padding:1rem 3.2rem">
+                                    <div class="col-3">
+                                        <div class="rounded-circle bg-primary" style="max-width: 43px;height: 41px;font-size: 16px;margin: 0 auto;padding: 10px;text-align: center;">
+                                            <i class="fa fa-cog text-white"></i>
                                         </div>
-                                    </a>
+                                        <p class="pt-2 text-center small">Card Settings</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="rounded-circle bg-primary" style="max-width: 43px;height: 41px;font-size: 16px;margin: 0 auto;padding: 10px;text-align: center;">
+                                            <i class="fa fa-receipt text-white"></i>
+                                        </div>
+                                        <p class="pt-2 text-center small">Direct Mandate</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="rounded-circle bg-primary" style="max-width: 43px;height: 41px;font-size: 16px;margin: 0 auto;padding: 10px;text-align: center;">
+                                            <i class="fa fa-id-card text-white"></i>
+                                        </div>
+                                        <p class="pt-2 text-center small">Edit Nickname</p>
+                                    </div>
+
 
                                 </div>
                             </div>
@@ -1099,7 +2384,7 @@
                                 </a>
                             </div>
 
-                            <div class="accDetails my-3">
+                            <div class="accDetails mb-3 mt-2 px-5">
                                 <div class="casaAccDetails" id="casaAccDetails">
                                     <div class="row" id="accNumber">
                                         <div class="col-8">
@@ -1467,8 +2752,8 @@
                             </div>
 
                             <div hidden class="actionBtnGroup text-center actGrp" id="actGrpCard">
-                                <a class="btn btn-sm btn-primary mt-2 d-lg-inline-block d-none " href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    View Transaction History
+                                <a class="btn btn-sm btn-primary mt-2 d-lg-inline-block d-none " href="" data-bs-toggle="modal" data-bs-target="#cardTranModal">
+                                    View Latest Statement
                                 </a>
 
                                 <a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
@@ -1477,7 +2762,7 @@
                             </div>
 
                             <div hidden class="actionBtnGroup text-center actGrp" id="actGrpFD">
-                                <a class="btn btn-sm btn-primary mt-2 d-lg-inline-block d-none " href="@Url.Action("FDTran","Home")">
+                                <a class="btn btn-sm btn-primary mt-2 d-lg-inline-block d-none" data-bs-toggle="modal" data-bs-target="#fdTranModal" href="">
                                     View Transaction History
                                 </a>
                                 @*<a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
@@ -1486,6 +2771,16 @@
                                     <a class="btn btn-sm btn-outline-primary d-lg-inline-block d-none mt-2">
                                         Print Placement/Renewal Slip
                                     </a>*@
+                            </div>
+                            <div hidden class="actionBtnGroup text-center actGrp" id="actGrpGI">
+                                <a class="btn btn-sm btn-primary mt-2 d-lg-inline-block d-none" data-bs-toggle="modal" data-bs-target="#giTranModal" href="">
+                                    View Transaction History
+                                </a>
+                            </div>
+                            <div hidden class="actionBtnGroup text-center actGrp" id="actGrpLF">
+                                <a class="btn btn-sm btn-primary mt-2 d-lg-inline-block d-none" data-bs-toggle="modal" data-bs-target="#lfTranModal" href="">
+                                    View Transaction History
+                                </a>
                             </div>
 
                             <div class="alert alert-info mt-5 rounded-8 shadow mx-auto" role="alert">
@@ -1698,6 +2993,8 @@
 
         });
         flatpickr("input[type=datetime-local", {});
+        $('.saveBtn').hide();
+        $('.cancelBtn').hide();
 
         $('#mandateTable tbody').on('click', 'tr', function () {
             var data = table.row(this).data();
@@ -1971,6 +3268,7 @@
             switch (listId) {
 
                 case 'casaAcc':
+                    accNumberTitle.html($(listItem).find(".accListTitleAndNum p:nth-of-type(2)").html());
                     accNumber.html($(listItem).find('.accListTitleAndNum p:last-of-type').html());
                     if ($(listItem).find(".iconBox").hasClass('savingAcc')) {
                         accType.html("Savings");
@@ -2055,7 +3353,7 @@
                     $('#IFDIllustration').attr('hidden', true);
                     $('#LFIllustration').attr('hidden', true);
                     $('#GIIllustration').attr('hidden', true);
-                    $('#actGrpFD').attr('hidden', false);
+                    $('#actGrpGI').attr('hidden', false);
                     $('.accDetailsCon').addClass('mt-5')
 
                     break;
@@ -2065,7 +3363,7 @@
                     accNumberTitle.html($(listItem).find(".accListTitleAndNum p:first-of-type").html());
                     accTypeTitle.html("Note No: " + $(listItem).find(".accListTitleAndNum p:last-of-type").html());
                     loanAccNumber.html($(listItem).find(".accListTitleAndNum p:first-of-type").html());
-                    loanNoteNum.html($(listItem).find(".accListTitleAndNum p:last-of-type").html());
+                    loanNoteNum.html($(listItem).find(".accListTitleAndNum p:last-of-type").html().slice(0,-5));
                     loanAmtDue.html($(listItem).find(".accBalance p").html());
                     $('#CardSettings').attr('hidden', true);
                     $('#CASAIllustration').attr('hidden', true);
@@ -2073,6 +3371,7 @@
                     $('#IFDIllustration').attr('hidden', true);
                     $('#LFIllustration').attr('hidden', false);
                     $('#GIIllustration').attr('hidden', true);
+                    $('#actGrpLF').attr('hidden', false);
                     $('.accDetailsCon').addClass('mt-5')
 
                     break;
@@ -2104,11 +3403,28 @@
             $('#etransHistoryTable').attr('hidden', true);
             $('#transHistoryTable').attr('hidden', false);
             $('#unpostedtran').attr('hidden', false);
-
         }
-
     })
-
+    $('#ViewPbeTransactionCard').change(function () {
+        if ($('#ViewPbeTransactionCard:checked').val() == 'on') {
+            $('#etransHistoryTableCard').attr('hidden', false);
+            $('#transHistoryTableCard').attr('hidden', true);
+            $('#unbilledTran').attr('hidden', true);
+        } else {
+            $('#etransHistoryTableCard').attr('hidden', true);
+            $('#transHistoryTableCard').attr('hidden', false);
+            $('#unbilledTran').attr('hidden', false);
+        }
+    })
+    $('#ViewPbeTransactionFD').change(function () {
+        if ($('#ViewPbeTransactionFD:checked').val() == 'on') {
+            $('#etransHistoryTableFD').attr('hidden', false);
+            $('#transHistoryTableFD').attr('hidden', true);
+        } else {
+            $('#etransHistoryTableFD').attr('hidden', true);
+            $('#transHistoryTableFD').attr('hidden', false);
+        }
+    })
     function refreshListItemActive(activeEl) {
         if ($(activeEl).hasClass("active") == false) {
             $(".accList ul li").removeClass("active");
@@ -2139,6 +3455,9 @@
     $("#unpostedtran").click(function () {
         refreshFilterState("#unpostedtran", "#unpostedTranTick");
     });
+    $("#unbilledTran").click(function () {
+        refreshFilterStateCard("#unbilledTran", "#unbilledTranTick");
+    });
 
     function refreshFilterState(btnId, btnTickId) {
         if ($(btnId).hasClass("active")) {
@@ -2163,6 +3482,29 @@
         }
     }
 
+    function refreshFilterStateCard(btnId, btnTickId) {
+        if ($(btnId).hasClass("active")) {
+            $(btnTickId).fadeIn();
+            $(btnId).removeClass('border-secondary text-secondary border-1').addClass('border-danger text-danger border-2');
+
+            if (btnId == "#unbilledtran") {
+                $(".pbc-data").show();
+            } else {
+                $(".unbilled-data").show();
+            }
+        }
+        else {
+            $(btnTickId).hide();
+            $(btnId).removeClass('border-danger text-danger border-2').addClass('border-secondary text-secondary border-1');
+
+            if (btnId == "#unbilledtran") {
+                $(".pbc-data").hide();
+            } else {
+                $(".unbilled-data").hide();
+            }
+        }
+    }
+
 
 
     $('#pbetran').on('click', function () {
@@ -2181,8 +3523,68 @@
         $('#exampleModal1').modal("show");
         $('#exampleModal').modal("hide");
     });
-    $('#secondmodalClose').on('click', function (e) {        
+    $('#secondmodalClose').on('click', function (e) {
         $('#exampleModal').modal("show");
         $('#exampleModal1').modal("hide");
     });
+
+    $(".editBtn").click(function () {
+        $(".cancelBtn").hide();
+        $(".saveBtn").hide();
+        $(".editBtn").show();
+        $(this).hide();
+        $(this).siblings('.cancelBtn').show();
+        $(this).siblings('.saveBtn').show();
+        $(this).parent().siblings().children('.accountName').prop('disabled', false);
+        $(this).parent().siblings().children('.accountName').prop('hidden', false);
+        $(this).parent().siblings().children('.initLabel').prop('hidden', true);
+        $(this).parent().siblings().children('.accountName').addClass('border-1 border-danger');
+        $(this).parent().siblings().children('.accountName').removeClass('border-0r');
+        $(this).parent().siblings().children('.accountName').focus();
+        lstfocus = $(this).parent().siblings().children('.accountName')[0];
+        // console.log($(this).siblings());
+    });
+    $(".cancelBtn").click(function () {
+        $(this).hide();
+        $(this).siblings('.saveBtn').hide();
+        $(this).siblings('.editBtn').show();
+        $(this).parent().siblings().children('.accountName').prop('disabled', true);
+        $(this).parent().siblings().children('.accountName').prop('hidden', true);
+        $(this).parent().siblings().children('.initLabel').prop('hidden', false);
+        $(this).parent().siblings().children('.accountName').removeClass('border-1 border-danger');
+
+    });
+    $('.saveBtn').on('click', function () {
+        Swal.fire({
+            title: 'Do you want to save the changes?',
+            showCancelButton: true,
+            confirmButtonText: 'Save',
+            cancelButtonText: 'No',
+            allowOutsideClick: false,
+            confirmButtonColor: '#D14655',
+            cancelButtonColor: '#4E5E68',
+            customClass: {
+                title: 'alertFontStyle'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Your account name is updated',
+                    icon: 'success',
+                    iconColor: '#3AA08A',
+                    confirmButtonColor: '#D14655',
+                    customClass: {
+                        title: 'alertFontStyle'
+                    }
+                }).then((result) => {
+                    $('.saveBtn').hide();
+                    $('.cancelBtn').hide();
+                    $(".editBtn").show();
+                    $('.accountName').prop('disabled', true);
+                    $('.accountName').removeClass('border-1 border-danger');
+
+                })
+            }
+        });
+    })
 </script>
