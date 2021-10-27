@@ -1,4 +1,4 @@
-﻿<div class="d-none d-lg-block" style="height:5vh;"></div>
+<div class="d-none d-lg-block" style="height:5vh;"></div>
 
 
 <div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
@@ -14,23 +14,33 @@
                     </p>
                 </div>
                 <div id="firstPage" class="col-12 col-lg-8 ">
-                    <div class="row mb-2">
-                        <label for="tranAmount" class="col-sm-12 col-form-label">Select your account</label>
-                        <div class="col-sm-12 mb-2">
+                    <div class="row mb-2 d-flex justify-content-center">
 
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Please select</option>
-                                <option value="">4000151818158236</option>
-                                <option value="">9577445338254589</option>
-                                <option value="">1235489818021458</option>
-                                <option value="">1235489158236111</option>
-                                <option value="">4533825382544453</option>
-                                <option value="">7445338254553684</option>
-                                <option value="">0248891234486685</option>
+                        <div class="col-sm-12 d-flex flex-wrap flex-row justify-content-between">
+                            <label class="col-sm-6 col-form-label">Select your account</label>
+                        </div>
 
+                        <div class="col-sm-9">
+
+                            <select id="choices-multiple-remove-button" multiple>
+                                <option class="choice-option">40001518</option>
+                                <option class="choice-option">95774453</option>
+                                <option class="choice-option">12354898</option>
+                                <option class="choice-option">12354891</option>
+                                <option class="choice-option">14680642</option>
+                                <option class="choice-option">54670423</option>
+                                <option class="choice-option">40054898</option>
+                                <option class="choice-option">95771468</option>
                             </select>
 
                         </div>
+
+                        <div class="form-check form-switch col-sm-3 text-end p-0 py-2 pe-2">
+                            <input class="form-check-input ms-2 p-0" type="checkbox" role="switch"
+                                   id="selectAllSwitch">
+                            <label class="form-check-label" for="selectAllSwitch">Select All Account</label>
+                        </div>
+
                     </div>
 
                     <div class="row my-5 last-row">
@@ -149,44 +159,63 @@
                                 </label>
                                 <div class="col-lg-12 col-md-12 col-sm-12 my-1">
                                     <div class="radio">
-                                        <input id="radio-1" name="radio" type="radio" checked>
-                                        <label for="radio-1" class="radio-label1">
-                                            Courier to my mailing
-                                            address
+                                        <input id="radio-3" name="radio2" type="radio" checked>
+                                        <label for="radio-3" class="radio-label3">
+                                            Delivery to Existing Mailing Address
+                                        </label>
+                                        <label for="radio-4" class="radio-label4 ms-3 small">
+                                            (Delivery cannot be made to P. O. Box address / overseas address)
                                         </label>
                                     </div>
 
                                     <div class="radio">
-                                        <input id="radio-2" name="radio" type="radio">
-                                        <label for="radio-2" class="radio-label2">
-                                            Collect at Public Bank
-                                            Branch
+                                        <input id="radio-5" name="radio2" type="radio">
+                                        <label for="radio-5" class="radio-label5">
+                                            Collect at Public Bank Branch
                                         </label>
                                     </div>
+                                    <div hidden id="radioHide">
+                                        <select class="form-select" state-select mt-2"
+                                                aria-label="Default select example" id="selectState">
+                                            <option selected>Select State</option>
+                                            <option value="">Johor</option>
+                                            <option value="">Negeri Sembilan</option>
+                                            <option value="">Selangor</option>
+                                            <option value="">Malacca</option>
+                                            <option value="">Perak</option>
+                                            <option value="">Penang</option>
+                                            <option value="">Terengganu</option>
+                                            <option value="">Sabah</option>
+                                            <option value="">Sarawak</option>
+                                            <option value="">Kelantan</option>
+                                            <option value="">Pahang</option>
+                                        </select>
 
-                                    <select hidden class="form-select branch-select mt-1" aria-label="Default select example" id="selectBranch">
+                                        <select class="form-select branch-select mt-2"
+                                                aria-label="Default select example" id="selectBranch">
 
-                                        <option selected>Select Branch</option>
+                                            <option selected>Select Branch</option>
 
-                                        <!-- <option value="" id="boldState" disabled>Johor</option> -->
-                                        <optgroup label="Johor"></optgroup>
-                                        <option value="">Tangkak</option>
-                                        <option value="">Muar</option>
+                                            <!-- <option value="" id="boldState" disabled>Johor</option> -->
+                                            <optgroup label="Johor"></optgroup>
+                                            <option value="">Tangkak</option>
+                                            <option value="">Muar</option>
 
-                                        <!-- <option value="" id="boldState" disabled>Negeri Sembilan</option> -->
-                                        <optgroup label="Negeri Sembilan"></optgroup>
-                                        <option value="">Seremban</option>
+                                            <!-- <option value="" id="boldState" disabled>Negeri Sembilan</option> -->
+                                            <optgroup label="Negeri Sembilan"></optgroup>
+                                            <option value="">Seremban</option>
 
-                                        <!-- <option value="" id="boldState" disabled>Selangor</option> -->
-                                        <optgroup label="Selangor"></optgroup>
-                                        <option value="">Bangi</option>
+                                            <!-- <option value="" id="boldState" disabled>Selangor</option> -->
+                                            <optgroup label="Selangor"></optgroup>
+                                            <option value="">Bangi</option>
 
-                                        <!-- <option value="" id="boldState" disabled>Kedah</option> -->
-                                        <optgroup label="Kedah"></optgroup>
-                                        <option value="">Alor Setar</option>
-                                        <option value="">Kuala Ketil</option>
+                                            <!-- <option value="" id="boldState" disabled>Kedah</option> -->
+                                            <optgroup label="Kedah"></optgroup>
+                                            <option value="">Alor Setar</option>
+                                            <option value="">Kuala Ketil</option>
 
-                                    </select>
+                                        </select>
+                                    </div>
                                 </div>
 
 
@@ -347,7 +376,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="alert alert-info col-12 col-lg-8 rounded-8 shadow" style="margin-bottom:100px" role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            Important: Only one handphone number for all principal card
+                        </li>
+                        <li>
+                            Please be informed that updates can only be effected for address in Malaysia for principal cards.
+                        </li>
+                        <li>
+                            For request to update to overseas address, kindly email to custsvc@publicbank.com.my or make changes at branches.
+                        </li>
+                        <li>
+                            Any changes to your mailing or email address will only be effective in your next statement.
+                        </li>
+
+                    </ul>
+                </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -369,13 +417,47 @@
         });
 
         $('.profileMenu').addClass('active');
+
+        
+        var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+            removeItemButton: true,
+            searchEnabled: true,
+            searchChoices: true,
+            searchResultLimit: 5,
+            placeholder: true,
+            placeholderValue: "Search or select account(s)",
+            // searchPlaceholderValue: null,
+            // renderChoiceLimit: 5,
+        });
+
     });
 
 
     $('#firstNext').on('click', function () {
-        $('#secondPage').attr('hidden', false);
-        $('#firstPage').attr('hidden', true);
-        $('#fourthPage').attr('hidden', true);
+        if ($('#selectAcc').val() == '1') {
+            Swal.fire(
+                {
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'This Account does not have any associated phone number',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                }
+            )
+        }
+        else if ($('#selectAcc').val() == '2') {
+            Swal.fire(
+                {
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'This Account does not have any associated phone number'
+                }
+            )
+        }
+        else {
+            $('#secondPage').attr('hidden', false);
+            $('#firstPage').attr('hidden', true);
+            $('#fourthPage').attr('hidden', true);
+        }
     });
 
 
@@ -396,4 +478,23 @@
             'success'
         )
     })
+    $("[name='radio2']").on('change', function () {
+        if ($('#radio-5').is(':checked')) {
+            $('#radioHide').attr('hidden', false);
+        }
+        else {
+            $('#radioHide').attr('hidden', true);
+        }
+    })
+    $("#selectAllSwitch").change(function () {
+        if ($(this).is(":checked")) {
+            $(".choices").addClass('is-disabled');
+            $('.choices__list').attr('hidden', true);
+            $('.choices__input').attr('disabled', true);
+        } else {
+            $(".choices").removeClass('is-disabled');
+            $('.choices__list').attr('hidden', false);
+            $('.choices__input').attr('disabled', false);
+        }
+    });
 </script>
