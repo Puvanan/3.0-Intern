@@ -1,0 +1,242 @@
+﻿<div class="d-none d-lg-block" style="height:5vh;"></div>
+
+
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
+
+    <div class="row mt-2 justify-content-center">
+
+        <div class="col-lg-10">
+
+            <div class="row justify-content-center ">
+
+                <div class="col-12 col-lg-5 text-center">
+                    <img class="mb-4 img-fluid " style="width:100px;" src="~/Images/WebsiteImages/cancelation.png" />
+                    <h3>Stop Cheque</h3>
+                    <p class="mb-4">
+                        Request for a cheque that you had issued to be stopped.
+
+                    </p>
+
+                </div>
+
+                <div id="firstPage" class="col-12 col-lg-8 ">
+
+                    <div class="row mb-2">
+
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Account Number</label>
+
+                        <div class="col-sm-12 mb-2">
+
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Please select</option>
+                                <option>3001320213 (Current) RM 123,456,789.10</option>
+                                <option>3980035216 (Current) RM 98,765,432.10</option>
+                                <option>3001198511 (Current) RM 88,888,888.88</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <label class="col-sm-12 col-form-label">Cheque Number</label>
+
+                        <div class="num-Book col-sm-12">
+                            <input type="Number" class="form-control mb-2" placeholder="Cheque Number">
+                        </div>
+
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action("Cheque", "Home" )">
+                                Back
+                            </a>
+                            <a id="next-btn" class="btn btn-primary  float-end"> Next </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success -->
+                <div hidden id="secondPage" class="col-12 col-lg-8 mt-3 px-5">
+                    <div class="p-5 shadow bg-white rounded-8">
+
+                        <div class="row detailzRow d-flex mb-4">
+
+                            <div class="row logoRow">
+
+                                <div class="col-lg-2 col-2 checkIconDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="successIcon">
+                                                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
+                                                             viewBox="0 0 52 52">
+                                                            <circle class="checkmark__circle" cx="26" cy="26" r="25"
+                                                                    fill="none" />
+                                                            <path class="checkmark__check" fill="none"
+                                                                  d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                                        </svg>
+                                                    </div>
+
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-10 checkTextDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+
+                                                <td style="vertical-align: middle;">
+                                                    <h5 class="lbl1 mt-3">Cheque Stopped Successfully</h5>
+                                                    <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Reference No.</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>963596</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Account No.</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>3001320213</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Cheque No.</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>123456</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Cheque Stop ID</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>00011</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start">Print</a>
+                            <a id="secondNext" class="btn btn-primary  float-end" href="@Url.Action("Cheque","Home")">Done</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="alert alert-info col-12 col-lg-8 rounded-8 shadow-sm" style="margin-bottom:100px" role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            You are advised to check through the transaction history of the affected account to
+                            ensure that the cheque intended to be stopped has not been presented for payment.
+                        </li>
+                        <li>Stop cheque requests may incur other changes/fees. Any stop cheque request through PBe will be construed as your acknowledgment that PBB Group reserves the right to debit your relevant accounts for any such charges/ fees (if any).</li>
+                        <li>You are advised to contact your account holding branch to obtain more information with regard to the charges/fees involved (if any).</li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+
+<script>
+    $(document).ready(function () {
+        $('#secondPage').attr('hidden', true);
+        $('#cancel-btn').click(function () {
+            location.reload();
+        });
+    });
+
+    $('#next-btn').on('click', function () {
+        Swal.fire({
+            title: 'Do you want to submit the Stop Cheque Request?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Submit',
+            allowOutsideClick: false,
+            customClass: {
+                title: 'alertFontStyle'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Your Stop Cheque Request has been submitted!',
+                    icon: 'success',
+                    customClass: {
+                        title: 'alertFontStyle'
+                    }
+                }).then(function () {
+                    $('#firstPage').attr('hidden', true);
+                    $('#secondPage').attr('hidden', false);
+                });
+            }
+        })
+
+
+
+    });
+</script>

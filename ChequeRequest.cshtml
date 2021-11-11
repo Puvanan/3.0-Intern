@@ -1,0 +1,639 @@
+﻿<div class="d-none d-lg-block" style="height:5vh;"></div>
+
+
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
+
+    <div class="row mt-2 justify-content-center">
+
+        <div class="col-lg-10">
+
+            <div class="row justify-content-center ">
+
+                <div class="col-12 col-lg-5 text-center">
+                    <img class="mb-4 img-fluid " style="width:100px;" src="~/Images/WebsiteImages/checkbook.png" />
+                    <h3 class="mb-4">Request Cheque Book</h3>
+                    <p>
+                        Request for a new cheque book for your current account.
+                    </p>
+                </div>
+
+                <div id="firstPage" class="col-12 col-lg-8 ">
+
+                    <div class="row mb-2">
+
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Select your account</label>
+
+                        <div class="col-sm-12 mb-2">
+
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Please select</option>
+                                <option value="">4000151818158236</option>
+                                <option value="">9577445338254589</option>
+                                <option value="">1235489818021458</option>
+                                <option value="">1235489158236111</option>
+                                <option value="">4533825382544453</option>
+                                <option value="">7445338254553684</option>
+                                <option value="">0248891234486685</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <label class="col-sm-12 col-form-label">Number of Books</label>
+
+                        <div class="num-Book col-sm-12">
+                            <input type="Number" class="form-control mb-2" placeholder="Number of Books">
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-2">
+
+                        <label class="col-sm-12 col-form-label">Mode of Collection</label>
+
+                        <div class="col-sm-12 my-1">
+
+                            <div class="radio">
+                                <input id="radio-1" name="radio" type="radio" checked>
+                                <label for="radio-1" class="radio-label1">Collect at Account Holding Branch</label>
+                            </div>
+
+                            <div class="radio">
+                                <input id="radio-2" name="radio" type="radio">
+                                <label for="radio-2" class="radio-label2">Send by Mail</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action("Cheque", "Home" )">
+                                Back
+                            </a>
+                            <a id="firstNext" class="btn btn-primary  float-end"> Next </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div hidden id="secondPage" class="col-12 col-lg-8 ">
+
+                    <div class="row mb-2">
+                        <h4 class="col-sm-12 col-form-label">Account Number</h4>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" class="form-control" value="3001198511" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <h4 class="col-sm-12 col-form-label">Number of Books</h4>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" class="form-control" value="2" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <h4 class="col-sm-12 col-form-label">Mode of Collection</h4>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" class="form-control" value="Collect at Account Holding Branch" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action(" ChequeBook", "Home" )">
+                                Back
+                            </a>
+
+                            <a id="secondNext" class="btn btn-primary  float-end"> Confirm </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div hidden id="thirdPage" class="col-12 col-lg-8 mt-2">
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Account Number</label>
+                        <div class="info col-sm-12 my-1">
+                            <label>3001198511</label>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Number of Books</label>
+                        <div class="info col-sm-12 my-1">
+                            <label>2</label>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Mode of Collection</label>
+                        <div class="info col-sm-12 my-1">
+                            <label>Send by Mail</label>
+                        </div>
+                    </div>
+
+                    <div class="row myFA1 mb-2">
+                        <label class="col-sm-12 col-form-label">Approve this update with</label>
+                        <div class="col-sm-12 mb-2">
+                            <select class="form-select" aria-label="Default select example" id="auth">
+                                <option value="noti">PB SecureSign (Push Notification)</option>
+                                <option value="secure">PB SecureSign (SecurePAC)</option>
+                                <option value="token">SecureSign Token</option>
+                                <option value="pac" selected>SMS PAC</option>
+                            </select>
+
+
+                        </div>
+                        <div class="col-sm-12">
+
+                            <div class="row myFA2" id="PAC" mt-2>
+
+                                <div class="zz col-3">
+                                    <label for="PAC" class="col-sm-3 col-form-label">
+                                        <img src="/puvan/icon/twoFA/otp.png" alt="" width="100" height="100">
+                                    </label>
+                                </div>
+
+                                <div class="digitPac col-6">
+
+                                    <input type="text" class="form-control" id="PAC">
+
+                                    <p class="text-muted">
+                                        A 6 digit PAC will be sent to your registered mobile phone
+                                        number
+                                        *****6168. Please click "Request PAC" if you wish to proceed
+                                    </p>
+
+                                </div>
+
+                                <div class="col-3">
+                                    <a class="btn btn-info pac text-white float-lg-end" id="reqPacBtn">
+                                        Request
+                                        PAC
+                                    </a>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row myFA3 d-none" id="token" mt-2>
+
+                                <div class="zz col-3">
+                                    <label for="hToken" class="col-sm-3 col-form-label">
+                                        <img src="/puvan/icon/twoFA/securesigntoken.png" alt="" width="90"
+                                             height="120">
+                                    </label>
+                                </div>
+
+                                <div class="col-9">
+
+                                    <p class="text-muted">
+                                        Switch on your SecureSign token and follow the instrution
+                                        below to
+                                        generate on your SecureSign Code.
+                                    </p>
+
+                                    <ol>
+                                        <li>Press "sign" button. You will see a '1' display on the screen.</li>
+                                        <li>Enter xxxxx and press 'OK'.</li>
+                                        <li>You will see a '2" dispaly on screen.</li>
+                                        <li>Enter xxxx and press 'OK.'</li>
+                                        <li>The SecureSign will be displayed on screen.</li>
+                                    </ol>
+
+                                    <input type="text" class="form-control" id="hToken"
+                                           placeholder="Enter your SecureSign Code">
+
+                                </div>
+
+                            </div>
+
+                            <div class="row myFA4 d-none" id="noti" mt-2>
+
+                                <div class="zz col-3">
+                                    <label for="notification" class="col-sm-3 col-form-label">
+                                        <img src="/puvan/icon/twoFA/success.png" alt="" width="90"
+                                             height="90">
+                                    </label>
+                                </div>
+
+                                <div class="col-6">
+
+                                    <p>
+                                        A push notification will be sent to your mobile phone. Please verify the
+                                        details
+                                        at
+                                        your PB SecureSign screen before approving transaction.
+                                    </p>
+
+                                </div>
+
+                                <div class="col-3">
+                                    <a class="btn btn-info pac text-white float-lg-end" data-bs-toggle="modal"
+                                       data-bs-target="#staticBackdrop">Push Notification</a>
+
+                                    <!-- Modal -->
+
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                         aria-hidden="true">
+
+                                        <div class="modal-dialog modal-dialog-centered">
+
+                                            <div class="modal-content">
+
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLabel">
+                                                        PB SecureSign
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+
+                                                <div class="modal-body">
+
+                                                    <div class="container-fluid">
+
+                                                        <div class="row">
+
+                                                            <div class="col-sm-12 d-flex justify-content-center">
+                                                                <img src="/puvan/icon/twoFA/animation_500_kugn1p08.gif"
+                                                                     alt="" width="300" height="300">
+                                                            </div>
+
+                                                            <div class="col-sm-12">
+                                                                <p>
+                                                                    Please check your mobile device (Iphone12) for a
+                                                                    push
+                                                                    notification to approve the transacion
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="col-sm-12">
+
+                                                                <div class="progress">
+
+                                                                    <div class="progress-bar bg-danger active"
+                                                                         role="progressbar" aria-valuenow="0"
+                                                                         aria-valuemin="0" aria-valuemax="100"
+                                                                         style="width:0%">
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row myFA5 d-none" id="secure" mt-2>
+
+                                <div class="zz col-3">
+                                    <label for="secure" class="col-sm-3 col-form-label">
+                                        <img src="/puvan/icon/twoFA/kp2.png" alt="" width="90" height="90">
+                                    </label>
+                                </div>
+
+                                <div class="col-9">
+
+                                    <p class="text-muted">
+                                        Open your PB engage mobile app and follow the instruction
+                                        below to
+                                        generate your SecurePac
+                                    </p>
+
+                                    <ol>
+                                        <li>Launch your PB engage mobile app.</li>
+                                        <li>From the side menu, select "PB SecureSign".</li>
+                                        <li>Verify the transaction details before you click "proceed".</li>
+                                        <li>Enter your SecurePIN or authentucate with your fingerpint/Face ID</li>
+                                        <li>The 6 digits SecurePAC will be displayed on the screen</li>
+                                    </ol>
+
+                                    <input type="text" class="form-control" id="secure"
+                                           placeholder="Enter SecurePAC">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start"> Back </a>
+                            <a id="thirdNext" class="btn btn-primary  float-end"> Submit </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Success -->
+                <div hidden id="fourthPage" class="col-12 col-lg-8 mt-3 px-5">
+                    <div class="p-5 shadow bg-white rounded-8">
+
+                        <div class="row detailzRow d-flex mb-4">
+
+                            <div class="row logoRow">
+
+                                <div class="col-lg-2 col-2 checkIconDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="successIcon">
+                                                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
+                                                             viewBox="0 0 52 52">
+                                                            <circle class="checkmark__circle" cx="26" cy="26" r="25"
+                                                                    fill="none" />
+                                                            <path class="checkmark__check" fill="none"
+                                                                  d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                                        </svg>
+                                                    </div>
+
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-10 checkTextDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+
+                                                <td style="vertical-align: middle;">
+                                                    <h5 class="lbl1 mt-3">Request Cheque Book Successfully</h5>
+                                                    <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Reference Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>RR232382989FH</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Account Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>345352423423</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Number of Books</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>2</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Mode of Collection</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>Send by Mail</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" onclick="window.print()"> Print </a>
+                            <a id="secondNext" class="btn btn-primary  float-end" href="@Url.Action("Cheque", "Home")">
+                                Done
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="alert alert-info col-12 col-lg-8 rounded-8 shadow-sm" style="margin-bottom:100px" role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            Your cheque book(s) will be processed within 4 working days after making this
+                            request.
+                        </li>
+                        <li>This feature should not be used for PB Sharelink accounts.</li>
+                        <li>
+                            You are advised to contact your account holding branch to obtain more information
+                            with regard to the changes/fees involved (if any).
+                        </li>
+                        <li>
+                            Number of cheque book requested is subjected to approval from the account holding
+                            branch.
+                        </li>
+                        <li>
+                            Please note that if you've selected to send by email, the cheque book(s) will be
+                            posted to your account mailing address and delivery charges will be debited directly
+                            from your account.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+
+<script>
+    $(document).ready(function () {
+
+        $('.mobileNav').each(function () {
+            $(this).removeClass('active');
+        })
+
+        $('.nav-link').each(function () {
+            $(this).removeClass('active');
+        })
+
+        $('.profile').each(function () {
+            $(this).addClass('active');
+        });
+
+        $('.profileMenu').addClass('active');
+
+        $('#reqPacBtn').on('click', function () {
+            console.log('test');
+            Swal.fire(
+                'OTP is Sent!',
+                'OTP sent to your phone number 012 - * * * * 123',
+                'success'
+            )
+        })
+
+        $('#firstNext').on('click', function () {
+
+            if ($('#radio-1').is(':checked')) {
+                $('#secondPage').attr('hidden', false);
+                $('#thirdPage').attr('hidden', true);
+            }
+
+            else {
+                $('#secondPage').attr('hidden', true);
+                $('#thirdPage').attr('hidden', false);
+            }
+
+            $('#firstPage').attr('hidden', true);
+            $('#fourthPage').attr('hidden', true);
+        });
+
+        $('#secondNext').on('click', function () {
+            Swal.fire({
+                title: 'Do you want to submit the Cheque Request?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Submit',
+                allowOutsideClick: false,
+                customClass: {
+                    title: 'alertFontStyle'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Your Cheque Request has been submitted!',
+                        icon: 'success',
+                        customClass: {
+                            title: 'alertFontStyle'
+                        }
+                    }).then(function () {
+                        $('#fourthPage').attr('hidden', false);
+                        $('#thirdPage').attr('hidden', true);
+                        $('#secondPage').attr('hidden', true);
+                        $('#firstPage').attr('hidden', true);
+                    });
+                }
+            })
+
+        });
+
+        $('#thirdNext').on('click', function () {
+            Swal.fire(
+                'Success',
+                'Your Request Successfully Submitted',
+                'success'
+            )
+            $('#fourthPage').attr('hidden', false);
+            $('#thirdPage').attr('hidden', true);
+            $('#secondPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', true);
+        });
+    });
+
+    // enhanced ui for authentication script
+
+    $("#auth").change(function () {
+        console.log("test");
+        var cases = $("#auth option:selected").val();
+
+        if (cases == "pac") {
+            $("#PAC").removeClass("d-none");
+            $("#secure").addClass("d-none");
+            $("#noti").addClass("d-none");
+            $("#token").addClass("d-none");
+        }
+        if (cases == "token") {
+            $("#token").removeClass("d-none");
+            $("#PAC").addClass("d-none");
+            $("#signin").addClass("d-none");
+            $("#noti").addClass("d-none");
+        }
+        if (cases == "secure") {
+            $("#secure").removeClass("d-none");
+            $("#PAC").addClass("d-none");
+            $("#token").addClass("d-none");
+            $("#noti").addClass("d-none");
+        }
+        if (cases == "noti") {
+            $("#noti").removeClass("d-none");
+            $("#PAC").addClass("d-none");
+            $("#token").addClass("d-none");
+            $("#secure").addClass("d-none");
+        }
+    }
+    );
+
+    var progressBar = $('.progress-bar');
+    var progressNumber = 0;
+
+    setInterval(function () {
+        progressNumber++;
+        progressBar.css('width', progressNumber + '%');
+        progressBar.attr('aria-valuenow', progressNumber);
+    }, 500);
+
+</script>
