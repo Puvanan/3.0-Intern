@@ -1,0 +1,560 @@
+﻿<div class="d-none d-lg-block" style="height:5vh;"></div>
+
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
+    <div class="row mt-2 justify-content-center">
+        <div class="col-lg-10">
+            <div class="row justify-content-center ">
+                <div class="col-12 col-lg-5 text-center">
+                    <img class="mb-4 img-fluid " style="width:100px;" src="~/Images/WebsiteImages/research.png" />
+                    <h3>Inquire Positive Pay</h3>
+                    <p>
+                        Inquire or delete a cheque that you had previously submitted to positive pay.
+                    </p>
+                </div>
+
+                <!-- 1st page -->
+                <div id="firstPage" class="col-12 col-lg-8 ">
+
+                    <div class="row mb-2">
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Select your account</label>
+                        <div class="col-sm-12 mb-2">
+
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Please select</option>
+                                <option value="">4000151818158236</option>
+                                <option value="">9577445338254589</option>
+                                <option value="">1235489818021458</option>
+                                <option value="">1235489158236111</option>
+                                <option value="">4533825382544453</option>
+                                <option value="">7445338254553684</option>
+                                <option value="">0248891234486685</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Cheque Number</label>
+                        <div class="col-sm-12 mb-2">
+                            <input type="text" class="form-control" id="paymentTypeCon">
+                        </div>
+
+
+                    </div>
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+
+                            <a class="btn btn-dark float-start" href="@Url.Action("Cheque", "Home" )">
+                                Back
+                            </a>
+                            <a id="firstNext" class="btn btn-primary float-end"> Next </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd page -->
+                <div hidden id="secondPage" class="col-12 col-lg-9 mt-3 px-5">
+                    <div class="row justify-content-center mt-4">
+
+                        <div class="col-12">
+
+                            <table id="CASA"
+                                   class="table table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white"
+                                   style="width:100%">
+                                <thead class="bg-dark text-white rounded-8">
+                                    <tr style="text-align:center">
+                                        <th class="small">Delete</th>
+                                        <th class="small">Status</th>
+                                        <th class="small">PayTo</th>
+                                        <th class="small">Amount(RM)</th>
+                                        <th class="small">Date of Cheque</th>
+                                        <th class="small">Date of Cheque Cleared</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="text-align:center">
+                                        <td>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                   id="flexRadioDefault1">
+                                        </td>
+                                        <td class="title">Stale</td>
+                                        <td class="title">test</td>
+                                        <td class="text-danger">1000000.00</td>
+                                        <td class="title">01-JAN-2021</td>
+                                        <td class="title">N/A</td>
+                                    </tr>
+                                    <tr style="text-align:center">
+                                        <td>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                   id="flexRadioDefault1">
+                                        </td>
+                                        <td class="title">Stale</td>
+                                        <td class="title">test</td>
+                                        <td class="text-danger">1000000.00</td>
+                                        <td class="title">01-JAN-2021</td>
+                                        <td class="title">N/A</td>
+                                    </tr>
+                                    <tr style="text-align:center">
+                                        <td>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                   id="flexRadioDefault1">
+                                        </td>
+                                        <td class="title">Stale</td>
+                                        <td class="title">test</td>
+                                        <td class="text-danger">1000000.00</td>
+                                        <td class="title">01-JAN-2021</td>
+                                        <td class="title">N/A</td>
+                                    </tr>
+                                    <tr style="text-align:center">
+                                        <td>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                   id="flexRadioDefault1">
+                                        </td>
+                                        <td class="title">Stale</td>
+                                        <td class="title">test</td>
+                                        <td class="text-danger">1000000.00</td>
+                                        <td class="title">01-JAN-2021</td>
+                                        <td class="title">N/A</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <div class="row my-5 last-row">
+                                <div class="col-12">
+
+                                    <a class="btn btn-dark float-start" href="@Url.Action("Cheque", "Home"
+                                            )">
+                                        Back
+                                    </a>
+                                    <a id="btnDel" class="btn btn-primary  float-end"> Delete </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 3th page -->
+                <div hidden id="thirdPage" class="col-12 col-lg-9 mt-3 px-5">
+                    <h3>Confirm Deletion</h3>
+                    <div class="row mb-1">
+                        <label class="col-sm-12 col-form-label">Account Number</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="3213256456465">
+                        </div>
+                    </div>
+
+                    <div class="row mb-1">
+                        <label class="col-sm-12 col-form-label">Name</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="Kwek Kian Sheng">
+                        </div>
+                    </div>
+
+                    <div class="row mb-1">
+                        <label class="col-sm-12 col-form-label">Cheque No</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="3213256456465">
+                        </div>
+                    </div>
+
+                    <div class="row mb-1">
+                        <label class="col-sm-12 col-form-label">Pay to</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="Kwek Kian Sheng">
+                        </div>
+                    </div>
+
+                    <div class="row mb-1">
+                        <label class="col-sm-12 col-form-label">Amount</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="3213256456465">
+                        </div>
+                    </div>
+
+                    <div class="row mb-1">
+                        <label class="col-sm-12 col-form-label">Date</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="Kwek Kian Sheng">
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="auth" class="col-sm-3 col-form-label">Approve this transacion with</label>
+                        <div class="col-sm-9">
+                            <select class="form-select" aria-label="Default select example" id="auth">
+                                <option value="noti">PB SecureSign (Push Notification)</option>
+                                <option value="secure">PB SecureSign (SecurePAC)</option>
+                                <option value="token">SecureSign Token</option>
+                                <option value="pac" selected>SMS PAC</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-1" id="PAC">
+                        <label for="PAC" class="col-sm-3 col-form-label">
+                            <img src="~/Images/WebsiteImages/otp.png" alt=""
+                                 width="100" height="100">
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="PAC">
+                            <p class="text-muted">
+                                A 6 digit PAC will be sent to your registered mobile phone
+                                number
+                                *****6168. Please click "Request PAC" if you wish to proceed
+                            </p>
+                        </div>
+                        <div class="col-sm-3 text-end text-lg-center mt-0 mt-lg-0">
+                            <a class="btn btn-info pac text-white float-lg-end">Request PAC</a>
+                        </div>
+                    </div>
+                    <div class="row mb-1 d-none" id="token">
+                        <label for="hToken" class="col-sm-3 col-form-label">
+                            <img src="~/Images/WebsiteImages/securesigntoken.png"
+                                 alt="" width="90" height="120">
+                        </label>
+                        <div class="col-sm-9">
+                            <p class="text-muted">
+                                Switch on your SecureSign token and follow the instrution
+                                below to
+                                generate on your SecureSign Code.
+                            </p>
+                            <ol>
+                                <li>Press "sign" button. You will see a '1' display on the screen.</li>
+                                <li>Enter xxxxx and press 'OK'.</li>
+                                <li>You will see a '2" dispaly on screen.</li>
+                                <li>Enter xxxx and press 'OK.'</li>
+                                <li>The SecureSign will be displayed on screen.</li>
+                            </ol>
+                            <input type="text" class="form-control" id="hToken"
+                                   placeholder="Enter your SecureSign Code">
+                        </div>
+                    </div>
+                    <div class="row mb-1 d-none" id="noti">
+                        <label for="notification" class="col-sm-3 col-form-label">
+                            <img src="~/Images/WebsiteImages/success.png"
+                                 alt="" width="90" height="90">
+                        </label>
+                        <div class="col-sm-6">
+                            <p>
+                                A push notification will be sent to your mobile phone. Please verify the details
+                                at
+                                your PB SecureSign screen before approving transaction.
+                            </p>
+
+                        </div>
+                        <div class="col-sm-3">
+                            <a class="btn btn-info pac text-white float-lg-end" data-bs-toggle="modal"
+                               data-bs-target="#staticBackdrop">Push Notification</a>
+
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">PB SecureSign</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-12 d-flex justify-content-center">
+                                                        <img src="~/Images/WebsiteImages/animation_500_kugn1p08.gif" alt=""
+                                                             width="300" height="300">
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <p>
+                                                            Please check your mobile device (Iphone12) for a push
+                                                            notification to approve the transacion
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-danger" role="progressbar"
+                                                                 aria-valuenow="0" aria-valuemin="0"
+                                                                 aria-valuemax="100" style="width:0%">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-1 d-none" id="secure">
+                        <label for="secure" class="col-sm-3 col-form-label">
+                            <img src="~/Images/WebsiteImages/kp2.png" alt=""
+                                 width="90" height="90">
+                        </label>
+                        <div class="col-sm-9">
+                            <p class="text-muted">
+                                Open your PB engage mobile app and follow the instruction
+                                below to
+                                generate your SecurePac
+                            </p>
+                            <ol>
+                                <li>Launch your PB engage mobile app.</li>
+                                <li>From the side menu, select "PB SecureSign".</li>
+                                <li>Verify the transaction details before you click "proceed".</li>
+                                <li>Enter your SecurePIN or authentucate with your fingerpint/Face ID</li>
+                                <li>The 6 digits SecurePAC will be displayed on the screen</li>
+                            </ol>
+                            <input type="text" class="form-control" id="secure" placeholder="Enter SecurePAC">
+                        </div>
+                    </div>
+                    <div class="row mt-2 pb-5 last-row">
+                        <div class="col-6 text-start text-lg-start mt-3">
+                            <button class="btn btn-dark mb-3 mb-lg-0 mt-0 mt-1g-0 btnBackPac">Back</button>
+                        </div>
+                        <div class="col-6 text-end text-lg-end mt-3">
+                            <button id="confirmBtn"
+                                    class="btn btn-primary mb-3 mb-1g-0 mt-1g-0 tranBtn">
+                                Confirm
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 4th page -->
+                <div hidden id="fourthPage" class="col-12 col-lg-8 mt-3 px-5">
+                    <div class="p-5 shadow bg-white rounded-8">
+
+                        <div class="row detailzRow d-flex mb-4">
+
+                            <div class="row logoRow">
+
+                                <div class="col-lg-2 col-2 checkIconDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="successIcon">
+                                                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
+                                                             viewBox="0 0 52 52">
+                                                            <circle class="checkmark__circle" cx="26" cy="26" r="25"
+                                                                    fill="none" />
+                                                            <path class="checkmark__check" fill="none"
+                                                                  d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                                        </svg>
+                                                    </div>
+
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-10 checkTextDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+
+                                                <td style="vertical-align: middle;">
+                                                    <h5 class="lbl1 mt-3">Deletion Completed</h5>
+                                                    <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="row detailsRow">
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Cheque No</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>123456</label>
+                            </div>
+                        </div>
+
+                        <div class="row detailsRow">
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Pay To</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>Kwek Kian Sheng</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Amount (RM)</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>10.00</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Date of Cheque</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>29 Oct 2021</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start"> Print </a>
+                            <a id="thirdNext" class="btn btn-primary  float-end" href="@Url.Action("Cheque", "Home" )"> Done </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info col-12 col-lg-8 rounded-8 shadow-sm" style="margin-bottom:100px" role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            A security vode know as PBe Authentication Code (PAC) is used when performing
+                            high risk transactions. Click here for more details.
+                        </li>
+                        <li>
+                            This feature is only available within our Operating Hours 12:05 a.m - 12
+                            midnight.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script>
+    $('#firstNext').on('click', function () {
+
+        $('#secondPage').prop('hidden', false);
+        $('#thirdPage').prop('hidden', true);
+        $('#firstPage').prop('hidden', true);
+        $('#fourthPage').prop('hidden', true);
+
+    })
+    $('#btnDel').on('click', function () {
+
+        $('#secondPage').prop('hidden', true);
+        $('#thirdPage').prop('hidden', false);
+        $('#firstPage').prop('hidden', true);
+        $('#fourthPage').prop('hidden', true);
+
+    })
+
+
+    $('#deleteCheq').on('click', function () {
+        console.log('test');
+        Swal.fire(
+            'Cheque deleted',
+            'OTP sent to your phone number 012 - * * * * 123',
+            'error'
+        )
+    })
+
+
+    $('#confirmBtn').on('click', function () {
+        Swal.fire({
+            title: 'Do you want to delete the cheque?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Submit',
+            allowOutsideClick: false,
+            customClass: {
+                title: 'alertFontStyle'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Your Delete Request has been submitted!',
+                    icon: 'success',
+                    customClass: {
+                        title: 'alertFontStyle'
+                    }
+                }).then(function () {
+                    $('#secondPage').prop('hidden', true);
+                    $('#thirdPage').prop('hidden', true);
+                    $('#firstPage').prop('hidden', true);
+                    $('#fourthPage').prop('hidden', false);
+                });
+            }
+        })
+
+
+
+    });
+
+
+    $("#auth").change(function () {
+        console.log("test");
+        var cases = $("#auth option:selected").val();
+        if (cases == "pac")
+            $("#PAC").removeClass("d-none");
+        $("#secure").addClass("d-none");
+        $("#noti").addClass("d-none");
+        $("#token").addClass("d-none");
+        if (cases == "token") {
+            $("#token").removeClass("d-none");
+            $("#PAC").addClass("d-none");
+            $("#signin").addClass("d-none");
+            $("#noti").addClass("d-none");
+        }
+        if (cases == "secure") {
+            $("#secure").removeClass("d-none");
+            $("#PAC").addClass("d-none");
+            $("#token").addClass("d-none");
+            $("#noti").addClass("d-none");
+        }
+        if (cases == "noti") {
+            $("#noti").removeClass("d-none");
+            $("#PAC").addClass("d-none");
+            $("#token").addClass("d-none");
+            $("#secure").addClass("d-none");
+        }
+    }
+    );
+    var progressBar = $('.progress-bar');
+    var progressNumber = 0;
+
+    setInterval(function () {
+        progressNumber++;
+        progressBar.css('width', progressNumber + '%');
+        progressBar.attr('aria-valuenow', progressNumber);
+    }, 500);</script>

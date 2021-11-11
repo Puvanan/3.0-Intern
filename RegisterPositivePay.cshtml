@@ -1,0 +1,306 @@
+﻿<div class="d-none d-lg-block" style="height:5vh;"></div>
+
+
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
+    <div class="row mt-2 justify-content-center">
+        <div class="col-lg-10">
+            <div class="row justify-content-center ">
+                <div class="col-12 col-lg-5 text-center">
+                    <img class="mb-4 img-fluid " style="width:100px;" src="~/Images/WebsiteImages/document.png" />
+                    <h3>Register Positive Pay</h3>
+                    <p>
+                        Activating Positive Pay will ensure that you are secured by verifying
+                        cheques submitted for payment against cheques that you had inserted to
+                        Positive Pay.
+                    </p>
+                </div>
+
+                <div id="firstPage" class="col-12 col-lg-8 ">
+                    <div class="row mb-2">
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Select your account</label>
+                        <div class="col-sm-12 mb-2">
+
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected class="text-muted">Please select</option>
+                                <option value="">3001198511 (Current)</option>
+                                <option value="">3001320213 (Current)</option>
+                                <option value="">3060022027 (Current)</option>
+                                <option value="">3188498819 (Current)</option>
+                                <option value="">3980035216 (Current)</option>
+                                <option value="">3992850013 (Current)</option>
+                                <option value="">3997569913 (Current)</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <label class="col-sm-12 col-form-label">Effective Date</label>
+                    <input id="effectiveDatePicker" class="form-control bg-white" placeholder="01-01-2021"
+                           aria-label="effectiveDateInput">
+                    <div class="form-check mt-4">
+                        <input class="form-check-input" type="checkbox" value="" id="posPayCheckbox">
+                        <label class="form-check-label" for="posPayCheckbox">
+                            By checking this checkbox, I acknowledge that I have read, understand and agree to be
+                            bound by
+                            the <span>
+                                <a class="text-decoration-none text-primary" href="#">
+                                    PBB Positive Pay Service
+                                    Terms
+                                    and Conditions
+                                </a>
+                            </span>.
+                        </label>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action("Cheque", "Home" )">
+                                Back
+                            </a>
+                            <button id="firstNext" class="btn btn-primary float-end"> Next </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success -->
+                <div hidden id="secondPage" class="col-12 col-lg-8 mt-3 px-5">
+                    <div class="p-5 shadow bg-white rounded-8">
+
+                        <div class="row detailzRow d-flex mb-4">
+
+                            <div class="row logoRow">
+
+                                <div class="col-lg-2 col-2 checkIconDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="successIcon">
+                                                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
+                                                             viewBox="0 0 52 52">
+                                                            <circle class="checkmark__circle" cx="26" cy="26" r="25"
+                                                                    fill="none" />
+                                                            <path class="checkmark__check" fill="none"
+                                                                  d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                                        </svg>
+                                                    </div>
+
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-10 checkTextDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+
+                                                <td style="vertical-align: middle;">
+                                                    <h5 class="lbl1 mt-3">Register Successfully</h5>
+                                                    <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Reference Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>RR232382989FH</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Account Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>45986754563 (Current) </label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Effective Date</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>10 Oct 2021</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Date/Time</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>8 Oct 2021 19:43:24</label>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start"> Print </a>
+                            <a id="thirdNext" class="btn btn-primary  float-end" href="@Url.Action("Cheque","Home")"> Done </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="alert alert-info col-12 col-lg-8 rounded-8 shadow-sm" style="margin-bottom:100px" role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            This features is only available within our Operating Hours 12:05 a.m. - 12 midnight.
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+
+<script>
+    $(document).ready(function () {
+       checkAgreement();
+
+            $('#posPayCheckbox').change(function () {
+                checkAgreement();
+            });
+
+            $("#effectiveDatePicker").flatpickr({
+                dateFormat: 'd-m-Y'
+
+            });
+
+            $("#firstNext").click(function () {
+                Swal.fire({
+                    width: '650px',
+                    title: 'Confirm Registration of Positive Pay?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d64354',
+                    cancelButtonColor: '#212529',
+                    confirmButtonText: 'Confirm'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $("#firstPage").prop('hidden', true);
+                        $("#secondPage").prop('hidden', false);
+                        Swal.fire({
+                            title: 'Your Registration of Positive Pay has been submitted!',
+                            icon: 'success',
+                        })
+                        // Swal.fire({
+                        //     title: 'Your Registration of Positive Pay submitted unsuccessfully!',
+                        //     icon: 'error',
+                        // })
+                    }
+                });
+            });
+
+            $('#reqPacBtn').on('click', function () {
+                Swal.fire({
+                    title: 'OTP is Sent!',
+                    text: 'OTP sent to your phone number 012 - * * * * 123',
+                    icon: 'success',
+                    confirmButtonColor: '#198754',
+                    confirmButtonText: 'OK',
+                });
+            });
+
+
+            $("#auth").change(function () {
+                console.log("test");
+                var cases = $("#auth option:selected").val();
+                if (cases == "pac") {
+                    $("#PAC").removeClass("d-none");
+                    $("#secure").addClass("d-none");
+                    $("#noti").addClass("d-none");
+                    $("#token").addClass("d-none");
+                }
+                if (cases == "token") {
+                    $("#token").removeClass("d-none");
+                    $("#PAC").addClass("d-none");
+                    $("#secure").addClass("d-none");
+                    $("#noti").addClass("d-none");
+                }
+                if (cases == "secure") {
+                    $("#secure").removeClass("d-none");
+                    $("#PAC").addClass("d-none");
+                    $("#token").addClass("d-none");
+                    $("#noti").addClass("d-none");
+                }
+                if (cases == "noti") {
+                    $("#noti").removeClass("d-none");
+                    $("#PAC").addClass("d-none");
+                    $("#token").addClass("d-none");
+                    $("#secure").addClass("d-none");
+                }
+            }
+            );
+
+            var progressBar = $('.progress-bar');
+            var progressNumber = 0;
+
+            setInterval(function () {
+                progressNumber++;
+                progressBar.css('width', progressNumber + '%');
+                progressBar.attr('aria-valuenow', progressNumber);
+            }, 500);
+        });
+
+        function checkAgreement() {
+            if ($('#posPayCheckbox').is(':checked')) {
+                $('#firstNext').prop('disabled', false);
+            } else {
+                $('#firstNext').prop('disabled', true);
+            }
+        }
+</script>

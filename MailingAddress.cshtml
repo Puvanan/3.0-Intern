@@ -5,86 +5,60 @@
 <div class="d-none d-lg-block" style="height:5vh;"></div>
 
 
-<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 h-100 my-auto">
-    <div class="row mt-2 justify-content-center h-100 my-auto">
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
+    <div class="row mt-2 justify-content-center">
         <div class="col-lg-10">
             <div class="row justify-content-center ">
                 <div class="col-12 col-lg-5 text-center">
-                    <h3>Loan Redraw</h3>
-                    <p class="mb-4">
-                        Loan Redraw allows you to redraw the additional principle repayments that you had made on your loan.
+                    <img class="mb-4 img-fluid " style="width:100px;" src="~/Images/WebsiteImages/location.png" />
+                    <h3>Change Mailing Address</h3>
+                    <p class="text-muted small">
+                        Update your mailing address for us to send any important mails to you.
                     </p>
                 </div>
-                <div id="firstPage" class="col-12 col-lg-8 ">
-                    <div class="row mb-2">
-                        <label for="tranAmount" class="col-sm-12 col-form-label">Select your account</label>
-                        <div class="col-sm-12 mb-2">
+                <div class="col-12 col-lg-8 " id="firstPage">
+                    <div class="row mb-2 d-flex justify-content-center">
 
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Please select</option>
-                                <option value="">4000151818158236</option>
-                                <option value="">9577445338254589</option>
-                                <option value="">1235489818021458</option>
-                                <option value="">1235489158236111</option>
-                                <option value="">4533825382544453</option>
-                                <option value="">7445338254553684</option>
-                                <option value="">0248891234486685</option>
+                        <div class="col-sm-12 d-flex flex-wrap flex-row justify-content-between">
+                            <label class="col-sm-6 col-form-label">For account</label>
+                        </div>
 
+                        <div class="col-sm-8">
+
+                            <select id="choices-multiple-remove-button" multiple>
+                                <option class="choice-option">40001518</option>
+                                <option class="choice-option">95774453</option>
+                                <option class="choice-option">12354898</option>
+                                <option class="choice-option">12354891</option>
+                                <option class="choice-option">14680642</option>
+                                <option class="choice-option">54670423</option>
+                                <option class="choice-option">40054898</option>
+                                <option class="choice-option">95771468</option>
                             </select>
 
                         </div>
-                    </div>
 
-                    <div class="row my-5 last-row">
-                        <div class="col-12">
-                            <a class="btn btn-dark float-start" href="@Url.Action("CardSettings", "Home")"> Back </a>
-                            <a data-bs-toggle="modal" data-bs-target="#exampleModal" id="firstNext" class="btn btn-primary  float-end"> Next </a>
+                        <div class="form-check form-switch col-sm-4 text-end p-0 py-2 pe-2">
+                            <input class="form-check-input ms-5 p-0" type="checkbox" role="switch"
+                                   id="selectAllSwitch">
+                            <label class="form-check-label ps-3" for="selectAllSwitch">Select all accounts</label>
+                        </div>
+
+                    </div>
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Address</label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="mailing" name="mailing" class="form-control mb-0" placeholder="Enter House No./ Unit No./ Apt/ Suite/ Building">
+                            <input type="text" id="mailing" name="mailing" class="form-control mb-0" placeholder="Enter Street Address / P.O Box">
+                            <input type="text" id="mailing" name="mailing" class="form-control" placeholder="Enter City And State">
                         </div>
                     </div>
-                </div>
-
-                <div hidden id="secondPage" class="col-12 col-lg-8 ">
                     <div class="row mb-2">
-                        <label for="tranAmount" class="col-sm-12 col-form-label">Name of Borrower</label>
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Postcode</label>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control mb-2" disabled placeholder="Name of Borrower" value="TAN KIM LENG">
+                            <input type="Number" class="form-control mb-2" placeholder="Postcode">
                         </div>
                     </div>
-                    <div class="row mb-2">
-                        <label for="tranAmount" class="col-sm-12 col-form-label">Account Holding Branch	</label>
-                        <div class="col-sm-12">
-                            <input type="text" class="form-control mb-2" disabled placeholder="Account Holding Branchn" value="JLN SULTAN SULAIMAN">
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <label for="tranAmount" class="col-sm-12 col-form-label">To Account</label>
-                        <div class="col-sm-12 mb-2">
-
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Please select</option>
-                                <option value="">4000151818158236</option>
-                                <option value="">9577445338254589</option>
-                                <option value="">1235489818021458</option>
-                                <option value="">1235489158236111</option>
-                                <option value="">4533825382544453</option>
-                                <option value="">7445338254553684</option>
-                                <option value="">0248891234486685</option>
-
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <label for="tranAmount" class="col-sm-12 col-form-label">Redraw Amount (Maximum Amount: RM 48,000.00)</label>
-                        <div class="col-sm-12">
-                            <input type="Number" class="form-control mb-2">
-                            <div id="emailHelp" class="form-text">
-                                (Minimum of RM5,000-00 and in multiples of RM1,000-00)
-                                Note: Amount must not be more than the Available Redraw Amount.
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="row mb-2">
                         <label for="auth" class="col-sm-3 col-form-label">Approve this transacion with</label>
                         <div class="col-sm-9">
@@ -100,7 +74,7 @@
                         <label for="PAC" class="col-sm-3 col-form-label"> <img src="~/Images/WebsiteImages/otp.png" alt="" width="100" height="100"></label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="PAC">
-                            <p class="text-muted">A 6-digit PAC will be sent to your registered mobile number *****6168. Please click "Request PAC" if you wish to proceed with this transaction.</p>
+                            <p class="text-muted">A 6 digit PAC will be sent to your registered mobile phone number *****6168. Please click "Request PAC" if you wish to proceed</p>
                         </div>
                         <div class="col-sm-3 text-end text-lg-center mt-0 mt-lg-0">
                             <a class="btn btn-info pac text-white float-lg-end">Request PAC</a>
@@ -184,18 +158,24 @@
                     </div>
                 </div>
 
-               
+                
 
-                <!-- Success -->
-                <div hidden id="thirdPage" class="col-12 col-lg-8 mt-3 px-5 fourthPage">
-                    <div class="p-5 pt-3 shadow bg-white rounded-8">
+                <div hidden id="thirdPage" class="col-12 col-lg-8 mt-3 px-5">
+                    <div class="p-5 shadow bg-white rounded-8">
+
                         <div class="row detailzRow d-flex mb-4">
+
                             <div class="row logoRow">
+
                                 <div class="col-lg-2 col-2 checkIconDIV">
+
                                     <table style="height: 100%; width: 100%;">
+
                                         <tbody>
+
                                             <tr>
                                                 <td>
+
                                                     <div class="successIcon">
                                                         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
                                                              viewBox="0 0 52 52">
@@ -205,145 +185,120 @@
                                                                   d="M14.1 27.2l7.1 7.2 16.7-16.8" />
                                                         </svg>
                                                     </div>
+
                                                 </td>
+
                                             </tr>
+
                                         </tbody>
+
                                     </table>
+
                                 </div>
+
                                 <div class="col-lg-9 col-md-12 col-sm-12 col-xs-10 checkTextDIV">
+
                                     <table style="height: 100%; width: 100%;">
+
                                         <tbody>
+
                                             <tr>
+
                                                 <td style="vertical-align: middle;">
-                                                    <h5 class="lbl1 mt-3">Loan Redraw Successful</h5>
+                                                    <h5 class="lbl1 mt-3">Mailing Address Changed Successfully.</h5>
                                                     <p class="text-muted">4 May 2018, 12:59:12pm</p>
                                                 </td>
+
                                             </tr>
+
                                         </tbody>
+
                                     </table>
+
                                 </div>
+
                             </div>
+
+
                         </div>
+
                         <div class="row detailsRow">
+
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
                                 <label>Reference Number</label>
                             </div>
+
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
                                 <label>RR232382989FH</label>
                             </div>
+
                         </div>
+
                         <div class="row detailsRow">
+
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                <label>Name of Borrower</label>
+                                <label>Your New Mailing Address</label>
                             </div>
+
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                <label>Kwek Kian Sheng</label>
+                                <label>12A test</label>
                             </div>
+
                         </div>
+
                         <div class="row detailsRow">
+
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                <label>Accounting Holding Branch</label>
+                                <label>Postcode</label>
                             </div>
+
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                <label>KL Main Office</label>
+                                <label>12345</label>
                             </div>
+
                         </div>
+
                         <div class="row detailsRow">
+
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                <label>From of Account</label>
+                                <label>For Account No(s) / Branch Name</label>
                             </div>
+
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                <label>292343534331231</label>
+                                <label>5472344 / Gurun</label>
                             </div>
-                        </div>
-                        <div class="row detailsRow">
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                <label>To Account</label>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                <label>477756423223</label>
-                            </div>
-                        </div>
-                        <div class="row detailsRow">
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                <label>Redraw Amount</label>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                <label>RM 5000.00</label>
-                            </div>
-                        </div>
-                        <div class="row detailsRow">
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                <label>Date and Time</label>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                <label>1 October 2021</label>
-                            </div>
+
                         </div>
                     </div>
+
                     <div class="row my-5 last-row">
                         <div class="col-12">
                             <a class="btn btn-dark float-start"> Print </a>
-                            <a id="thirdNext" class="btn btn-primary  float-end" href="@Url.Action("CardSettings", "Home" )"> Done </a>
+                            <a id="secondNext" class="btn btn-primary  float-end" href="@Url.Action("CardSettings", "Home")"> Done </a>
                         </div>
                     </div>
+
                 </div>
 
-            </div>
+                <div class="alert alert-info col-12 col-lg-8 rounded-8 shadow-sm" style="margin-bottom:100px" role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            Any change mailing address requests through PbeBank.com will be construed as
+                            written requests by customers to execute the change of address of the affected
+                            accounts.
+                        </li>
+                        <li>
+                            Change mailing address requests will not be executed immediately. These requests
+                            will be executed by your account holding branch accordingly.
+                        </li>
+                        <li>
+                            For Credit/ Debit card contact details, please update information in Change
+                            Credit/ Debit Card contact information tab.
+                        </li>
+                    </ul>
+                </div>
 
-
-
-
-        </div>
-
-    </div>
-
-</div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Redraw Request via PBe</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                        id="modalCloseBtn"></button>
-            </div>
-
-            <div class="modal-body">
-                <label class="modalNotice">Notice:</label>
-
-                <br>
-
-                <ol>
-                    <li class="modalLi">
-                        All Redraw Request will be routed back to the Loan Account Holding Branch for
-                        processing.
-                    </li>
-
-                    <li class="modalLi">
-                        Upon satisfying all the <a href="#">Term and Condition</a> on Redrawing as per the
-                        Letter of Offer, Branch will then proceed on the request.
-                    </li>
-
-                    <li class="modalLi">
-                        Processing of the Redraw Request will take two (2) days perior submission online before
-                        the date of the proposed redrawing.
-                    </li>
-
-                    <li class="modalLi">
-                        Branch will notify you once your current/savings account has been credited.
-                    </li>
-
-                    <li>
-                        Kindly refer to your Account Holding branch for any queries on the request.
-                    </li>
-                </ol>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="modalBtn">
-                    Agree and Proceed
-                </button>
             </div>
         </div>
     </div>
@@ -362,44 +317,40 @@
         $('.profile').each(function () {
             $(this).addClass('active');
         });
-        $('.profileMenu').addClass('active');        
-    });
-    $('#modalBtn').on('click', function () {
-            $('#secondPage').attr('hidden', false);
-            $('#firstPage').attr('hidden', true);
-            $('#thirdPage').attr('hidden', true);
-    });
-    $('.pac').on('click', function () {
-        Swal.fire(
-            'OTP is Sent!',
-            'OTP sent to your phone number 012 - * * * * 123',
-            'success'
-        )
-    })
-    $('#secondNext').on('click', function () {
-        Swal.fire(
-            'Success',
-            'Your Transaction Successfully Saved',
-            'success'
-        ).then((result) => {
-                if (result.isConfirmed) {
-                    $('#thirdPage').attr('hidden', false);
-                    $('#secondPage').attr('hidden', true);
-                    $('#firstPage').attr('hidden', true);
-                }
-            })
+        $('.profileMenu').addClass('active');
 
-       
-    })
+
+        var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+            removeItemButton: true,
+            searchEnabled: true,
+            searchChoices: true,
+            searchResultLimit: 5,
+            placeholder: true,
+            placeholderValue: "Search or select account(s)",
+            // searchPlaceholderValue: null,
+            // renderChoiceLimit: 5,
+        });
+
+    });
+    $("#selectAllSwitch").change(function () {
+        if ($(this).is(":checked")) {
+            $(".choices").addClass('is-disabled');
+            $('.choices__list').attr('hidden', true);
+            $('.choices__input').attr('disabled', true);
+        } else {
+            $(".choices").removeClass('is-disabled');
+            $('.choices__list').attr('hidden', false);
+            $('.choices__input').attr('disabled', false);
+        }
+    });
     $("#auth").change(function () {
         console.log("test");
         var cases = $("#auth option:selected").val();
-        if (cases == "pac") {
+        if (cases == "pac")
             $("#PAC").removeClass("d-none");
-            $("#secure").addClass("d-none");
-            $("#noti").addClass("d-none");
-            $("#token").addClass("d-none");
-        }
+        $("#secure").addClass("d-none");
+        $("#noti").addClass("d-none");
+        $("#token").addClass("d-none");
         if (cases == "token") {
             $("#token").removeClass("d-none");
             $("#PAC").addClass("d-none");
@@ -420,6 +371,35 @@
         }
     });
 
+
+    $('#secondNext').on('click', function () {
+        Swal.fire({
+            title: 'Do you want to submit the changes?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Submit',
+            allowOutsideClick: false,
+            customClass: {
+                title: 'alertFontStyle'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Your mailing address has been changed!',
+                    icon: 'success',
+                    customClass: {
+                        title: 'alertFontStyle'
+                    }
+                }).then(function () {
+                    $('#thirdPage').attr('hidden', false);
+                    $('#firstPage').attr('hidden', true);
+                });
+            }
+        })
+
+
+
+    });
 </script>
 
 

@@ -1,0 +1,390 @@
+﻿<div class="d-none d-lg-block" style="height:5vh;"></div>
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
+    <div class="row mt-2 justify-content-center">
+        <div class="col-lg-10">
+            <div class="row justify-content-center ">
+                <div class="col-12 col-lg-5 text-center">
+                    <img class="mb-4 img-fluid " style="width:100px;" src="~/Images/WebsiteImages/file.png" />
+                    <h3>Insert Positive Pay</h3>
+                    <p class="mb-4">
+
+                        Insert cheque to positive pay to ensure that your payment is received by the intended payee.
+
+                    </p>
+                </div>
+                <!-- 1st page -->
+                <div id="firstPage" class="col-12 col-lg-8 ">
+
+                    <div class="row mb-2">
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Select your account</label>
+                        <div class="col-sm-12 mb-2">
+
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Please select</option>
+                                <option value="">4000151818158236</option>
+                                <option value="">9577445338254589</option>
+                                <option value="">1235489818021458</option>
+                                <option value="">1235489158236111</option>
+                                <option value="">4533825382544453</option>
+                                <option value="">7445338254553684</option>
+                                <option value="">0248891234486685</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Cheque Number</label>
+                        <div class="col-sm-12 mb-2">
+                            <input type="text" class="form-control" id="paymentTypeCon"
+                                   placeholder="Enter Cheque Number">
+                        </div>
+                        <label for="payTo" class="col-sm-12 col-form-label">Pay To</label>
+                        <div class="col-sm-12 mb-2">
+                            <input type="text" class="form-control" id="paymentTypeCon">
+                        </div>
+
+                        <label for="tranAmount" class="col-sm-12 col-form-label"
+                               placeholder="Enter Cheque Number">Date of Cheque </label>
+                        <div class="col-sm-12 mb-2">
+                            <input type="datetime-local" class="form-control" id="paymentTypeCon "
+                                   placeholder="Enter Date of Cheque">
+                        </div>
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Amount</label>
+                        <div class="col-sm-12 mb-2">
+                            <input type="text" class="form-control" id="paymentTypeCon" placeholder="Enter Amount">
+                        </div>
+
+                    </div>
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+
+                            <a class="btn btn-dark float-start" href="@Url.Action("Cheque", "Home" )">
+                                Back
+                            </a>
+                            <a id="firstNext" class="btn btn-primary  float-end"> Next </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div hidden id="secondPage" class="col-12 col-lg-8 mt-3 px-5">
+                    <h3>Cheque Details</h3>
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Account Number</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="3213256456465">
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Cheque Number</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="Kwek Kian Sheng">
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Pay to</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="Kwek Kian Sheng">
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Amount</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="3213256456465">
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Date</label>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" disabled class="form-control mb-2" placeholder="Address 1"
+                                   value="Kwek Kian Sheng">
+                        </div>
+                    </div>
+
+                    <div class="row mt-2 pb-5 last-row">
+                        <div class="col-6 text-start text-lg-start mt-3">
+                            <button class="btn btn-dark mb-3 mb-lg-0 mt-0 mt-1g-0 btnBackPac">Back</button>
+                        </div>
+                        <div class="col-6 text-end text-lg-end mt-3">
+                            <button id="confirmBtn"
+                                    class="btn btn-primary mb-3 mb-1g-0 mt-1g-0 tranBtn">
+                                Confirm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Success -->
+                <div hidden id="thirdPage" class="col-12 col-lg-8 mt-3 px-5">
+                    <div class="p-5 shadow bg-white rounded-8">
+
+                        <div class="row detailzRow d-flex mb-4">
+
+                            <div class="row logoRow">
+
+                                <div class="col-lg-2 col-2 checkIconDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+                                                <td>
+
+                                                    <div class="successIcon">
+                                                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
+                                                             viewBox="0 0 52 52">
+                                                            <circle class="checkmark__circle" cx="26" cy="26" r="25"
+                                                                    fill="none" />
+                                                            <path class="checkmark__check" fill="none"
+                                                                  d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                                        </svg>
+                                                    </div>
+
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-10 checkTextDIV">
+
+                                    <table style="height: 100%; width: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+
+                                                <td style="vertical-align: middle;">
+                                                    <h5 class="lbl1 mt-3">Insert Cheque Successful</h5>
+                                                    <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Reference Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>RR232382989FH</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Account Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>3242342543</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Cheque Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>1234546</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Pay To</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>Praveen</label>
+                            </div>
+
+                        </div>
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Date of Cheque</label>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>2 Oct 2021</label>
+                            </div>
+
+                        </div>
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Amount</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>RM 2.60</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                                <label>Date/Time</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                                <label>3 Oct 2021 19:54:00</label>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start"> Print </a>
+                            <a id="thirdNext" class="btn btn-primary  float-end" href="@Url.Action("Cheque", "Home" )"> Done </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-info col-12 col-lg-8 rounded-8 shadow-sm" style="margin-bottom:100px" role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            This features is only available within our Operating Hours 12:05 a.m. - 12
+                            midnight.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script>
+    $(document).ready(function () {
+        flatpickr("input[type=datetime-local]", {});
+    });
+    $('#firstNext').on('click', function () {
+
+        $('#secondPage').prop('hidden', false);
+        $('#thirdPage').prop('hidden', true);
+        $('#firstPage').prop('hidden', true);
+        $('#fourthPage').prop('hidden', true);
+
+    })
+    $('#btnDel').on('click', function () {
+
+        $('#secondPage').prop('hidden', true);
+        $('#thirdPage').prop('hidden', false);
+        $('#firstPage').prop('hidden', true);
+
+
+    })
+
+    $('#deleteCheq').on('click', function () {
+        console.log('test');
+        Swal.fire(
+            'Cheque deleted',
+            'OTP sent to your phone number 012 - * * * * 123',
+            'error'
+        )
+    })
+
+    $('#confirmBtn').on('click', function () {
+        Swal.fire({
+            title: 'Do you want to insert the cheque?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Submit',
+            allowOutsideClick: false,
+            customClass: {
+                title: 'alertFontStyle'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Your Insert Request has been submitted!',
+                    icon: 'success',
+                    customClass: {
+                        title: 'alertFontStyle'
+                    }
+                }).then(function () {
+                    $('#secondPage').prop('hidden', true);
+                    $('#thirdPage').prop('hidden', false);
+                    $('#firstPage').prop('hidden', true);
+                });
+            }
+        })
+
+
+
+    });
+
+
+    $("#auth").change(function () {
+        console.log("test");
+        var cases = $("#auth option:selected").val();
+        if (cases == "pac")
+            $("#PAC").removeClass("d-none");
+        $("#secure").addClass("d-none");
+        $("#noti").addClass("d-none");
+        $("#token").addClass("d-none");
+        if (cases == "token") {
+            $("#token").removeClass("d-none");
+            $("#PAC").addClass("d-none");
+            $("#signin").addClass("d-none");
+            $("#noti").addClass("d-none");
+        }
+        if (cases == "secure") {
+            $("#secure").removeClass("d-none");
+            $("#PAC").addClass("d-none");
+            $("#token").addClass("d-none");
+            $("#noti").addClass("d-none");
+        }
+        if (cases == "noti") {
+            $("#noti").removeClass("d-none");
+            $("#PAC").addClass("d-none");
+            $("#token").addClass("d-none");
+            $("#secure").addClass("d-none");
+        }
+    }
+    );
+    var progressBar = $('.progress-bar');
+    var progressNumber = 0;
+
+    setInterval(function () {
+        progressNumber++;
+        progressBar.css('width', progressNumber + '%');
+        progressBar.attr('aria-valuenow', progressNumber);
+    }, 500);
+
+</script>
