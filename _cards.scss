@@ -1,0 +1,152 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Ephesis&family=Raleway:wght@500;600&display=swap");
+@import "fonts";
+$bg-light: #f3f4fa;
+$bg-white: #fefeff;
+$bg-dark-text: #333;
+$bg-grey-text: #666;
+$primary: #d64354;
+$blue: #0072bc;
+$bg-info: #819ce0;
+$bg-warning: #ffc037;
+$bg-green: #98fb98;
+$bg-form: #f4f2f7;
+$bg-black-transparent: rgba(0, 0, 0, 0);
+$btn-dark: #212529;
+
+
+// .swiper {
+//     width: 600px;
+//     height: 300px;
+// }
+
+.cardCon {
+    border-radius: 1rem;
+    width: 400px;
+    height: 250px;
+}
+
+.darkCard {
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(137deg, #0f2027, #203a43, #2c5364);
+
+    & .cardNumber {
+        font-family: "Courier Prime", monospace;
+        color: $bg-white;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+        letter-spacing: 0.25rem;
+    }
+
+    & .cardHolderName,
+    .cardExpiry {
+        font-family: "Gilroy-Medium", sans-serif;
+        color: $bg-light;
+    }
+
+    & .typeOfCard {
+        font-family: "Gilroy-Bold";
+        color: $bg-light;
+    }
+
+    & .pbCardLogo {
+        filter: brightness(150%) contrast(150%);
+    }
+}
+
+.lightCard {
+    background: #7f7fd5; /* fallback for old browsers */
+    background: -webkit-linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4);
+
+    & .cardNumber {
+        font-family: "Courier Prime", monospace;
+        color: $bg-dark-text;
+        text-shadow: 1px 1px 5px rgba(150, 150, 150, 1);
+        letter-spacing: 0.25rem;
+    }
+
+    & .cardHolderName,
+    .cardExpiry {
+        font-family: "Gilroy-Medium", sans-serif;
+        color: $bg-dark-text;
+    }
+
+    & .typeOfCard {
+        font-family: "Gilroy-Bold";
+        color: $bg-dark-text;
+    }
+}
+
+.quantumTitle {
+    font-family: "Raleway", sans-serif !important;
+
+    &::after {
+        content: "QUANTUM";
+    }
+}
+
+.signatureTitle {
+    font-family: "Ephesis", cursive !important;
+    font-size: 2rem;
+
+    &::after {
+        content: "Signature";
+    }
+}
+
+.cardTypeImg {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.visaCard {
+    background-size: cover;
+    /*background-image: url("/assets/cardAssets/visa.svg");*/
+}
+
+.masterCard {
+    background-size: contain;
+    background-position-x: right;
+    /*background-image: url("/assets/cardAssets/mastercard.svg");*/
+}
+
+// Media Queries
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .cardCon {
+        height: 200px;
+        width: 330px;
+    }
+
+    .cardNumber {
+        font-size: 1.1rem;
+    }
+
+    .quantumTitle {
+        font-size: 1.2rem;
+    }
+
+    .signatureTitle {
+        font-size: 1.8rem;
+    }
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {
+}
+
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width
