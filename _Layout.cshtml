@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBeBank</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @*<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">*@
+
+</head>
+<body class="vh-100 bg-light">
+    <div class="container-fluid">
+        <div class="row flex-nowrap vh-100">
+
+            <div class="col-auto col-xl-2 d-lg-block d-none leftbar bg-light gx-0">
+
+                <div id="mySidebar" class="sidebar d-flex flex-column pt-4 shadow-sm">
+                    <div class="d-flex flex-column flex-grow-0 justify-content-start align-items-center">
+                        <img href="@Url.Action("index2","Home")" src="~/Images/WebsiteImages/pbe-logo.png" class="img-fluid small-img" style="padding:1rem; width:90px;" />
+                        <img hidden href="@Url.Action("Index2","Home")" src="~/Images/WebsiteImages/pb_logo.png" class="img-fluid big-img" style="padding:1.5rem; width: 200px;" />
+                    </div>
+                    <div class="d-flex flex-column justify-content-start flex-grow-1 mt-3 pt-5">
+                        <ul class="ps-0 pt-5" style="list-style:none">
+                            <li class="mb-4 nav-link homeMenu p-0">
+                                <a href="@Url.Action("Index2","Home")">
+                                    <div class="row" style="width:200px">
+                                        <div class="col-3"><i class="bi bi-house-fill"></i></div>
+                                        <div class="col-6"><span class="icon-text small">Home</span></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-4 nav-link accountMenu p-0">
+                                <a href="@Url.Action("AccountSummary","Home")">
+                                    <div class="row" style="width:200px">
+                                        <div class="col-3">
+                                            <i class="bi bi-card-heading"></i>
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="icon-text small ">Accounts</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-4 nav-link accountMenu p-0">
+                                <a href="#submenu" data-bs-toggle="collapse" class="border-collapse">
+                                    <div class="row" style="width:200px">
+                                        <div class="col-3">
+                                            <i class="bi bi-file-earmark-check"></i>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <span class="icon-text small ">Apply</span>
+                                        </div>
+
+                                        <div class="col-3">
+                                            <i class="bi bi-caret-down ms-3"></i>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <ul class="collapse nav flex-column" style="margin-top:0;" id="submenu" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="@Url.Action("LoanRedraw","Home")" class="nav-link px-2 align-middle">
+                                            <i class="bi bi-arrow-right" style="color:#fff;margin-right: 2.3rem;"> </i>
+                                            <span class="ms-4 d-none d-sm-inline py-0 small text-muted " style="font-size:16px;">Loan Redraw</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb-4 nav-link accountMenu p-0">
+                                <a href="#submenu3" data-bs-toggle="collapse" class="border-collapse">
+                                    <div class="row" style="width:200px">
+                                        <div class="col-3">
+                                            <i class="bi bi-gear"></i>
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="icon-text small ">Settings</span>
+                                        </div>
+                                        <div class="col-3">
+                                            <i class="bi bi-caret-down ms-3"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <ul class="collapse nav flex-column" style="margin-top:0;" id="submenu3" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="@Url.Action("ManageProfile","Home")" class="nav-link px-2 align-middle">
+                                            <i class="bi bi-arrow-right" style="color:#fff;margin-right: 2.3rem;"> </i>
+                                            <span class="ms-4 d-none d-sm-inline py-0 small text-muted " style="font-size:16px;">Profile</span>
+                                        </a>
+                                    </li>
+                                    <li class="w-100 mt-2">
+                                        <a href="@Url.Action("Cheque","Home")" class="nav-link px-2 align-middle">
+                                            <i class="bi bi-arrow-right" style="color:#fff;margin-right: 2.3rem;"> </i>
+                                            <span class="d-none ms-4 d-sm-inline small py-0 text-muted " style="font-size:16px;">Cheque Management</span>
+                                        </a>
+                                    </li>
+                                    <li class="w-100 mt-2">
+                                        <a href="@Url.Action("CardSettings","Home")" class="nav-link px-2 align-middle">
+                                            <i class="bi bi-arrow-right" style="color:#fff;margin-right: 2.3rem;"> </i>
+                                            <span class="d-none ms-4 d-sm-inline small py-0 text-muted " style="font-size:16px;">Card</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="d-flex flex-column justify-content-end flex-grow-1 mt-3 pt-5">
+                        <a class="mb-3" href="@Url.Action("Login2","Home")">
+                            <div class="row" style="width:200px">
+                                <div class="col-3"><i class="bi bi-power"></i></div>
+                                <div class="col-6"><span class="icon-text small">Log Out</span></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div hidden class="d-flex1 flex-column align-items-center align-items-sm-start px-3 pb-4 pt-3 h-100 ">
+                    <a href="@Url.Action("index2","Home")" class="d-flex align-items-center pb-5 mb-md-0 me-md-auto text-decoration-none">
+                        <img src="~/Images/WebsiteImages/pb_logo.png" class="d-inline-block align-text-top logo">
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start w-100 mt-lg-5" id="menu">
+                        <li class="nav-item mb-3 px-1 py-2 w-100">
+                            <a href="@Url.Action("index2","Home")" class="nav-link homeMenu   align-middle px-2">
+                                <i class="bi bi-house fs-5"></i><span class="ms-3 d-none d-sm-inline ">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="w-100 mb-3 px-1 py-2">
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link accountMenu px-2 align-middle pb-2">
+                                <i class="bi bi-card-heading fs-5x"></i>
+                                <span class="ms-3 d-none d-sm-inline ">Accounts</span>
+                                <span class="float-end">
+                                    <i class="bi bi-caret-down"></i>
+                                </span>
+                            </a>
+                            <ul class="collapse nav flex-column" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="@Url.Action("DepositSummary3","Home")" class="nav-link px-2 align-middle">
+                                        <i class="bi bi-arrow-right" style="color:#fff"> </i>
+                                        <span class="ms-3 d-none d-sm-inline ">Debit</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("CreditCardSummary3","Home")" class="nav-link px-2 align-middle">
+                                        <i class="bi bi-arrow-right" style="color:#fff"> </i>
+                                        <span class="d-none ms-3 d-sm-inline small text-end">Credit</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="w-100 mb-3 px-1 py-2">
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link profileMenu px-2 align-middle pb-2">
+                                <i class="bi bi-person-circle fs-5x"></i> <span class="ms-3 d-none d-sm-inline ">
+                                    Profile
+                                </span>
+                                <span class="float-end">
+                                    <i class="bi bi-caret-down"></i>
+                                </span>
+
+                            </a>
+
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="@Url.Action("ManageProfile","Home")" class="nav-link px-0 ">
+                                        <i class="bi bi-arrow-right" style="color:#fff"> </i>
+                                        <span class="d-none ms-3 d-sm-inline small">Manage Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0">
+                                        <i class="bi bi-arrow-right" style="color:#fff"> </i>
+                                        <span class="d-none ms-3 d-sm-inline small">Manage Card Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0">
+                                        <i class="bi bi-arrow-right" style="color:#fff"> </i>
+                                        <span class="d-none ms-3 d-sm-inline small">Cancel ATM Card</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0">
+                                        <i class="bi bi-arrow-right" style="color:#fff"> </i>
+                                        <span class="d-none ms-3 d-sm-inline small">Product</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mb-3 px-1 py-2 w-100">
+                            <a href="#" class="nav-link px-2 align-middle">
+                                <i class="bi bi-question-circle fs-5x"></i> <span class="ms-3 d-none d-sm-inline">Support</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="@Url.Action("Login", "Home")" class="d-flex align-items-center nav-link text-decoration-none">
+                            <i class="bi bi-power fs-5x"></i><span class="ms-3 d-none d-sm-inline">Log Out</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-10 gx-0 col-auto rounded-8-lg content" id="main">
+                <div class="position-fixed w-100 top-0 d-none d-lg-none" style="height:225px; z-index:-1; background:#ffebee;">
+                    <div class="custom-shape-divider-bottom-1629106234">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="row h-auto ">
+                    @*<div class="d-none" style="height:5vh;"></div>*@
+
+                    <div class="col-12 ps-4 pb-2 pt-3 d-lg-none d-block">
+                        <img src="~/Images/WebsiteImages/pb_logo.png" class="d-inline-block align-text-top logo" style="padding-left:7.5px">
+                    </div>
+
+                    <div class="col-12 mx-auto ">
+                        @RenderBody()
+                    </div>
+
+                </div>
+            </div>
+            <div class=" d-lg-block d-none footer position-fixed bottom-0 gx-0">
+                <div class="bg-white pe-3" style="padding-left: 140px;">
+                    <div class="container-fluid">
+                        <div class="row align-items-center justify-content-md-between px-2 py-1">
+                            <div class="col-md-6">
+
+                                <div class="text-center text-md-start text-primary-hover text-muted smaller">
+                                    Copyright © 2021 Public Bank Berhad 196501000672 (6463-H). ALL RIGHTS RESERVED.
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-sm-flex align-items-center justify-content-center justify-content-md-end">
+
+
+
+                                <ul class="nav text-primary-hover text-center text-sm-end justify-content-center text-black" justify-content-center mt-3 mt-md-0">
+                                    <li class="nav-item"><a class="nav-link text-black-50 hover-dark smaller" href="#">Terms</a></li>
+                                    <li class="nav-item"><a class="nav-link text-black-50 hover-dark smaller" href="#">FAQ</a></li>
+                                    <li class="nav-item"><a class="nav-link text-black-50 hover-dark smaller" href="#">Privacy</a></li>
+                                    <li class="nav-item"><a class="nav-link text-black-50 hover-dark smaller" href="#">Security</a></li>
+                                    <li class="nav-item"><a class="nav-link text-black-50 hover-dark smaller" href="#">e-Banking Charter</a></li>
+                                    <li class="nav-item"><a class="nav-link text-black-50 hover-dark smaller" href="#">Bank Negara Malaysia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-block d-lg-none gx-0" id="mobile-nav" style="position: fixed;bottom:5px;width: 100vw; left: 5px; z-index:2000">
+                <div class="mx-1">
+                    <div class="bg-white text-center mb-3 rounded-8 shadow-lg row justify-content-evenly py-3 mx-1" style="border-radius: 1rem;">
+                        <div class="col-2 text-center">
+                            <a href="@Url.Action("Index2", "Home")" class="mobileNav active">
+                                <i class="bi bi-house fs-5 "></i>
+                                <p class="mb-0 smaller">Home</p>
+                            </a>
+                        </div>
+                        <div class="col-2 text-center">
+                            <a class="mobileNav account">
+                                <i class="bi bi-card-heading fs-5 "></i>
+                                <p class="mb-0 smaller">Account</p>
+                            </a>
+                        </div>
+                        <div class="col-2 text-center">
+                            <a data-bs-toggle="modal" data-bs-target="#Apply" class="mobileNav">
+                                <i class="bi bi-file-earmark-check fs-5 " ></i>
+                                <p class="mb-0 smaller">Apply</p>
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a data-bs-toggle="modal" data-bs-target="#settingProfile" class="mobileNav profile">
+                                <i class="bi bi-question-circle fs-5 "></i>
+                                <p class="mb-0 smaller">Settings</p>
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a href="@Url.Action("Login", "Home")" class="mobileNav">
+                                <i class="bi bi-power fs-5 "></i>
+                                <p class="mb-0 smaller">LogOut</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade p-0" id="Apply" tabindex="-1" aria-labelledby="applyLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-mobile mainNav">
+            <div class="modal-content glass-2 px-3 py-2">
+                <div class="modal-body">
+                    <div class="row">
+                        <a href="@Url.Action("LoanRedraw", "Home")">
+                            <div class="col-12">
+                                <div class="row border-bottom p-1 pb-4 h-100">
+                                    <div class="col-10 my-auto">
+                                        <p class="mb-0 text-black h6 small">LoanRedraw</p>
+                                    </div>
+                                    <div class="col-2 my-auto">
+                                        <i class="ri-arrow-right-line text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>                   
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade p-0" id="settingProfile" tabindex="-1" aria-labelledby="settingProfileLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-mobile mainNav">
+            <div class="modal-content glass-2 px-3 py-2">
+                <div class="modal-body">
+                    <div class="row">
+                        <a href="@Url.Action("ManageProfile", "Home")">
+                            <div class="col-12">
+                                <div class="row border-bottom p-1 pb-4 h-100">
+                                    <div class="col-10 my-auto">
+                                        <p class="mb-0 text-black h6 small">Profile</p>
+                                    </div>
+                                    <div class="col-2 my-auto">
+                                        <i class="ri-arrow-right-line text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-12">
+                            <div class="row  border-bottom p-1 pb-4 h-100">
+                                <div class="col-10 my-auto">
+                                    <p class="mb-0  h6 small">Chequebook</p>
+                                </div>
+                                <div class="col-2 my-auto">
+                                    <i class="ri-arrow-right-line text-muted"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-12">
+                            <div class="row  border-bottom p-1 pb-4 h-100">
+                                <div class="col-10 my-auto">
+                                    <p class="mb-0  h6 small">Card</p>
+                                </div>
+                                <div class="col-2 my-auto">
+                                    <i class="ri-arrow-right-line text-muted"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-dark rounded-pill position-fixed px-3" style="bottom: 50px;right: 50px;">Return to <b>PBe</b>  <span class="px-1"><i class="fas fa-undo"></i></span></a>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/js")
+
+    <script>
+        var mini = true;
+
+                //function toggleSidebar() {
+                //    if (mini) {
+                //        console.log("opening sidebar");
+                //        document.getElementById("mySidebar").style.width = "280px";
+                //        $('.small-img').attr('hidden', true);
+                //        $('.big-img').attr('hidden', false);
+                //        //document.getElementById("main").style.marginLeft = "280px";
+                //        this.mini = false;
+                //    } else {
+                //        console.log("closing sidebar");
+                //        document.getElementById("mySidebar").style.width = "90px";
+                //        //document.getElementById("main").style.marginLeft = "auto";
+                //        //$('.border-collapse').attr('aria-expanded', false);
+                //        //$('#submenu2').removeClass('show');
+                //        $('.big-img').attr('hidden', true);
+                //        $('.small-img').attr('hidden', false);
+                //        this.mini = true;
+                //    }
+                //}
+        $('.mobileNav').on('click', function () {
+            $('.modal').modal('hide');
+        })
+    </script>
+</body>
+</html>
