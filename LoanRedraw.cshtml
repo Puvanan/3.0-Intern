@@ -1,13 +1,13 @@
-﻿
+
 @{
     ViewBag.Title = "MailingAddress";
 }
-<div class="d-none d-lg-block" style="height:5vh;"></div>
 
+<div class="d-none d-lg-block" style="height:5vh;"></div>
 
 <div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 h-100 my-auto">
     <div class="row mt-2 justify-content-center h-100 my-auto">
-        <div class="col-lg-10">
+        <div class="col-lg-8">
             <div class="row justify-content-center ">
                 <div class="col-12 col-lg-5 text-center">
                     <h3>Loan Redraw</h3>
@@ -37,13 +37,65 @@
 
                     <div class="row my-5 last-row">
                         <div class="col-12">
-                            <a class="btn btn-dark float-start" href="@Url.Action("CardSettings", "Home")"> Back </a>
+                            <a class="btn btn-dark float-start" href="@Url.Action("Index2", "Home")"> Back </a>
                             <a data-bs-toggle="modal" data-bs-target="#exampleModal" id="firstNext" class="btn btn-primary  float-end"> Next </a>
                         </div>
                     </div>
                 </div>
 
                 <div hidden id="secondPage" class="col-12 col-lg-8 ">
+                    <form>
+                        <div class="row mb-2">
+                            <label for="tranAmount" class="col-sm-12 col-form-label">Name of Borrower</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control mb-2" disabled placeholder="Name of Borrower" value="TAN KIM LENG">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="tranAmount" class="col-sm-12 col-form-label">Account Holding Branch	</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control mb-2" disabled placeholder="Account Holding Branchn" value="JLN SULTAN SULAIMAN">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="tranAmount" class="col-sm-12 col-form-label">To Account</label>
+                            <div class="col-sm-12 mb-2">
+
+                                <select class="form-select" id="toAcc" aria-label="Default select example">
+                                    <option selected value="0">Please select</option>
+                                    <option value="">4000151818158236</option>
+                                    <option value="">9577445338254589</option>
+                                    <option value="">1235489818021458</option>
+                                    <option value="">1235489158236111</option>
+                                    <option value="">4533825382544453</option>
+                                    <option value="">7445338254553684</option>
+                                    <option value="">0248891234486685</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="tranAmount" class="col-sm-12 col-form-label">Redraw Amount (Maximum Amount: RM 48,000.00)</label>
+                            <div class="col-sm-12">
+                                <input type="Number" class="form-control mb-2">
+                                <div id="emailHelp" class="form-text">
+                                    (Minimum of RM5,000-00 and in multiples of RM1,000-00)
+                                    Note: Amount must not be more than the Available Redraw Amount.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row my-5 last-row">
+                            <div class="col-12">
+                                <a class="btn btn-dark float-start" href="@Url.Action("Index2", "Home")"> Back </a>
+                                <a class="btn btn-outline-primary btnReset float-start ms-2"> Clear </a>
+                                <a id="secondNext" class="btn btn-primary  float-end"> Next </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div hidden id="thirdPage" class="col-12 col-lg-8 ">
                     <div class="row mb-2">
                         <label for="tranAmount" class="col-sm-12 col-form-label">Name of Borrower</label>
                         <div class="col-sm-12">
@@ -58,30 +110,14 @@
                     </div>
                     <div class="row mb-2">
                         <label for="tranAmount" class="col-sm-12 col-form-label">To Account</label>
-                        <div class="col-sm-12 mb-2">
-
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Please select</option>
-                                <option value="">4000151818158236</option>
-                                <option value="">9577445338254589</option>
-                                <option value="">1235489818021458</option>
-                                <option value="">1235489158236111</option>
-                                <option value="">4533825382544453</option>
-                                <option value="">7445338254553684</option>
-                                <option value="">0248891234486685</option>
-
-                            </select>
-
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control mb-2" disabled placeholder="Name of Borrower" value="4000151818158236">
                         </div>
                     </div>
                     <div class="row mb-2">
                         <label for="tranAmount" class="col-sm-12 col-form-label">Redraw Amount (Maximum Amount: RM 48,000.00)</label>
                         <div class="col-sm-12">
-                            <input type="Number" class="form-control mb-2">
-                            <div id="emailHelp" class="form-text">
-                                (Minimum of RM5,000-00 and in multiples of RM1,000-00)
-                                Note: Amount must not be more than the Available Redraw Amount.
-                            </div>
+                            <input type="text" class="form-control mb-2" disabled placeholder="Name of Borrower" value="RM 5000">
                         </div>
                     </div>
 
@@ -178,16 +214,14 @@
 
                     <div class="row my-5 last-row">
                         <div class="col-12">
-                            <a class="btn btn-dark float-start" href="@Url.Action("CardSettings", "Home")"> Back </a>
-                            <a id="secondNext" class="btn btn-primary  float-end"> Next </a>
+                            <a class="btn btn-dark float-start" href="@Url.Action("Index2", "Home")"> Back </a>
+                            <a id="thirdNext" class="btn btn-primary  float-end"> Next </a>
                         </div>
                     </div>
                 </div>
 
-               
-
                 <!-- Success -->
-                <div hidden id="thirdPage" class="col-12 col-lg-8 mt-3 px-5 fourthPage">
+                <div hidden id="forthPage" class="col-12 col-lg-8 mt-3 px-5 fourthPage">
                     <div class="p-5 pt-3 shadow bg-white rounded-8">
                         <div class="row detailzRow d-flex mb-4">
                             <div class="row logoRow">
@@ -283,8 +317,8 @@
                     </div>
                     <div class="row my-5 last-row">
                         <div class="col-12">
-                            <a class="btn btn-dark float-start"> Print </a>
-                            <a id="thirdNext" class="btn btn-primary  float-end" href="@Url.Action("CardSettings", "Home" )"> Done </a>
+                            <a class="btn btn-outline-primary float-start"> Print </a>
+                            <a id="thirdNext" class="btn btn-primary  float-end" href="@Url.Action("Index2", "Home" )"> Done </a>
                         </div>
                     </div>
                 </div>
@@ -294,8 +328,10 @@
 
 
 
+            </div>
+        <div class="col-lg-4 col-12 last-row mt-5">
+            <img src="~/Images/WebsiteImages/register-win-pbe-login02.jpg" class="img-fluid " />
         </div>
-
     </div>
 
 </div>
@@ -362,12 +398,13 @@
         $('.profile').each(function () {
             $(this).addClass('active');
         });
-        $('.profileMenu').addClass('active');        
+        $('.profileMenu').addClass('active');
     });
     $('#modalBtn').on('click', function () {
-            $('#secondPage').attr('hidden', false);
-            $('#firstPage').attr('hidden', true);
-            $('#thirdPage').attr('hidden', true);
+        $('#secondPage').attr('hidden', false);
+        $('#firstPage').attr('hidden', true);
+        $('#thirdPage').attr('hidden', true);
+        $('#forthPage').attr('hidden', true);
     });
     $('.pac').on('click', function () {
         Swal.fire(
@@ -376,20 +413,21 @@
             'success'
         )
     })
-    $('#secondNext').on('click', function () {
-        Swal.fire(
-            'Success',
-            'Your Transaction Successfully Saved',
-            'success'
-        ).then((result) => {
-                if (result.isConfirmed) {
-                    $('#thirdPage').attr('hidden', false);
-                    $('#secondPage').attr('hidden', true);
-                    $('#firstPage').attr('hidden', true);
-                }
-            })
+    $('.btnReset').on('click', function () {
+        $('form')[0].reset();
+    })
 
-       
+    $('#secondNext').on('click', function () {
+        $('#thirdPage').attr('hidden', false);
+        $('#secondPage').attr('hidden', true);
+        $('#firstPage').attr('hidden', true);
+        $('#forthPage').attr('hidden', true);
+    })
+    $('#thirdNext').on('click', function () {
+        $('#forthPage').attr('hidden', false);
+        $('#thirdPage').attr('hidden', true);
+        $('#secondPage').attr('hidden', true);
+        $('#firstPage').attr('hidden', true);
     })
     $("#auth").change(function () {
         console.log("test");
