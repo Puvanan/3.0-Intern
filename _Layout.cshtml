@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,6 +6,7 @@
     <title>PBeBank</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
     @*<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">*@
 
 </head>
@@ -25,7 +26,7 @@
                             <li class="mb-4 nav-link homeMenu p-0">
                                 <a href="@Url.Action("Index2","Home")">
                                     <div class="row" style="width:200px">
-                                        <div class="col-3"><i class="bi bi-house-fill"></i></div>
+                                        <div class="col-3"><i class="fad fa-home"></i></div>
                                         <div class="col-6"><span class="icon-text small">Home</span></div>
                                     </div>
                                 </a>
@@ -34,7 +35,7 @@
                                 <a href="@Url.Action("AccountSummary","Home")">
                                     <div class="row" style="width:200px">
                                         <div class="col-3">
-                                            <i class="bi bi-card-heading"></i>
+                                            <i class="fad fa-id-card"></i>
                                         </div>
                                         <div class="col-6">
                                             <span class="icon-text small ">Accounts</span>
@@ -42,11 +43,11 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="mb-4 nav-link accountMenu p-0">
+                            <li class="mb-4 nav-link applyMenu p-0">
                                 <a href="#submenu" data-bs-toggle="collapse" class="border-collapse">
                                     <div class="row" style="width:200px">
                                         <div class="col-3">
-                                            <i class="bi bi-file-earmark-check"></i>
+                                            <i class="fad fa-file-check fa-swap-opacity"></i>
                                         </div>
 
                                         <div class="col-6">
@@ -68,11 +69,11 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="mb-4 nav-link accountMenu p-0">
+                            <li class="mb-4 nav-link settingMenu p-0">
                                 <a href="#submenu3" data-bs-toggle="collapse" class="border-collapse">
                                     <div class="row" style="width:200px">
                                         <div class="col-3">
-                                            <i class="bi bi-gear"></i>
+                                            <i class="fad fa-cog fa-swap-opacity"></i>
                                         </div>
                                         <div class="col-6">
                                             <span class="icon-text small ">Settings</span>
@@ -110,7 +111,7 @@
                     <div class="d-flex flex-column justify-content-end flex-grow-1 mt-3 pt-5">
                         <a class="mb-3" href="@Url.Action("Login2","Home")">
                             <div class="row" style="width:200px">
-                                <div class="col-3"><i class="bi bi-power"></i></div>
+                                <div class="col-3"><i class="fad fa-power-off fa-swap-opacity"></i></div>
                                 <div class="col-6"><span class="icon-text small">Log Out</span></div>
                             </div>
                         </a>
@@ -124,13 +125,13 @@
                     </a>
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start w-100 mt-lg-5" id="menu">
                         <li class="nav-item mb-3 px-1 py-2 w-100">
-                            <a href="@Url.Action("index2","Home")" class="nav-link homeMenu   align-middle px-2">
+                            <a href="@Url.Action("index2","Home")" class="nav-link menu homeMenu   align-middle px-2">
                                 <i class="bi bi-house fs-5"></i><span class="ms-3 d-none d-sm-inline ">Home</span>
                             </a>
                         </li>
 
                         <li class="w-100 mb-3 px-1 py-2">
-                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link accountMenu px-2 align-middle pb-2">
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link menu accountMenu px-2 align-middle pb-2">
                                 <i class="bi bi-card-heading fs-5x"></i>
                                 <span class="ms-3 d-none d-sm-inline ">Accounts</span>
                                 <span class="float-end">
@@ -139,13 +140,13 @@
                             </a>
                             <ul class="collapse nav flex-column" id="submenu2" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="@Url.Action("DepositSummary3","Home")" class="nav-link px-2 align-middle">
+                                    <a href="@Url.Action("DepositSummary3","Home")" class="nav-link menu px-2 align-middle">
                                         <i class="bi bi-arrow-right" style="color:#fff"> </i>
                                         <span class="ms-3 d-none d-sm-inline ">Debit</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="@Url.Action("CreditCardSummary3","Home")" class="nav-link px-2 align-middle">
+                                    <a href="@Url.Action("CreditCardSummary3","Home")" class="nav-link menu px-2 align-middle">
                                         <i class="bi bi-arrow-right" style="color:#fff"> </i>
                                         <span class="d-none ms-3 d-sm-inline small text-end">Credit</span>
                                     </a>
@@ -153,7 +154,7 @@
                             </ul>
                         </li>
                         <li class="w-100 mb-3 px-1 py-2">
-                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link profileMenu px-2 align-middle pb-2">
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link menu profileMenu px-2 align-middle pb-2">
                                 <i class="bi bi-person-circle fs-5x"></i> <span class="ms-3 d-none d-sm-inline ">
                                     Profile
                                 </span>
@@ -198,7 +199,7 @@
                     </ul>
                     <hr>
                     <div class="dropdown pb-4">
-                        <a href="@Url.Action("Login", "Home")" class="d-flex align-items-center nav-link text-decoration-none">
+                        <a href="@Url.Action("Login", "Home")" class="d-flex align-items-center menu nav-link text-decoration-none">
                             <i class="bi bi-power fs-5x"></i><span class="ms-3 d-none d-sm-inline">Log Out</span>
                         </a>
                     </div>
@@ -252,36 +253,39 @@
                     </div>
                 </div>
             </div>
-            <div class="d-block d-lg-none gx-0" id="mobile-nav" style="position: fixed;bottom:5px;width: 100vw; left: 5px; z-index:2000">
-                <div class="mx-1">
-                    <div class="bg-white text-center mb-3 rounded-8 shadow-lg row justify-content-evenly py-3 mx-1" style="border-radius: 1rem;">
+            <!-- (mobile nav) -->
+            <div class="d-block d-lg-none gx-0" id="mobile-nav"
+                 style="position: fixed;bottom:0px;width: 100%; left:12px; z-index:2000">
+                <div>
+                    <div class="bg-white text-center shadow-lg row justify-content-evenly py-3" style="width:100%;">
                         <div class="col-2 text-center">
-                            <a href="@Url.Action("Index2", "Home")" class="mobileNav active">
-                                <i class="bi bi-house fs-5 "></i>
+                            <a id="homeLink" href="@Url.Action("Index2", "Home" )" class="mobileNav active">
+                                <i class="fad fa-home fs-5 "></i>
                                 <p class="mb-0 smaller">Home</p>
                             </a>
                         </div>
                         <div class="col-2 text-center">
-                            <a class="mobileNav account">
-                                <i class="bi bi-card-heading fs-5 "></i>
+                            <a id="accountsLink" href="@Url.Action("AccountSummary", "Home" )"
+                               class="mobileNav account">
+                                <i class="fad fa-id-card fs-5 "></i>
                                 <p class="mb-0 smaller">Account</p>
                             </a>
                         </div>
                         <div class="col-2 text-center">
                             <a data-bs-toggle="modal" data-bs-target="#Apply" class="mobileNav">
-                                <i class="bi bi-file-earmark-check fs-5 " ></i>
+                                <i class="fad fa-file-check fa-swap-opacity fs-5 "></i>
                                 <p class="mb-0 smaller">Apply</p>
                             </a>
                         </div>
                         <div class="col-2">
                             <a data-bs-toggle="modal" data-bs-target="#settingProfile" class="mobileNav profile">
-                                <i class="bi bi-question-circle fs-5 "></i>
+                                <i class="fad fa-cog fa-swap-opacity fs-5 "></i>
                                 <p class="mb-0 smaller">Settings</p>
                             </a>
                         </div>
                         <div class="col-2">
-                            <a href="@Url.Action("Login", "Home")" class="mobileNav">
-                                <i class="bi bi-power fs-5 "></i>
+                            <a href="@Url.Action("Login", "Home" )" class="mobileNav">
+                                <i class="fad fa-power-off fa-swap-opacity fs-5 "></i>
                                 <p class="mb-0 smaller">LogOut</p>
                             </a>
                         </div>
@@ -290,17 +294,16 @@
             </div>
         </div>
     </div>
-
-    <div class="modal fade p-0" id="Apply" tabindex="-1" aria-labelledby="applyLabel" aria-hidden="true">
+    <div class="modal fade p-0 nav-modal" id="Apply" tabindex="-1" aria-labelledby="applyLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-mobile mainNav">
             <div class="modal-content glass-2 px-3 py-2">
                 <div class="modal-body">
                     <div class="row">
-                        <a href="@Url.Action("LoanRedraw", "Home")">
+                        <a href="@Url.Action("LoanRedraw", "Home" )">
                             <div class="col-12">
                                 <div class="row border-bottom p-1 pb-4 h-100">
                                     <div class="col-10 my-auto">
-                                        <p class="mb-0 text-black h6 small">LoanRedraw</p>
+                                        <p class="mb-0 text-black h6 small">Loan Redraw</p>
                                     </div>
                                     <div class="col-2 my-auto">
                                         <i class="ri-arrow-right-line text-muted"></i>
@@ -308,19 +311,20 @@
                                 </div>
                             </div>
                         </a>
-                    </div>                   
+                    </div>
                 </div>
 
             </div>
         </div>
     </div>
 
-    <div class="modal fade p-0" id="settingProfile" tabindex="-1" aria-labelledby="settingProfileLabel" aria-hidden="true">
+    <div class="modal fade p-0 nav-modal" id="settingProfile" tabindex="-1" aria-labelledby="settingProfileLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-dialog-mobile mainNav">
             <div class="modal-content glass-2 px-3 py-2">
                 <div class="modal-body">
                     <div class="row">
-                        <a href="@Url.Action("ManageProfile", "Home")">
+                        <a href="@Url.Action("ManageProfile", "Home" )">
                             <div class="col-12">
                                 <div class="row border-bottom p-1 pb-4 h-100">
                                     <div class="col-10 my-auto">
@@ -334,28 +338,32 @@
                         </a>
                     </div>
                     <div class="row mt-1">
-                        <div class="col-12">
-                            <div class="row  border-bottom p-1 pb-4 h-100">
-                                <div class="col-10 my-auto">
-                                    <p class="mb-0  h6 small">Chequebook</p>
-                                </div>
-                                <div class="col-2 my-auto">
-                                    <i class="ri-arrow-right-line text-muted"></i>
+                        <a href="@Url.Action("Cheque", "Home" )">
+                            <div class="col-12">
+                                <div class="row  border-bottom p-1 pb-4 h-100">
+                                    <div class="col-10 my-auto">
+                                        <p class="mb-0 text-black h6 small">Chequebook</p>
+                                    </div>
+                                    <div class="col-2 my-auto">
+                                        <i class="ri-arrow-right-line text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="row mt-1">
-                        <div class="col-12">
-                            <div class="row  border-bottom p-1 pb-4 h-100">
-                                <div class="col-10 my-auto">
-                                    <p class="mb-0  h6 small">Card</p>
-                                </div>
-                                <div class="col-2 my-auto">
-                                    <i class="ri-arrow-right-line text-muted"></i>
+                        <a href="@Url.Action("CardSettings", "Home" )">
+                            <div class="col-12">
+                                <div class="row  border-bottom p-1 pb-4 h-100">
+                                    <div class="col-10 my-auto">
+                                        <p class="mb-0 text-black h6 small">Card</p>
+                                    </div>
+                                    <div class="col-2 my-auto">
+                                        <i class="ri-arrow-right-line text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
@@ -363,32 +371,74 @@
             </div>
         </div>
     </div>
-    <a class="btn btn-dark rounded-pill position-fixed px-3" style="bottom: 50px;right: 50px;">Return to <b>PBe</b>  <span class="px-1"><i class="fas fa-undo"></i></span></a>
+    <a class="btn btn-dark rounded-pill position-fixed px-3" style="bottom: 85px;right: 10px;">Return to <b>PBe</b>  <span class="px-1"><i class="fas fa-undo"></i></span></a>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/js")
 
     <script>
         var mini = true;
 
-                //function toggleSidebar() {
-                //    if (mini) {
-                //        console.log("opening sidebar");
-                //        document.getElementById("mySidebar").style.width = "280px";
-                //        $('.small-img').attr('hidden', true);
-                //        $('.big-img').attr('hidden', false);
-                //        //document.getElementById("main").style.marginLeft = "280px";
-                //        this.mini = false;
-                //    } else {
-                //        console.log("closing sidebar");
-                //        document.getElementById("mySidebar").style.width = "90px";
-                //        //document.getElementById("main").style.marginLeft = "auto";
-                //        //$('.border-collapse').attr('aria-expanded', false);
-                //        //$('#submenu2').removeClass('show');
-                //        $('.big-img').attr('hidden', true);
-                //        $('.small-img').attr('hidden', false);
-                //        this.mini = true;
-                //    }
-                //}
+        $('.mobileNav').on('click', function () {
+            $('.modal').modal('hide');
+        });
+
+        var lastScrollTop = 0, delta = 5;
+
+        $(window).scroll(function () {
+            var nowScrollTop = $(this).scrollTop();
+
+            if (Math.abs(lastScrollTop - nowScrollTop) >= delta) {
+                if (nowScrollTop > lastScrollTop) {
+                    // Scrolling Down
+                    $("#mobile-nav").addClass("mobileNav-slide-down");
+                } else {
+                    // Scrolling Up
+                    $("#mobile-nav").removeClass("mobileNav-slide-down");
+                }
+
+                lastScrollTop = nowScrollTop;
+            }
+        });
+
+        const swiper = new Swiper('.mobileSidebarSwiper', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: false,
+            allowTouchMove: true,
+            mousewheel: true,
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+            slidesPerView: 1,
+            touchRatio: 0.3,
+            on: {
+                touchEnd: function () {
+                    navigate(swiper.activeIndex);
+
+                }
+            }
+        });
+
+        function navigate(currentIndex) {
+            switch (currentIndex) {
+                case 0:
+                    mobileSidebar.hide();
+                    $("#homeLink").click();
+                    break;
+                case 1:
+                    mobileSidebar.hide();
+                    $("#accountsLink").click();
+                    break;
+                case 2:
+                    $("#Apply").modal("show");
+
+                    break;
+                case 3:
+                    $("#settingProfile").modal("show");
+                    break;
+                default:
+                    break;
+            }
+        }
         $('.mobileNav').on('click', function () {
             $('.modal').modal('hide');
         })
