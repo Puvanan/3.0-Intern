@@ -1,24 +1,22 @@
-﻿
+
 @{
     ViewBag.Title = "MailingAddress";
 }
 <div class="d-none d-lg-block" style="height:5vh;"></div>
 
 
-<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
-    <div class="row mt-2 justify-content-center">
-        <div class="col-lg-10">
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 h-100 my-auto px-3 px-lg-0">
+    <div class="row mt-2 justify-content-center h-100 my-auto">
+        <div class="col-lg-8">
             <div class="row justify-content-center ">
                 <div class="col-12 col-lg-5 text-center position-relative">
-                    <img src="~/Images/WebDecoratives/pin-number.png" class="img-fluid position-absolute" style="width: 150px;left: 35%;top: 45px;" />
-                    <img src="~/Images/WebDecoratives/Work risk-free.svg" class="mb-4 img-fluid " style="width:300px" />
                     <h3>Change Card Pin</h3>
-                    <p>
+                    <p class="mb-4">
                         Create or change any of your debit or credit card PIN.
                     </p>
                 </div>
-                <div id="firstPage" class="col-12 col-lg-8 ">
-                    <div class="row mb-2">
+                <div id="firstPage" class="col-12 col-lg-10 ">
+                    <div class="row mb-0">
                         <label for="tranAmount" class="col-sm-12 col-form-label">Select your account</label>
                         <div class="col-sm-12 mb-2">
 
@@ -45,91 +43,78 @@
                     </div>
                 </div>
 
-                <div hidden id="secondPage" class="col-12 col-lg-8 ">
-                    <div class="row mb-2">
-                        <label for="tranAmount" class="col-sm-12 col-form-label">New Pin</label>
-                        <div class="col-sm-12">
-                            <input type="password" class="form-control mb-2" placeholder="New Pin">
+                <div hidden id="secondPage" class="col-12 col-lg-10">
+                    <form>
+                        <div class="row mb-0">
+                            <label for="tranAmount" class="col-sm-12 col-form-label">New Pin</label>
+                            <div class="col-sm-12">
+                                <input type="password" class="form-control mb-2" placeholder="New Pin">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mb-2">
-                        <label for="tranAmount" class="col-sm-12 col-form-label">Confirm New Pin</label>
-                        <div class="col-sm-12">
-                            <input type="password" class="form-control mb-2" placeholder="New Pin">
+                        <div class="row mb-0">
+                            <label for="tranAmount" class="col-sm-12 col-form-label">Confirm New Pin</label>
+                            <div class="col-sm-12">
+                                <input type="password" class="form-control mb-2" placeholder="New Pin">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row mb-2">
-                        <label for="tranAmount" class="col-sm-12 col-form-label">OTP</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="PAC">
-                            <span>Didn't get the code</span>
-                            <a hidden href="#" id="ResendPAC" class="text-decoration-none ms-3 mb-2">Resend(1/3)</a>
-                            <p class="text-muted">A 6 digit OTP will be sent to your registered mobile phone number *****6168. Please click "Request PAC" if you wish to proceed</p>
-                        </div>
-                        <div class="col-sm-3 text-end text-lg-center mt-0 mt-lg-0">
-                            <a class="btn btn-info pac text-white float-lg-end">Request OTP</a>
-                        </div>
-                        <div class="mt-0">
+                        <div class="row mb-0">
+                            <label for="tranAmount" class="col-sm-12 col-form-label">OTP</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="PAC">
+                                <span>Didn't get the code</span>
+                                <a hidden href="#" id="ResendPAC" class="text-decoration-none ms-3 mb-2">Resend(1/3)</a>
+                                <p class="text-muted">A 6 digit OTP will be sent to your registered mobile phone number *****6168. Please click "Request PAC" if you wish to proceed</p>
+                            </div>
+                            <div class="col-sm-3 text-end text-lg-center mt-0 mt-lg-0">
+                                <a class="btn btn-outline-primary pac text-white float-lg-end">Request OTP</a>
+                            </div>
+                            <div class="mt-0">
 
 
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="row my-5 last-row">
+                    </form>
+                    <div class="row my-5">
                         <div class="col-12">
                             <a class="btn btn-dark float-start" href="@Url.Action("CardSettings", "Home")"> Back </a>
-                            <a id="secondNext" class="btn btn-primary float-end disabled"> Next </a>
+                            <a class="btn btn-outline-primary btnReset float-end float-sm-none float-lg-end float-xxl-none ms-2"> Clear </a>
+                            <a id="secondNext" class="btn btn-primary col-12 col-sm-3 mt-2 mt-sm-0 float-sm-end col-lg-12 mt-lg-2 col-xxl-3 mt-xxl-0"> Next </a>
                         </div>
                     </div>
                 </div>
 
-                <div hidden id="thirdPage" class="col-12 col-lg-8 mt-3 px-5">
-                    <div class="p-5 shadow bg-white rounded-8">
-                        <div class="row detailzRow d-flex mb-2">
+                <div hidden id="thirdPage" class="col-12 col-lg-10 mt-3 ">
+                    <div class="p-4 shadow bg-white rounded-8">
 
-                            <div class="row logoRow">
-                                <div class="col-lg-2 col-2 checkIconDIV">
-                                    <table style="height: 100%; width: 100%;">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="successIcon">
-                                                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
-                                                             viewBox="0 0 52 52">
-                                                            <circle class="checkmark__circle" cx="26" cy="26" r="25"
-                                                                    fill="none" />
-                                                            <path class="checkmark__check" fill="none"
-                                                                  d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                                                        </svg>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                        <div class="row logoRow mb-4">
+
+                            <div class="col-lg-2 col-3 checkIconDIV">
+
+                                <div class="successIcon text-start">
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none"
+                                              d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
                                 </div>
 
-                                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-10 checkTextDIV ">
-                                    <table style="height: 100%; width: 100%;">
-                                        <tbody>
-                                            <tr>
-                                                <td style="vertical-align: middle;">
-                                                    <h4 class="lbl1">Pin Changed Successfully</h4>
-                                                    <p class="text-muted mb-0">4 May 2018, 12:59:12pm</p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
                             </div>
+
+                            <div class="col-lg-10 col-9 checkTextDIV">
+                                <h5>Pin Changed Successfully</h5>
+                                <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                            </div>
+
                         </div>
+
                         <div class="row detailsRow">
 
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
                                 <label>Reference Number</label>
                             </div>
 
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
                                 <label>RR232382989FH</label>
                             </div>
 
@@ -137,11 +122,11 @@
 
                         <div class="row detailsRow">
 
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
                                 <label>Card</label>
                             </div>
 
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
                                 <label>xxxx xxxx xxxx 3106</label>
                             </div>
 
@@ -149,7 +134,7 @@
 
                         <div class="row detailsRow mt-5">
 
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 leftReference">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-start leftReference">
                                 <label>
                                     Please be informed that you are responsible to safeguard your Card PIN at all
                                     times. To know more about our Card Promotions, please visit our website at
@@ -162,32 +147,34 @@
                     </div>
                     <div class="row my-5 last-row">
                         <div class="col-12">
-                            <a class="btn btn-dark float-start"> Print </a>
+                            <a class="btn btn-outline-primary float-start"> Print </a>
                             <a id="secondNext" class="btn btn-primary  float-end" href="@Url.Action("CardSettings", "Home")"> Done </a>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="alert alert-info col-12 col-lg-8 rounded-8 shadow-sm" style="margin-bottom:100px" role="alert">
+                <div class="alert alert-info col-12 col-lg-10 rounded-8 shadow-sm"  role="alert">
                     <b>Note</b><br>
-                               <ul>
-                                   <li>Only active cards added to your PBe account will be displayed.</li>
-                                   <li>
-                                       If the card is not listed, go to Profile Maintenance, select Manage Profile and
-                                       click Add/Delete Account function to add the card.
-                                   </li>
-                               </ul>
+                    <ul>
+                        <li>Only active cards added to your PBe account will be displayed.</li>
+                        <li>
+                            If the card is not listed, go to Profile Maintenance, select Manage Profile and
+                            click Add/Delete Account function to add the card.
+                        </li>
+                    </ul>
                 </div>
 
-              
+
             </div>
 
 
 
 
         </div>
-
+        <div class="col-lg-4 col-12 last-row mt-5">
+            <img src="~/Images/WebsiteImages/register-win-pbe-login02.jpg" class="img-fluid ads-form" />
+        </div>
     </div>
 
 </div>
@@ -262,6 +249,9 @@
             return "";
         }
     });
+        $('.btnReset').on('click', function () {
+        $('form')[0].reset();
+    })
 </script>
 
 
