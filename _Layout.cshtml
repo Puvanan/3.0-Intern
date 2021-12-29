@@ -55,7 +55,7 @@
                                         </div>
 
                                         <div class="col-3">
-                                            <i class="bi bi-caret-down ms-3"></i>
+                                            <i class="fad fa-chevron-circle-down ms-3 small pt-2"></i>
                                         </div>
                                     </div>
                                 </a>
@@ -79,7 +79,7 @@
                                             <span class="icon-text small ">Settings</span>
                                         </div>
                                         <div class="col-3">
-                                            <i class="bi bi-caret-down ms-3"></i>
+                                            <i class="fad fa-chevron-circle-down ms-3 small pt-2"></i>
                                         </div>
                                     </div>
                                 </a>
@@ -87,19 +87,19 @@
                                     <li class="w-100">
                                         <a href="@Url.Action("ManageProfile","Home")" class="nav-link px-2 align-middle">
                                             <i class="bi bi-arrow-right" style="color:#fff;margin-right: 2.3rem;"> </i>
-                                            <span class="ms-4 d-none d-sm-inline py-0 small text-muted " style="font-size:16px;">Profile</span>
+                                            <span class="ms-4 d-none d-sm-inline py-0 small text-muted " style="font-size:15px;">Profile</span>
                                         </a>
                                     </li>
                                     <li class="w-100 mt-2">
                                         <a href="@Url.Action("Cheque","Home")" class="nav-link px-2 align-middle">
                                             <i class="bi bi-arrow-right" style="color:#fff;margin-right: 2.3rem;"> </i>
-                                            <span class="d-none ms-4 d-sm-inline small py-0 text-muted " style="font-size:16px;">Cheque Management</span>
+                                            <span class="d-none ms-4 d-sm-inline small py-0 text-muted " style="font-size:15px;">Cheque Management</span>
                                         </a>
                                     </li>
                                     <li class="w-100 mt-2">
                                         <a href="@Url.Action("CardSettings","Home")" class="nav-link px-2 align-middle">
                                             <i class="bi bi-arrow-right" style="color:#fff;margin-right: 2.3rem;"> </i>
-                                            <span class="d-none ms-4 d-sm-inline small py-0 text-muted " style="font-size:16px;">Card</span>
+                                            <span class="d-none ms-4 d-sm-inline small py-0 text-muted " style="font-size:15px;">Card</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -259,14 +259,14 @@
                 <div>
                     <div class="bg-white text-center shadow-lg row justify-content-evenly py-3" style="width:100%;">
                         <div class="col-2 text-center">
-                            <a id="homeLink" href="@Url.Action("Index2", "Home" )" class="mobileNav active">
+                            <a id="homeLink" href="@Url.Action("Index2", "Home" )" class="mobileNav active homeMenu menu">
                                 <i class="fad fa-home fs-5 "></i>
                                 <p class="mb-0 smaller">Home</p>
                             </a>
                         </div>
                         <div class="col-2 text-center">
                             <a id="accountsLink" href="@Url.Action("AccountSummary", "Home" )"
-                               class="mobileNav account">
+                               class="mobileNav menu accountMenu">
                                 <i class="fad fa-id-card fs-5 "></i>
                                 <p class="mb-0 smaller">Account</p>
                             </a>
@@ -301,12 +301,12 @@
                     <div class="row">
                         <a href="@Url.Action("LoanRedraw", "Home" )">
                             <div class="col-12">
-                                <div class="row border-bottom p-1 pb-4 h-100">
+                                <div class="row p-1 pb-4 h-100">
                                     <div class="col-10 my-auto">
                                         <p class="mb-0 text-black h6 small">Loan Redraw</p>
                                     </div>
                                     <div class="col-2 my-auto">
-                                        <i class="ri-arrow-right-line text-muted"></i>
+                                        <span class="text-dark"><i class="ri-arrow-right-line text-muted"></i></span>
                                     </div>
                                 </div>
                             </div>
@@ -326,12 +326,14 @@
                     <div class="row">
                         <a href="@Url.Action("ManageProfile", "Home" )">
                             <div class="col-12">
-                                <div class="row border-bottom p-1 pb-4 h-100">
+                                <div class="row p-1 pb-4 h-100">
                                     <div class="col-10 my-auto">
                                         <p class="mb-0 text-black h6 small">Profile</p>
                                     </div>
                                     <div class="col-2 my-auto">
-                                        <i class="ri-arrow-right-line text-muted"></i>
+                                        <span class="text-dark">
+                                            <i class="ri-arrow-right-line text-muted"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -340,12 +342,14 @@
                     <div class="row mt-1">
                         <a href="@Url.Action("Cheque", "Home" )">
                             <div class="col-12">
-                                <div class="row  border-bottom p-1 pb-4 h-100">
+                                <div class="row p-1 pb-4 h-100">
                                     <div class="col-10 my-auto">
                                         <p class="mb-0 text-black h6 small">Chequebook</p>
                                     </div>
                                     <div class="col-2 my-auto">
-                                        <i class="ri-arrow-right-line text-muted"></i>
+                                        <span class="text-dark">
+                                            <i class="ri-arrow-right-line text-muted"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -372,15 +376,105 @@
         </div>
     </div>
     <a class="btn btn-dark rounded-pill position-fixed px-3" style="bottom: 85px;right: 10px;">Return to <b>PBe</b>  <span class="px-1"><i class="fas fa-undo"></i></span></a>
+    <div class="pb-loader d-flex align-items-center justify-content-center top-0">
+        @*Loader*@
+        <img src="~/Images/WebsiteImages/sm-pblogo.png" alt="loader">
+    </div>
+    @*Modal for Expired time*@
+    <div class="modal fade" id="expiredModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-3 bg-white">
+
+                <div class="modal-body ">
+                    <!-- <div class="container gx-1 gx-lg-0 mt-3 mt-lg-5  my-auto"> -->
+                    <div class="text-end">
+                        <button type="button" class="btn-close text-end" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="row ">
+                                <div id="bodyModal" class="col-12 col-lg-12 mt-1 mb-0">
+                                    <div class="row justify-content-center">
+                                        <div class="imageTimeout mb-3 text-center">
+                                            <img  class="img-fluid"src="~/Images/WebDecoratives/clock.png" width="80px"/>
+                                        </div>
+                                        <div class="col-lg-12 col-8 mb-0">
+                                            <h3 class="text-danger text-center">Timeout Warning </h3>
+                                            <p class="text-muted text-center mb-0">
+                                                Your session will expire in <span id="countdowntimer" class="text-danger">60</span>
+                                                seconds.<br> Please click on Stay Logged in to continue or Cancel to
+                                                logout.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer justify-content-center ">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Stay Logged in</button>
+                </div>
+            </div>
+        </div>
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/js")
 
     <script>
+        $(document).ready(function () {
+            //ShowIEAlert();
+            Browser();
+        });
+        function Browser() {
+
+            if (platform.name == 'Chrome' && parseFloat(platform.version.substr(0, platform.version.indexOf('.'))) <= 60) {
+                window.location.replace("/Home/notsupportedbrowser")
+            }
+            if (platform.name == 'Firefox' && parseFloat(platform.version.substr(0, platform.version.indexOf('.'))) <= 60) {
+                window.location.replace("/Home/notsupportedbrowser")
+            }
+            if (platform.name == 'IE') {
+                alert("Unsupported Browser");
+                history.go(-1);
+            }
+        }
+        //loader
+        function showLoader() {
+            $(".pb-loader").addClass("show");
+        }
+        function hideLoader() {
+            $(".pb-loader").removeClass("show");
+        }
+
         var mini = true;
 
         $('.mobileNav').on('click', function () {
             $('.modal').modal('hide');
         });
+
+        //expired modal
+        function expiredModal() {
+            //counter
+            var timeleft = 60;
+            var downloadTimer = setInterval(function () {
+                timeleft--;
+                document.getElementById("countdowntimer").textContent = timeleft;
+                if (timeleft <= 0) {
+                    clearInterval(downloadTimer);
+                    //put location after countdown
+                    window.location.replace("/Home/notsupportedbrowser");
+                }
+
+            }, 1000);
+            $('#expiredModal').modal({backdrop: 'static', keyboard: false})  
+            $('#expiredModal').modal('show');
+        }
 
         var lastScrollTop = 0, delta = 5;
 
@@ -442,6 +536,22 @@
         $('.mobileNav').on('click', function () {
             $('.modal').modal('hide');
         })
+        //function isIE() {
+        //    const ua = window.navigator.userAgent; //Check the userAgent property of the window.navigator object
+        //    const msie = ua.indexOf('MSIE '); // IE 10 or older
+        //    const trident = ua.indexOf('Trident/'); //IE 11
+
+        //    return (msie > 0 || trident > 0);
+        //}
+        //ShowIEAlert();
+
+        ////function to show alert if it's IE
+        //function ShowIEAlert() {
+        //    if (isIE()) {
+                
+        //        alert("You seem to be using unsupported browser.");
+        //    }
+        //}
     </script>
 </body>
 </html>
