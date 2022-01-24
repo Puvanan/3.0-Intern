@@ -1,147 +1,196 @@
-﻿
-    <div class="container gx-1 gx-lg-0 mt-3 mt-lg-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-5 col-12 text-center">
-                <div class="d-flex justify-content-center">
-                    <div class="iconProfile d-flex justify-content-center" style="width:200px; height: 150px;">
-                        <img src="~/Images/WebDecoratives/Discuss talent requirements.svg" />
-                    </div>
+
+<div class="container-fluid gx-1 gx-lg-0 mt-3 mt-lg-5 px-4 px-lg-0">
+    <div class="row justify-content-center">
+        <div class="col-lg-5 col-12 text-center">
+            <div class="d-flex justify-content-center">
+                <div class="iconProfile d-flex justify-content-center" style="width:200px; height: 150px;">
+                    <img src="~/Images/WebDecoratives/Discuss talent requirements.svg" />
                 </div>
-
-                <h3 class="mt-3 mb-0">Card Settings</h3>
-
-                <p class="small text-muted mb-0">
-                    A one stop centre for you to manage everything to do with your cards from setting up your PIN to
-                    cancelling your card.
-                </p>
             </div>
-        </div>
 
-        <div class="row mt-3 mt-lg-2 justify-content-center">
-            <div class="col-lg-10 col-xl-8">
-                <div class="row">
+            <h3 class="mt-3 mb-0">Card Settings</h3>
 
-                    <div class="col-12 col-xl-6 px-lg-3 mt-4">
-                        <a href="@Url.Action("CardPin", "Home" )">
-                            <div class="row ps-2 ps-lg-0 rounded-8 h-100 justify-content-lg-between bg-white border-bottom-sa setting">
-
-                                <div class="col-10 col-lg-7 ps-lg-4 py-3 my-auto">
-                                    <div class="title d-flex align-items-center">
-                                        <h5 class="d-none d-lg-block text-black">Create / Change Card PIN</h5>
-                                    </div>
-                                    <p class="mb-0 d-lg-none d-block text-black">Create / Change Card PIN</p>
-                                    <div class="description">
-                                        <p class="small d-lg-block d-none text-muted">
-                                            Create or change any of your debit and credit card PIN.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-5 text-center d-none d-lg-block my-auto position-relative">
-                                    <img class="mb-4 img-fluid " style="width:75px;" src="~/Images/WebDecoratives/pin-number.png" />
-                                </div>
-
-                                <div class="col-2 d-block d-lg-none my-auto">
-                                    <img class="img-fluid img-Quick mx-auto" width="20" height="20"
-                                         src="/puvan/icon/jpg/arrow.png" />
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-12 col-xl-6 px-lg-3 mt-4">
-                        <a href="@Url.Action("CancelCard", "Home" )">
-                            <div class="row ps-2 ps-lg-0 rounded-8 h-100 justify-content-lg-between bg-white border-bottom-sa setting">
-                                <div class="col-10 col-lg-7 ps-lg-4 py-3 my-auto">
-                                    <div class="title d-flex align-items-center">
-                                        <h5 class=" d-none
-                                        d-lg-block text-black">
-                                            Cancel Card
-                                        </h5>
-                                    </div>
-                                    <p class="mb-0 d-lg-none d-block text-black">Cancel Card</p>
-                                    <div class="description">
-                                        <p class="small d-lg-block d-none text-muted">
-                                            Cancel any debit or credit card that you currently own.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-5 text-center d-none d-lg-block my-auto position-relative">
-                                    <img class="mb-4 img-fluid " style="width:75px;" src="~/Images/WebDecoratives/credit-card.png" />
-                                </div>
-
-                                <div class="col-2 d-block d-lg-none my-auto">
-                                    <img class="img-fluid img-Quick mx-auto" width="20" height="20"
-                                         src="/puvan/icon/jpg/arrow.png" />
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-12 col-xl-6 px-lg-3 mt-4">
-                        <a href="@Url.Action("CreditDebitCard", "Home" )">
-                            <div class="row ps-2 ps-lg-0 rounded-8 h-100 justify-content-lg-between bg-white border-bottom-sa setting">
-
-                                <div class="col-10 col-lg-7 ps-lg-4 py-3 my-auto">
-                                    <div class="title d-flex align-items-center">
-                                        <h5 class="d-none d-lg-block text-black">
-                                            Card Opt Out / In Status
-                                        </h5>
-                                    </div>
-                                    <p class="mb-0 d-lg-none d-block text-black">Card Opt Out / In Status</p>
-                                    <div class="description">
-                                        <p class="small d-lg-block d-none text-muted">
-                                            Choose to opt out ot opt in for Card-not-present and Overseas Retail
-                                            Transactions.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-5 text-center d-none d-lg-block my-auto position-relative">
-                                    <img class="mb-4 img-fluid " style="width:75px;" src="~/Images/WebDecoratives/button.png" />
-                                </div>
-
-                                <div class="col-2 d-block d-lg-none my-auto">
-                                    <img class="img-fluid img-Quick mx-auto" width="20" height="20"
-                                         src="/puvan/icon/jpg/arrow.png" />
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-12 col-xl-6 px-lg-3 mt-4">
-                        <a href="@Url.Action("PrimaryCard","Home")">
-                            <div class="row ps-2 ps-lg-0 rounded-8 h-100 justify-content-lg-center bg-white
-                                border-bottom-sm setting">
-                                <div class="col-10 col-lg-7 ps-lg-4 py-3 my-auto">
-                                    <div class="title d-flex align-items-center">
-                                        <h5 class="d-none d-lg-block text-black">Update Contact Information</h5>
-                                    </div>
-                                    <p class="mb-0 d-lg-none d-block">Update Contact Information</p>
-                                    <div class="description">
-                                        <p class="small d-lg-block d-none text-muted">
-                                            Update your contact information for all of your cards.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-5 text-center d-none d-lg-block my-auto position-relative">
-                                    <img class="mb-4 img-fluid " style="width:75px;" src="~/Images/WebDecoratives/contact (1).png" />
-                                </div>
-                                <div class="col-2 d-block d-lg-none my-auto">
-                                    <img class="img-fluid img-Quick mx-auto" width="20" height="20"
-                                         src="/puvan/icon/jpg/arrow.png" />
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
+            <p class="small text-muted mb-0">
+                A one stop centre for you to manage everything to do with your cards from setting up your PIN to
+                cancelling your card.
+            </p>
         </div>
     </div>
 
+    <div class="row mainRow pb-5 mt-3 mt-lg-2 justify-content-center">
+        <div class="col-lg-10 col-xl-8">
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-xl-4 px-lg-3 mt-4 py-lg-2">
+                    <a href="@Url.Action("CardPin", "Home" )">
+                        <div class="row ps-2 ps-lg-0 rounded-8 h-100 justify-content-lg-between bg-white border-bottom-sm setting">
+
+                            <div class="col-10 col-lg-7 ps-lg-4 py-3 my-auto">
+                                <div class="title d-flex align-items-center">
+                                    <h5 class="d-none d-lg-block text-black">Create / Change Card PIN</h5>
+                                </div>
+                                <p class="mb-0 d-lg-none d-block text-black">Create / Change Card PIN</p>
+                                <div class="description">
+                                    <p class="small d-lg-block d-none text-muted pt-3">
+                                        Create or change any of your debit and credit card PIN.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-5 text-center d-none d-lg-block my-auto position-relative">
+                                <img class="mb-4 img-fluid " style="width:75px;" src="~/Images/WebDecoratives/pin-number.png" />
+                            </div>
+
+                            <div class="col-2 d-block d-lg-none my-auto pt-2">
+                                <i class="fas fa-arrow-circle-right text-primary h5"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-xl-4 px-lg-3 mt-4 py-lg-2">
+                    <a href="@Url.Action("CancelCard", "Home" )">
+                        <div class="row ps-2 ps-lg-0 rounded-8 h-100 justify-content-lg-between bg-white border-bottom-sm setting">
+                            <div class="col-10 col-lg-7 ps-lg-4 py-3 my-auto">
+                                <div class="title d-flex align-items-center">
+                                    <h5 class=" d-none
+                                        d-lg-block text-black">
+                                        Cancel Card
+                                    </h5>
+                                </div>
+                                <p class="mb-0 d-lg-none d-block text-black">Cancel Card</p>
+                                <div class="description">
+                                    <p class="small d-lg-block d-none text-muted pt-3">
+                                        Cancel any debit or credit card that you currently own.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-5 text-center d-none d-lg-block my-auto position-relative">
+                                <img class="mb-4 img-fluid " style="width:75px;" src="~/Images/WebDecoratives/credit-card.png" />
+                            </div>
+
+                            <div class="col-2 d-block d-lg-none my-auto pt-2">
+                                <i class="fas fa-arrow-circle-right text-primary h5"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-xl-4 px-lg-3 mt-4 py-lg-2">
+                    <a href="@Url.Action("CreditDebitCard", "Home" )">
+                        <div class="row ps-2 ps-lg-0 rounded-8 h-100 justify-content-lg-between bg-white border-bottom-sm setting">
+
+                            <div class="col-10 col-lg-7 ps-lg-4 py-3 my-auto">
+                                <div class="title d-flex align-items-center">
+                                    <h5 class="d-none d-lg-block text-black">
+                                        Card Opt Out / In Status
+                                    </h5>
+                                </div>
+                                <p class="mb-0 d-lg-none d-block text-black">Card Opt Out / In Status</p>
+                                <div class="description">
+                                    <p class="small d-lg-block d-none text-muted pt-3">
+                                        Choose to opt out ot opt in for Card-not-present and Overseas Retail
+                                        Transactions.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-5 text-center d-none d-lg-block my-auto position-relative">
+                                <img class="mb-4 img-fluid " style="width:75px;" src="~/Images/WebDecoratives/button.png" />
+                            </div>
+
+                            <div class="col-2 d-block d-lg-none my-auto pt-2">
+                                <i class="fas fa-arrow-circle-right text-primary h5"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-xl-4 px-lg-3 mt-4 py-lg-2">
+                    <a href="@Url.Action("PrimaryCard","Home")">
+                        <div class="row ps-2 ps-lg-0 rounded-8 h-100 justify-content-lg-center bg-white
+                                border-bottom-sm setting">
+                            <div class="col-10 col-lg-7 ps-lg-4 py-3 my-auto">
+                                <div class="title d-flex align-items-center">
+                                    <h5 class="d-none d-lg-block text-black">Update Contact Information</h5>
+                                </div>
+                                <p class="mb-0 d-lg-none d-block text-black">Update Contact Information</p>
+                                <div class="description">
+                                    <p class="small d-lg-block d-none text-muted pt-3">
+                                        Update your contact information for all of your cards.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-5 text-center d-none d-lg-block my-auto position-relative">
+                                <img class="mb-4 img-fluid " style="width:75px;" src="~/Images/WebDecoratives/contact (1).png" />
+                            </div>
+                            <div class="col-2 d-block d-lg-none my-auto pt-2">
+                                <i class="fas fa-arrow-circle-right text-primary h5"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-xl-4 px-lg-3 mt-4 py-lg-2">
+                    <a href="@Url.Action("BalanceTransfer","Home")">
+                        <div class="row ps-2 ps-lg-0 rounded-8 h-100 justify-content-lg-center bg-white
+                                border-bottom-sm setting">
+                            <div class="col-10 col-lg-7 ps-lg-4 py-3 my-auto">
+                                <div class="title d-flex align-items-center">
+                                    <h5 class="d-none d-lg-block text-black">Balance Transfer</h5>
+                                </div>
+                                <p class="mb-0 d-lg-none d-block text-black">Update Contact Information</p>
+                                <div class="description">
+                                    <p class="small d-lg-block d-none text-muted pt-3">
+                                        Update your contact information for all of your cards.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-5 text-center d-none d-lg-block my-auto position-relative">
+                                <img class="mb-4 img-fluid " style="width:75px;" src="~/Images/WebDecoratives/contact (1).png" />
+                            </div>
+                            <div class="col-2 d-block d-lg-none my-auto pt-2">
+                                <i class="fas fa-arrow-circle-right text-primary h5"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-xl-4 px-lg-3 mt-4 py-lg-2">
+                    <a href="@Url.Action("manageDuitNow","Home")">
+                        <div class="row ps-2 ps-lg-0 rounded-8 h-100 justify-content-lg-center bg-white
+                                border-bottom-sm setting">
+                            <div class="col-10 col-lg-7 ps-lg-4 py-3 my-auto">
+                                <div class="title d-flex align-items-center">
+                                    <h5 class="d-none d-lg-block text-black">Manage DuitNow</h5>
+                                </div>
+                                <p class="mb-0 d-lg-none d-block text-black">
+                                    Manage everything about your DuitNow Accounts.
+                                </p>
+                                <div class="description">
+                                    <p class="small d-lg-block d-none text-muted pt-3">
+                                        Manage everything about your DuitNow Accounts.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-5 text-center d-none d-lg-block my-auto position-relative">
+                                <img class="mb-4 img-fluid" src="~/Images/SocialMediaIcons/duitnow.png" />
+                            </div>
+                            <div class="col-2 d-block d-lg-none my-auto pt-2">
+                                <i class="fas fa-arrow-circle-right text-primary h5"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/js")
 @*<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="card.js"></script>*@
