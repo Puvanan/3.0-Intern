@@ -1,0 +1,490 @@
+<div class="d-none d-lg-block" style="height:5vh;"></div>
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 h-100 my-auto px-3 px-lg-0">
+
+    <div class="row mt-2 justify-content-center h-100 my-auto">
+
+        <div class="col-lg-8">
+
+            <div class="row justify-content-center ">
+
+                <div class="col-12 col-lg-5 text-center">
+                    <h3 class="mb-2">Manage DuitNow</h3>
+                    <p>
+                        Manage everything about your DuitNow Accounts.
+                    </p>
+                </div>
+
+                <div id="firstPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="row mb-2 px-3">
+                        <a id="addDuitNowID" href="@Url.Action("addDuitNow")"
+                                class="btn col-4 border border-1 border-danger btn-sm font-semibold text-danger float-left col-3 my-4">
+                            <span class="pe-1"><i class="fad fa-plus"></i></span> Add New DuitNow ID
+                        </a>
+                        <div class="table-responsive ps-0">
+                            <table id="manageDuitNowTable" class="col-12 table table-bordered border-2">
+                                <thead class="table-dark text-center">
+                                <th>Actions</th>
+                                <th>Bank</th>
+                                <th>DuitNow ID Type</th>
+                                <th>DuitNow ID</th>
+                                <th>Account Number</th>
+                                <th>Status</th>
+                                </thead>
+                                <tbody class="bg-white">
+                                    <tr class="text-center">
+                                        <td style="width: fit-content !important;">
+                                            <button class="editDuitNowBtn editBtn badge p-1 m-1">
+                                                <span><i class="fas fa-edit"></i></span>
+                                                Edit
+
+                                            </button>
+                                            <button class=" deleteDuitNowBtn cancelBtn badge p-1 m-1">
+                                                <span><i class="fas fa-trash"></i></span>
+                                                Delete
+
+                                            </button>
+
+                                        </td>
+                                        <td>
+                                            Public Bank
+                                        </td>
+                                        <td>
+                                            I/C Number
+                                        </td>
+                                        <td>
+                                            ********5153
+                                        </td>
+                                        <td>
+                                            4700025129
+                                        </td>
+                                        <td>
+                                            Off
+                                        </td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <td style="width: fit-content !important;">
+                                            <button class="editDuitNowBtn editBtn badge p-1 m-1">
+                                                <span><i class="fas fa-edit"></i></span>
+                                                Edit
+
+                                            </button>
+                                            <button class=" deleteDuitNowBtn cancelBtn badge p-1 m-1">
+                                                <span><i class="fas fa-trash"></i></span>
+                                                Delete
+
+                                            </button>
+
+                                        </td>
+                                        <td>
+                                            Public Bank
+                                        </td>
+                                        <td>
+                                            I/C Number
+                                        </td>
+                                        <td>
+                                            ********5153
+                                        </td>
+                                        <td>
+                                            4700025129
+                                        </td>
+                                        <td>
+                                            On
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div hidden id="secondPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="row mb-2">
+                        <h4 class="col-sm-12 col-form-label">Bank</h4>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" class="form-control" value="Public Bank" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <h4 class="col-sm-12 col-form-label">DuitNow ID Type</h4>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" class="form-control" value="IC Number" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <h4 class="col-sm-12 col-form-label">DuitNow ID</h4>
+                        <div class="info col-sm-12 my-1">
+                            <input type="text" class="form-control" value="********5153" disabled>
+
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <h4 class="col-sm-12 col-form-label">Account Number</h4>
+                        <div class="info col-sm-12 my-1">
+                            <select class="form-select duitNowSelect" aria-label="Default select example"
+                                    id="duitNowAccNoSelect">
+                                <option value="4700025129" selected>4700025129 (Savings)</option>
+                                <option value="3001198511">3001198511 (Savings)</option>
+                                <option value="4000151818">4000151818 (Savings)</option>
+                                <option value="3001320213">3001320213 (Current)</option>
+                                <option value="3590065120">3590065120 (Current)</option>
+                            </select>
+                            <p class="text-muted" style="font-size: 0.8rem;" hidden>
+                                To change DuitNow Account Number, PAC Authentication is required.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <h4 class="col-sm-12 col-form-label">Status</h4>
+                        <div class="info col-sm-12 my-1">
+                            <select class="form-select duitNowSelect duitNowStatusSelect"
+                                    aria-label="Default select example" id="duitNowStatusSelect">
+                                <option value="Off" selected>Off</option>
+                                <option value="On">On</option>
+                            </select>
+                            <p class="text-muted" style="font-size: 0.8rem;" hidden>
+                                To change status to On, PAC Authentication is required.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="manageDuitNowPAC" class="row mb-2 justify-content-between" hidden>
+
+                        <label for="tranAmount" class="col-sm-12 col-form-label">OTP</label>
+
+                        <div class="col-7 col-sm-8 col-md-9 col-lg-7 col-xl-8">
+                            <input type="text" class="form-control" id="PAC">
+                        </div>
+
+                        <div class="col-5 col-sm-4 col-md-3 col-lg-5 col-xl-4 ps-0 text-end text-lg-center mt-0">
+                            <a class="btn btn-info reqPacBtn text-white float-lg-end">Request OTP</a>
+                        </div>
+
+                        <div class="description mt-1">
+                            <span>Didn't get the code?</span>
+                            <a hidden href="#" id="ResendPAC" class="text-decoration-none ms-3 mb-2">Resend(1/3)</a>
+                            <p class="text-muted">
+                                A 6 digit OTP will be sent to your registered mobile phone
+                                number
+                                *****6168. Please click "Request PAC" if you wish to proceed
+                            </p>
+                        </div>
+
+                        <div class="mt-0">
+
+
+                        </div>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start me-2 col-2 mb-2" href="@Url.Action("CardSettings", "Home" )">
+                                Back
+                            </a>
+                            <a class="btn btn-dark float-end float-sm-start float-lg-end float-xl-start col-2 mb-2"
+                               href="@Url.Action("CardSettings", "Home" )">
+                                Cancel
+                            </a>
+                            <button id="thirdNext"
+                                    class="btn btn-primary  float-end col-12 col-sm-2 col-lg-12 col-xl-2"
+                                    disabled>
+                                Confirm
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div hidden id="thirdPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <div class="p-4 shadow bg-white rounded-8 mb-3">
+
+                        <div class="row logoRow mb-4">
+
+                            <div class="col-2 checkIconDIV">
+
+                                <div class="successIcon text-start">
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none"
+                                              d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
+                                </div>
+
+                            </div>
+
+                            <div class="col-10 checkTextDIV">
+                                <h5>Your transaction has been accepted.</h5>
+
+                                <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                            </div>
+
+                        </div>
+                        <div class="row detailsRow">
+                            <div class="col-12">
+                                <p class="text-muted">
+                                    Please take note of the Reference Number for future
+                                    correspondence.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-muted leftReference">
+                                <label>Reference Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>679401</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-muted leftReference">
+                                <label>Bank</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>Public Bank</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-muted leftReference">
+                                <label>DuitNow ID Type</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>I/C Number</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-muted leftReference">
+                                <label>DuitNow ID</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>********5153</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-muted leftReference">
+                                <label>Account Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>4813871427</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-muted leftReference">
+                                <label>Status</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>On</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start me-2 col-2 mb-2" href="@Url.Action("ChequeBook", "Home" )">
+                                Back
+                            </a>
+                            <a class="btn btn-dark float-end float-sm-start float-lg-end float-xl-start col-6 mb-2"
+                               href="@Url.Action("ChequeBook", "Home" )">
+                                Back to Home
+                            </a>
+                            <button id="thirdNext"
+                                    class="btn btn-primary  float-end col-12 col-sm-2 col-lg-12 col-xl-2"
+                                    disabled>
+                                Print
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div hidden id="errorPage" class="col-12 px-lg-4 text-center text-lg-start my-lg-5">
+                    <div class="container pb-5 p-lg-5 bg-white rounded-8 shadow d-flex flex-column-reverse flex-lg-row justify-content-lg-between">
+                        <div class="container errorTexts">
+                            <h4>
+                                You have not registered any DuitNow ID(s). <br> Please proceed to <span>
+                                    <a href="#"
+                                       style="color: #d64354;">Register DuitNow</a>
+                                </span> to add new ID(s).
+                            </h4>
+                            <p class="pt-4">
+                                Our Operating Hours are 12:05 a.m. - 12 midnight. <br>
+                                Please call our Customer Service Representative at 603-2179 9999 if you require
+                                further
+                                information.
+                            </p>
+                            <button class="btn btn-dark mt-5">Back to Home</button>
+                        </div>
+
+
+                        <div class="">
+                            <img src="assets/icons/notfound.gif" alt="Not Found GIF" width="280px">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class=" alert alert-info col-10 col-sm-11 col-xxl-10 col-lg-10 rounded-8 shadow-sm my-5 px-3"
+                     role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <div id="firstNotes">
+                            <li>
+                                Manage DuitNow function allows you to perform Deletion, Modify, Deactivate/Activate
+                                and Switch Bank.
+                            </li>
+                            <li>
+                                For Deletion, Modify and Deactivate/Activate, you are allowed to perform
+                                modification for DuitNow IDs which were registered with Public Bank.
+                            </li>
+                            <li>
+                                For DuitNow ID registered with other banks, you are allowed to perform Switch Bank.
+                                The selected DuitNow ID will be transferred to Public Bank.
+                            </li>
+                            <li>
+                                Only account status that is active can be modified by the customer. If the account
+                                status is inactive, customer can only change the account status.
+                            </li>
+                            <li>
+                                If the account status is SUSPENDED, customer is required to contact the Bank for
+                                assistance.
+                            </li>
+                        </div>
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="col-12 col-lg-4 last-row p-4 mt-4 p-sm-2 text-center">
+            <img src="~/Images/WebsiteImages/register-win-pbe-login02.jpg" class="img-fluid ads-form" />
+        </div>
+
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/js")
+<script>
+    $('.deleteDuitNowBtn').click(function () {
+        Swal.fire({
+            title: 'Are you sure you want to delete the DuitNow with ID of ' + $(this).parent()
+                .siblings('td:nth-child(4)').text(),
+            icon: 'warning',
+            confirmButtonText: 'Yes',
+            showCancelButton: true,
+            cancelButtonText: 'No',
+            reverseButtons: true,
+        });
+    });
+
+    $('.editDuitNowBtn').click(function () {
+        $('#firstPage').attr('hidden', true);
+        $('#secondPage').attr('hidden', false);
+        $('#thirdPage').attr('hidden', true);
+        $('.alert').attr('hidden', true);
+        $('.pictureRow').attr('hidden', true);
+        $('#errorPage').attr('hidden', true);
+    });
+
+    $('#duitNowStatusSelect').change(function () {
+        if ($(this).val() == 'On' || $('#duitNowAccNoSelect').hasClass('option-changed')) {
+            $(this).siblings('p').attr('hidden', false);
+            $(this).parent().parent().siblings('#manageDuitNowPAC').attr('hidden', false);
+        } else {
+
+            $(this).parent().parent().siblings('#manageDuitNowPAC').attr('hidden', true);
+        }
+
+        if ($(this).val() == 'Off') {
+            $(this).siblings('p').attr('hidden', true);
+        }
+
+    });
+
+    $('#duitNowAccNoSelect').change(function () {
+        $(this).addClass('option-changed');
+        $(this).siblings('p').attr('hidden', false);
+        $(this).parent().parent().siblings('#manageDuitNowPAC').attr('hidden', false);
+    });
+
+
+    $('.duitNowSelect').change(function () {
+        $('#thirdNext').attr('disabled', false);
+    });
+
+    $('.reqPacBtn').on('click', function () {
+        Swal.fire(
+            'OTP is Sent!',
+            'OTP sent to your phone number 012 - * * * * 123',
+            'success'
+        )
+    });
+
+    $('#thirdNext').click(function () {
+        $('#firstPage').attr('hidden', true);
+        $('#secondPage').attr('hidden', true);
+        $('#thirdPage').attr('hidden', false);
+        $('.alert').attr('hidden', true);
+        $('#errorPage').attr('hidden', true);
+    });
+
+    if ($('#manageDuitNowTable > tbody > tr').length > 0) {
+        $('#manageDuitNowTable > tbody > tr').each(function (index, tr) {
+            if ($(tr).children('td:last-child:contains("On")').length > 0) {
+                $(tr).children('td:first-child').children('.deleteDuitNowBtn').show();
+            } else {
+                $(tr).children('td:first-child').children('.deleteDuitNowBtn').hide();
+            }
+        });
+    } else {
+        $('#firstPage').attr('hidden', true);
+        $('#secondPage').attr('hidden', true);
+        $('#thirdPage').attr('hidden', true);
+        $('.alert').attr('hidden', true);
+        $('#errorPage').attr('hidden', false);
+
+        // Swal.fire({
+        //     title: 'You have not registered any DuitNow ID(s)',
+        //     text: 'Our Operating Hours are 12.05 a.m. - 12 midnight. \n Please call our Customer Server Representative at 603-2179 9999 if you require more information.',
+        //     icon: 'error',
+        //     confirmButtonText: 'Register DuitNow',
+        //     showCancelButton: true,
+        //     cancelButtonText: 'Back',
+        //     reverseButtons: true,
+        //     allowOutsideClick: false,
+        //     allowEscapeKey: false,
+        // });
+    }
+</script>
