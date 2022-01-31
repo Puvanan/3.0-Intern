@@ -1,0 +1,442 @@
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 h-100 my-auto px-3 px-lg-0">
+    <div class="row mt-2 justify-content-center h-100 my-auto">
+        <div class="col-lg-8">
+            <div class="row justify-content-center ">
+
+                <div class="col-12 col-lg-5 col-xl-6 p-5 text-center position-relative">
+                    <h3>Register DuitNow</h3>
+                    <p>
+                        Manage everything about your DuitNow Accounts.
+                    </p>
+                </div>
+
+                <div id="firstPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <div class="row justify-content-center">
+                        <form>
+                            <div class="col-12 table-responsive">
+
+                                <table class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white"
+                                       style="width:100%">
+                                    <thead class="bg-dark text-white rounded-8">
+                                        <tr style="text-align:center">
+                                            <th class="small">Select</th>
+                                            <th class="small">DuitNow ID Type</th>
+                                            <th class="small">DuitNow ID</th>
+                                            <th class="small">Account No.</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="text-align:center">
+                                            <td>
+                                                <input class="form-check-input" type="checkbox"
+                                                       id="mobileNumberCheck">
+                                            </td>
+                                            <td>Mobile Number</td>
+                                            <td>******1355</td>
+                                            <td>
+                                                <select class="form-select" id="mobileNumberAccNumberSelect"
+                                                        aria-label="Default select example">
+                                                    <option selected>95774453</option>
+                                                    <option>12354898</option>
+                                                    <option>12354891</option>
+                                                    <option>14680642</option>
+                                                    <option>54670423</option>
+                                                    <option>40054898</option>
+                                                    <option>95771468</option>
+                                                </select>
+                                            </td>
+
+                                        </tr>
+                                        <tr style="text-align:center">
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="icNumberCheck">
+                                            </td>
+                                            <td>IC Number</td>
+                                            <td>********5135</td>
+                                            <td>
+                                                <select class="form-select" id="icNumberAccNumberSelect"
+                                                        aria-label="Default select example">
+                                                    <option selected>95774453</option>
+                                                    <option>12354898</option>
+                                                    <option>12354891</option>
+                                                    <option>14680642</option>
+                                                    <option>54670423</option>
+                                                    <option>40054898</option>
+                                                    <option>95771468</option>
+                                                </select>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                            <div class="row my-5 last-row">
+                                <div class="col-12">
+                                    <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3"
+                                       href="@Url.Action("manageDuitNow", "Home" )">
+                                        Back
+                                    </a>
+                                    <a class="btn btn-outline-primary btnReset col-5 float-end col-sm-3 float-sm-none col-lg-5 float-lg-end float-xxl-none col-xxl-3">
+                                        Clear
+                                    </a>
+                                    <a id="firstNext"
+                                       class="btn btn-primary col-12 col-sm-3 mt-2 mt-sm-0 float-sm-end col-lg-12 mt-lg-2 col-xxl-3 mt-xxl-0 disabled">
+                                        Next
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div hidden id="secondPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <div class="row justify-content-center">
+                        <form>
+                            <div class="col-12 table-responsive">
+
+                                <table class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white"
+                                       style="width:100%">
+                                    <thead class="bg-dark text-white rounded-8">
+                                        <tr style="text-align:center">
+                                            <th class="small">DuitNow ID Type</th>
+                                            <th class="small">DuitNow ID</th>
+                                            <th class="small">Account No.</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="text-align:center" id='mobileNumberRow' hidden>
+                                            <td>Mobile Number</td>
+                                            <td>******1355</td>
+                                            <td id='mobileNumberAccNumberVal'></td>
+                                        </tr>
+                                        <tr style="text-align:center" id='icNumberRow' hidden>
+                                            <td>IC Number</td>
+                                            <td>********5135</td>
+                                            <td id='icNumberAccNumberVal'></td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                            <div class="row mb-2 justify-content-between">
+
+                                <label for="tranAmount" class="col-sm-12 col-form-label">OTP</label>
+
+                                <div class="col-7 col-sm-8 col-md-9 col-lg-7 col-xl-8">
+                                    <input type="text" class="form-control" id="PAC">
+                                </div>
+
+                                <div class="col-5 col-sm-4 col-md-3 col-lg-5 col-xl-4 ps-0 text-end text-lg-center mt-0">
+                                    <a class="btn btn-info reqPacBtn text-white float-lg-end">Request OTP</a>
+                                </div>
+
+                                <div class="description mt-1">
+                                    <span>Didn't get the code?</span>
+                                    <a hidden href="#" id="ResendPAC"
+                                       class="text-decoration-none ms-3 mb-2">Resend(1/3)</a>
+                                    <p class="text-muted">
+                                        A 6 digit OTP will be sent to your registered mobile phone
+                                        number
+                                        *****6168. Please click "Request PAC" if you wish to proceed
+                                    </p>
+                                    <p id="timerText" hidden>
+                                        Time remaining: <span id="time"
+                                                              style="color:#d64354"></span>
+                                    </p>
+                                </div>
+
+                                <div class="mt-0">
+
+
+                                </div>
+                            </div>
+
+                            <div class="row my-5 last-row">
+                                <div class="col-12">
+                                    <a class="btn btn-dark float-start" href="@Url.Action("manageDuitNow", "Home"
+                                            )">
+                                        Back
+                                    </a>
+                                    <a id="secondNext" class="btn btn-primary float-end disabled"> Next </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div hidden id="thirdPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <div class="p-4 shadow bg-white rounded-8 successAcknowledgement">
+
+                        <div class="row logoRow mb-4">
+
+                            <div class="col-2 checkIconDIV">
+
+                                <div class="successIcon text-start">
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none"
+                                              d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
+                                </div>
+
+                            </div>
+
+                            <div class="col-10 checkTextDIV">
+                                <h5>DuitNow Registered Successfully</h5>
+                                <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                            </div>
+
+                        </div>
+                        <div class="col-12 table-responsive">
+
+                            <table class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white"
+                                   style="width:100%">
+                                <thead class="bg-dark text-white rounded-8">
+                                    <tr style="text-align:center">
+
+                                        <th class="small">DuitNow ID Type</th>
+                                        <th class="small">DuitNow ID</th>
+                                        <th class="small">Account No.</th>
+                                        <th class="small">Status</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="text-align:center" class='mobileNumberAckRow' hidden>
+                                        <td>Mobile Number</td>
+                                        <td>******1355</td>
+                                        <td class='mobileNumberAccNumberAckVal'></td>
+                                        <td class="text-success">Successful</td>
+
+                                    </tr>
+
+                                    <tr style="text-align:center" class='icNumberAckRow' hidden>
+                                        <td>IC Number</td>
+                                        <td>********5135</td>
+                                        <td class='icNumberAccNumberAckVal'></td>
+                                        <td class="text-success">Successful</td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="p-4 shadow bg-white rounded-8 failAcknowledgement" hidden>
+
+                        <div class="row logoRow mb-4">
+
+                            <div class="col-2 checkIconDIV">
+                                <div class="failedIcon text-start">
+                                    <svg class="failedmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="failedmark_circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="failedmark_check" fill="none"
+                                              d="M14.1 14.1l23.8 23.8 m0,-23.8 l-23.8,23.8" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="col-10 checkTextDIV">
+                                <h5>DuitNow Registered Failed</h5>
+                                <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                            </div>
+
+                        </div>
+                        <div class="col-12 table-responsive">
+
+                            <table class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white"
+                                   style="width:100%">
+                                <thead class="bg-dark text-white rounded-8">
+                                    <tr style="text-align:center">
+
+                                        <th class="small">DuitNow ID Type</th>
+                                        <th class="small">DuitNow ID</th>
+                                        <th class="small">Account No.</th>
+                                        <th class="small">Status</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="text-align:center" class='mobileNumberAckRow' hidden>
+                                        <td>Mobile Number</td>
+                                        <td>******1355</td>
+                                        <td class='mobileNumberAccNumberAckVal'></td>
+                                        <td class="text-danger">Rejected</td>
+
+                                    </tr>
+
+                                    <tr style="text-align:center" class='icNumberAckRow' hidden>
+                                        <td>IC Number</td>
+                                        <td>********5135</td>
+                                        <td class='icNumberAccNumberAckVal'></td>
+                                        <td class="text-danger">Rejected</td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start"> Print </a>
+                            <a id="thirdNext" class="btn btn-primary  float-end" href="@Url.Action("manageDuitNow", "Home" )"> Done </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="alert alert-info col-10 col-sm-11 col-xxl-10 col-lg-10 rounded-8 shadow-sm my-5 px-3"
+                     role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            The Register DuitNow service is to allow applicants to register DuitNow ID(s) to the
+                            Bank's account number.
+                        </li>
+                        <li>
+                            Only available DuitNow ID(S) are allowed to be registered.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-12 col-lg-4 last-row p-4 mt-4 p-sm-2 text-center pictureRow">
+            <img src="~/Images/WebsiteImages/register-win-pbe-login02.jpg" class="img-fluid ads-form" />
+        </div>
+    </div>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/js")
+
+<script>
+    var oneMin = 60,
+        display = $('#time');
+
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+
+        var timerInterval = setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.text(minutes + " : " + seconds);
+
+            if (--timer < 0) {
+                clearInterval(timerInterval);
+                timer = duration;
+                $('.reqPacBtn').removeClass('disabled');
+                $('#timerText').prop("hidden", true);
+            }
+        }, 1000);
+    };
+
+    $(document).ready(function () {
+        checkTableRowSelect();
+        $('.mobileNav').each(function () {
+            $(this).removeClass('active');
+        })
+        $('.nav-link').each(function () {
+            $(this).removeClass('active');
+        })
+        $('.profile').each(function () {
+            $(this).addClass('active');
+        });
+        $('.profileMenu').addClass('active');
+
+
+        // check first next button
+        $('input[type="checkbox"]').change(function () {
+            checkTableRowSelect();
+        });
+
+        $('#firstNext').on('click', function () {
+
+            $('#secondPage').attr('hidden', false);
+            $('#firstPage').attr('hidden', true);
+            $('#thirdPage').attr('hidden', true);
+
+            //check which checkbox is checked
+            if ($('#mobileNumberCheck').is(":checked")) {
+                $('#mobileNumberRow').prop("hidden", false);
+                $('#mobileNumberAccNumberVal').html($('#mobileNumberAccNumberSelect option:selected').text());
+            }
+
+            if ($('#icNumberCheck').is(":checked")) {
+                $('#icNumberRow').prop("hidden", false);
+                $('#icNumberAccNumberVal').html($('#icNumberAccNumberSelect option:selected').text());
+            }
+        });
+        $('.reqPacBtn').on('click', function () {
+            $(this).addClass('disabled');
+            $('#timerText').prop("hidden", false);
+            startTimer(oneMin, display);
+            Swal.fire(
+                'OTP is Sent!',
+                'OTP sent to your phone number 012 - * * * * 123',
+                'success'
+            );
+            $('#secondNext').removeClass('disabled');
+        })
+        $('#secondNext').on('click', function () {
+            Swal.fire({
+                title: 'DuitNow Registered Successfully',
+                icon: 'success',
+                customClass: {
+                    title: 'alertFontStyle'
+                }
+            }).then(function () {
+                $('#thirdPage').attr('hidden', false);
+                $('#secondPage').attr('hidden', true);
+                $('#firstPage').attr('hidden', true);
+
+                //check which checkbox is checked
+                if ($('#mobileNumberCheck').is(":checked")) {
+                    $('.mobileNumberAckRow').prop("hidden", false);
+                    $('.mobileNumberAccNumberAckVal').html($('#mobileNumberAccNumberSelect option:selected').text());
+                }
+
+                if ($('#icNumberCheck').is(":checked")) {
+                    $('.icNumberAckRow').prop("hidden", false);
+                    $('.icNumberAccNumberAckVal').html($('#icNumberAccNumberSelect option:selected').text());
+                }
+            });
+        })
+    });
+
+    //reset button
+    $('.btnReset').on('click', function () {
+        $('form')[0].reset();
+    });
+
+    function checkTableRowSelect() {
+        if ($('#mobileNumberCheck').is(":checked") || $('#icNumberCheck').is(":checked")) {
+            $('#firstNext').removeClass('disabled');
+        } else {
+            $('#firstNext').addClass('disabled');
+        }
+    }
+</script>
