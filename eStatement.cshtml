@@ -1,0 +1,156 @@
+﻿<div class="d-none d-lg-block" style="height:5vh;"></div>
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 h-100 my-auto px-3 px-lg-0">
+    <div class="row mt-2 justify-content-center h-100 my-auto">
+        <div class="col-lg-8">
+            <div class="row justify-content-center ">
+
+                <div class="col-12 col-lg-5 text-center">
+                    <h3>View E-Statement</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+
+                <!-- Download -->
+                <div id="firstPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="row mb-2">
+                        <label for="tranAmount" class="col-sm-12 col-form-label">Account No.</label>
+                        <div class="col-sm-12 mb-2">
+
+                            <select class="form-select" id="accNum" aria-label="Default select example">
+                                <option selected>Please select</option>
+                                <option value="1">4000151818158236 (Current)</option>
+                                <option value="2">9577445338254589 (Current)</option>
+                                <option value="3">1235489818021458 (Current)</option>
+                                <option value="4">1235489158236111 (Fixed Deposit)</option>
+                            </select>
+                            <span class="field-validation-valid text-danger ps-1" style="font-size:14px"
+                                  data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action("StatementSetting", "Home" )">
+                                Back
+                            </a>
+                            <button id="firstNext" type="button" class="btn btn-primary float-end">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div hidden id="secondPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-12 table-responsive mb-2">
+
+                            <table class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white"
+                                   style="width:100%">
+                                <thead class="bg-dark text-white rounded-8">
+                                    <tr style="text-align:center">
+
+                                        <th class="small">No.</th>
+                                        <th class="small">Statement Date</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr style="text-align:center">
+
+                                        <td class="title-1">1</td>
+                                        <td class="title-1"><a href="#"><u>18 Nov 2021</u></a></td>
+
+                                    </tr>
+
+                                    <tr style="text-align:center">
+
+                                        <td class="title-1">2</td>
+                                        <td class="title-1"><a href="#"><u>31 Oct 2021</u></a></td>
+
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+
+                        </div>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start">
+                                Back
+                            </a>
+                            <button id="secondNext" type="button" class="btn btn-primary float-end">
+                                Done
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="alert-info col-10 col-sm-11 col-xxl-10 col-lg-10 rounded-8 shadow-sm my-5 px-3"
+                     role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            This function is subject to the Terms and Conditions governing the E-Statement Service.
+                            The initial use of the service shall be deemed as your agreement to be bound by these
+                            terms and conditions and as your acknowledgement and acceptance of all the inherent
+                            risks associated with the use of the service.
+                        </li>
+                        <li>
+                            Upon generation of your E-Statement, the Bank will cease sending paper based statement
+                            to you. For statement request(s) for a specific period select Account Inquiry /
+                            Statement Request / Hard-copy Statement.
+                        </li>
+                        <li>
+                            If you wish to download Acrobat Reader please go to the following site and follow the
+                            on-screen instructions : <a href="#" style="word-break: break-all;">
+                                http://www.adobe.com/products/acrobat/readstep.html
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-12 col-lg-4 last-row p-4 mt-4 p-sm-2 text-center pictureRow">
+            <img src="~/Images/WebsiteImages/register-win-pbe-login02.jpg" class="img-fluid " />
+        </div>
+
+    </div>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/js")
+<script>
+
+    $(document).ready(function () {
+
+        $('#firstNext').on('click', function () {
+
+            $('#firstPage').attr('hidden', true);
+            $('#secondPage').attr('hidden', false);
+
+        });
+
+        $('#secondNext').on('click', function () {
+
+            $('#firstPage').attr('hidden', false);
+            $('#secondPage').attr('hidden', true);
+
+        });
+
+    });
+
+</script>

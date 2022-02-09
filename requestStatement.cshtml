@@ -1,0 +1,235 @@
+﻿
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 h-100 my-auto px-3 px-lg-0">
+    <div class="row mt-2 justify-content-center h-100 my-auto">
+        <div class="col-lg-8 formRow px-4">
+            <div class="row justify-content-center ">
+
+                <div class="col-12 col-lg-5 col-xl-6 p-5 text-center position-relative">
+                    <h3>Request Paper Statement</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                    </p>
+                </div>
+
+                <div id="firstPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <form>
+                        <div class="row mb-2">
+                            <label for="accNumber" class="col-sm-12 col-form-label">Account No.</label>
+                            <div class="col-sm-12 mb-2">
+
+                                <select class="form-select" id="accNumberSelect"
+                                        aria-label="Default select example">
+                                    <option selected>Please select</option>
+                                    <option>95774453</option>
+                                    <option>12354898</option>
+                                    <option>12354891</option>
+                                    <option>14680642</option>
+                                    <option>54670423</option>
+                                    <option>40054898</option>
+                                    <option>95771468</option>
+                                </select>
+                                <span class="field-validation-valid text-danger ps-1" style="font-size:14px"
+                                      data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label for="statementPeriod" class="col-sm-12 col-form-label">Statement Period</label>
+                            <div class="col-sm-12 mb-2">
+
+                                <select class="form-select" id="statementPeriodSelect"
+                                        aria-label="Default select example">
+                                    <option selected>January, 2022</option>
+                                    <option>December, 2021</option>
+                                    <option>November, 2021</option>
+                                    <option>October, 2021</option>
+                                    <option>September, 2021</option>
+                                    <option>August, 2021</option>
+                                </select>
+                                <span class="field-validation-valid text-danger ps-1" style="font-size:14px"
+                                      data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="row my-5 last-row">
+                            <div class="col-12">
+                                <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3"
+                                   href="@Url.Action("StatementSetting", "Home" )">
+                                    Back
+                                </a>
+                                <a id="firstNext"
+                                   class="btn btn-primary col-12 col-sm-3 mt-2 mt-sm-0 float-sm-end col-lg-12 mt-lg-2 col-xxl-3 mt-xxl-0">
+                                    Next
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div hidden id="secondPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <form>
+                        <div class="row mb-2">
+                            <label for="accNumber" class="col-sm-12 col-form-label">Account No.</label>
+                            <div class="col-sm-12 mb-2">
+                                <input type="text" class="form-control mb-2" id="accNumber" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label for="statementPeriod" class="col-sm-12 col-form-label">Statement Period</label>
+                            <div class="col-sm-12 mb-2">
+                                <input type="text" class="form-control mb-2" id="statementPeriod" disabled>
+                            </div>
+                        </div>
+
+
+                        <div class="row my-5 last-row">
+                            <div class="col-12">
+                                <a class="btn btn-dark float-start"
+                                   href="@Url.Action("StatementSetting", "Home" )">
+                                    Back
+                                </a>
+                                <a id="secondNext" class="btn btn-primary  float-end"> Next </a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div hidden id="thirdPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <div class="p-4 shadow bg-white rounded-8">
+
+                        <div class="row logoRow mb-4">
+
+                            <div class="col-2 checkIconDIV">
+
+                                <div class="successIcon text-start">
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none"
+                                              d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
+                                </div>
+
+                            </div>
+
+                            <div class="col-10 checkTextDIV">
+                                <h5>Paper Statement Requested Successfully</h5>
+                                <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                            </div>
+
+                        </div>
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Reference No.</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>551480</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Account No.</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>123456789</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Statement Period</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>January, 2022</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start"> Print </a>
+                            <a id="secondNext" class="btn btn-primary  float-end" href="@Url.Action("StatementSetting", "Home" )"> Done </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="alert alert-info col-10 col-sm-11 col-xxl-10 col-lg-10 rounded-8 shadow-sm my-5 px-3"
+                     role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            Statement requests may incur other charges / fees. Any statement requests through PBe
+                            will be constructed as your acknowledgement that PBB Group reserves the right to debit
+                            your relevent Account(s) for any such charges / fees.
+                        </li>
+                        <li>
+                            You are advised to contact your account holding branch / PB Card Services to obtain more
+                            information with regard to the charges / fees involved (if any).
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-12 col-lg-4 last-row p-4 mt-4 p-sm-2 text-center pictureRow">
+            <img src="~/Images/WebsiteImages/register-win-pbe-login02.jpg" class="img-fluid ads-form" />
+        </div>
+    </div>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/js")
+<script>
+
+    $(document).ready(function () {
+
+        $('.mobileNav').each(function () {
+            $(this).removeClass('active');
+        })
+        $('.nav-link').each(function () {
+            $(this).removeClass('active');
+        })
+        $('.profile').each(function () {
+            $(this).addClass('active');
+        });
+        $('.profileMenu').addClass('active');
+
+        $('#firstNext').on('click', function () {
+
+            $('#secondPage').attr('hidden', false);
+            $('#firstPage').attr('hidden', true);
+            $('#thirdPage').attr('hidden', true);
+
+            //set the value to the second page
+            $('#accNumber').val($('#accNumberSelect option:selected').text());
+            $('#statementPeriod').val($('#statementPeriodSelect option:selected').text());
+        });
+
+        $('#secondNext').on('click', function () {
+            $('#thirdPage').attr('hidden', false);
+            $('#secondPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', true);
+        })
+    });
+
+    //reset button
+    $('.btnReset').on('click', function () {
+        $('form')[0].reset();
+    });
+
+</script>
