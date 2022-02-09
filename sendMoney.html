@@ -1,7 +1,11 @@
-    <!-- MultiSelect Choices CSS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<!-- MultiSelect Choices CSS-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+
 <!-- Date Range Picker CSS -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
 <div class="container-fluid gx-0 gx-lg-0 mt-0 mt-xxl-45 p-lg-3 p-4 ps-lg-5  bg-light rounded-8-lg">
     <div class="row justify-content-center">
         <div id="firstPage" class="col-12 col-lg-6 mt-lg-4 border-end-xl">
@@ -24,9 +28,11 @@
                         <div class="accordion" id="myAccordion">
                             <div class="accordion-item border-0">
 
-                                <button type="button" class="accordion-button shadow-none collapsed py-0 ps-0" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <button type="button" class="accordion-button shadow-none collapsed py-0 ps-0"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne">
                                     <div class="row px-3">
-                                        <div class="col-3 my-auto text-center bg-light-2 rounded-8" style="max-width:50px;height: 50px; padding: 0.8rem 0.8rem;">
+                                        <div class="col-3 my-auto text-center bg-light-2 rounded-8"
+                                             style="max-width:50px;height: 50px; padding: 0.8rem 0.8rem;">
                                             <i class="fad fa-paper-plane text-primary"></i>
                                         </div>
                                         <div class="col-9 my-auto ps-3">
@@ -42,8 +48,7 @@
                                 <div id="collapseOne" class="accordion-collapse collapse border-bottom"
                                      data-bs-parent="#myAccordion">
 
-                                    <div class="p-1 py-2 bg-white cardType"
-                                         id="newAccountNo">
+                                    <div class="p-1 py-2 bg-white cardType" id="newAccountNo">
                                         <a href="#" id="doTransfer">
 
                                             <div class="row px-3">
@@ -65,10 +70,10 @@
                                     </div>
 
                                 </div>
-                                <div id="collapseOne" class="accordion-collapse collapse border-bottom" data-bs-parent="#myAccordion">
+                                <div id="collapseOne" class="accordion-collapse collapse border-bottom"
+                                     data-bs-parent="#myAccordion">
 
-                                    <div class="p-1 py-2 bg-white cardType"
-                                         id="newDuitNow">
+                                    <div class="p-1 py-2 bg-white cardType" id="newDuitNow">
                                         <a href="#" id="doDuitNowTransfer">
 
                                             <div class="row px-3">
@@ -100,12 +105,16 @@
                     <div class="rounded-8 shadow-sm p-1 py-2 bg-white cardType">
                         <a href="#">
                             <div class="row h-100 px-3">
-                                <div class="col-3 my-auto text-center bg-light-2 rounded-8" style="max-width:50px; padding: .6rem .8rem;">
+                                <div class="col-3 my-auto text-center bg-light-2 rounded-8"
+                                     style="max-width:50px; padding: .6rem .8rem;">
                                     <i class="fad fa-wallet text-primary"></i>
                                 </div>
                                 <div class="col-7 my-auto ps-3">
                                     <h6 class="mb-0 text-black pt-2">Personal</h6>
-                                    <p class="smaller fs-lg-6 text-muted mb-1">Transfer via DuitNow of a person's mobile</p>
+                                    <p class="smaller fs-lg-6 text-muted mb-1">
+                                        Transfer via DuitNow of a person's
+                                        mobile
+                                    </p>
                                 </div>
                                 <div class="col-2 ms-auto my-auto text-end">
                                     <i class="fa fa-arrow-right text-primary"></i>
@@ -117,7 +126,10 @@
             </div>
             <div class="row mt-5">
                 <div class="col-12 col-lg-10 text-center text-lg-end">
-                    <button disabled class="btn btn-primary mb-3 mb-lg-0 mt-0 mt-lg-0 float-lg-end btnNextPaymentType">Next</button>
+                    <button disabled
+                            class="btn btn-primary mb-3 mb-lg-0 mt-0 mt-lg-0 float-lg-end btnNextPaymentType">
+                        Next
+                    </button>
                 </div>
             </div>
         </div>
@@ -165,13 +177,13 @@
 
                     <div class="dropdown">
 
-                        <button class="col-12 btn bg-white border border-1 dropdown-toggle text-start"
-                                type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                        <button class="col-12 btn bg-white border border-1 dropdown-toggle text-start" type="button"
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             Please select
                         </button>
 
-                        <ul id="bankList" class="dropdown-menu px-3" style="width:97%" aria-labelledby="dropdownMenuButton1">
+                        <ul id="bankList" class="dropdown-menu px-3" style="width:97%"
+                            aria-labelledby="dropdownMenuButton1">
 
                             <div class="row">
                                 <div class="col-12">
@@ -188,7 +200,8 @@
                                 <span class="ms-2">Public Bank Berhad</span>
                             </li>
                             <li class="mb-1" value="CIMB">
-                                <img class="img-fluid" src="~/Images/Banks/maybank-logo-png-transparent.png" style="width: 75px;" />
+                                <img class="img-fluid" src="~/Images/Banks/maybank-logo-png-transparent.png"
+                                     style="width: 75px;" />
                                 <span class="ms-2">Maybank Berhad</span>
                             </li>
                             <li class="mb-1" value="Maybank">
@@ -204,8 +217,7 @@
                 <div class="row mb-2">
                     <label for="accNumber" class="col-sm-12 col-form-label">Account No.</label>
                     <div class="col-sm-12 mb-2">
-                        <input type="text" class="form-control mb-2" id="accNumber"
-                               placeholder="Enter Account No.">
+                        <input type="text" class="form-control mb-2" id="accNumber" placeholder="Enter Account No.">
                     </div>
                 </div>
 
@@ -248,31 +260,10 @@
                         Reference
                     </label>
 
-                    <div class="col-sm-18 mb-2">
+                    <input type="text" class="typeahead tt-query form-control mb-2" id="rrSuggestions"
+                           name="rrSuggestions" autocomplete="off" spellcheck="false"
+                           placeholder="Enter Receipient Reference">
 
-                        <input type="text" class="form-control mb-2" id="rrSuggestions" name="rrSuggestions"
-                               list="suggestionsList" autocomplete="off"
-                               placeholder="Enter Receipient Reference">
-
-                        <datalist id="suggestionsList">
-                            <option value="Car Payment"></option>
-                            <option value="Happy Birthday"></option>
-                            <option value="Monthly Expenses"></option>
-                            <option value="Movie Tickets"></option>
-                            <option value="Lunch"></option>
-                            <option value="Cake"></option>
-                            <!-- <option value="Flowers"></option> -->
-                        </datalist>
-
-                    </div>
-
-
-
-
-
-                    <!-- <div class="col-12 col-sm-6">
-                        <input type="text" id="userInput" class="form-control mb-2">
-                    </div> -->
 
                 </div>
 
@@ -292,8 +283,7 @@
                     </label>
                     <div class="col-sm-12">
 
-                        <select class="form-select" id="reccurTranSelect"
-                                aria-label="Default select example">
+                        <select class="form-select" id="reccurTranSelect" aria-label="Default select example">
                             <option selected class="text-muted ms-2">None</option>
                             <option>Daily</option>
                             <option>Weekly</option>
@@ -319,8 +309,8 @@
                         <label for="emailCheckbox" id="emailCheckbox" class="form-check-label">Email</label>
                         <!-- <input type="email" for="emailCheckbox" id="emailCheckboxes" class="col-sm-10 float-sm-end" disabled/> -->
                         <div class="col-sm-10 mb-1 float-sm-end">
-                            <input type="email" for="emailCheckbox"
-                                   class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="emailCheckboxes" disabled>
+                            <input type="email" for="emailCheckbox" class="form-control mb-2 pb-0 pt-0 py-2 px-2"
+                                   id="emailCheckboxes" disabled>
                         </div>
                     </div>
 
@@ -329,8 +319,8 @@
                         <label for="smsCheckbox" id="smsCheckbox" class="form-check-label">SMS</label>
                         <!-- <input type="email" for="emailCheckbox" id="emailCheckboxes" class="col-sm-10 float-sm-end" disabled/> -->
                         <div class="col-sm-10 mb-1 float-sm-end">
-                            <input type="text" for="smsCheckbox"
-                                   class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="smsCheckboxes" disabled>
+                            <input type="text" for="smsCheckbox" class="form-control mb-2 pb-0 pt-0 py-2 px-2"
+                                   id="smsCheckboxes" disabled>
                         </div>
                     </div>
 
@@ -344,33 +334,7 @@
 
                 </div>
 
-                <div class="row mb-2 justify-content-between">
 
-                    <label for="tranAmount" class="col-sm-12 col-form-label">PAC</label>
-
-                    <div class="col-7 col-sm-8 col-md-9 col-lg-7 col-xl-8">
-                        <input type="text" class="form-control" id="PAC">
-                    </div>
-
-                    <div class="col-5 col-sm-4 col-md-3 col-lg-5 col-xl-4 ps-0 text-end text-lg-center mt-0">
-                        <a class="btn btn-info reqPacBtn text-white float-lg-end">Request PAC</a>
-                    </div>
-
-                    <div class="description mt-1">
-                        <span>Didn't get the code?</span>
-                        <a hidden href="#" id="ResendPAC"
-                           class="text-decoration-none ms-3 mb-2">Resend(1/3)</a>
-                        <p class="text-muted">
-                            A 6 digit PAC will be sent to your registered mobile phone
-                            number
-                            *****6168. Please click "Request PAC" if you wish to proceed
-                        </p>
-                        <p class="timerText" hidden>
-                            Time remaining: <span id="time"
-                                                  style="color:#d64354"></span>
-                        </p>
-                    </div>
-                </div>
 
                 <div class="row mb-2">
 
@@ -379,15 +343,17 @@
                         <input id="checkbox" type="checkbox" class="form-check-input" />
                         <label for="checkbox" class="form-check-label">
                             By checking this checkbox, I
-                            acknowledge that I have read, understand and agree to be bound by the<a href="#"> Terms and Conditions</a>.
+                            acknowledge that I have read, understand and agree to be bound by the<a href="#">
+                                Terms
+                                and Conditions
+                            </a>.
                         </label>
                     </div>
                 </div>
 
                 <div class="row my-5 last-row">
                     <div class="col-12">
-                        <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3"
-                           href="@Url.Action(" CardSettings", "Home" )">
+                        <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3" href="@Url.Action("CardSettings", "Home" )">
                             Back
                         </a>
                         <a class="btn btn-outline-primary btnReset col-5 float-end col-sm-3 float-sm-none col-lg-5 float-lg-end float-xxl-none col-xxl-3">
@@ -395,14 +361,14 @@
                         </a>
                         <a id="firstNext"
                            class="btn btn-primary col-12 col-sm-3 mt-2 mt-sm-0 float-sm-end col-lg-12 mt-lg-2 col-xxl-3 mt-xxl-0 disabled"
-                           data-bs-toggle="modal" href="#exampleModalToggle" role="button">Next</a>
+                           data-bs-toggle="modal" role="button">Next</a>
                     </div>
                 </div>
 
             </form>
 
-            <div class="alert alert-info col-10 col-sm-10 col-xxl-18 col-lg-12 rounded-8 shadow-sm"
-                 role="alert" id="safeguardNote">
+            <div class="alert alert-info col-10 col-sm-10 col-xxl-18 col-lg-12 rounded-8 shadow-sm" role="alert"
+                 id="safeguardNote">
                 <!-- <div class="alert alert-info col-12 col-lg-5 mt-lg-4 border-end-xl px-4 rounded-8 shadow-sm" role="alert" id="safeguardNote"> -->
 
                 <b>Note</b><br>
@@ -442,7 +408,7 @@
 
         </div>
 
-        <div hidden id="thirdPage" class="col-12 col-lg-5 mt-lg-4 border-end-xl px-4">
+        <div hidden id="thirdPage" class="col-12 col-lg-6 mt-lg-4 border-end-xl px-4">
 
             <h3 class="title">Confirmation</h3>
 
@@ -463,7 +429,8 @@
                     <label for="accType" class="col-sm-12 col-form-label">From Account</label>
                     <div class="col-sm-12 mb-2">
 
-                        <select class="form-select" disabled id="userAccountDisable" aria-label="Default select example">
+                        <select class="form-select" disabled id="userAccountDisable"
+                                aria-label="Default select example">
                             <option>Savings - 2303042340032 (RM 500,204)</option>
                         </select>
                         <!-- <span class="field-validation-valid text-danger ps-1" style="font-size:14px"
@@ -479,10 +446,8 @@
                     <div class="dropdownDisabled">
 
                         <button disabled class="col-12 btn bg-white border border-1 dropdown-toggle text-start"
-                                type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                            <img src="~/Images/Banks/pbb.png"
-                                 style="width: 40px; height: 40px;"></img>
+                                type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="~/Images/Banks/pbb.png" style="width: 40px; height: 40px;"></img>
                             <span class="ms-2">Public Bank Berhad</span>
                             <!-- Please select -->
                         </button>
@@ -506,7 +471,8 @@
                     <div class="col-sm-12 mb-2">
 
 
-                        <select class="form-select" disabled id="transferMethodsDisabled" aria-label="Default select example">
+                        <select class="form-select" disabled id="transferMethodsDisabled"
+                                aria-label="Default select example">
 
                             <option>DuitNow Transfer (before known as Instant Transfer)</option>
 
@@ -520,8 +486,8 @@
                     <label for="receipientName" class="col-sm-12 col-form-label">Receipient Name</label>
                     <div class="col-sm-12 mb-2">
 
-                        <input type="text" class="form-control mb-2" id="receipientNameDisabled"
-                               placeholder="Bob" disabled>
+                        <input type="text" class="form-control mb-2" id="receipientNameDisabled" placeholder="Bob"
+                               disabled>
                     </div>
                 </div>
 
@@ -529,7 +495,8 @@
                     <label for="accType" class="col-sm-12 col-form-label">Account Type</label>
                     <div class="col-sm-12 mb-2">
 
-                        <select class="form-select" disabled id="accTypeSelectDisabled" aria-label="Default select example">
+                        <select class="form-select" disabled id="accTypeSelectDisabled"
+                                aria-label="Default select example">
 
                             <option>Savings / Current Account</option>
 
@@ -543,8 +510,8 @@
                     <label for="transferAmount" class="col-sm-12 col-form-label">Amount (RM)</label>
                     <div class="col-sm-12 mb-2">
 
-                        <input type="number" class="form-control mb-2" id="transferAmountDisabled"
-                               placeholder="400" disabled>
+                        <input type="number" class="form-control mb-2" id="transferAmountDisabled" placeholder="400"
+                               disabled>
 
                     </div>
                 </div>
@@ -554,11 +521,11 @@
                     <label class="col-sm-12 col-form-label " for="rrSuggestions">Receipient Reference</label>
 
 
-                    <div class="col-sm-12 mb-2">
 
-                        <input type="text" id="recRefDisabled" placeholder="Groceries" disabled class="typeahead tt-query form-control mb-2" autocomplete="off" spellcheck="false">
 
-                    </div>
+                    <input type="text" id="recRefDisabled" placeholder="Groceries" disabled
+                           class="typeahead tt-query form-control mb-2" autocomplete="off" spellcheck="false">
+
 
                 </div>
 
@@ -601,29 +568,36 @@
 
 
                 <div class="row mb-2" id="receipientNotification">
-                    <label for="statementPeriod" class="col-sm-12 col-form-label">Notify Receipient <span class="text-muted">(Optional)</span></label>
+                    <label for="statementPeriod" class="col-sm-12 col-form-label">
+                        Notify Receipient <span class="text-muted">(Optional)</span>
+                    </label>
 
 
                     <div class="col-sm-12 mb-2">
-                        <input id="emailCheckboxDisabled" type="checkbox" class="form-check-input" checked disabled />
+                        <input id="emailCheckboxDisabled" type="checkbox" class="form-check-input" checked
+                               disabled />
 
-                        <label for="emailCheckbox" id="emailCheckboxDisabled" class="form-check-label" disabled>Email</label>
+                        <label for="emailCheckbox" id="emailCheckboxDisabled" class="form-check-label"
+                               disabled>Email</label>
 
                         <!-- <input type="email" for="emailCheckbox" id="emailCheckboxes" class="col-sm-10 float-sm-end" disabled/> -->
                         <div class="col-sm-10 mb-1 float-sm-end">
-                            <input type="email" for="emailCheckbox" class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="emailCheckboxesDisabled" placeholder="bob2932@gmail.com" disabled>
+                            <input type="email" for="emailCheckbox" class="form-control mb-2 pb-0 pt-0 py-2 px-2"
+                                   id="emailCheckboxesDisabled" placeholder="bob2932@gmail.com" disabled>
                         </div>
                     </div>
 
                     <div class="col-sm-12 mb-2">
                         <input id="smsCheckboxDisabled" type="checkbox" class="form-check-input" disabled />
 
-                        <label for="smsCheckbox" id="smsCheckboxDisabled" class="form-check-label" disabled>SMS</label>
+                        <label for="smsCheckbox" id="smsCheckboxDisabled" class="form-check-label"
+                               disabled>SMS</label>
 
                         <!-- <input type="email" for="emailCheckbox" id="emailCheckboxes" class="col-sm-10 float-sm-end" disabled/> -->
                         <div class="col-sm-10 mb-1 float-sm-end">
 
-                            <input type="text" for="smsCheckbox" class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="smsCheckboxesDisabled" disabled>
+                            <input type="text" for="smsCheckbox" class="form-control mb-2 pb-0 pt-0 py-2 px-2"
+                                   id="smsCheckboxesDisabled" disabled>
 
 
                         </div>
@@ -650,7 +624,7 @@
 
                     <div class="col-sm-12 authField" hidden>
 
-                        <div class="row justify-content-between  myFA2 mt-4" id="PAC" mt-2>
+                        <div class="row justify-content-between  myFA2 mt-4" id="pac" mt-2>
 
                             <div class="zz col-3 col-lg-2 col-xxl-3">
                                 <label for="PAC" class="">
@@ -667,7 +641,8 @@
                                 </div>
 
                                 <div class="col-12 col-md-3">
-                                    <button type="button" class="btnNext col-12 reqPacBtn pac btn btn-outline-primary pac text-white float-lg-end mt-2"
+                                    <button type="button"
+                                            class="btnNext col-12 reqPacBtn pac btn btn-outline-primary pac text-white float-lg-end mt-2"
                                             id="reqPacBtn">
                                         Request
                                         PAC
@@ -698,7 +673,8 @@
                             </div>
 
                             <div class=" col-12 col-md-3 ps-md-1 d-none d-md-block">
-                                <button type="button" class="reqPacBtn col-12 btn btn-outline-primary pac text-white  mt-2"
+                                <button type="button"
+                                        class="reqPacBtn col-12 btn btn-outline-primary pac text-white  mt-2"
                                         id="reqPacBtn">
                                     Request
                                     PAC
@@ -768,8 +744,9 @@
                             </div>
 
                             <div class="d-block d-md-none">
-                                <button type="button" class="btn btn-outline-primary pac text-white float-lg-end w-100 btnNext" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdropPhone">
+                                <button type="button"
+                                        class="btn btn-outline-primary pac text-white float-lg-end w-100 btnNext"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdropPhone">
                                     Push
                                     Notification
                                 </button>
@@ -840,8 +817,8 @@
                             </div>
 
                             <div class="col-md-3 col-9 ps-md-1 d-none d-md-block">
-                                <button type="button" class="btn btn-outline-primary col-12 text-white  mt-2" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
+                                <button type="button" class="btn btn-outline-primary col-12 text-white  mt-2"
+                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                     Push Notification
                                 </button>
 
@@ -972,14 +949,19 @@
 
                     <div class="form-check mt-4">
                         <input id="checkbox" type="checkbox" class="form-check-input" />
-                        <label for="checkbox" class="form-check-label">By checking this checkbox, I acknowledge that I have read, understand and agree to be bound by the<a href="#"> Terms and Conditions</a>.</label>
+                        <label for="checkbox" class="form-check-label">
+                            By checking this checkbox, I acknowledge that
+                            I have read, understand and agree to be bound by the<a href="#">
+                                Terms and
+                                Conditions
+                            </a>.
+                        </label>
                     </div>
                 </div>
 
                 <div class="row my-5 last-row">
                     <div class="col-12">
-                        <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3"
-                           href="@Url.Action(" CardSettings", "Home" )">
+                        <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3" href="@Url.Action("CardSettings", "Home" )">
                             Back
                         </a>
                         <a class="btn btn-outline-primary btnReset col-5 float-end col-sm-3 float-sm-none col-lg-5 float-lg-end float-xxl-none col-xxl-3">
@@ -1002,12 +984,17 @@
 
             </form>
 
-            <div class="alert alert-info col-10 col-sm-10 col-xxl-18 col-lg-12 rounded-8 shadow-sm" role="alert" id="safeguardNote">
+            <div class="alert alert-info col-10 col-sm-10 col-xxl-18 col-lg-12 rounded-8 shadow-sm" role="alert"
+                 id="safeguardNote">
                 <!-- <div class="alert alert-info col-12 col-lg-5 mt-lg-4 border-end-xl px-4 rounded-8 shadow-sm" role="alert" id="safeguardNote"> -->
 
                 <b>Note</b><br>
                 <ul>
-                    <li>The new transfer service is applicable to funds transfer to other banks within Malaysia only. Funds will be debited from the applicant's account and credited into the beneficiary's account immediately.</li>
+                    <li>
+                        The new transfer service is applicable to funds transfer to other banks within Malaysia
+                        only. Funds will be debited from the applicant's account and credited into the beneficiary's
+                        account immediately.
+                    </li>
                     <li>
                         The service is only available during our operating hours 12:05 a.m. - 12 midnight.
                     </li>
@@ -1016,14 +1003,18 @@
                         The third party fund transfer limit is RM20,000.00 (PAC) and RM50,000.00 (SecureSign).
                     </li>
                     <li>
-                        The limit for a single transaction is at a maximum value of RM10,000.00 per transaction using PAC.
+                        The limit for a single transaction is at a maximum value of RM10,000.00 per transaction
+                        using PAC.
                     </li>
                     <li>
-                        New Transfers will not be initiated if Beneficiary's Bank rejects or is unable to confirm the transaction into the particular account. During such occurrences, the funds will be credited back into your account.
+                        New Transfers will not be initiated if Beneficiary's Bank rejects or is unable to confirm
+                        the transaction into the particular account. During such occurrences, the funds will be
+                        credited back into your account.
                     </li>
 
                     <li>
-                        The default third party transaction limit is RM3,000.00. This daily limit can be increased or decreased by selecting Profile Maintenance / Manage Profile / Change Daily Limit.
+                        The default third party transaction limit is RM3,000.00. This daily limit can be increased
+                        or decreased by selecting Profile Maintenance / Manage Profile / Change Daily Limit.
                     </li>
 
 
@@ -1032,9 +1023,9 @@
 
         </div>
 
-        <div hidden id="secondDuitNowPage" class="col-12 col-lg-5 mt-lg-4 border-end-xl px-4">
+        <div hidden id="secondDuitNowPage" class="col-12 col-lg-6 mt-lg-4 border-end-xl px-4">
 
-            <h3 class="title">DuitNow Transfer</h3>
+            <h3>DuitNow Transfer</h3>
 
             <div class="row">
 
@@ -1078,15 +1069,16 @@
                             <option value="armyPoliceID">Army / Police ID</option>
                             <option value="businessRegNum">Business Registration Number</option>
                         </select>
-                        <span class="field-validation-valid text-danger ps-1" style="font-size:14px"
-                              data-valmsg-replace="true"></span>
+                        @*<span class="field-validation-valid text-danger ps-1" style="font-size:14px"
+                              data-valmsg-replace="true"></span>*@
                     </div>
                 </div>
 
                 <div class="row mb-2" class="myDiv" id="duitNowMobile">
                     <label for="tranAmount" class="col-sm-12 col-form-label">Mobile Number</label>
                     <div class="col-sm-12">
-                        <input type="text" class="form-control mb-2" placeholder=" Enter receipient's mobile number...">
+                        <input type="text" class="form-control mb-2"
+                               placeholder=" Enter receipient's mobile number...">
 
                     </div>
                 </div>
@@ -1094,7 +1086,8 @@
                 <div class="row mb-2" id="duitNowIC">
                     <label for="tranAmount" class="col-sm-12 col-form-label">I/C Number</label>
                     <div class="col-sm-12">
-                        <input type="text" class="form-control mb-2" placeholder=" Enter receipient's I/C number...">
+                        <input type="text" class="form-control mb-2"
+                               placeholder=" Enter receipient's I/C number...">
 
                     </div>
                 </div>
@@ -1154,7 +1147,10 @@
                             <option value="Colombia">Colombia</option>
                             <option value="Comoros">Comoros</option>
                             <option value="Congo">Congo</option>
-                            <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                            <option value="Congo, The Democratic Republic of The">
+                                Congo, The Democratic Republic of
+                                The
+                            </option>
                             <option value="Cook Islands">Cook Islands</option>
                             <option value="Costa Rica">Costa Rica</option>
                             <option value="Cote D'ivoire">Cote D'ivoire</option>
@@ -1198,7 +1194,9 @@
                             <option value="Guinea-bissau">Guinea-bissau</option>
                             <option value="Guyana">Guyana</option>
                             <option value="Haiti">Haiti</option>
-                            <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                            <option value="Heard Island and Mcdonald Islands">
+                                Heard Island and Mcdonald Islands
+                            </option>
                             <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
                             <option value="Honduras">Honduras</option>
                             <option value="Hong Kong">Hong Kong</option>
@@ -1219,11 +1217,16 @@
                             <option value="Kazakhstan">Kazakhstan</option>
                             <option value="Kenya">Kenya</option>
                             <option value="Kiribati">Kiribati</option>
-                            <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                            <option value="Korea, Democratic People's Republic of">
+                                Korea, Democratic People's
+                                Republic of
+                            </option>
                             <option value="Korea, Republic of">Korea, Republic of</option>
                             <option value="Kuwait">Kuwait</option>
                             <option value="Kyrgyzstan">Kyrgyzstan</option>
-                            <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                            <option value="Lao People's Democratic Republic">
+                                Lao People's Democratic Republic
+                            </option>
                             <option value="Latvia">Latvia</option>
                             <option value="Lebanon">Lebanon</option>
                             <option value="Lesotho">Lesotho</option>
@@ -1233,7 +1236,10 @@
                             <option value="Lithuania">Lithuania</option>
                             <option value="Luxembourg">Luxembourg</option>
                             <option value="Macao">Macao</option>
-                            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                            <option value="Macedonia, The Former Yugoslav Republic of">
+                                Macedonia, The Former
+                                Yugoslav Republic of
+                            </option>
                             <option value="Madagascar">Madagascar</option>
                             <option value="Malawi">Malawi</option>
                             <option value="Malaysia">Malaysia</option>
@@ -1291,7 +1297,9 @@
                             <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
                             <option value="Saint Lucia">Saint Lucia</option>
                             <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                            <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                            <option value="Saint Vincent and The Grenadines">
+                                Saint Vincent and The Grenadines
+                            </option>
                             <option value="Samoa">Samoa</option>
                             <option value="San Marino">San Marino</option>
                             <option value="Sao Tome and Principe">Sao Tome and Principe</option>
@@ -1306,7 +1314,10 @@
                             <option value="Solomon Islands">Solomon Islands</option>
                             <option value="Somalia">Somalia</option>
                             <option value="South Africa">South Africa</option>
-                            <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                            <option value="South Georgia and The South Sandwich Islands">
+                                South Georgia and The South
+                                Sandwich Islands
+                            </option>
                             <option value="Spain">Spain</option>
                             <option value="Sri Lanka">Sri Lanka</option>
                             <option value="Sudan">Sudan</option>
@@ -1335,7 +1346,10 @@
                             <option value="United Arab Emirates">United Arab Emirates</option>
                             <option value="United Kingdom">United Kingdom</option>
                             <option value="United States">United States</option>
-                            <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                            <option value="United States Minor Outlying Islands">
+                                United States Minor Outlying
+                                Islands
+                            </option>
                             <option value="Uruguay">Uruguay</option>
                             <option value="Uzbekistan">Uzbekistan</option>
                             <option value="Vanuatu">Vanuatu</option>
@@ -1349,14 +1363,16 @@
                             <option value="Zambia">Zambia</option>
                             <option value="Zimbabwe">Zimbabwe</option>
                         </select>
-                        <span class="field-validation-valid text-danger ps-1" style="font-size:14px" data-valmsg-replace="true"></span>
+                        <span class="field-validation-valid text-danger ps-1" style="font-size:14px"
+                              data-valmsg-replace="true"></span>
                     </div>
                 </div>
 
                 <div class="row mb-2" id="duitNowPassportNumber">
                     <label for="tranAmount" class="col-sm-12 col-form-label">Passport Number</label>
                     <div class="col-sm-12">
-                        <input type="text" class="form-control mb-2" placeholder=" Enter receipient's passport number...">
+                        <input type="text" class="form-control mb-2"
+                               placeholder=" Enter receipient's passport number...">
 
                     </div>
                 </div>
@@ -1364,7 +1380,8 @@
                 <div class="row mb-2" id="duitNowArmyPoliceID">
                     <label for="tranAmount" class="col-sm-12 col-form-label">Army / Police ID</label>
                     <div class="col-sm-12">
-                        <input type="text" class="form-control mb-2" placeholder=" Enter receipient's army / police ID...">
+                        <input type="text" class="form-control mb-2"
+                               placeholder=" Enter receipient's army / police ID...">
 
                     </div>
                 </div>
@@ -1372,7 +1389,8 @@
                 <div class="row mb-2" id="duitNowBusinessRegNum">
                     <label for="tranAmount" class="col-sm-12 col-form-label">Business Registration Number</label>
                     <div class="col-sm-12">
-                        <input type="text" class="form-control mb-2" placeholder=" Enter receipient's business registration number...">
+                        <input type="text" class="form-control mb-2"
+                               placeholder=" Enter receipient's business registration number...">
 
                     </div>
                 </div>
@@ -1403,7 +1421,8 @@
                     <label class="col-sm-12 col-form-label " for="rrSuggestions">Receipient Reference</label>
 
 
-                    <input type="text" id="duitNowRecRef" class="typeahead tt-query form-control mb-2" autocomplete="off" spellcheck="false">
+                    <input type="text" id="duitNowRecRef" class="typeahead tt-query form-control mb-2"
+                           autocomplete="off" spellcheck="false" placeholder="Enter Receipient Reference">
 
 
 
@@ -1455,17 +1474,21 @@
 
 
                 <div class="row mb-2" id="duitNowReceipientNotification">
-                    <label for="statementPeriod" class="col-sm-12 col-form-label">Notify Receipient <span class="text-muted">(Optional)</span></label>
+                    <label for="statementPeriod" class="col-sm-12 col-form-label">
+                        Notify Receipient <span class="text-muted">(Optional)</span>
+                    </label>
 
 
                     <div class="col-sm-12 mb-2">
                         <input id="duitNowEmailCheckbox" type="checkbox" class="form-check-input" />
 
-                        <label for="duitNowEmailCheckbox" id="duitNowEmailCheckbox" class="form-check-label">Email</label>
+                        <label for="duitNowEmailCheckbox" id="duitNowEmailCheckbox"
+                               class="form-check-label">Email</label>
 
                         <!-- <input type="email" for="emailCheckbox" id="emailCheckboxes" class="col-sm-10 float-sm-end" disabled/> -->
                         <div class="col-sm-10 mb-1 float-sm-end">
-                            <input type="email" for="duitNowEmailCheckbox" class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="duitNowEmailCheckboxes" disabled>
+                            <input type="email" for="duitNowEmailCheckbox"
+                                   class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="duitNowEmailCheckboxes" disabled>
                         </div>
                     </div>
 
@@ -1476,7 +1499,8 @@
 
                         <!-- <input type="email" for="emailCheckbox" id="emailCheckboxes" class="col-sm-10 float-sm-end" disabled/> -->
                         <div class="col-sm-10 mb-1 float-sm-end">
-                            <input type="text" for="duitNowSmsCheckbox" class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="duitNowSmsCheckboxes" disabled>
+                            <input type="text" for="duitNowSmsCheckbox"
+                                   class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="duitNowSmsCheckboxes" disabled>
 
 
                         </div>
@@ -1493,14 +1517,19 @@
 
                     <div class="form-check mt-4">
                         <input id="duitNowCheckbox" type="checkbox" class="form-check-input" />
-                        <label for="duitNowCheckbox" class="form-check-label">By checking this checkbox, I acknowledge that I have read, understand and agree to be bound by the<a href="#"> Terms and Conditions</a>.</label>
+                        <label for="duitNowCheckbox" class="form-check-label">
+                            By checking this checkbox, I
+                            acknowledge that I have read, understand and agree to be bound by the<a href="#">
+                                Terms
+                                and Conditions
+                            </a>.
+                        </label>
                     </div>
                 </div>
 
                 <div class="row my-5 last-row">
                     <div class="col-12">
-                        <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3"
-                           href="@Url.Action(" CardSettings", "Home" )">
+                        <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3" href="@Url.Action("CardSettings", "Home" )">
                             Back
                         </a>
                         <a class="btn btn-outline-primary btnDuitNowReset col-5 float-end col-sm-3 float-sm-none col-lg-5 float-lg-end float-xxl-none col-xxl-3">
@@ -1517,12 +1546,17 @@
 
             </form>
 
-            <div class="alert alert-info col-10 col-sm-10 col-xxl-18 col-lg-12 rounded-8 shadow-sm" role="alert" id="duitNowSafeguardNote">
+            <div class="alert alert-info col-10 col-sm-10 col-xxl-18 col-lg-12 rounded-8 shadow-sm" role="alert"
+                 id="duitNowSafeguardNote">
                 <!-- <div class="alert alert-info col-12 col-lg-5 mt-lg-4 border-end-xl px-4 rounded-8 shadow-sm" role="alert" id="safeguardNote"> -->
 
                 <b>Note</b><br>
                 <ul>
-                    <li>The new transfer service is applicable to funds transfer to other banks within Malaysia only. Funds will be debited from the applicant's account and credited into the beneficiary's account immediately.</li>
+                    <li>
+                        The new transfer service is applicable to funds transfer to other banks within Malaysia
+                        only. Funds will be debited from the applicant's account and credited into the beneficiary's
+                        account immediately.
+                    </li>
                     <li>
                         The service is only available during our operating hours 12:05 a.m. - 12 midnight.
                     </li>
@@ -1531,14 +1565,18 @@
                         The third party fund transfer limit is RM20,000.00 (PAC) and RM50,000.00 (SecureSign).
                     </li>
                     <li>
-                        The limit for a single transaction is at a maximum value of RM10,000.00 per transaction using PAC.
+                        The limit for a single transaction is at a maximum value of RM10,000.00 per transaction
+                        using PAC.
                     </li>
                     <li>
-                        New Transfers will not be initiated if Beneficiary's Bank rejects or is unable to confirm the transaction into the particular account. During such occurrences, the funds will be credited back into your account.
+                        New Transfers will not be initiated if Beneficiary's Bank rejects or is unable to confirm
+                        the transaction into the particular account. During such occurrences, the funds will be
+                        credited back into your account.
                     </li>
 
                     <li>
-                        The default third party transaction limit is RM3,000.00. This daily limit can be increased or decreased by selecting Profile Maintenance / Manage Profile / Change Daily Limit.
+                        The default third party transaction limit is RM3,000.00. This daily limit can be increased
+                        or decreased by selecting Profile Maintenance / Manage Profile / Change Daily Limit.
                     </li>
 
 
@@ -1547,7 +1585,7 @@
 
         </div>
 
-        <div hidden id="thirdDuitNowPage" class="col-12 col-lg-5 mt-lg-4 border-end-xl px-4">
+        <div hidden id="thirdDuitNowPage" class="col-12 col-lg-6 mt-lg-4 border-end-xl px-4">
 
             <h3 class="title">DuitNow Transfer</h3>
 
@@ -1568,7 +1606,8 @@
                     <label for="accType" class="col-sm-12 col-form-label">From Account</label>
                     <div class="col-sm-12 mb-2">
 
-                        <select class="form-select" disabled id="duitNowUserAccountDisable" aria-label="Default select example">
+                        <select class="form-select" disabled id="duitNowUserAccountDisable"
+                                aria-label="Default select example">
                             <option>Savings - 2303042340032 (RM 500,204)</option>
                         </select>
                         <!-- <span class="field-validation-valid text-danger ps-1" style="font-size:14px"
@@ -1625,7 +1664,8 @@
 
 
 
-                    <input type="text" id="duitNowRecRefDisabled" placeholder="Groceries" disabled class="typeahead tt-query form-control mb-2" autocomplete="off" spellcheck="false">
+                    <input type="text" id="duitNowRecRefDisabled" placeholder="Groceries" disabled
+                           class="typeahead tt-query form-control mb-2" autocomplete="off" spellcheck="false">
 
 
 
@@ -1635,8 +1675,9 @@
                     <label for="statementPeriod" class="col-sm-12 col-form-label">Transfer Date</label>
                     <div class="col-sm-12 mb-2">
 
-                        <input type="text" class="form-control bg-white datepicker" id="duitNowEffectiveDatePickerDisabled"
-                               name="duitNowEffectiveDatePicker" placeholder="23/02/2022" disabled>
+                        <input type="text" class="form-control bg-white datepicker"
+                               id="duitNowEffectiveDatePickerDisabled" name="duitNowEffectiveDatePicker"
+                               placeholder="23/02/2022" disabled>
 
                         <!-- <input type="datetime-local" class="form-control bg-white datepicker"> -->
                     </div>
@@ -1670,29 +1711,38 @@
 
 
                 <div class="row mb-2" id="duitNowReceipientNotification">
-                    <label for="statementPeriod" class="col-sm-12 col-form-label">Notify Receipient <span class="text-muted">(Optional)</span></label>
+                    <label for="statementPeriod" class="col-sm-12 col-form-label">
+                        Notify Receipient <span class="text-muted">(Optional)</span>
+                    </label>
 
 
                     <div class="col-sm-12 mb-2">
-                        <input id="duitNowEmailCheckboxDisabled" type="checkbox" class="form-check-input" checked disabled />
+                        <input id="duitNowEmailCheckboxDisabled" type="checkbox" class="form-check-input" checked
+                               disabled />
 
-                        <label for="duitNowEmailCheckbox" id="duitNowEmailCheckboxDisabled" class="form-check-label" disabled>Email</label>
+                        <label for="duitNowEmailCheckbox" id="duitNowEmailCheckboxDisabled" class="form-check-label"
+                               disabled>Email</label>
 
                         <!-- <input type="email" for="emailCheckbox" id="emailCheckboxes" class="col-sm-10 float-sm-end" disabled/> -->
                         <div class="col-sm-10 mb-1 float-sm-end">
-                            <input type="email" for="duitNowEmailCheckbox" class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="duitNowEmailCheckboxesDisabled" placeholder="bob2932@gmail.com" disabled>
+                            <input type="email" for="duitNowEmailCheckbox"
+                                   class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="duitNowEmailCheckboxesDisabled"
+                                   placeholder="bob2932@gmail.com" disabled>
                         </div>
                     </div>
 
                     <div class="col-sm-12 mb-2">
                         <input id="duitNowSmsCheckboxDisabled" type="checkbox" class="form-check-input" disabled />
 
-                        <label for="duitNowSmsCheckbox" id="duitNowSmsCheckboxDisabled" class="form-check-label" disabled>SMS</label>
+                        <label for="duitNowSmsCheckbox" id="duitNowSmsCheckboxDisabled" class="form-check-label"
+                               disabled>SMS</label>
 
                         <!-- <input type="email" for="emailCheckbox" id="emailCheckboxes" class="col-sm-10 float-sm-end" disabled/> -->
                         <div class="col-sm-10 mb-1 float-sm-end">
 
-                            <input type="text" for="duitNowSmsCheckbox" class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="duitNowSmsCheckboxesDisabled" disabled>
+                            <input type="text" for="duitNowSmsCheckbox"
+                                   class="form-control mb-2 pb-0 pt-0 py-2 px-2" id="duitNowSmsCheckboxesDisabled"
+                                   disabled>
 
 
                         </div>
@@ -1757,7 +1807,7 @@
                         <div class="row justify-content-between  myFA2" id="duitNowPac" mt-2>
 
                             <div class="zz col-3 col-lg-2 col-xxl-3">
-                                <label for="PAC" class="col-sm-3 col-form-label">
+                                <label for="PAC">
                                     <img src="~/Images/WebsiteImages/pac-sms-dark-2.png" class="img-fluid" style="width:120px;">
                                 </label>
                             </div>
@@ -1803,7 +1853,8 @@
                             </div>
 
                             <div class=" col-12 col-md-3 ps-md-1 d-none d-md-block">
-                                <button type="button" class="reqDuitNowPacBtn col-12 btn btn-info pac text-white  mt-2"
+                                <button type="button"
+                                        class="reqDuitNowPacBtn col-12 btn btn-info pac text-white  mt-2"
                                         id="reqDuitNowPacBtn">
                                     Request
                                     PAC
@@ -1815,7 +1866,7 @@
                         <div class="row myFA3 d-none" id="duitNowToken" mt-2>
 
                             <div class="zz col-3">
-                                <label for="hToken" class="col-sm-3 col-form-label">
+                                <label for="hToken">
                                     <img src="~/Images/WebsiteImages/SecureSign Token.png" class="img-fluid" style="width:120px;">
                                 </label>
                             </div>
@@ -1856,7 +1907,7 @@
                         <div class="row myFA4 d-none" id="duitNowNoti" mt-2>
 
                             <div class="zz col-3 col-lg-3 col-xl-2">
-                                <label for="notification" class="col-sm-3 col-form-label">
+                                <label for="notification">
                                     <img src="~/Images/WebsiteImages/push-notification-dark-3.png" alt="" class="img-fluid" style="width:120px;">
                                 </label>
                             </div>
@@ -1942,16 +1993,16 @@
                             </div>
 
                             <div class="col-md-3 col-9 ps-md-1 d-none d-md-block">
-                                <button type="button" class="btn btn-info col-12 pac text-white  mt-2" data-bs-toggle="modal"
-                                        data-bs-target="#duitNowStaticBackdrop">
+                                <button type="button" class="btn btn-info col-12 pac text-white  mt-2"
+                                        data-bs-toggle="modal" data-bs-target="#duitNowStaticBackdrop">
                                     Push Notification
                                 </button>
 
                                 <!-- Modal -->
 
                                 <div class="modal fade" id="duitNowStaticBackdrop" data-bs-backdrop="static"
-                                     data-bs-keyboard="false" tabindex="-1" aria-labelledby="duitNowStaticBackdropLabel"
-                                     aria-hidden="true">
+                                     data-bs-keyboard="false" tabindex="-1"
+                                     aria-labelledby="duitNowStaticBackdropLabel" aria-hidden="true">
 
                                     <div class="modal-dialog modal-dialog-centered">
 
@@ -2017,7 +2068,7 @@
                         <div class="row myFA5 d-none" id="duitNowSecure" mt-2>
 
                             <div class="zz col-3">
-                                <label for="duitNowSecure" class="col-sm-3 col-form-label">
+                                <label for="duitNowSecure">
                                     <img src="~/Images/WebsiteImages/securepac-red3.png" class="img-fluid" style="width:120px;">
                                 </label>
                             </div>
@@ -2061,8 +2112,7 @@
                         </div>
 
                         <p class="timerText" hidden>
-                            Time remaining: <span id="duitNowTime"
-                                                  style="color:#d64354"></span>
+                            Time remaining: <span id="duitNowTime" style="color:#d64354"></span>
                         </p>
 
                     </div>
@@ -2075,7 +2125,13 @@
 
                     <div class="form-check mt-4">
                         <input id="duitNowCheckbox" type="checkbox" class="form-check-input" />
-                        <label for="duitNowCheckbox" class="form-check-label">By checking this checkbox, I acknowledge that I have read, understand and agree to be bound by the<a href="#"> Terms and Conditions</a>.</label>
+                        <label for="duitNowCheckbox" class="form-check-label">
+                            By checking this checkbox, I
+                            acknowledge that I have read, understand and agree to be bound by the<a href="#">
+                                Terms
+                                and Conditions
+                            </a>.
+                        </label>
                     </div>
                 </div>
 
@@ -2092,20 +2148,24 @@
                         <!-- <a id="secondDuitNowNext"
                         class="btn btn-primary col-12 col-sm-3 mt-2 mt-sm-0 float-sm-end col-lg-12 mt-lg-2 col-xxl-3 mt-xxl-0 disabled"
                         data-bs-toggle="modal" href="#exampleModalToggle" role="button">Next</a> -->
-                        <a id="secondDuitNowNext"
-                           class="btn btn-primary float-end disabled"
-                           data-bs-toggle="modal" href="#" role="button">Next</a>
+                        <a id="secondDuitNowNext" class="btn btn-primary float-end disabled" data-bs-toggle="modal"
+                           href="#" role="button">Next</a>
                     </div>
                 </div>
 
             </form>
 
-            <div class="alert alert-info col-10 col-sm-10 col-xxl-18 col-lg-12 rounded-8 shadow-sm" role="alert" id="safeguardNote">
+            <div class="alert alert-info col-10 col-sm-10 col-xxl-18 col-lg-12 rounded-8 shadow-sm" role="alert"
+                 id="safeguardNote">
                 <!-- <div class="alert alert-info col-12 col-lg-5 mt-lg-4 border-end-xl px-4 rounded-8 shadow-sm" role="alert" id="safeguardNote"> -->
 
                 <b>Note</b><br>
                 <ul>
-                    <li>The new transfer service is applicable to funds transfer to other banks within Malaysia only. Funds will be debited from the applicant's account and credited into the beneficiary's account immediately.</li>
+                    <li>
+                        The new transfer service is applicable to funds transfer to other banks within Malaysia
+                        only. Funds will be debited from the applicant's account and credited into the beneficiary's
+                        account immediately.
+                    </li>
                     <li>
                         The service is only available during our operating hours 12:05 a.m. - 12 midnight.
                     </li>
@@ -2114,14 +2174,18 @@
                         The third party fund transfer limit is RM20,000.00 (PAC) and RM50,000.00 (SecureSign).
                     </li>
                     <li>
-                        The limit for a single transaction is at a maximum value of RM10,000.00 per transaction using PAC.
+                        The limit for a single transaction is at a maximum value of RM10,000.00 per transaction
+                        using PAC.
                     </li>
                     <li>
-                        New Transfers will not be initiated if Beneficiary's Bank rejects or is unable to confirm the transaction into the particular account. During such occurrences, the funds will be credited back into your account.
+                        New Transfers will not be initiated if Beneficiary's Bank rejects or is unable to confirm
+                        the transaction into the particular account. During such occurrences, the funds will be
+                        credited back into your account.
                     </li>
 
                     <li>
-                        The default third party transaction limit is RM3,000.00. This daily limit can be increased or decreased by selecting Profile Maintenance / Manage Profile / Change Daily Limit.
+                        The default third party transaction limit is RM3,000.00. This daily limit can be increased
+                        or decreased by selecting Profile Maintenance / Manage Profile / Change Daily Limit.
                     </li>
 
 
@@ -2130,8 +2194,7 @@
 
         </div>
 
-
-        @*favorites*@
+        <!-- @*favorites*@ -->
         <div class="col-lg-6 mt-lg-4 d-lg-block d-none ps-5" id='favAccList'>
             <h3 class="title">Favourites</h3>
             <div class="row">
@@ -2163,8 +2226,8 @@
                                         <p id='favBank' hidden>PublicBank</p>
                                     </div>
                                     <div class="col-12 mt-lg-n4">
-                                        <img src="~/Images/Banks/pb-logo-text.png"
-                                             class="img-fluid float-end" style="max-width:100px;" />
+                                        <img src="~/Images/Banks/pb-logo-text.png" class="img-fluid float-end"
+                                             style="max-width:100px;" />
                                     </div>
                                 </div>
                             </li>
@@ -2206,8 +2269,8 @@
                                         <p id='favBank' hidden>CIMB</p>
                                     </div>
                                     <div class="col-12 mt-lg-n4">
-                                        <img src="~/Images/Banks/cimb.png"
-                                             class="img-fluid float-end" style="max-width:100px; margin-top:-.5em;" />
+                                        <img src="~/Images/Banks/cimb.png" class="img-fluid float-end"
+                                             style="max-width:100px; margin-top:-.5em;" />
                                     </div>
                                 </div>
                             </li>
@@ -2228,8 +2291,8 @@
                                         <p id='favBank' hidden>PublicBank</p>
                                     </div>
                                     <div class="col-12 mt-lg-n4">
-                                        <img src="~/Images/Banks/pb-logo-text.png"
-                                             class="img-fluid float-end" style="max-width:100px;" />
+                                        <img src="~/Images/Banks/pb-logo-text.png" class="img-fluid float-end"
+                                             style="max-width:100px;" />
                                     </div>
                                 </div>
                             </li>
@@ -2270,8 +2333,8 @@
                                         <p id='favBank' hidden>BSN</p>
                                     </div>
                                     <div class="col-12 mt-lg-n4">
-                                        <img src="~/Images/WebsiteImages/pb_logo.png"
-                                             class="img-fluid float-end" style="max-width:100px;" />
+                                        <img src="~/Images/WebsiteImages/pb_logo.png" class="img-fluid float-end"
+                                             style="max-width:100px;" />
                                     </div>
                                 </div>
                             </li>
@@ -2455,7 +2518,7 @@
                         <a id="secondNext" class="btn btn-primary ms-2 float-end"> Confirm </a>
                     </div>
                     <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
-                     data-bs-toggle="modal">Open second modal</button> -->
+                    data-bs-toggle="modal">Open second modal</button> -->
 
                 </div>
 
@@ -2700,7 +2763,6 @@
     </div>
 </div>
 
-
 <!-- First DuitNow Modal -->
 <div class="modal fade" id="duitNowExampleModalToggle" aria-hidden="true" aria-labelledby="duitNowExampleModalToggleLabel"
      tabindex="-1">
@@ -2869,7 +2931,7 @@
                         <a id="secondDuitNowNext" class="btn btn-primary ms-2 float-end"> Confirm </a>
                     </div>
                     <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
-                     data-bs-toggle="modal">Open second modal</button> -->
+                    data-bs-toggle="modal">Open second modal</button> -->
 
                 </div>
 
@@ -2878,7 +2940,6 @@
         </div>
     </div>
 </div>
-
 
 <!-- Second DuitNow Modal -->
 <div class="modal fade" id="duitNowExampleModalToggle2" aria-hidden="true" aria-labelledby="duitNowExampleModalToggleLabel2"
@@ -3115,10 +3176,15 @@
 </div>
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/js")
+
+<!-- MultiSelect Choices JS-->
+<script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+
+<!-- Date Range Picker JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
 <script>
-
     var display;
     var oneMin = 60; //60 seconds (1 minute)
     var confirmationModal = new bootstrap.Modal(document.getElementById('exampleModalToggle'));
@@ -3204,7 +3270,8 @@
         var selText = $(this).text();
         var imgSource = $(this).find('img').attr('src');
         var img = '<img src=' + imgSource + ' width="30px">';
-        $(this).parents('.dropdown').find('.dropdown-toggle').html(img + ' ' + selText + ' <span class="caret"></span>');
+        $(this).parents('.dropdown').find('.dropdown-toggle').html(img + ' ' + selText +
+            ' <span class="caret"></span>');
     });
 
     $(".dropdown ul li").click(function () {
@@ -3212,16 +3279,16 @@
         $(this).css("color", "green");
     });
 
-    var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
-        removeItemButton: true,
-        searchEnabled: true,
-        searchChoices: true,
-        searchResultLimit: 5,
-        placeholder: true,
-        placeholderValue: "Select suggestion(s)",
-        // searchPlaceholderValue: null,
-        // renderChoiceLimit: 5,
-    });
+    // var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+    //     removeItemButton: true,
+    //     searchEnabled: true,
+    //     searchChoices: true,
+    //     searchResultLimit: 5,
+    //     placeholder: true,
+    //     placeholderValue: "Select suggestion(s)",
+    //     // searchPlaceholderValue: null,
+    //     // renderChoiceLimit: 5,
+    // });
 
     $("#selectAllSwitch").change(function () {
         if ($(this).is(":checked")) {
@@ -3310,12 +3377,20 @@
         display = $('#duitNowTime');
         startTimer(oneMin, display);
     })
+    $('.duitNowAuthConfirmBtn').on('click', function () {
+        $('#secondDuitNowNext').removeClass('disabled');
+        $('.reqDuitNowPacBtn').addClass('disabled');
+        $('.timerText').prop("hidden", false);
+        display = $('#duitNowTime');
+        startTimer(oneMin, display);
+    })
 
     // var display = $('#time'),
     //     oneMin = 10;
 
     function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
+        var timer = duration,
+            minutes, seconds;
 
         var timerInterval = setInterval(function () {
             minutes = parseInt(timer / 60, 10);
@@ -3457,6 +3532,8 @@
 
     var bankName;
     $('#myUL li').click(function () {
+        $('#firstPage').attr('hidden', true);
+        $('#secondPage').attr('hidden', false);
         $('#receipientName').val($(this).find('#favName').text());
         $('#accNumber').val($(this).find('#favAccNum').text());
 
@@ -3559,8 +3636,7 @@
             $('#emailCheckboxes').attr('disabled', false);
 
 
-        }
-        else {
+        } else {
 
             $('#emailCheckboxes').attr('disabled', true);
 
@@ -3575,8 +3651,7 @@
             $('#duitNowEmailCheckboxes').attr('disabled', false);
 
 
-        }
-        else {
+        } else {
 
             $('#duitNowEmailCheckboxes').attr('disabled', true);
 
@@ -3589,9 +3664,7 @@
         if (this.checked) {
 
             $('#smsCheckboxes').attr('disabled', false);
-        }
-
-        else {
+        } else {
 
             $('#smsCheckboxes').attr('disabled', true);
 
@@ -3603,9 +3676,7 @@
         if (this.checked) {
 
             $('#duitNowSmsCheckboxes').attr('disabled', false);
-        }
-
-        else {
+        } else {
 
             $('#duitNowSmsCheckboxes').attr('disabled', true);
 
@@ -3643,7 +3714,9 @@
 
     $(document).ready(function () {
         // Defining the local dataset
-        var cars = ['Happy Birthday', 'Car Payment', 'Lunch', 'Groceries', 'Smartwatch', 'Gaming console', 'Dinner'];
+        var cars = ['Happy Birthday', 'Car Payment', 'Lunch', 'Groceries', 'Smartwatch', 'Gaming console',
+            'Dinner'
+        ];
 
         // Constructing the suggestion engine
         var cars = new Bloodhound({
@@ -3655,13 +3728,13 @@
         // Initializing the typeahead
         $('.typeahead').typeahead({
             hint: true,
-            highlight: true, /* Enable substring highlighting */
+            highlight: true,
+            /* Enable substring highlighting */
             minLength: 1 /* Specify minimum characters required for showing result */
-        },
-            {
-                name: 'cars',
-                source: cars
-            });
+        }, {
+            name: 'cars',
+            source: cars
+        });
     });
 
     $(".dropdown ul li").on('click', function (e) {
@@ -3675,9 +3748,7 @@
             $('#receipientAccountType').hide();
             $('#receipientNotification').hide();
 
-        }
-
-        else {
+        } else {
 
             $('#receipientNames').show();
             $('#receipientAccountType').show();
@@ -3705,9 +3776,7 @@
             $("#recurrTransactionTimes").hide();
             $("#recurrTransactionType").removeClass("col-sm-5 float-sm-start");
             $("#recurrTransactionType").addClass("col-sm-12");
-        }
-
-        else {
+        } else {
 
             $("#recurrTransactionTimes").show();
             $("#recurrTransactionType").removeClass("col-sm-12");
@@ -3734,13 +3803,12 @@
             $("#duitNowRecurrTransactionTimes").hide();
             $("#duitNowRecurrTransactionType").removeClass("col-sm-5 float-sm-start");
             $("#duitNowRecurrTransactionType").addClass("col-sm-12");
-        }
-
-        else {
+        } else {
 
             $("#duitNowRecurrTransactionTimes").show();
             $("#duitNowRecurrTransactionType").removeClass("col-sm-12");
-            $("#duitNowRecurrTransactionType").addClass("col-sm-5 float-sm-start").css("margin-right", "16.5%");
+            $("#duitNowRecurrTransactionType").addClass("col-sm-5 float-sm-start").css("margin-right",
+                "16.5%");
         }
 
 
@@ -3821,18 +3889,18 @@
         $("#thirdDuitNowPage").attr('hidden', true);
     })
 
-    $(function () {
-        $("#transferMethods").select2({
-            templateResult: formatOption
-        });
+    // $(function () {
+    //     $("#transferMethods").select2({
+    //         templateResult: formatOption
+    //     });
 
-        function formatOption(option) {
-            var $option = $(
-                '<div><strong>' + option.text + '</strong></div><div>' + option.title + '</div>'
-            );
-            return $option;
-        };
-    });
+    //     function formatOption(option) {
+    //         var $option = $(
+    //             '<div><strong>' + option.text + '</strong></div><div>' + option.title + '</div>'
+    //         );
+    //         return $option;
+    //     };
+    // });
 
     $("#transferMethods").on('change', function () {
 
@@ -3844,8 +3912,7 @@
         if (ibgTrans || defaultTransSelect) {
 
             $("#duitNowTransferMessage").hide();
-        }
-        else {
+        } else {
 
             $("#duitNowTransferMessage").show();
         }
@@ -3868,5 +3935,4 @@
         $('#secondPage').attr('hidden', true);
         $('#thirdPage').attr('hidden', true);
     })
-
 </script>
