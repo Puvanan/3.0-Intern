@@ -42,7 +42,7 @@
 
                         <!-- <div class="row my-5 my-xxl-5 last-row">
                         <div class="col-12">
-                            <a class="btn btn-dark float-start" href="@Url.Action("Index2", "Home" )">
+                            <a class="btn btn-dark float-start" href="@Url.Action("Apply", "Home" )">
                                 Back
                             </a>
                             <a id="firstNext" class="btn btn-primary  float-end"> Next </a>
@@ -53,7 +53,7 @@
                             <div class="col-12">
                                 <!-- Feedback: Back button not functioning, should link to "Balance Transfer" screen -->
                                 <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3"
-                                   href="@Url.Action("Index2", "Home" )">
+                                   href="@Url.Action("Apply", "Home" )">
                                     Back
                                 </a>
                                 <a class="btn btn-outline-primary btnReset col-5 float-end col-sm-3 float-sm-none col-lg-5 float-lg-end float-xxl-none col-xxl-3">
@@ -100,107 +100,102 @@
                         </div>
                     </div>
 
-                    <div class="row mb-2 px-3">
+                    <div class="row mb-2">
                         <div class="table-responsive">
-                            <form>
-                                <table id="balanceTransferTable" class="col-12 table table-borderless">
-                                    <thead class="table-dark">
-                                    <th>Plan</th>
-                                    <th>Card Issuer</th>
-                                    <th>Other Bank's Credit Card No.</th>
-                                    <th>Transfer Amount (RM)</th>
 
-                                    </thead>
-                                    <tbody class="bg-white">
-                                        <tr class="balanceTransferTableRow">
-                                            <td>
-                                                <select class="form-select" aria-label="Plan">
-                                                    <option selected>Select a plan</option>
-                                                    <option value="A">A : U 1.00% for 6 months</option>
-                                                    <option value="B">B : U 0% for 6 months</option>
-                                                    <option value="C">C : U 11.00% for 12 months</option>
-                                                    <option value="E">E : U 8.00% for 36 months</option>
-                                                    <option value="F">F : U 0% for 48 months</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select class="form-select" aria-label="CardIssuer">
-                                                    <option selected>Select a Bank</option>
-                                                    <option value="">Affin Bank Berhad</option>
-                                                    <option value="">Affin Islamic Bank Berhad</option>
-                                                    <option value="">
-                                                        Al-Rajhi Banking and Investment Corp (M) Bhd
-                                                    </option>
-                                                    <option value="">Alliance Bank Malaysia Berhad</option>
-                                                    <option value="">AmBank (Malaysia) Berhad</option>
-                                                    <option value="">AmBank Islamic Berhad</option>
-                                                    <option value="">BNP Paribas (Malaysia) Berhad</option>
-                                                    <option value="">Bangkok Bank Berhad</option>
-                                                    <option value="">Bank Islam Malaysia</option>
-                                                    <option value="">Bank Muamalat Malaysia Berhad</option>
-                                                    <option value="">Bank Pertanian Malaysia (AgroBank)</option>
-                                                    <option value="">Bank Simpanan Nasional Berhad</option>
-                                                    <option value="">Bank of America Malaysia Berhad</option>
-                                                    <option value="">Bank of China (Malaysia) Berhad</option>
-                                                    <option value="">CIMB Bank Berhad</option>
-                                                    <option value="">CIMB Islamic Bank Berhad</option>
-                                                    <option value="">
-                                                        China Construction Bank (Malaysia) Berhad
-                                                    </option>
-                                                    <option value="">Citibank Berhad</option>
-                                                    <option value="">Deutsche Bank (Malaysia) Berhad</option>
-                                                    <option value="">Finexus Cards Sdn. Bhd.</option>
-                                                    <option value="">HSBC Amanah Malaysia Berhad</option>
-                                                    <option value="">HSBC Bank Malaysia Berhad</option>
-                                                    <option value="">Hong Leong Bank Berhad</option>
-                                                    <option value="">Hong Leong Islamic Bank Berhad</option>
-                                                    <option value="">
-                                                        Industrial and Commercial Bank of China (ICBC)
-                                                    </option>
-                                                    <option value="">J.P. Morgan Chase Bank Berhad</option>
-                                                    <option value="">Kuwait Finance House (Malaysia) Berhad</option>
-                                                    <option value="">MBSB Bank Berhad</option>
-                                                    <option value="">MUFG Bank (Malaysia) Berhad</option>
-                                                    <option value="">Maybank</option>
-                                                    <option value="">Maybank Islamic Berhad</option>
-                                                    <option value="">HSBC Bank Malaysia Berhad</option>
-                                                    <option value="">Mizuho Bank (Malaysia) Berhad</option>
-                                                    <option value="">OCBC Bank (Malaysia) Berhad</option>
-                                                    <option value="">OCBC Al-Amin Bank Berhad</option>
-                                                    <option value="">RHB Bank Berhad</option>
-                                                    <option value="">RHB Islamic Bank Berhad</option>
-                                                    <option value="">
-                                                        Standard Chartered Bank Malaysia Berhad
-                                                    </option>
-                                                    <option value="">Standard Chartered Saadiq Berhad</option>
-                                                    <option value="">
-                                                        Sumitomo Mitsui Banking Corporation (M) Berhad
-                                                    </option>
-                                                    <option value="">United Overseas Bank (Malaysia) Berhad</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <input class="form-control number-input" type="number"
-                                                       placeholder="Credit Card No."
-                                                       aria-label="Other Bank's Credit Card No.">
-                                            </td>
-                                            <td>
-                                                <input class="form-control number-input" type="number"
-                                                       placeholder="Transfer Amount" aria-label="Transfer Amount (RM)">
-                                            </td>
-                                            <td class="bg-light">
-                                                <button class="deleteTableRow d-none bg-transparent border-0 text-primary">
-                                                    <span>
-                                                        <i class="fas fa-trash"></i>
-                                                    </span>
-                                                </button>
-                                            </td>
-                                        </tr>
+                            <table id="balanceTransferTable" class="table table-responsive table-borderless  p-lg-2 p-0 shadow-sm rounded-8 bg-white">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th class="small">Plan</th>
+                                        <th class="small">Card Issuer</th>
+                                        <th class="small">Other Bank's Credit Card No.</th>
+                                        <th class="small">Transfer Amount (RM)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="balanceTransferTableRow">
+                                        <td class="small">
+                                            <select class="form-select" aria-label="Plan">
+                                                <option selected>Select a plan</option>
+                                                <option value="A">A : U 1.00% for 6 months</option>
+                                                <option value="B">B : U 0% for 6 months</option>
+                                                <option value="C">C : U 11.00% for 12 months</option>
+                                                <option value="E">E : U 8.00% for 36 months</option>
+                                                <option value="F">F : U 0% for 48 months</option>
+                                            </select>
+                                        </td>
+                                        <td class="small">
+                                            <select class="form-select" aria-label="CardIssuer">
+                                                <option selected>Select a Bank</option>
+                                                <option value="">Affin Bank Berhad</option>
+                                                <option value="">Affin Islamic Bank Berhad</option>
+                                                <option value="">
+                                                    Al-Rajhi Banking and Investment Corp (M) Bhd
+                                                </option>
+                                                <option value="">Alliance Bank Malaysia Berhad</option>
+                                                <option value="">AmBank (Malaysia) Berhad</option>
+                                                <option value="">AmBank Islamic Berhad</option>
+                                                <option value="">BNP Paribas (Malaysia) Berhad</option>
+                                                <option value="">Bangkok Bank Berhad</option>
+                                                <option value="">Bank Islam Malaysia</option>
+                                                <option value="">Bank Muamalat Malaysia Berhad</option>
+                                                <option value="">Bank Pertanian Malaysia (AgroBank)</option>
+                                                <option value="">Bank Simpanan Nasional Berhad</option>
+                                                <option value="">Bank of America Malaysia Berhad</option>
+                                                <option value="">Bank of China (Malaysia) Berhad</option>
+                                                <option value="">CIMB Bank Berhad</option>
+                                                <option value="">CIMB Islamic Bank Berhad</option>
+                                                <option value="">
+                                                    China Construction Bank (Malaysia) Berhad
+                                                </option>
+                                                <option value="">Citibank Berhad</option>
+                                                <option value="">Deutsche Bank (Malaysia) Berhad</option>
+                                                <option value="">Finexus Cards Sdn. Bhd.</option>
+                                                <option value="">HSBC Amanah Malaysia Berhad</option>
+                                                <option value="">HSBC Bank Malaysia Berhad</option>
+                                                <option value="">Hong Leong Bank Berhad</option>
+                                                <option value="">Hong Leong Islamic Bank Berhad</option>
+                                                <option value="">
+                                                    Industrial and Commercial Bank of China (ICBC)
+                                                </option>
+                                                <option value="">J.P. Morgan Chase Bank Berhad</option>
+                                                <option value="">Kuwait Finance House (Malaysia) Berhad</option>
+                                                <option value="">MBSB Bank Berhad</option>
+                                                <option value="">MUFG Bank (Malaysia) Berhad</option>
+                                                <option value="">Maybank</option>
+                                                <option value="">Maybank Islamic Berhad</option>
+                                                <option value="">HSBC Bank Malaysia Berhad</option>
+                                                <option value="">Mizuho Bank (Malaysia) Berhad</option>
+                                                <option value="">OCBC Bank (Malaysia) Berhad</option>
+                                                <option value="">OCBC Al-Amin Bank Berhad</option>
+                                                <option value="">RHB Bank Berhad</option>
+                                                <option value="">RHB Islamic Bank Berhad</option>
+                                                <option value="">
+                                                    Standard Chartered Bank Malaysia Berhad
+                                                </option>
+                                                <option value="">Standard Chartered Saadiq Berhad</option>
+                                                <option value="">
+                                                    Sumitomo Mitsui Banking Corporation (M) Berhad
+                                                </option>
+                                                <option value="">United Overseas Bank (Malaysia) Berhad</option>
+                                            </select>
+                                        </td>
+                                        <td class="small">
+                                            <input class="form-control number-input" type="number"
+                                                   placeholder="Credit Card No."
+                                                   aria-label="Other Bank's Credit Card No.">
+                                        </td>
+                                        <td class="small">
+                                            <input class="form-control number-input" type="number"
+                                                   placeholder="Transfer Amount" aria-label="Transfer Amount (RM)">
+                                        </td>
+
+                                    </tr>
 
 
-                                    </tbody>
-                                </table>
-                            </form>
+                                </tbody>
+                            </table>
+
 
                         </div>
 
@@ -264,8 +259,7 @@
                         <div class="my-5 mt-3 col-12">
                             <div class="col-12">
                                 <!-- Feedback: Back button not functioning, should link to "Balance Transfer" screen -->
-                                <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3"
-                                   href="@Url.Action("Index2", "Home" )">
+                                <a class="btn btn-dark col-5 col-sm-3 me-sm-2 col-lg-5 col-xxl-3"id="backFirst">
                                     Back
                                 </a>
                                 <a id="secondClear"
@@ -308,7 +302,7 @@
                                     <th class="small">Card Issuer</th>
                                     <th class="small">Other Bank's Credit Card No.</th>
                                     <th class="small">Transfer Amount (RM)</th>
-                                    <th class="small">Interest Charge/Management Fee</th>
+                                    <th class="small">Interest Charge/ Management Fee</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -317,7 +311,7 @@
                                     <td>Citibank Berhad</td>
                                     <td>4902970001127914</td>
                                     <td>100.00</td>
-                                    <td>1.0</td>
+                                    <td>1.00</td>
 
                                 </tr>
                                 <tr>
@@ -369,7 +363,7 @@
                     <div class="row my-5 last-row">
                         <div class="col-12">
                             <!-- Feedback: Back button not functioning, should link to "Balance Transfer" screen -->
-                            <a class="btn btn-dark float-start me-2" href="@Url.Action("Index2", "Home" )">
+                            <a class="btn btn-dark float-start me-2" id="backSecond">
                                 Back
                             </a>
                             <a id="thirdNext" class="btn btn-primary  float-end ">Confirm</a>
@@ -449,54 +443,54 @@
 
                         </div>
 
+                        <div class="row mb-2 px-3">
+                            <table id="FD"
+                                   class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th class="small">
+                                            Plan
+                                        </th>
+                                        <th class="small">Card Issuer</th>
+                                        <th class="small">Other Bank's Credit Card No.</th>
+                                        <th class="small">Transfer Amount (RM)</th>
+                                        <th class="small">Interest Charge/ Management Fee</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>A: U 1.00% for 6 months</td>
+                                        <td>Citibank Berhad</td>
+                                        <td>4902970001127914</td>
+                                        <td>100.00</td>
+                                        <td>1.00</td>
 
-                    </div>
-                    <div class="row mb-2 px-3">
-                        <table id="FD"
-                               class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th class="small">
-                                        Plan
-                                    </th>
-                                    <th class="small">Card Issuer</th>
-                                    <th class="small">Other Bank's Credit Card No.</th>
-                                    <th class="small">Transfer Amount (RM)</th>
-                                    <th class="small">Interest Charge/Management Fee</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>A: U 1.00% for 6 months</td>
-                                    <td>Citibank Berhad</td>
-                                    <td>4902970001127914</td>
-                                    <td>100.00</td>
-                                    <td>1.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Total Amount (RM)</td>
+                                        <td>100.00</td>
+                                        <td>1.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Grand Total (RM)</td>
+                                        <td>101.00</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>Total Amount (RM)</td>
-                                    <td>100.00</td>
-                                    <td>1.00</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>Grand Total (RM)</td>
-                                    <td>101.00</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
 
                     <div class="row my-5 last-row">
                         <div class="col-12">
                             <a class="btn btn-outline-primary float-start" onclick="window.print()"> Print </a>
                             <!-- Feedback: Done button should bring users to "Cheque Management" page. To bring users to main balance transfer page -->
-                            <a  class="btn btn-primary  float-end" href="@Url.Action("Index2", "Home" )">
+                            <a  class="btn btn-primary  float-end" href="@Url.Action("Apply", "Home" )">
                                 Done
                             </a>
                         </div>
@@ -524,12 +518,14 @@
                             <li>
                                 Reference for Balance Transfer plan
                                 <div class="table-responsive">
-                                    <table class="table table-sm table-bordered border-dark">
+                                    <table class="table table-sm">
                                         <thead class="table-dark">
-                                        <th>Plan</th>
-                                        <th>Tenure</th>
-                                        <th>Interest Charge / Management Fee</th>
-                                        <th>Minimum Transfer Amount per Bank (RM)</th>
+                                            <tr>
+                                                <th>Plan</th>
+                                                <th>Tenure</th>
+                                                <th>Interest Charge / Management Fee</th>
+                                                <th>Minimum Transfer Amount per Bank (RM)</th>
+                                            </tr>
                                         </thead>
                                         <tbody class="table-light">
                                             <tr>
@@ -748,6 +744,25 @@
                 $('#cardNumber').val($('#selectCard').val());
             }
         });
+        
+        $('#backFirst').on('click', function () {
+            $('#secondPage').attr('hidden', true);
+            $('#thirdPage').attr('hidden', true);
+
+            $('#firstPage').attr('hidden', false);
+            $('#fourthPage').attr('hidden', true);
+
+            $("#firstNotes").attr('hidden', false);
+            $("#secondNotes").attr('hidden', true);
+        });
+        $('#backSecond').on('click', function () {
+            $('#fourthPage').attr('hidden', true);
+            $('#thirdPage').attr('hidden', true);
+            $('#secondPage').attr('hidden', false);
+            $('#firstPage').attr('hidden', true);
+            $("#firstNotes").attr('hidden', true);
+            $("#secondNotes").attr('hidden', false);
+        });
 
         $('#thirdNext').on('click', function () {
             $('#fourthPage').attr('hidden', false);
@@ -830,4 +845,4 @@
         progressBar.attr('aria-valuenow', progressNumber);
     }, 500);
 
-</script> 
+</script>
