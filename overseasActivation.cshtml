@@ -1,0 +1,1071 @@
+<div class="d-none d-lg-block" style="height:5vh;"></div>
+
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 h-100 my-auto px-3 px-lg-0">
+    <div class="row mt-2 justify-content-center h-100 my-auto">
+        <div class="col-lg-8">
+            <div class="row justify-content-center ">
+
+                <div class="col-12 col-lg-5 text-center">
+                    <h3>
+                        Overseas ATM Withdrawal Activation / Deactivation
+                    </h3>
+                    <p>
+                        Overseas ATM Withdrawal Activation / Deactivation
+                    </p>
+                </div>
+
+
+                <div id="firstPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="row mb-2 d-flex justify-content-center">
+                        <label class="col-sm-12 col-form-label">Account Number</label>
+                        <div class="col-sm-12 my-1">
+
+                            <div class="col-sm-12 mb-2">
+
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected class="text-muted">Please select</option>
+                                    <option value="">69000013718 (Savings) RM 13,5668.25</option>
+                                    <option value="">69000013718 (Current) RM 255,5543.23</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action("lifestyleSettings", "Home" )">
+                                Back
+                            </a>
+                            <a id="firstNext" class="btn btn-primary  float-end"> Next </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Activate -->
+                <div hidden id="secondPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            Account Number
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="accNumlbl" class="form-control" name="cardNumber"
+                                   value="6900013718" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Card Number</label>
+                        <div class="col-sm-12 mb-2">
+                            <select class="form-select" aria-label="selectovrseas">
+                                <option selected>484810000007306224 ARJUNA A/L DASARATHA</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Current Status</label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="currStatus" class="form-control" name="currStatus"
+                                   value="Deactivated" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2 d-flex justify-content-center">
+                        <label class="col-sm-12 col-form-label">Activation</label>
+                        <div class="col-sm-12 my-1">
+                            <div class="radio">
+                                <input id="radio" name="radio" type="radio" checked>
+                                <label for="radio" class="radio-label">Activate</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            Start Date
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="startDatelbl" class="form-control" name="startDatelbl"
+                                   value="12/01/2022">
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            End Date
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="endDatelbl" class="form-control" name="endDatelbl"
+                                   value="12/01/2022">
+                        </div>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action("lifestyleSettings", "Home" )">
+                                Back
+                            </a>
+
+                            <a id="secondNext" class="btn btn-primary  float-end"> Next </a>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <!-- Deactivate-->
+                <div hidden id="thirdPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            Account Number
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="accNumlbl" class="form-control" name="cardNumber"
+                                   value="6900013718" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Card Number</label>
+                        <div class="col-sm-12 mb-2">
+                            <select class="form-select" aria-label="selectovrseas">
+                                <option selected>5554342232324 GOH CHIAO WEI</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Current Status</label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="currStatus" class="form-control" name="currStatus"
+                                   value="Activated" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2 d-flex justify-content-center">
+                        <label class="col-sm-12 col-form-label">Activation</label>
+                        <div class="col-sm-12 my-1">
+                            <div class="radio1">
+                                <input id="radio" name="radio1" type="radio" checked>
+                                <label for="radio1" class="radio-label">Deactivate</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            Start Date
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="startDatelbl" class="form-control" name="startDatelbl" value=""
+                                   placeholder="Enter Start Date" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            End Date
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="endDatelbl" class="form-control" name="endDatelbl" value=""
+                                   placeholder="Enter End Date" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action("lifestyleSettings", "Home" )">
+                                Back
+                            </a>
+
+                            <a id="thirdNext" class="btn btn-primary  float-end"> Next </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Activate PAC -->
+                <div hidden id="forthPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            Account Number
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="accNumlbl" class="form-control" name="cardNumber"
+                                   value="6900013718" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Card Number</label>
+                        <div class="col-sm-12 mb-2">
+                            <select class="form-select" aria-label="selectovrseas">
+                                <option selected>5554342232324 GOH CHIAO WEI</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">New Status</label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="newStatus" class="form-control" name="newStatus"
+                                   value="Activated" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            Start Date
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="startDatelbl" class="form-control" name="startDatelbl"
+                                   value="21/02/2022" placeholder="Enter Start Date" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            End Date
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="endDatelbl" class="form-control" name="endDatelbl"
+                                   value="21/02/2022" placeholder="Enter End Date" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row myFA1 mb-2">
+                        <label class="col-sm-12 col-form-label">Approve this update with</label>
+
+                        <div class="col-sm-12 mb-2">
+                            <input type="text" id="SMSpaclbl" class="form-control" name="SMSpaclbl" value="SMS PAC"
+                                   placeholder="Enter End Date" disabled>
+
+
+                        </div>
+
+
+                        <div class="col-sm-12 authField">
+
+                            <div class="row justify-content-between  myFA2" id="PAC" mt-2>
+
+                                <div class="zz col-3 col-lg-2 col-xxl-3">
+                                    <label for="PAC" class="col-sm-3 col-form-label">
+                                        <img src="~/Images/WebsiteImages/pac-sms-dark-2.png" alt="" width="100" height="100">
+                                    </label>
+                                </div>
+
+                                <div class="col-8 col-md-9 row d-block d-md-none" id="pacTextandBtn">
+
+                                    <div class="digitPac col-12 col-md-6 col-lg-8">
+
+                                        <input type="text" class="form-control mt-2 mt-lg-0" id="PAC">
+
+                                    </div>
+
+                                    <div class="col-12 col-md-3">
+                                        <button class="col-12 reqPacBtn pac btn btn-info pac text-white float-lg-end mt-2"
+                                                id="reqPacBtn">
+                                            Request
+                                            PAC
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 d-block d-md-none">
+                                    <p class="text-muted">
+                                        A 6 digit PAC will be sent to your registered mobile phone
+                                        number
+                                        ***6168. Please click "Request PAC" if you wish to proceed
+                                    </p>
+
+                                </div>
+
+                                <div class="digitPac col-md-6 col-xxl-6 d-none d-md-block">
+
+                                    <input type="text" class="form-control mt-2" id="PAC">
+
+                                    <p class="text-muted  d-none d-md-block">
+                                        A 6 digit PAC will be sent to your registered mobile phone
+                                        number
+                                        ***6168. Please click "Request PAC" if you wish to proceed
+                                    </p>
+
+                                </div>
+
+                                <div class=" col-12 col-md-3 ps-md-1 d-none d-md-block">
+                                    <button class="reqPacBtn col-12 btn btn-info pac text-white  mt-2"
+                                            id="reqPacBtn">
+                                        Request
+                                        PAC
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <p class="timerText" hidden>
+                                Time remaining: <span id="time"
+                                                      style="color:#d64354"></span>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action("lifestyleSettings", "Home" )">
+                                Back
+                            </a>
+
+                            <a id="fourthNext" class="btn btn-primary  float-end"> Next </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Deactivate PAC-->
+                <div hidden id="fifthPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            Account Number
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="accNumlbl" class="form-control" name="cardNumber"
+                                   value="6900013718" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">Card Number</label>
+                        <div class="col-sm-12 mb-2">
+                            <select class="form-select" aria-label="selectovrseas">
+                                <option selected>5554342232324 GOH CHIAO WEI</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">New Status</label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="newStatus" class="form-control" name="newStatus"
+                                   value="Deactivate" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            Start Date
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="startDatelbl" class="form-control" name="startDatelbl" value="--"
+                                   placeholder="Enter Start Date" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-12 col-form-label">
+                            End Date
+                        </label>
+                        <div class="col-sm-12 my-1">
+                            <input type="text" id="endDatelbl" class="form-control" name="endDatelbl" value="--"
+                                   placeholder="Enter End Date" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row myFA1 mb-2">
+                        <label class="col-sm-12 col-form-label">Approve this update with</label>
+
+                        <div class="col-sm-12 mb-2">
+                            <input type="text" id="SMSpaclbl" class="form-control" name="SMSpaclbl" value="SMS PAC"
+                                   placeholder="Enter End Date" disabled>
+
+
+                        </div>
+
+
+                        <div class="col-sm-12 authField">
+
+                            <div class="row justify-content-between  myFA2" id="PAC" mt-2>
+
+                                <div class="zz col-3 col-lg-2 col-xxl-3">
+                                    <label for="PAC" class="col-sm-3 col-form-label">
+                                        <img src="/puvan/icon/twoFA/otp.png" alt="" width="100" height="100">
+                                    </label>
+                                </div>
+
+                                <div class="col-8 col-md-9 row d-block d-md-none" id="pacTextandBtn">
+
+                                    <div class="digitPac col-12 col-md-6 col-lg-8">
+
+                                        <input type="text" class="form-control mt-2 mt-lg-0" id="PAC">
+
+                                    </div>
+
+                                    <div class="col-12 col-md-3">
+                                        <button class="col-12 reqPacBtn pac btn btn-info pac text-white float-lg-end mt-2"
+                                                id="reqPacBtn">
+                                            Request
+                                            PAC
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 d-block d-md-none">
+                                    <p class="text-muted">
+                                        A 6 digit PAC will be sent to your registered mobile phone
+                                        number
+                                        ***6168. Please click "Request PAC" if you wish to proceed
+                                    </p>
+
+                                </div>
+
+                                <div class="digitPac col-md-6 col-xxl-6 d-none d-md-block">
+
+                                    <input type="text" class="form-control mt-2" id="PAC">
+
+                                    <p class="text-muted  d-none d-md-block">
+                                        A 6 digit PAC will be sent to your registered mobile phone
+                                        number
+                                        ***6168. Please click "Request PAC" if you wish to proceed
+                                    </p>
+
+                                </div>
+
+                                <div class=" col-12 col-md-3 ps-md-1 d-none d-md-block">
+                                    <button class="reqPacBtn col-12 btn btn-info pac text-white  mt-2"
+                                            id="reqPacBtn">
+                                        Request
+                                        PAC
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <p class="timerText" hidden>
+                                Time remaining: <span id="time"
+                                                      style="color:#d64354"></span>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start" href="@Url.Action(" Index2", "Home" )"> Back </a>
+                            <a id="fifthNext" class="btn btn-primary  float-end"> Next </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Activated card -->
+                <div hidden id="sixthPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="p-4 shadow bg-white rounded-8">
+
+                        <div class="row logoRow mb-4">
+
+                            <div class="col-lg-2 col-3 checkIconDIV">
+
+                                <div class="successIcon text-start">
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none"
+                                              d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-10 col-9 checkTextDIV">
+                                <h5 class="text-danger">Your request has been accepted.</h5>
+                                <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Reference Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>776544</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Account Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>46576573443</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Card Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>552342322000 GOH CHIAO WEI</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>New Status</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>Activate</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Start Date</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>12/01/2022</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>End Date</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>12/01/2022</label>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start"> Print </a>
+                            <a id="sixthNext" class="btn btn-primary  float-end"> Done </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deactivated card -->
+                <div hidden id="seventhPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="p-4 shadow bg-white rounded-8">
+
+                        <div class="row logoRow mb-4">
+
+                            <div class="col-lg-2 col-3 checkIconDIV">
+
+                                <div class="successIcon text-start">
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none"
+                                              d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-10 col-9 checkTextDIV">
+                                <h5 class="text-danger">Your request has been accepted.</h5>
+                                <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Reference Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>776544</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Account Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>46576573443</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Card Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>552342322000 GOH CHIAO WEI</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>New Status</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>Deactivate</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Start Date</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>12/01/2022</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>End Date</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>12/01/2022</label>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start"> Print </a>
+                            <a id="sixthNext" class="btn btn-primary  float-end"> Done </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div hidden id="eighthPage" class="col-12 col-lg-10 px-lg-0 px-4">
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-12 table-responsive mb-2">
+
+                            <table class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white"
+                                   style="width:100%">
+                                <thead class="bg-dark text-white rounded-8">
+                                    <tr style="text-align:center">
+
+                                        <th class="small">No.</th>
+                                        <th class="small">Statement Date</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr style="text-align:center">
+
+                                        <td class="title">1</td>
+                                        <td class="title"><a href="#"><u>18 Nov 2021</u></a></td>
+
+                                    </tr>
+
+                                    <tr style="text-align:center">
+
+                                        <td class="title">2</td>
+                                        <td class="title"><a href="#"><u>31 Oct 2021</u></a></td>
+
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+
+                        </div>
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start">
+                                Back
+                            </a>
+                            <button id="eighthNext" type="button" class="btn btn-primary float-end">
+                                Done
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="alert alert-info col-10 col-sm-11 col-xxl-10 col-lg-10 rounded-8 shadow-sm my-5 px-3"
+                     role="alert" id="al1">
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            Choose an account to perform PB Lifestyle Debit Card - Overseas ATM Withdrawal
+                            Activation / Deactivation
+                        </li>
+                    </ul>
+                </div>
+                <div class="alert alert-info col-10 col-sm-11 col-xxl-10 col-lg-10 rounded-8 shadow-sm my-5 px-3"
+                     role="alert" id="al2" hidden>
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            Cardmember is only allowed to select either one option, activate or deactivate.
+                        </li>
+                        <li>
+                            To activate, cardmember need to input start date and end date.
+                        </li>
+                        <li>
+                            To deactivate, start date and end date are not required. The deactivation will take
+                            effect immediately.
+                        </li>
+                        <li>
+                            Start date cannot be earlier than today's date and the end date must not be earlier
+                            than
+                            start date.
+                        </li>
+                    </ul>
+                </div>
+                <div class="alert alert-info col-10 col-sm-11 col-xxl-10 col-lg-10 rounded-8 shadow-sm my-5 px-3"
+                     role="alert" id="al3" hidden>
+                    <b>Note</b><br>
+                    <ul>
+                        <li>
+                            A security code known as PBe Authentication Code (PAC) is used when performing high
+                            risk
+                            transactions. Click <a href="" class="text-danger">here</a> for more details.
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class="col-12 col-lg-4 last-row p-4 mt-4 p-sm-2 text-center pictureRow">
+            <img src="~/Images/WebsiteImages/register-win-pbe-login02.jpg" class="img-fluid ads-form" />
+        </div>
+
+    </div>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/js")
+<script>
+
+    var oneMin = 60,
+        display = $('#time');
+
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        var timerInterval = setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.text(minutes + " : " + seconds);
+
+            if (--timer < 0) {
+                clearInterval(timerInterval);
+                timer = duration;
+                $('.reqPacBtn').attr('disabled', false);
+                $('.timerText').prop("hidden", true);
+            }
+        }, 1000);
+    }
+    $(document).ready(function () {
+
+
+        $('#authMethod').change(function () {
+            var selectedIndex = $(this).children('option:selected').index();
+            if (selectedIndex != 0) {
+                $(this).parent().removeClass('col-sm-12').addClass('col-sm-9');
+                $(this).parent().siblings('.authConfirmBtn').attr('hidden', false);
+            }
+
+            var cases = $("#authMethod option:selected").val();
+            if (cases == "pac") {
+                $("#PAC").removeClass("d-none");
+                $("#secure").addClass("d-none");
+                $("#noti").addClass("d-none");
+                $("#token").addClass("d-none");
+            }
+            if (cases == "token") {
+                $("#token").removeClass("d-none");
+                $("#PAC").addClass("d-none");
+                $("#secure").addClass("d-none");
+                $("#noti").addClass("d-none");
+            }
+            if (cases == "secure") {
+                $("#secure").removeClass("d-none");
+                $("#PAC").addClass("d-none");
+                $("#token").addClass("d-none");
+                $("#noti").addClass("d-none");
+            }
+            if (cases == "noti") {
+                $("#noti").removeClass("d-none");
+                $("#PAC").addClass("d-none");
+                $("#token").addClass("d-none");
+                $("#secure").addClass("d-none");
+            }
+        });
+
+        $('.authConfirmBtn button').click(function () {
+            $(this).parent().siblings().find('#authMethod').attr('disabled', true);
+            $(this).parent().siblings('.authField').attr('hidden', false);
+            $(this).attr('disabled', true);
+
+
+        });
+
+        $('.mobileNav').each(function () {
+            $(this).removeClass('active');
+        })
+        $('.nav-link').each(function () {
+            $(this).removeClass('active');
+        })
+        $('.profile').each(function () {
+            $(this).addClass('active');
+        });
+        $('.profileMenu').addClass('active');
+    });
+    $('#modalBtn').on('click', function () {
+        $('#secondPage').attr('hidden', false);
+        $('#firstPage').attr('hidden', true);
+        $('#thirdPage').attr('hidden', true);
+        $('#forthPage').attr('hidden', true);
+    });
+
+    $('.reqPacBtn').on('click', function () {
+        $(this).attr('disabled', true);
+        $('.timerText').prop("hidden", false);
+        startTimer(oneMin, display);
+        Swal.fire(
+            'OTP is Sent!',
+            'OTP sent to your phone number 012 - * * * * 123',
+            'success'
+        )
+    })
+    $('.btnReset').on('click', function () {
+        $('form')[0].reset();
+    })
+
+
+
+    var progressBar = $('.progress-bar');
+    var progressNumber = 0;
+
+    setInterval(function () {
+        progressNumber++;
+        progressBar.css('width', progressNumber + '%');
+        progressBar.attr('aria-valuenow', progressNumber);
+    }, 500);
+    $(document).ready(function () {
+        checkAgreement();
+
+        $('#eStatementCheckBox').change(function () {
+            checkAgreement();
+        });
+
+        $('#firstNext').on('click', function () {
+
+
+            $('#secondPage').attr('hidden', false);
+            $('#thirdPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', true);
+            $('#fourthPage').attr('hidden', true);
+            $('#fifthPage').attr('hidden', true);
+            $('#sixthPage').attr('hidden', true);
+            $('#al1').attr('hidden', true);
+            $('#al2').attr('hidden', false);
+            $('#al3').attr('hidden', true);
+        });
+
+        $('#secondNext').on('click', function () {
+
+            $('#thirdPage').attr('hidden', true);
+            $('#secondPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', true);
+            $('#forthPage').attr('hidden', false);
+            $('#fifthPage').attr('hidden', true);
+            $('#sixthPage').attr('hidden', true);
+            $('#seventhPage').attr('hidden', true);
+            $('#eighthPage').attr('hidden', true);
+            $('#al1').attr('hidden', true);
+            $('#al2').attr('hidden', true);
+            $('#al3').attr('hidden', false);
+
+        });
+
+        $('#thirdNext').on('click', function () {
+
+            $('#thirdPage').attr('hidden', true);
+            $('#secondPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', true);
+            $('#forthPage').attr('hidden', false);
+            $('#fifthPage').attr('hidden', true);
+            $('#sixthPage').attr('hidden', true);
+            $('#seventhPage').attr('hidden', true);
+            $('#eighthPage').attr('hidden', true);
+            $('#al1').attr('hidden', true);
+            $('#al2').attr('hidden', true);
+            $('#al3').attr('hidden', false);
+
+        });
+
+        $("#fourthNext").click(function () {
+            $('#thirdPage').attr('hidden', true);
+            $('#secondPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', true);
+            $('#forthPage').attr('hidden', true);
+            $('#fifthPage').attr('hidden', true);
+            $('#sixthPage').attr('hidden', false);
+            $('#seventhPage').attr('hidden', true);
+            $('#eighthPage').attr('hidden', true);
+            $('#al1').attr('hidden', true);
+            $('#al2').attr('hidden', true);
+            $('#al3').attr('hidden', true);
+        });
+
+        $('#confirmBtn').on('click', function () {
+            Swal.fire({
+                title: 'Do you want to delete the account?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Submit',
+                allowOutsideClick: false,
+                customClass: {
+                    title: 'alertFontStyle'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Your Delete Request has been submitted!',
+                        icon: 'success',
+                        customClass: {
+                            title: 'alertFontStyle'
+                        }
+                    }).then(function () {
+                        $('#firstPage').prop('hidden', true);
+                        $('#secondPage').prop('hidden', true);
+                        $('#thirdPage').prop('hidden', true);
+                        $('#fourthage').prop('hidden', true);
+                        $('#fifthPage').prop('hidden', true);
+                        $('#sixthPage').prop('hidden', false);
+                        $('#seventhPage').prop('hidden', true);
+                        $('#eighthPage').attr('hidden', true);
+                    });
+                }
+            })
+        });
+
+        $('#seventhNext').on('click', function () {
+
+            $('#thirdPage').attr('hidden', true);
+            $('#secondPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', true);
+            $('#forthPage').attr('hidden', true);
+            $('#fifthPage').attr('hidden', true);
+            $('#sixthPage').attr('hidden', true);
+            $('#seventhPage').attr('hidden', true);
+            $('#eighthPage').attr('hidden', false);
+
+        });
+
+        $('#fifthNext').on('click', function () {
+
+            $('#thirdPage').attr('hidden', true);
+            $('#secondPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', true);
+            $('#fourthPage').attr('hidden', true);
+            $('#fifthPage').attr('hidden', true);
+            $('#sixthPage').attr('hidden', false);
+            $('#seventhPage').attr('hidden', true);
+            $('#eighthPage').attr('hidden', true);
+
+        });
+
+        $('#sixthNext').on('click', function () {
+
+            $('#thirdPage').attr('hidden', true);
+            $('#secondPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', false);
+            $('#fourthPage').attr('hidden', true);
+            $('#fifthPage').attr('hidden', true);
+            $('#sixthPage').attr('hidden', true);
+            $('#seventhPage').attr('hidden', true);
+            $('#eighthPage').attr('hidden', true);
+
+        });
+
+        $('#eighthNext').on('click', function () {
+
+            $('#thirdPage').attr('hidden', true);
+            $('#secondPage').attr('hidden', true);
+            $('#firstPage').attr('hidden', false);
+            $('#fourthPage').attr('hidden', true);
+            $('#fifthPage').attr('hidden', true);
+            $('#sixthPage').attr('hidden', true);
+            $('#seventhPage').attr('hidden', true);
+            $('#eighthPage').attr('hidden', true);
+
+        });
+
+    });
+
+    function checkAgreement() {
+        if ($("#eStatementCheckBox").is(':checked')) {
+            $("#fourthNext").prop('disabled', false);
+        } else {
+            $("#fourthNext").prop('disabled', true);
+        }
+    }
+
+</script>
