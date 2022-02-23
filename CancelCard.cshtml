@@ -1,19 +1,18 @@
-﻿<div class="d-none d-lg-block" style="height:5vh;"></div>
-<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 my-auto">
-    <div class="row mt-2 justify-content-center">
-        <div class="col-lg-10">
+<div class="d-none d-lg-block" style="height:5vh;"></div>
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 h-100 my-auto px-3 px-lg-0">
+    <div class="row mt-2 justify-content-center h-100 my-auto">
+        <div class="col-lg-8">
             <div class="row justify-content-center ">
                 <div class="col-12 col-lg-5 text-center position-relative">
-                    <img src="~/Images/WebDecoratives/credit-card.png" class="img-fluid position-absolute" style="width: 150px;left: 170px;top: 45px;" />
-                    <img src="~/Images/WebDecoratives/Work risk-free.svg" class="mb-4 img-fluid " style="width:300px" />
                     <h3>Cancel Card</h3>
                     <p>
                         Cancel any debit or credit card that you currently own.
                     </p>
                 </div>
 
-                <div id="firstPage" class="col-12 col-lg-8 ">
-                    <div class="row mb-2">
+                <div id="firstPage" class="col-12 col-lg-10">
+
+                    <div class="row mb-0">
                         <label for="tranAmount" class="col-sm-12 col-form-label">Select your account</label>
                         <div class="col-sm-12 mb-2">
 
@@ -32,7 +31,7 @@
                         </div>
                     </div>
 
-                    <div class="row my-5 last-row">
+                    <div class="row my-5">
                         <div class="col-12">
                             <a class="btn btn-dark float-start" href="@Url.Action("CardSettings", "Home" )">
                                 Back
@@ -42,401 +41,375 @@
                     </div>
                 </div>
 
-                <div hidden id="secondPage" class="col-12 col-lg-8 ">
+                <div hidden id="secondPage" class="col-12 col-lg-10">
 
-                    <div class="container height-100 d-flex justify-content-center align-items-center mt-4">
+                    <div class="height-100 d-flex justify-content-center align-items-center mt-4">
+                        <form>
+                            <div class="position-relative mx-auto">
 
-                        <div class="position-relative mx-auto">
-
-                            <div class="row mb-2">
-                                <label class="col-sm-12 col-form-label">
-                                    Credit Card Number
-                                </label>
-                                <div class="col-sm-12 my-1">
-                                    <input type="text" id="cardNumber" class="form-control" name="cardNumber"
-                                           value="4000151818158236">
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <label class="col-sm-12 col-form-label">Card Member Name</label>
-                                <div class="col-sm-12 my-1">
-                                    <input type="text" id="memberName" class="form-control" name="memberName"
-                                           value="Kwek Kian Sheng">
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <label class="col-sm-12 col-form-label">Credit Card Status</label>
-                                <div class="col-sm-12 my-1">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Select</option>
-                                        <option value="">Lost</option>
-                                        <option value="">Stolen</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <label class="col-sm-12 col-form-label">Date of Lost</label>
-                                <div class="col-sm-12 my-1">
-                                    <input id="effectiveDatePicker1" class="form-control bg-white"
-                                           placeholder="01-JAN-2021" aria-label="effectiveDateInput">
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <label class="col-sm-12 col-form-label">
-                                    Place of Lost
-                                </label>
-                                <div class="col-sm-12 my-1">
-                                    <input type="text" id="placeLost1" class="form-control" name="placeLost"
-                                           value="Tangkak">
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 rightReference1 my-1">
-                                    <label for="placeLost" id="placeLost2">(Optional)</label>
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <label class="col-sm-12 col-form-label">Date Last Used</label>
-                                <div class="col-sm-12 my-1">
-                                    <input id="effectiveDatePicker2" class="form-control bg-white"
-                                           placeholder="01-JAN-2021" aria-label="effectiveDateInput">
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 rightReference1 my-1">
-                                    <label for="lastUsed" id="lastUsed">(Optional)</label>
-                                </div>
-                            </div>
-
-
-                            <div class="row mb-2">
-                                <label class="col-sm-12 col-form-label">
-                                    Amount Last Used (RM)
-                                </label>
-                                <div class="col-sm-12 my-1">
-                                    <input type="text" id="amountUsed1" class="form-control" name="amountUsed"
-                                           value="RM 2000.00">
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 rightReference1 my-1">
-                                    <label for="amountUsed" id="amountUsed2">(Optional)</label>
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <label class="col-sm-12 col-form-label">
-                                    Merchant and Location Last Used (RM)
-                                </label>
-                                <div class="col-sm-12 my-1">
-                                    <input type="text" id="locationUsed1" class="form-control" name="locationUsed"
-                                           value="RM 2000.00">
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 rightReference1 my-1">
-                                    <label for="locationUsed" id="locationUsed2">(Optional)</label>
-                                </div>
-                            </div>
-
-                            <div class="row mb-2">
-                                <label class="col-lg-12 col-md-12 col-sm-12 col-form-label">
-                                    Replacement card required?
-                                </label>
-                                <div class="col-lg-12 col-md-12 col-sm-12 my-1">
-                                    <div class="radio">
-                                        <input id="radio-1" name="radio" type="radio" checked>
-                                        <label for="radio-1" class="radio-label1">
-                                            Yes
-                                        </label>
-                                    </div>
-
-                                    <div class="radio">
-                                        <input id="radio-2" name="radio" type="radio">
-                                        <label for="radio-2" class="radio-label2">
-                                            No
-                                        </label>
+                                <div class="row mb-0">
+                                    <label class="col-sm-12 col-form-label">
+                                        Credit Card Number
+                                    </label>
+                                    <div class="col-sm-12 my-1">
+                                        <input type="text" id="cardNumber" class="form-control" name="cardNumber"
+                                               value="4000151818158236">
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row mb-2">
-                                <label class="col-lg-12 col-md-12 col-sm-12 col-form-label">
-                                    Collection of Card
-                                </label>
-                                <div class="col-lg-12 col-md-12 col-sm-12 my-1">
-                                    <div class="radio">
-                                        <input id="radio-3" name="radio2" type="radio" checked>
-                                        <label for="radio-3" class="radio-label3">
-                                            Delivery to Existing Mailing Address
-                                        </label>
-                                        <label for="radio-4" class="radio-label4 ms-3 small">
-                                            (Delivery cannot be made to P. O. Box address / overseas address)
-                                        </label>
+                                <div class="row mb-0">
+                                    <label class="col-sm-12 col-form-label">Card Member Name</label>
+                                    <div class="col-sm-12 my-1">
+                                        <input type="text" id="memberName" class="form-control" name="memberName"
+                                               value="Kwek Kian Sheng">
                                     </div>
+                                </div>
 
-                                    <div class="radio">
-                                        <input id="radio-5" name="radio2" type="radio">
-                                        <label for="radio-5" class="radio-label5">
-                                            Collect at Public Bank Branch
-                                        </label>
-                                    </div>
-                                    <div hidden id="radioHide">
-                                        <select class="form-select" state-select mt-2"
-                                                aria-label="Default select example" id="selectState">
-                                            <option selected>Select State</option>
-                                            <option value="">Johor</option>
-                                            <option value="">Negeri Sembilan</option>
-                                            <option value="">Selangor</option>
-                                            <option value="">Malacca</option>
-                                            <option value="">Perak</option>
-                                            <option value="">Penang</option>
-                                            <option value="">Terengganu</option>
-                                            <option value="">Sabah</option>
-                                            <option value="">Sarawak</option>
-                                            <option value="">Kelantan</option>
-                                            <option value="">Pahang</option>
-                                        </select>
-
-                                        <select class="form-select branch-select mt-2"
-                                                aria-label="Default select example" id="selectBranch">
-
-                                            <option selected>Select Branch</option>
-
-                                            <!-- <option value="" id="boldState" disabled>Johor</option> -->
-                                            <optgroup label="Johor"></optgroup>
-                                            <option value="">Tangkak</option>
-                                            <option value="">Muar</option>
-
-                                            <!-- <option value="" id="boldState" disabled>Negeri Sembilan</option> -->
-                                            <optgroup label="Negeri Sembilan"></optgroup>
-                                            <option value="">Seremban</option>
-
-                                            <!-- <option value="" id="boldState" disabled>Selangor</option> -->
-                                            <optgroup label="Selangor"></optgroup>
-                                            <option value="">Bangi</option>
-
-                                            <!-- <option value="" id="boldState" disabled>Kedah</option> -->
-                                            <optgroup label="Kedah"></optgroup>
-                                            <option value="">Alor Setar</option>
-                                            <option value="">Kuala Ketil</option>
-
+                                <div class="row mb-0">
+                                    <label class="col-sm-12 col-form-label">Credit Card Status</label>
+                                    <div class="col-sm-12 my-1">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Select</option>
+                                            <option value="">Lost</option>
+                                            <option value="">Stolen</option>
                                         </select>
                                     </div>
                                 </div>
+
+                                <div class="row mb-0">
+                                    <label class="col-sm-12 col-form-label">Date of Lost</label>
+                                    <div class="col-sm-12 my-1">
+                                        <input id="effectiveDatePicker1" class="form-control bg-white"
+                                               placeholder="01-JAN-2021" aria-label="effectiveDateInput">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-0">
+                                    <label class="col-sm-12 col-form-label">
+                                        Place of Lost
+                                    </label>
+                                    <div class="col-sm-12 my-1">
+                                        <input type="text" id="placeLost1" class="form-control" name="placeLost"
+                                               value="Tangkak">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 rightReference1 my-1">
+                                        <label for="placeLost" id="placeLost2">(Optional)</label>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-0">
+                                    <label class="col-sm-12 col-form-label">Date Last Used</label>
+                                    <div class="col-sm-12 my-1">
+                                        <input id="effectiveDatePicker2" class="form-control bg-white"
+                                               placeholder="01-JAN-2021" aria-label="effectiveDateInput">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 rightReference1 my-1">
+                                        <label for="lastUsed" id="lastUsed">(Optional)</label>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-0">
+                                    <label class="col-sm-12 col-form-label">
+                                        Amount Last Used (RM)
+                                    </label>
+                                    <div class="col-sm-12 my-1">
+                                        <input type="text" id="amountUsed1" class="form-control" name="amountUsed"
+                                               value="RM 2000.00">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 rightReference1 my-1">
+                                        <label for="amountUsed" id="amountUsed2">(Optional)</label>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-0">
+                                    <label class="col-sm-12 col-form-label">
+                                        Merchant and Location Last Used (RM)
+                                    </label>
+                                    <div class="col-sm-12 my-1">
+                                        <input type="text" id="locationUsed1" class="form-control" name="locationUsed"
+                                               value="RM 2000.00">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 rightReference1 my-1">
+                                        <label for="locationUsed" id="locationUsed2">(Optional)</label>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-form-label">
+                                        Replacement card required?
+                                    </label>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 my-1">
+                                        <div class="radio">
+                                            <input id="radio-1" name="radio" type="radio" checked>
+                                            <label for="radio-1" class="radio-label1">
+                                                Yes
+                                            </label>
+                                        </div>
+
+                                        <div class="radio">
+                                            <input id="radio-2" name="radio" type="radio">
+                                            <label for="radio-2" class="radio-label2">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-form-label">
+                                        Collection of Card
+                                    </label>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 my-1">
+                                        <div class="radio">
+                                            <input id="radio-3" name="radio2" type="radio" checked>
+                                            <label for="radio-3" class="radio-label3">
+                                                Delivery to Existing Mailing Address
+                                            </label>
+                                            <label for="radio-4" class="radio-label4 ms-3 small">
+                                                (Delivery cannot be made to P. O. Box address / overseas address)
+                                            </label>
+                                        </div>
+
+                                        <div class="radio">
+                                            <input id="radio-5" name="radio2" type="radio">
+                                            <label for="radio-5" class="radio-label5">
+                                                Collect at Public Bank Branch
+                                            </label>
+                                        </div>
+                                        <div hidden id="radioHide">
+                                            <select class="form-select" state-select mt-2"
+                                                    aria-label="Default select example" id="selectState">
+                                                <option selected>Select State</option>
+                                                <option value="">Johor</option>
+                                                <option value="">Negeri Sembilan</option>
+                                                <option value="">Selangor</option>
+                                                <option value="">Malacca</option>
+                                                <option value="">Perak</option>
+                                                <option value="">Penang</option>
+                                                <option value="">Terengganu</option>
+                                                <option value="">Sabah</option>
+                                                <option value="">Sarawak</option>
+                                                <option value="">Kelantan</option>
+                                                <option value="">Pahang</option>
+                                            </select>
+
+                                            <select class="form-select branch-select mt-2"
+                                                    aria-label="Default select example" id="selectBranch">
+
+                                                <option selected>Select Branch</option>
+
+                                                <!-- <option value="" id="boldState" disabled>Johor</option> -->
+                                                <optgroup label="Johor"></optgroup>
+                                                <option value="">Tangkak</option>
+                                                <option value="">Muar</option>
+
+                                                <!-- <option value="" id="boldState" disabled>Negeri Sembilan</option> -->
+                                                <optgroup label="Negeri Sembilan"></optgroup>
+                                                <option value="">Seremban</option>
+
+                                                <!-- <option value="" id="boldState" disabled>Selangor</option> -->
+                                                <optgroup label="Selangor"></optgroup>
+                                                <option value="">Bangi</option>
+
+                                                <!-- <option value="" id="boldState" disabled>Kedah</option> -->
+                                                <optgroup label="Kedah"></optgroup>
+                                                <option value="">Alor Setar</option>
+                                                <option value="">Kuala Ketil</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-
-                        </div>
-
+                        </form>>
                     </div>
 
-                    <div class="row my-5 last-row">
+                    <div class="row my-5 ">
                         <div class="col-12">
                             <a class="btn btn-dark float-start" href="@Url.Action("CardSettings", "Home" )">
                                 Back
                             </a>
-                            <a id="secondNext" class="btn btn-primary  float-end"> Submit </a>
+                            <a class="btn btn-outline-primary btnReset float-end float-sm-none float-lg-end float-xxl-none ms-2"> Clear </a>
+
+                            <a id="secondNext" class="btn btn-primary col-12 col-sm-3 mt-2 mt-sm-0 float-sm-end col-lg-12 mt-lg-2 col-xxl-3 mt-xxl-0"> Submit </a>
 
                         </div>
                     </div>
 
                 </div>
 
-                <div hidden id="thirdPage" class="col-12 col-lg-8 mt-3 px-5">
-                    <div class="p-5 shadow bg-white rounded-8">
+                <div hidden id="thirdPage" class="col-12 col-lg-10 mt-3">
+                    <div class="p-4 shadow bg-white rounded-8">
 
-                        <div id="my-print">
-                            <div class="row detailzRow d-flex mb-2">
+                        <div class="row logoRow mb-4">
 
-                                <div class="row logoRow">
+                            <div class="col-lg-2 col-3 checkIconDIV">
 
-                                    <div class="col-lg-2 col-2 checkIconDIV">
-                                        <table style="height: 100%; width: 100%;">
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <div class="successIcon">
-                                                            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
-                                                                 viewBox="0 0 52 52">
-                                                                <circle class="checkmark__circle" cx="26" cy="26" r="25"
-                                                                        fill="none" />
-                                                                <path class="checkmark__check" fill="none"
-                                                                      d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                                                            </svg>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-10 checkTextDIV mt-1">
-
-                                        <table style="height: 100%; width: 100%;">
-
-                                            <tbody>
-
-                                                <tr>
-
-                                                    <td style="vertical-align: middle;">
-                                                        <h4 class="lbl1">Cancelled Successful</h4>
-                                                        <label>4 May 2018, 12:59:12pm</label>
-                                                    </td>
-
-                                                </tr>
-
-                                            </tbody>
-
-                                        </table>
-
-                                    </div>
-
-                                </div>
-
-
-                            </div>
-
-                            <div class="input__container">
-
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Reference Number</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>RR232382989FH</label>
-                                    </div>
-
-                                </div>
-
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Card Member Name</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>Lai Li</label>
-                                    </div>
-
-                                </div>
-
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Credit Card Number</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>454454333222 (Visa Credit Card)</label>
-                                    </div>
-
-                                </div>
-
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Card Member Name</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>Lai Li</label>
-                                    </div>
-
-                                </div>
-
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Credit Card Status</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>Lost</label>
-                                    </div>
-
-                                </div>
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Date of Lost</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>01 Oct 2021</label>
-                                    </div>
-
-                                </div>
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Place of Lost</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>-</label>
-                                    </div>
-
-                                </div>
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Date Last Used</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>-</label>
-                                    </div>
-
-                                </div>
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Amount Last Used</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>RM 0.00</label>
-                                    </div>
-
-                                </div>
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Merchant and Location Last Used</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>-</label>
-                                    </div>
-
-                                </div>
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Replacement card required?</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>Yes</label>
-                                    </div>
-
-                                </div>
-                                <div class="row detailsRow">
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 leftReference">
-                                        <label>Collection of Card</label>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 rightReference">
-                                        <label>Delivery to Existing Mailing Address</label>
-                                    </div>
-
+                                <div class="successIcon text-start">
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none"
+                                              d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
                                 </div>
 
                             </div>
+
+                            <div class="col-lg-10 col-9 checkTextDIV">
+                                <h5>Cancelled Successfully</h5>
+                                <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Reference Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>RR232382989FH</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Card Member Name</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>Lai Li</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Credit Card Number</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>454454333222 (Visa Credit Card)</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Card Member Name</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>Lai Li</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Credit Card Status</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>Lost</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Date of Lost</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>01 Oct 2021</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Place of Lost</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>-</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Date Last Used</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>-</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Amount Last Used</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>RM 0.00</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Merchant and Location Last Used</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>-</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Replacement card required?</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>Yes</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Collection of Card</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>Delivery to Existing Mailing Address</label>
+                            </div>
+
                         </div>
 
                     </div>
-                    <div class="row my-5 last-row">
+                    <div class="row my-5 ">
                         <div class="col-12">
                             <a class="btn btn-dark float-start" onclick="window.print()"> Print </a>
                             <a id="thirdNext" class="btn btn-primary  float-end" href="@Url.Action("CardSettings", "Home" )"> Done </a>
@@ -445,19 +418,19 @@
 
                 </div>
 
-                <div class="alert alert-info col-12 col-lg-8 rounded-8 shadow-sm" style="margin-bottom:100px" role="alert">
+                <div class="alert alert-info col-12 col-lg-10 rounded-8 shadow-sm" role="alert">
                     <b>Note</b><br>
-                               <ul>
-                                   <li>
-                                       This card cancellation service is available for the selected card number only. If
-                                       you lost all your PB Credit cards, you are required to repeat the same process for
-                                       other registered card. For card number not listed above, please call our 24 hours
-                                       Lost Card Hotline at 603-2176 8555 for assistance.
-                                   </li>
-                               </ul>
+                    <ul>
+                        <li>
+                            This card cancellation service is available for the selected card number only. If
+                            you lost all your PB Credit cards, you are required to repeat the same process for
+                            other registered card. For card number not listed above, please call our 24 hours
+                            Lost Card Hotline at 603-2176 8555 for assistance.
+                        </li>
+                    </ul>
                 </div>
 
-                
+
 
 
             </div>
@@ -466,7 +439,9 @@
 
 
         </div>
-
+        <div class="col-lg-4 col-12 last-row mt-5">
+            <img src="~/Images/WebsiteImages/register-win-pbe-login02.jpg" class="img-fluid ads-form" />
+        </div>
     </div>
 
 </div>
@@ -495,20 +470,20 @@
         });
 
         $('#secondNext').on('click', function () {
-             Swal.fire({
+            Swal.fire({
                 title: 'Your card has been cancelled.',
                 icon: 'success',
             }).then((result) => {
                 if (result.isConfirmed) {
 
-                     $('#thirdPage').attr('hidden', false);
-                     $('#secondPage').attr('hidden', true);
-                     $('#firstPage').attr('hidden', true);
+                    $('#thirdPage').attr('hidden', false);
+                    $('#secondPage').attr('hidden', true);
+                    $('#firstPage').attr('hidden', true);
                 }
             })
 
-          
-            
+
+
         });
 
         // $('#reqPacBtn').on('click', function () {
@@ -545,6 +520,9 @@
         else {
             $('#radioHide').attr('hidden', true);
         }
+    })
+    $('.btnReset').on('click', function () {
+        $('form')[0].reset();
     })
 
 </script>
