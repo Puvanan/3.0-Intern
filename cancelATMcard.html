@@ -1,0 +1,341 @@
+<div class="d-none d-lg-block" style="height:5vh;"></div>
+
+<div class="container gx-1 gx-lg-0 mt-3 mt-lg-5 h-100 my-auto px-3 px-lg-0">
+    <div class="row mt-2 justify-content-center h-100 my-auto">
+        <div class="col-lg-8">
+            <div class="row justify-content-center ">
+
+                <div class="col-12 col-lg-5 text-center">
+                    <h3>Cancel ATM Card</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                </div>
+
+                <div id="firstPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <div class="row justify-content-center">
+                        <form>
+                            <p>Select card(s) to cancel</p>
+                            <div class="col-12 table-responsive">
+
+                                <table class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white"
+                                       style="width:100%">
+                                    <thead class="bg-dark text-white rounded-8">
+                                        <tr style="text-align:center">
+                                            <th class="small">Select</th>
+                                            <th class="small">Card No.</th>
+                                            <th class="small">Type of Card</th>
+                                            <th class="small">Account No.</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="text-align:center">
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="atmCardCheck1">
+                                            </td>
+                                            <td id='cardNum1'>5909890090003271</td>
+                                            <td id='cardType1'>MasterCard Lifestyle Card</td>
+                                            <td id='cardAccNum1'>3992850013</td>
+
+                                        </tr>
+                                        <tr style="text-align:center">
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" id="atmCardCheck2">
+                                            </td>
+                                            <td id='cardNum2'>4841000023029384</td>
+                                            <td id='cardType2'>Visa Lifestyle Card</td>
+                                            <td id='cardAccNum2'>6001719829</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                            <div class="row my-5 last-row">
+                                <div class="col-12">
+                                    <a class="btn btn-dark float-start" href="@Url.Action("lifestyleSettings", "Home"
+                                            )">
+                                        Back
+                                    </a>
+                                    <a id="firstNext" class="btn btn-primary  float-end"> Next </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div hidden id="secondPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <div class="row justify-content-center">
+                        <form>
+                            <div class="col-12 table-responsive">
+
+                                <table class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white"
+                                       style="width:100%">
+                                    <thead class="bg-dark text-white rounded-8">
+                                        <tr style="text-align:center">
+                                            <th class="small">Card No.</th>
+                                            <th class="small">Type of Card</th>
+                                            <th class="small">Account No.</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="text-align:center" id='cardRow1' hidden>
+                                            <td id='cardNumberVal1'></td>
+                                            <td id='typeOfCardVal1'></td>
+                                            <td id='accNumberVal1'></td>
+                                        </tr>
+                                        <tr style="text-align:center" id='cardRow2' hidden>
+                                            <td id='cardNumberVal2'></td>
+                                            <td id='typeOfCardVal2'></td>
+                                            <td id='accNumberVal2'></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span class="text-danger">
+                                    Please be informed once the cancellation is made, it
+                                    cannot be reverted.
+                                </span>
+
+                            </div>
+
+
+                            <div class="row my-5 last-row">
+                                <div class="col-12">
+                                    <a class="btn btn-dark float-start" href="@Url.Action("lifestyleSettings", "Home"
+                                            )">
+                                        Back
+                                    </a>
+                                    <a id="secondNext" class="btn btn-primary float-end"> Next </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div hidden id="thirdPage" class="col-12 col-lg-10 px-lg-0 px-4">
+                    <div class="p-4 shadow bg-white rounded-8">
+
+                        <div class="row logoRow mb-4">
+
+                            <div class="col-2 checkIconDIV">
+
+                                <div class="successIcon text-start">
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none"
+                                              d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
+                                </div>
+
+                            </div>
+
+                            <div class="col-10 checkTextDIV">
+                                <h5>ATM Card Cancelled Successfully</h5>
+                                <p class="text-muted">4 May 2018, 12:59:12pm</p>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Reference No.</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>551480</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row detailsRow">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start leftReference">
+                                <label>Date and Time</label>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-start text-sm-end rightReference">
+                                <label>4 May 2018, 12:59:12pm</label>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 table-responsive">
+
+                            <table class="table table-responsive table-borderless table-hover p-lg-2 p-0 shadow-sm rounded-8 bg-white"
+                                   style="width:100%">
+                                <thead class="bg-dark text-white rounded-8">
+                                    <tr style="text-align:center">
+
+                                        <th class="small">Card No.</th>
+                                        <th class="small">Type of Card</th>
+                                        <th class="small">Account No.</th>
+                                        <th class="small">Status</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="text-align:center" class='ackRow1' hidden>
+                                        <td id='ackCardNum1'></td>
+                                        <td id='ackCardType1'></td>
+                                        <td id='ackAccNum1'></td>
+                                        <td class="text-success">Cancelled</td>
+
+                                    </tr>
+
+                                    <tr style="text-align:center" class='ackRow2' hidden>
+                                        <td id='ackCardNum2'></td>
+                                        <td id='ackCardType2'></td>
+                                        <td id='ackAccNum2'></td>
+                                        <td class="text-success">Cancelled</td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="row my-5 last-row">
+                        <div class="col-12">
+                            <a class="btn btn-dark float-start"> Print </a>
+                            <a id="thirdNext" class="btn btn-primary  float-end" href="@Url.Action("lifestyleSettings", "Home" )"> Done </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="alert alert-info col-10 col-sm-11 col-xxl-10 col-lg-10 rounded-8 shadow-sm my-5 px-3"
+                     role="alert">
+                    <b>Note</b><br>
+                    <ul>
+                        <li class="firstPageNoteContent">
+                            This feature is applicable for individual account only. To cancel the ATM Card for joint
+                            account, please contact 03-2179 5000
+                        </li>
+                        <li class="secondPageNoteContent" hidden>
+                            Cancellation of ATM Card will take effect immediately upon confirmation.
+                        </li>
+                        <li class="thirdPageNoteContent" hidden>
+                            For replacement of ATM Card, please walk-in to the nearest Public Bank Branch.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-12 col-lg-4 last-row p-4 mt-4 p-sm-2 text-center pictureRow">
+            <img src="~/Images/WebsiteImages/register-win-pbe-login02.jpg" class="img-fluid ads-form" />
+        </div>
+    </div>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/js")
+<script>
+
+    $(document).ready(function () {
+        checkTableRowSelect();
+
+
+        $('.mobileNav').each(function () {
+            $(this).removeClass('active');
+        })
+        $('.nav-link').each(function () {
+            $(this).removeClass('active');
+        })
+        $('.profile').each(function () {
+            $(this).addClass('active');
+        });
+        $('.profileMenu').addClass('active');
+
+
+        // check first next button
+        $('input[type="checkbox"]').change(function () {
+            checkTableRowSelect();
+        });
+
+        $('#firstNext').on('click', function () {
+            Swal.fire({
+                title: 'Please ensure the ATM Card selected is correct.',
+                icon: 'warning',
+                customClass: {
+                    title: 'alertFontStyle'
+                }
+            }).then(function () {
+                $('#secondPage').attr('hidden', false);
+                $('#firstPage').attr('hidden', true);
+                $('#thirdPage').attr('hidden', true);
+
+                $('.firstPageNoteContent').attr('hidden', true);
+                $('.secondPageNoteContent').attr('hidden', false);
+                $('.thirdPageNoteContent').attr('hidden', true);
+                //check which checkbox is checked
+                if ($('#atmCardCheck1').is(":checked")) {
+                    $('#cardRow1').prop("hidden", false);
+                    $('#cardNumberVal1').html($('#cardNum1').text());
+                    $('#typeOfCardVal1').html($('#cardType1').text());
+                    $('#accNumberVal1').html($('#cardAccNum1').text());
+                }
+
+                if ($('#atmCardCheck2').is(":checked")) {
+                    $('#cardRow2').prop("hidden", false);
+                    $('#cardNumberVal2').html($('#cardNum2').text());
+                    $('#typeOfCardVal2').html($('#cardType2').text());
+                    $('#accNumberVal2').html($('#cardAccNum2').text());
+                }
+            });
+        })
+
+        $('#secondNext').on('click', function () {
+            Swal.fire({
+                title: 'ATM Card Cancelled Successfully',
+                icon: 'success',
+                customClass: {
+                    title: 'alertFontStyle'
+                }
+            }).then(function () {
+                $('#thirdPage').attr('hidden', false);
+                $('#secondPage').attr('hidden', true);
+                $('#firstPage').attr('hidden', true);
+
+                $('.firstPageNoteContent').attr('hidden', true);
+                $('.secondPageNoteContent').attr('hidden', true);
+                $('.thirdPageNoteContent').attr('hidden', false);
+
+                //check which checkbox is checked
+                if ($('#atmCardCheck1').is(":checked")) {
+                    $('.ackRow1').prop("hidden", false);
+                    $('#ackCardNum1').html($('#cardNum1').text());
+                    $('#ackCardType1').html($('#cardType1').text());
+                    $('#ackAccNum1').html($('#cardAccNum1').text());
+                }
+
+                if ($('#atmCardCheck2').is(":checked")) {
+                    $('.ackRow2').prop("hidden", false);
+                    $('#ackCardNum2').html($('#cardNum2').text());
+                    $('#ackCardType2').html($('#cardType2').text());
+                    $('#ackAccNum2').html($('#cardAccNum2').text());
+                }
+            });
+        })
+    });
+
+
+    function checkTableRowSelect() {
+        if ($('#atmCardCheck1').is(":checked") || $('#atmCardCheck2').is(":checked")) {
+            $('#firstNext').removeClass('disabled');
+        } else {
+            $('#firstNext').addClass('disabled');
+        }
+    }
+</script>
