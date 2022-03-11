@@ -4,9 +4,11 @@
         <div class="col-lg-8">
             <div class="row justify-content-center ">
                 <div class="col-12 col-lg-5 text-center position-relative">
-                    <h3>Cancel Card</h3>
+                    <h3>
+                        Cancel / Report Lost Card
+                    </h3>
                     <p>
-                        Cancel any debit or credit card that you currently own.
+                        Request for card cancellation or report for lost / stolen card.
                     </p>
                 </div>
 
@@ -18,13 +20,21 @@
 
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>Please select</option>
-                                <option value="">4000151818158236</option>
-                                <option value="">9577445338254589</option>
-                                <option value="">1235489818021458</option>
-                                <option value="">1235489158236111</option>
-                                <option value="">4533825382544453</option>
-                                <option value="">7445338254553684</option>
-                                <option value="">0248891234486685</option>
+                                <option value="">
+                                    4388990033570108  (PB Visa Infinite Credit Card)
+                                </option>
+                                <option value="">
+                                    4553570554044102  (PB-Petron Visa Debit Card)
+                                </option>
+                                <option value="">
+                                    5379920036583103  (Public Islamic Bank MasterCard Platinum Credit Card-i)
+                                </option>
+                                <option value="">
+                                    4388990011223344  (PB Visa Lifestyle Debit Card)
+                                </option>
+                                <option value="">
+                                    6234880077889900  (PB UnionPay Lifestyle Debit Card)
+                                </option>
 
                             </select>
 
@@ -422,10 +432,16 @@
                     <b>Note</b><br>
                     <ul>
                         <li>
-                            This card cancellation service is available for the selected card number only. If
-                            you lost all your PB Credit cards, you are required to repeat the same process for
-                            other registered card. For card number not listed above, please call our 24 hours
-                            Lost Card Hotline at 603-2176 8555 for assistance.
+                            This card cancellation service is available for the selected card number only.
+                        </li>
+                        <li>
+                            If you lost all your PB credit cards, you are required to repeat the same process for other registered card.
+                        </li>
+                        <li>
+                            For credit card number not listed above, please call our 24 hour Lost Card Hotline at +603-2176 8555 for assistance.
+                        </li>
+                        <li>
+                            For replacement of ATM Card, please walk-in to the nearest Public Bank Branch.
                         </li>
                     </ul>
                 </div>
@@ -446,6 +462,7 @@
 
 </div>
 @Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/js")
 <script>
 
     $(document).ready(function () {
@@ -464,6 +481,8 @@
         $('.profileMenu').addClass('active');
 
         $('#firstNext').on('click', function () {
+            if($('.form-select').val())
+
             $('#secondPage').attr('hidden', false);
             $('#firstPage').attr('hidden', true);
             $('#thirdPage').attr('hidden', true);
