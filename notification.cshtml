@@ -1,0 +1,24 @@
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="polite" aria-atomic="true">
+        <div class="toast-header">
+            <i class="fad fa-exclamation-circle pe-2"></i>
+            <strong class="me-auto">Suggestions</strong>
+            <small>11 mins ago</small>
+            <button type="button" data-bs-dismiss="toast" class="btn-close-white btn-close" aria-label="Close">
+                @*<i class="fad fa-times text-white"></i>*@
+            </button>
+        </div>
+        <div class="toast-body">
+            <div class="row">
+                <div class="col-12">
+                    Hi, would you like to convert your passbook saving accounts to statement saving accounts?
+                </div>
+                <div class="col-12 pt-3 text-center">
+                    <a class="btn btn-sm btn-outline-primary " href="@Url.Action("ConvertStatement")">
+                        Bring me there
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
