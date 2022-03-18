@@ -165,7 +165,7 @@
         <!-- Own Account -->
         <div hidden id="firstOwnAcc" class="col-12 col-lg-7 mt-lg-4 border-end-xl px-6">
 
-            <div class="col-12 col-lg-5 col-xl-12 p-5 p-lg-0 text-center">
+            <div class="col-12 col-lg-5 col-xl-12 p-5 p-lg-0 text-start">
                 <h3 class="mb-2">Send Money via Account No.</h3>
 
                 <p>Fill in the following to send money to your own account within Public Bank.</p>
@@ -364,7 +364,7 @@
         <div hidden id="secondOwnAcc"
              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7 mt-lg-4 border-end-xl px-6">
 
-            <h3 class="title">Send Money to ...</h3>
+            <h3>Send Money to ...</h3>
 
             <div class="row">
 
@@ -5534,354 +5534,886 @@
 
 
 <script>
-        var display;
-        var oneMin = 60; //60 seconds (1 minute)
-        var confirmationModal = new bootstrap.Modal(document.getElementById('exampleModalToggle'));
-        var receiptModal = new bootstrap.Modal(document.getElementById('exampleModalToggle2'));
-        var setAsFavModal = new bootstrap.Modal(document.getElementById('exampleModalToggleSetAsFav'));
-        var duitNowSetAsFavModal = new bootstrap.Modal(document.getElementById('exampleModalToggleDuitNowSetAsFav'));
-        var editFavModal = new bootstrap.Modal(document.getElementById('exampleModalToggleEditFav'));
-        var editFavModalDuitNow = new bootstrap.Modal(document.getElementById('editDuitNowModal'));
-        var duitNowConfirmationModal = new bootstrap.Modal(document.getElementById('duitNowExampleModalToggle'));
-        var duitNowReceiptModal = new bootstrap.Modal(document.getElementById('duitNowExampleModalToggle2'));
-        var setAsFavNames;
-        var setAsFavAccNums;
-        var duitNowSetAsFavNames;
-        var duitNowSetAsFavIDType;
-        var duitNowSetAsFavIDNum;
+            var display;
+            var oneMin = 60; //60 seconds (1 minute)
+            var confirmationModal = new bootstrap.Modal(document.getElementById('exampleModalToggle'));
+            var receiptModal = new bootstrap.Modal(document.getElementById('exampleModalToggle2'));
+            var setAsFavModal = new bootstrap.Modal(document.getElementById('exampleModalToggleSetAsFav'));
+            var duitNowSetAsFavModal = new bootstrap.Modal(document.getElementById('exampleModalToggleDuitNowSetAsFav'));
+            var editFavModal = new bootstrap.Modal(document.getElementById('exampleModalToggleEditFav'));
+            var editFavModalDuitNow = new bootstrap.Modal(document.getElementById('editDuitNowModal'));
+            var duitNowConfirmationModal = new bootstrap.Modal(document.getElementById('duitNowExampleModalToggle'));
+            var duitNowReceiptModal = new bootstrap.Modal(document.getElementById('duitNowExampleModalToggle2'));
+            var ibgInfoModal = new bootstrap.Modal(document.getElementById('interbankGiroModal'));
+            var setAsFavNames;
+            var setAsFavAccNums;
+            var duitNowSetAsFavNames;
+            var duitNowSetAsFavIDType;
+            var duitNowSetAsFavIDNum;
 
-        $('#bankSearchBar').on('keyup', function () {
-            myBank2Function();
-        });
+            // To Own Account section
+            var ownSelectTimes = document.getElementById("ownReccurTranTimesSelect");
+            for (let i = 1; i <= 99; i++)
+                ownSelectTimes.innerHTML += "<option value='" + i + "'>" + i + "</option>";
 
-        function editBankFunction() {
-            // Declare variables
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById('editBankSearchBar');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("editBankList");
-            li = ul.getElementsByTagName('li');
+            $('#firstClear').click(function () {
+                $('form')[0].reset();
+                $('#ownReccurTranSelect').trigger("change");
+            });
 
-            // Loop through all list items, and hide those who don't match the search query
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("span")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
+            $('#firstOwnNext').on('click', function () {
+                $('#ownUserAccountDisabled').html('<option selected>' + $('#ownUserAccount').val() + '</option>');
+                $('#ownRecipientAccountDisabled').val($('#ownRecipientAccount').val());
+                $('#ownTransferAmountDisabled').val($('#ownTransferAmount').val() + ".00");
+                $('#ownEffectiveDatePickerDisabled').val($('#ownEffectiveDatePicker').val());
+
+                $('#ownRecurrDisplay').html($('#ownRecurrBody').html());
+                $("#ownRecurrDisplay #ownReccurTranSelect").attr('disabled', true);
+                $("#ownRecurrDisplay #ownReccurTranTimesSelect").attr('disabled', true);
+                $("#ownRecurrDisplay #ownReccurTranSelect option[value='" + $('#ownRecurrBody #ownReccurTranSelect').val() + "']").prop('selected', true);
+                $("#ownRecurrDisplay #ownReccurTranTimesSelect option[value='" + $('#ownRecurrBody #ownReccurTranTimesSelect').val() + "']").prop('selected', true);
+
+                $('#secondOwnAcc').attr('hidden', false);
+                $('#firstOwnAcc').attr('hidden', true);
+            });
+
+
+            $('#ownAccordionReccurTrans').on('show.bs.collapse', function () {
+                $('#ownShowMoreText').attr('hidden', true);
+                $('#ownShowLessText').attr('hidden', false);
+            });
+
+            $('#ownAccordionReccurTrans').on('hide.bs.collapse', function () {
+                $('#ownShowLessText').attr('hidden', true);
+                $('#ownShowMoreText').attr('hidden', false);
+            });
+
+            $("#ownReccurTransactionTimes").hide();
+            $('#ownReccurTransFreq').attr('hidden', true);
+            $('#ownReccurTransIntervals').attr('hidden', true);
+            $("#ownReccurTransactionType").removeClass("col-sm-5 float-sm-start");
+            $("#ownReccurTransactionType").addClass("col-sm-12");
+            $("#ownReccurTranSelect").on('change', function () {
+
+                console.log($(this).children("option:selected").val() == "None");
+
+                if ($(this).children("option:selected").val() == "None") {
+
+                    $("#ownReccurTransactionTimes").hide();
+                    $('#ownReccurTransFreq').attr('hidden', true);
+                    $('#ownReccurTransIntervals').attr('hidden', true);
+                    $("#ownReccurTransactionType").removeClass("col-sm-5 float-sm-start");
+                    $("#ownReccurTransactionType").addClass("col-sm-12");
                 } else {
-                    li[i].style.display = "none";
+                    let frequency;
+
+                    if ($('#ownReccurTranSelect').val() == "Daily")
+                        frequency = "day";
+                    else
+                        frequency = $('#ownReccurTranSelect').val().toLowerCase().replace("ly", "");
+
+                    $('#ownRecurrMessage').html("Transaction will be recurring every " + frequency + " starting from 23 Feb 2022 until 1 Mar 2022");
+                    $('#ownReccurTransFreq').attr('hidden', false);
+                    $('#ownReccurTransIntervals').attr('hidden', false);
+                    $("#ownReccurTransactionTimes").show();
+                    $("#ownReccurTransactionType").removeClass("col-sm-12");
+                    $("#ownReccurTransactionType").addClass("col-sm-5 float-sm-start").css("margin-right", "16.5%");
                 }
-            }
-        }
+            });
 
-        $('#editBankSearchBar').on('keyup', function () {
-            editBankFunction();
-        });
+            $('#secondOwnNext').click(function () {
 
-        function myBank2Function() {
-            // Declare variables
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById('bankSearchBar');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("bankList");
-            li = ul.getElementsByTagName('li');
 
-            // Loop through all list items, and hide those who don't match the search query
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("span")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
+
+
+                $('#secondOwnAcc').attr('hidden', true);
+                $('#ackOwnAcc').attr('hidden', false);
+            });
+
+            // To Other Account section
+            $('#firstOtherNext').click(function () {
+                $('#otherDropdownMenuButtonDisplay').html($('#otherDropdownMenuButton').html());
+                $('#theTransferMethodsDisplay').html($('#theTransferMethods').html());
+
+                $('#theTransferMethodsDisplay #duitNowTransferOption').children('div').eq(0).removeClass('bg-white');
+                $('#theTransferMethodsDisplay #duitNowTransferOption').children('div').eq(0).addClass('bg-light-2');
+                $('#theTransferMethodsDisplay #interbankGiroOption').children('div').eq(1).removeClass('bg-white');
+                $('#theTransferMethodsDisplay #interbankGiroOption').children('div').eq(1).addClass('bg-light-2');
+                $('#theTransferMethodsDisplay #interbankGiroOption').children('div').eq(0).remove();
+
+                $('#otherUserAccountDisabled').html('<option selected>' + $('#otherUserAccount').val() + '</option>');
+                $('#otherAccNumberDisabled').val($('#otherAccNumber').val());
+                $('#otherAccTypeSelectDisabled').html('<option selected>' + $('#otherAccTypeSelect').val() + '</option>');
+                $('#otherTransferAmountDisabled').val($('#otherTransferAmount').val());
+                $('#otherRecipientReferDisabled').val($('#otherRecipientRefer').val());
+                $('#otherRecipientNameDisabled').val($('#otherRecipientName').val());
+                $('#otherEffectiveDatePickerDisabled').val($('#otherEffectiveDatePicker').val());
+
+                $('#otherRecurrDisplay').html($('#otherRecurrBody').html());
+                $("#otherRecurrDisplay #otherReccurTranSelect").attr('disabled', true);
+                $("#otherRecurrDisplay #otherReccurTranTimesSelect").attr('disabled', true);
+                $("#otherRecurrDisplay #otherRecipientPaymentDetails").attr('disabled', true);
+                $("#otherRecurrDisplay #emailCheckboxes").attr('disabled', true);
+                $("#otherRecurrDisplay #smsCheckboxes").attr('disabled', true);
+
+                $("#otherRecurrDisplay #otherReccurTranSelect option[value='" + $('#otherRecurrBody #otherReccurTranSelect').val() + "']").prop('selected', true);
+                $("#otherRecurrDisplay #otherReccurTranTimesSelect option[value='" + $('#otherRecurrBody #otherReccurTranTimesSelect').val() + "']").prop('selected', true);
+
+                $('#otherRecurrDisplay #otherRecipientPaymentDetails').val($('#otherRecurrBody #otherRecipientPaymentDetails').val());
+                $('#otherRecurrDisplay #emailCheckBoxes').val($('#otherRecurrBody #emailCheckBoxes').val());
+                $('#otherRecurrDisplay #smsCheckBoxes').val($('#otherRecurrBody #smsCheckBoxes').val());
+
+
+                $('#firstOtherAcc').attr('hidden', true);
+                $('#secondOtherAcc').attr('hidden', false);
+            });
+
+            $('#secondClear').click(function () {
+                $('form')[1].reset();
+                $('#otherReccurTranSelect').trigger("change");
+            });
+
+            $('#otherAccordionReccurTrans').on('show.bs.collapse', function () {
+                $('#otherShowMoreText').attr('hidden', true);
+                $('#otherShowLessText').attr('hidden', false);
+            });
+
+            $('#otherAccordionReccurTrans').on('hide.bs.collapse', function () {
+                $('#otherShowLessText').attr('hidden', true);
+                $('#otherShowMoreText').attr('hidden', false);
+            });
+
+            $('#secondOtherNext').click(function () {
+                $('#secondOtherAcc').attr('hidden', true);
+
+                if ($('#otherDropdownMenuButtonDisplay').html().includes("Bangkok Bank"))
+                    $('#ackInterGiro').attr('hidden', false);
+                else if ($('#otherDropdownMenuButtonDisplay').html().includes("Public Bank"))
+                    $('#ackOtherAcc').attr('hidden', false);
+                else
+                    $('#ackDuitNowPayToAccount').attr('hidden', false);
+            });
+
+            var otherSelectTimes = document.getElementById("otherReccurTranTimesSelect");
+            for (let i = 1; i <= 99; i++)
+                otherSelectTimes.innerHTML += "<option value='" + i + "'>" + i + "</option>";
+
+            $("#otherReccurTransactionTimes").hide();
+            $('#otherReccurTransFreq').attr('hidden', true);
+            $('#otherReccurTransIntervals').attr('hidden', true);
+            $("#otherReccurTransactionType").removeClass("col-sm-5 float-sm-start");
+            $("#otherReccurTransactionType").addClass("col-sm-12");
+            $("#otherReccurTranSelect").on('change', function () {
+
+                console.log($(this).children("option:selected").val() == "None");
+
+                if ($(this).children("option:selected").val() == "None") {
+
+                    $("#otherReccurTransactionTimes").hide();
+                    $('#otherReccurTransFreq').attr('hidden', true);
+                    $('#otherReccurTransIntervals').attr('hidden', true);
+                    $("#otherReccurTransactionType").removeClass("col-sm-5 float-sm-start");
+                    $("#otherReccurTransactionType").addClass("col-sm-12");
                 } else {
-                    li[i].style.display = "none";
+                    let frequency;
+
+                    if ($('#otherReccurTranSelect').val() == "Daily")
+                        frequency = "day";
+                    else
+                        frequency = $('#otherReccurTranSelect').val().toLowerCase().replace("ly", "");
+
+                    $('#otherRecurrMessage').html("Transaction will be recurring every " + frequency + " starting from 23 Feb 2022 until 1 Mar 2022");
+                    $('#otherReccurTransFreq').attr('hidden', false);
+                    $('#otherReccurTransIntervals').attr('hidden', false);
+                    $("#otherReccurTransactionTimes").show();
+                    $("#otherReccurTransactionType").removeClass("col-sm-12");
+                    $("#otherReccurTransactionType").addClass("col-sm-5 float-sm-start").css("margin-right", "16.5%");
                 }
-            }
-        }
+            });
 
-        $('#bankFloatingInput').on('keyup', function () {
-            myBankFunction();
-        })
+            // To Recipient ID section
+            $('#recipientIDAccordionReccurTrans').on('show.bs.collapse', function () {
+                $('#recipientIDShowMoreText').attr('hidden', true);
+                $('#recipientIDShowLessText').attr('hidden', false);
+            });
 
-        $('#floatingInput').on('keyup', function () {
-            myFunction();
-        })
+            $('#recipientIDAccordionReccurTrans').on('hide.bs.collapse', function () {
+                $('#recipientIDShowLessText').attr('hidden', true);
+                $('#recipientIDShowMoreText').attr('hidden', false);
+            });
 
-        function myFunction() {
-            // Declare variables
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById('floatingInput');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("myUL");
-            li = ul.getElementsByTagName('li');
+            var recipientIDSelectTimes = document.getElementById("recipientIDReccurTranTimesSelect");
+            for (let i = 1; i <= 99; i++)
+                recipientIDSelectTimes.innerHTML += "<option value='" + i + "'>" + i + "</option>";
 
-            // Loop through all list items, and hide those who don't match the search query
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("h6")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
+            $("#recipientIDReccurTransactionTimes").hide();
+            $('#recipientIDReccurTransFreq').attr('hidden', true);
+            $('#recipientIDReccurTransIntervals').attr('hidden', true);
+            $("#recipientIDReccurTransactionType").removeClass("col-sm-5 float-sm-start");
+            $("#recipientIDReccurTransactionType").addClass("col-sm-12");
+            $("#recipientIDReccurTranSelect").on('change', function () {
+
+                console.log($(this).children("option:selected").val() == "None");
+
+                if ($(this).children("option:selected").val() == "None") {
+
+                    $("#recipientIDReccurTransactionTimes").hide();
+                    $('#recipientIDReccurTransFreq').attr('hidden', true);
+                    $('#recipientIDReccurTransIntervals').attr('hidden', true);
+                    $("#recipientIDReccurTransactionType").removeClass("col-sm-5 float-sm-start");
+                    $("#recipientIDReccurTransactionType").addClass("col-sm-12");
                 } else {
-                    li[i].style.display = "none";
+                    let frequency;
+
+                    if ($('#recipientIDReccurTranSelect').val() == "Daily")
+                        frequency = "day";
+                    else
+                        frequency = $('#recipientIDReccurTranSelect').val().toLowerCase().replace("ly", "");
+
+                    $('#recipientIDRecurrMessage').html("Transaction will be recurring every " + frequency + " starting from 23 Feb 2022 until 1 Mar 2022");
+                    $('#recipientIDReccurTransFreq').attr('hidden', false);
+                    $('#recipientIDReccurTransIntervals').attr('hidden', false);
+                    $("#recipientIDReccurTransactionTimes").show();
+                    $("#recipientIDReccurTransactionType").removeClass("col-sm-12");
+                    $("#recipientIDReccurTransactionType").addClass("col-sm-5 float-sm-start").css("margin-right", "16.5%");
+                }
+            });
+
+            $('#thirdClear').click(function () {
+                $('#duitNowForm')[0].reset();
+                $('#recipientIDReccurTranSelect').trigger("change");
+            });
+
+            $('#firstRecipientIDNext').on('click', function () {
+
+
+                $('#recipientIDRecurrDisplay').html($('#recipientIDRecurrBody').html());
+
+                $("#recipientIDRecurrDisplay #recipientIDReccurTranSelect").attr('disabled', true);
+                $("#recipientIDRecurrDisplay #recipientIDReccurTranTimesSelect").attr('disabled', true);
+                $("#recipientIDRecurrDisplay #recipientIDRecipientPaymentDetails").attr('disabled', true);
+                $("#recipientIDRecurrDisplay #emailCheckboxes").attr('disabled', true);
+                $("#recipientIDRecurrDisplay #smsCheckboxes").attr('disabled', true);
+
+                $("#recipientIDRecurrDisplay #recipientIDReccurTranSelect").attr('disabled', true);
+                $("#recipientIDRecurrDisplay #recipientIDReccurTranTimesSelect").attr('disabled', true);
+                $("#recipientIDRecurrDisplay #recipientIDReccurTranSelect option[value='" + $('#recipientIDRecurrBody #recipientIDReccurTranSelect').val() + "']").prop('selected', true);
+                $("#recipientIDRecurrDisplay #recipientIDReccurTranTimesSelect option[value='" + $('#recipientIDRecurrBody #recipientIDReccurTranTimesSelect').val() + "']").prop('selected', true);
+
+                $('#recipientIDRecurrDisplay #recipientIDRecipientPaymentDetails').val($('#recipientIDRecurrBody #recipientIDRecipientPaymentDetails').val());
+                $('#recipientIDRecurrDisplay #emailCheckBoxes').val($('#recipientIDRecurrBody #emailCheckBoxes').val());
+                $('#recipientIDRecurrDisplay #smsCheckBoxes').val($('#recipientIDRecurrBody #smsCheckBoxes').val());
+
+                $('#firstRecipientId').attr('hidden', true);
+                $('#secondRecipientId').attr('hidden', false);
+            });
+
+            $('#secondRecipientIDNext').click(function () {
+                $('#secondRecipientId').attr('hidden', true);
+                $('#ackDuitNowPayToProxy').attr('hidden', false);
+            });
+
+
+            $('#bankSearchBar').on('keyup', function () {
+                myBank2Function();
+            });
+
+            function editBankFunction() {
+                // Declare variables
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById('editBankSearchBar');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("editBankList");
+                li = ul.getElementsByTagName('li');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("span")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
                 }
             }
-        }
 
-        function myBankFunction() {
-            // Declare variables
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById('bankFloatingInput');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("myBankUL");
-            li = ul.getElementsByTagName('li');
+            $('#editBankSearchBar').on('keyup', function () {
+                editBankFunction();
+            });
 
-            // Loop through all list items, and hide those who don't match the search query
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("h6")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
+            function myBank2Function() {
+                // Declare variables
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById('bankSearchBar');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("bankList");
+                li = ul.getElementsByTagName('li');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("span")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+
+            $('#bankFloatingInput').on('keyup', function () {
+                myBankFunction();
+            })
+
+            $('#floatingInput').on('keyup', function () {
+                myFunction();
+            })
+
+            function myFunction() {
+                // Declare variables
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById('floatingInput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName('li');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("h6")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        $("#favListHeading").prop('hidden', false);
+                        li[i].style.display = "";
+                    } else {
+                        $("#favListHeading").prop('hidden', true);
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+
+            function myBankFunction() {
+                // Declare variables
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById('bankFloatingInput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myBankUL");
+                li = ul.getElementsByTagName('li');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("h6")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+
+            /* BOOTSTRAP DROPDOWN MENU - Update selected item text and image */
+            $(".dropdown ul li").click(function () {
+                var selText = $(this).text();
+                var imgSource = $(this).find('img').attr('src');
+                var img = '<img src=' + imgSource + ' width="30px">';
+                $(this).parents('.dropdown').find('.dropdown-toggle').html(img + ' ' + selText +
+                    ' <span class="caret"></span>');
+            });
+
+            $(".dropdown ul li").click(function () {
+                $(".dropdown ul li").css("color", "inherit");
+                $(this).css("color", "green");
+            });
+
+            $("#selectAllSwitch").change(function () {
+                if ($(this).is(":checked")) {
+                    $(".choices").addClass('is-disabled');
+                    $('.choices__list').attr('hidden', true);
+                    $('.choices__input').attr('disabled', true);
                 } else {
-                    li[i].style.display = "none";
+                    $(".choices").removeClass('is-disabled');
+                    $('.choices__list').attr('hidden', false);
+                    $('.choices__input').attr('disabled', false);
                 }
-            }
-        }
+            });
 
-        /* BOOTSTRAP DROPDOWN MENU - Update selected item text and image */
-        $(".dropdown ul li").click(function () {
-            var selText = $(this).text();
-            var imgSource = $(this).find('img').attr('src');
-            var img = '<img src=' + imgSource + ' width="30px">';
-            $(this).parents('.dropdown').find('.dropdown-toggle').html(img + ' ' + selText +
-                ' <span class="caret"></span>');
-        });
+            $("#userInput").change(function () {
+                if ($(this).val()) {
+                    $(".choices").addClass('is-disabled');
+                    $('.choices__list').attr('hidden', true);
+                    $('.choices__input').attr('disabled', true);
 
-        $(".dropdown ul li").click(function () {
-            $(".dropdown ul li").css("color", "inherit");
-            $(this).css("color", "green");
-        });
-
-
-
-        $("#selectAllSwitch").change(function () {
-            if ($(this).is(":checked")) {
-                $(".choices").addClass('is-disabled');
-                $('.choices__list').attr('hidden', true);
-                $('.choices__input').attr('disabled', true);
-            } else {
-                $(".choices").removeClass('is-disabled');
-                $('.choices__list').attr('hidden', false);
-                $('.choices__input').attr('disabled', false);
-            }
-        });
-
-        $("#userInput").change(function () {
-            if ($(this).val()) {
-                $(".choices").addClass('is-disabled');
-                $('.choices__list').attr('hidden', true);
-                $('.choices__input').attr('disabled', true);
-
-            } else {
-                $(".choices").removeClass('is-disabled');
-                $('.choices__list').attr('hidden', false);
-                $('.choices__input').attr('disabled', false);
-            }
-        });
-
-        $("#userInput2").change(function () {
-            if ($(this).val()) {
-                $(".choices").addClass('is-disabled');
-                $('.choices__list').attr('hidden', true);
-                $('.choices__input').attr('disabled', true);
-
-            } else {
-                $(".choices").removeClass('is-disabled');
-                $('.choices__list').attr('hidden', false);
-                $('.choices__input').attr('disabled', false);
-            }
-        });
-
-        $('#effectiveDatePicker').daterangepicker({
-            singleDatePicker: true,
-            "drops": "right",
-            minDate: new Date(),
-            "locale": {
-                "format": "DD MMM YYYY",
-            }
-        });
-
-
-        $('#duitNowEffectiveDatePicker').daterangepicker({
-            singleDatePicker: true,
-            "drops": "right",
-            minDate: new Date(),
-            "locale": {
-                "format": "DD MMM YYYY",
-            }
-        });
-
-
-
-
-        $('.reqPacBtn').on('click', function () {
-            Swal.fire(
-                'OTP is Sent!',
-                'OTP sent to your phone number 012 - * * * * 123',
-                'success'
-            )
-            // $('#firstNext').removeClass('disabled');
-            $('#secondNext').removeClass('disabled');
-            $('.reqPacBtn').addClass('disabled');
-            $('.timerText').prop("hidden", false);
-            display = $('#time');
-            startTimer(oneMin, display);
-        })
-
-        $('.reqDuitNowPacBtn').on('click', function () {
-            Swal.fire(
-                'OTP is Sent!',
-                'OTP sent to your phone number 012 - * * * * 123',
-                'success'
-            )
-            // $('#firstDuitNowNext').removeClass('disabled');
-            $('#secondDuitNowNext').removeClass('disabled');
-            $('.reqDuitNowPacBtn').addClass('disabled');
-            $('.timerText').prop("hidden", false);
-            display = $('#duitNowTime');
-            startTimer(oneMin, display);
-        })
-
-        // var display = $('#time'),
-        //     oneMin = 10;
-
-        function startTimer(duration, display) {
-            var timer = duration,
-                minutes, seconds;
-
-            var timerInterval = setInterval(function () {
-                minutes = parseInt(timer / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.text(minutes + " : " + seconds);
-
-                if (--timer < 0) {
-                    clearInterval(timerInterval);
-                    timer = duration;
-                    $('.reqPacBtn').removeClass('disabled');
-                    $('.reqDuitNowPacBtn').removeClass('disabled');
-                    $('.timerText').prop("hidden", true);
+                } else {
+                    $(".choices").removeClass('is-disabled');
+                    $('.choices__list').attr('hidden', false);
+                    $('.choices__input').attr('disabled', false);
                 }
-            }, 1000);
-        }
+            });
 
-        $('#authMethod').change(function () {
-            var selectedIndex = $(this).children('option:selected').index();
-            if (selectedIndex != 0) {
-                $(this).parent().removeClass('col-sm-12').addClass('col-sm-9');
-                $(this).parent().siblings('.authConfirmBtn').attr('hidden', false);
+            $("#userInput2").change(function () {
+                if ($(this).val()) {
+                    $(".choices").addClass('is-disabled');
+                    $('.choices__list').attr('hidden', true);
+                    $('.choices__input').attr('disabled', true);
+
+                } else {
+                    $(".choices").removeClass('is-disabled');
+                    $('.choices__list').attr('hidden', false);
+                    $('.choices__input').attr('disabled', false);
+                }
+            });
+
+            $('#otherEffectiveDatePicker').daterangepicker({
+                singleDatePicker: true,
+                "drops": "right",
+                minDate: new Date(),
+                "locale": {
+                    "format": "DD MMM YYYY",
+                }
+            });
+
+            $('#ownEffectiveDatePicker').daterangepicker({
+                singleDatePicker: true,
+                "drops": "right",
+                minDate: new Date(),
+                "locale": {
+                    "format": "DD MMM YYYY",
+                }
+            });
+
+
+            $('#duitNowEffectiveDatePicker').daterangepicker({
+                singleDatePicker: true,
+                "drops": "right",
+                minDate: new Date(),
+                "locale": {
+                    "format": "DD MMM YYYY",
+                }
+            });
+
+
+
+
+            $('.reqPacBtn').on('click', function () {
+                Swal.fire(
+                    'OTP is Sent!',
+                    'OTP sent to your phone number 012 - * * * * 123',
+                    'success'
+                )
+                // $('#firstNext').removeClass('disabled');
+                $('#secondOtherNext').removeClass('disabled');
+                $('.reqPacBtn').addClass('disabled');
+                $(this).parent().parent().siblings('.timerText').prop("hidden", false);
+                display = $(this).parent().parent().siblings('.timerText').children();
+                startTimer(oneMin, display);
+            })
+
+            $('.reqDuitNowPacBtn').on('click', function () {
+                Swal.fire(
+                    'OTP is Sent!',
+                    'OTP sent to your phone number 012 - * * * * 123',
+                    'success'
+                )
+                // $('#firstRecipientIDNext').removeClass('disabled');
+                $('#secondRecipientIDNext').removeClass('disabled');
+                $('.reqDuitNowPacBtn').addClass('disabled');
+                $('.timerText').prop("hidden", false);
+                display = $('#duitNowTime');
+                startTimer(oneMin, display);
+            })
+
+            // var display = $('#time'),
+            //     oneMin = 10;
+
+            function startTimer(duration, display) {
+                var timer = duration,
+                    minutes, seconds;
+
+                var timerInterval = setInterval(function () {
+                    minutes = parseInt(timer / 60, 10);
+                    seconds = parseInt(timer % 60, 10);
+
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                    display.text(minutes + " : " + seconds);
+
+                    if (--timer < 0) {
+                        clearInterval(timerInterval);
+                        timer = duration;
+                        $('.reqPacBtn').removeClass('disabled');
+                        $('.reqDuitNowPacBtn').removeClass('disabled');
+                        $('.timerText').prop("hidden", true);
+                    }
+                }, 1000);
             }
 
-            var cases = $("#authMethod option:selected").val();
-            if (cases == "pac") {
-                $("#pac").removeClass("d-none");
-                $("#secure").addClass("d-none");
-                $("#noti").addClass("d-none");
-                $("#token").addClass("d-none");
-            }
-            if (cases == "token") {
-                $("#token").removeClass("d-none");
-                $("#pac").addClass("d-none");
-                $("#secure").addClass("d-none");
-                $("#noti").addClass("d-none");
-            }
-            if (cases == "secure") {
-                $("#secure").removeClass("d-none");
-                $("#pac").addClass("d-none");
-                $("#token").addClass("d-none");
-                $("#noti").addClass("d-none");
-            }
-            if (cases == "noti") {
-                $("#noti").removeClass("d-none");
-                $("#pac").addClass("d-none");
-                $("#token").addClass("d-none");
-                $("#secure").addClass("d-none");
-            }
-        });
+            $('.authMethod').change(function () {
+                var selectedIndex = $(this).children('option:selected').index();
+                if (selectedIndex != 0) {
+                    $(this).parent().removeClass('col-sm-12').addClass('col-sm-9');
+                    $(this).parent().siblings('.authConfirmBtn').attr('hidden', false);
+                }
 
-        $('.authConfirmBtn button').click(function () {
-            $(this).parent().siblings().find('#authMethod').attr('disabled', true);
-            $(this).parent().siblings('.authField').attr('hidden', false);
-            $(this).attr('disabled', true);
-        });
+                var cases = $(this).children('option:selected').val();
+                if (cases == "pac") {
+                    $(".pac").removeClass("d-none");
+                    $(".secure").addClass("d-none");
+                    $(".noti").addClass("d-none");
+                    $(".token").addClass("d-none");
+                }
+                if (cases == "token") {
+                    $(".token").removeClass("d-none");
+                    $(".pac").addClass("d-none");
+                    $(".secure").addClass("d-none");
+                    $(".noti").addClass("d-none");
+                }
+                if (cases == "secure") {
+                    $(".secure").removeClass("d-none");
+                    $(".pac").addClass("d-none");
+                    $(".token").addClass("d-none");
+                    $(".noti").addClass("d-none");
+                }
+                if (cases == "noti") {
+                    $(".noti").removeClass("d-none");
+                    $(".pac").addClass("d-none");
+                    $(".token").addClass("d-none");
+                    $(".secure").addClass("d-none");
+                }
+            });
 
-        $('#duitNowAuthMethod').change(function () {
-            var selectedIndex = $(this).children('option:selected').index();
-            if (selectedIndex != 0) {
-                $(this).parent().removeClass('col-sm-12').addClass('col-sm-9');
-                $(this).parent().siblings('.duitNowAuthConfirmBtn').attr('hidden', false);
-            }
+            $('.authConfirmBtn button').click(function () {
+                $(this).parent().siblings().find('.authMethod').attr('disabled', true);
+                $(this).parent().siblings('.authField').attr('hidden', false);
+                $(this).attr('disabled', true);
+            });
 
-            var cases = $("#duitNowAuthMethod option:selected").val();
-            if (cases == "duitNowPac") {
-                $("#duitNowPac").removeClass("d-none");
-                $("#duitNowSecure").addClass("d-none");
-                $("#duitNowNoti").addClass("d-none");
-                $("#duitNowToken").addClass("d-none");
-            }
-            if (cases == "duitNowToken") {
-                $("#duitNowToken").removeClass("d-none");
-                $("#duitNowPac").addClass("d-none");
-                $("#duitNowSecure").addClass("d-none");
-                $("#duitNowNoti").addClass("d-none");
-            }
-            if (cases == "duitNowSecure") {
-                $("#duitNowSecure").removeClass("d-none");
-                $("#duitNowPac").addClass("d-none");
-                $("#duitNowToken").addClass("d-none");
-                $("#noti").addClass("d-none");
-            }
-            if (cases == "duitNowNoti") {
-                $("#duitNowNoti").removeClass("d-none");
-                $("#duitNowPac").addClass("d-none");
-                $("#duitNowToken").addClass("d-none");
-                $("#duitNowSecure").addClass("d-none");
-            }
-        });
+            $('#duitNowAuthMethod').change(function () {
+                var selectedIndex = $(this).children('option:selected').index();
+                if (selectedIndex != 0) {
+                    $(this).parent().removeClass('col-sm-12').addClass('col-sm-9');
+                    $(this).parent().siblings('.duitNowAuthConfirmBtn').attr('hidden', false);
+                }
 
-        $('.duitNowAuthConfirmBtn button').click(function () {
-            $(this).parent().siblings().find('#duitNowAuthMethod').attr('disabled', true);
-            $(this).parent().siblings('.duitNowAuthField').attr('hidden', false);
-            $(this).attr('disabled', true);
-        });
+                var cases = $("#duitNowAuthMethod option:selected").val();
+                if (cases == "duitNowPac") {
+                    $("#duitNowPac").removeClass("d-none");
+                    $("#duitNowSecure").addClass("d-none");
+                    $("#duitNowNoti").addClass("d-none");
+                    $("#duitNowToken").addClass("d-none");
+                }
+                if (cases == "duitNowToken") {
+                    $("#duitNowToken").removeClass("d-none");
+                    $("#duitNowPac").addClass("d-none");
+                    $("#duitNowSecure").addClass("d-none");
+                    $("#duitNowNoti").addClass("d-none");
+                }
+                if (cases == "duitNowSecure") {
+                    $("#duitNowSecure").removeClass("d-none");
+                    $("#duitNowPac").addClass("d-none");
+                    $("#duitNowToken").addClass("d-none");
+                    $("#noti").addClass("d-none");
+                }
+                if (cases == "duitNowNoti") {
+                    $("#duitNowNoti").removeClass("d-none");
+                    $("#duitNowPac").addClass("d-none");
+                    $("#duitNowToken").addClass("d-none");
+                    $("#duitNowSecure").addClass("d-none");
+                }
+            });
 
-        var progressBar = $('.progress-bar');
-        var progressNumber = 0;
+            $('.duitNowAuthConfirmBtn button').click(function () {
+                $(this).parent().siblings().find('#duitNowAuthMethod').attr('disabled', true);
+                $(this).parent().siblings('.duitNowAuthField').attr('hidden', false);
+                $(this).attr('disabled', true);
+            });
 
-        setInterval(function () {
-            progressNumber++;
-            progressBar.css('width', progressNumber + '%');
-            progressBar.attr('aria-valuenow', progressNumber);
-        }, 500);
-        // var dropdown = new bootstrap.Dropdown(element)
-        //reset button
-        $('.btnReset').on('click', function () {
-            $(".dropdown ul li").css("color", "inherit");
-            $('#dropdownMenuButton1').html('Please select');
-            newSelect = "Please select";
-            $("#transferMethods option:selected").removeAttr("selected");
-            // console.log($("#transferMethods option[value='"+ newSelect +"']").attr('selected', 'selected'));
-            $("#transferMethods option[value='" + newSelect + "']").attr('selected', 'selected');
-            $("#duitNowTransferMessage").hide();
-            $("#recurrTransactionTimes").hide();
-            $("#recurrTransactionType").removeClass("col-sm-5 float-sm-start");
-            $("#recurrTransactionType").addClass("col-sm-12");
-            $('form')[0].reset();
-        });
+            var progressBar = $('.progress-bar');
+            var progressNumber = 0;
 
-        $('.btnDuitNowReset').on('click', function () {
-            $(".dropdown ul li").css("color", "inherit");
+            setInterval(function () {
+                progressNumber++;
+                progressBar.css('width', progressNumber + '%');
+                progressBar.attr('aria-valuenow', progressNumber);
+            }, 500);
+            // var dropdown = new bootstrap.Dropdown(element)
+            //reset button
+            $('.btnReset').on('click', function () {
+                $(".dropdown ul li").css("color", "inherit");
+                $('#otherDropdownMenuButton').html('Please select');
+                newSelect = "Please select";
+                $("#transferMethods option:selected").removeAttr("selected");
+                // console.log($("#transferMethods option[value='"+ newSelect +"']").attr('selected', 'selected'));
+                $("#transferMethods option[value='" + newSelect + "']").attr('selected', 'selected');
+                $("#duitNowTransferMessage").hide();
+                $("#reccurTransactionTimes").hide();
+                $('#reccurTransFreq').attr('hidden', true);
+                $('#reccurTransIntervals').attr('hidden', true);
+                $("#reccurTransactionType").removeClass("col-sm-5 float-sm-start");
+                $("#reccurTransactionType").addClass("col-sm-12");
+            });
+
+            $('.btnDuitNowReset').on('click', function () {
+                $(".dropdown ul li").css("color", "inherit");
+
+                $('#duitNowMobile').hide();
+                $('#duitNowIC').hide();
+                $('#duitNowPassportCountry').hide();
+                $('#duitNowPassportNumber').hide();
+                $('#duitNowArmyPoliceID').hide();
+                $('#duitNowBusinessRegNum').hide();
+                $("#duitNowRecurrTransactionTimes").hide();
+                $("#duitNowRecurrTransactionType").removeClass("col-sm-5 float-sm-start");
+                $("#duitNowRecurrTransactionType").addClass("col-sm-12");
+            });
+
+            var bankName;
+            $('#myUL li').click(function () {
+                $('#otherRecipientName').val($(this).find('#favNickname').text());
+                $('#otherAccNumber').val($(this).find('#favAccNum').text());
+
+                var selectedAccType = $(this).find('#favAccType').text();
+
+                $('#otherAccTypeSelect').val(selectedAccType).attr("selected", "selected");
+
+                bankName = $(this).find('#favBankVal').text();
+
+                $(".dropdown ul li").filter("[value=" + bankName + "]").trigger("click");
+            });
+
+            $('#firstOtherNext').removeClass('disabled');
+
+
+            $('#firstOwnNext').removeClass('disabled');
+
+
+            $('#firstRecipientIDNext').removeClass('disabled');
+
+
+
+            $('#setAsFavNext').on('click', function () {
+
+                receiptModal.hide();
+                setAsFavModal.show();
+                $('.switchFav').hide();
+                $('#setAsFavRecipientName').prop('disabled', true);
+                $('#setAsFavRecipientName').val("John Doe");
+                $('#setAsFavAccNumber').prop('disabled', true);
+                $('#setAsFavAccNumber').val("12345678985215");
+                $('#editBtn1').show();
+                $('#editBtn2').show();
+                $('#cancelBtn1').hide();
+                $('#cancelBtn2').hide();
+
+
+            })
+
+            $('#duitNowSetAsFavNext').on('click', function () {
+
+                duitNowReceiptModal.hide();
+                duitNowSetAsFavModal.show();
+                $('.switchFav').hide();
+                $('#duitNowSetAsFavRecipientName').prop('disabled', true);
+                $('#duitNowSetAsFavRecipientName').val("John Doe");
+                $('#duitNowSetAsFavIDType').prop('disabled', true);
+                // $('#duitNowSetAsFavIDType').val() =="mobileNum";
+                var duitNowFavIDSelect = "mobileNum";
+                $("#duitNowSetAsFavIDType option[value='" + duitNowFavIDSelect + "']").attr('selected', 'selected');
+                $('#duitNowSetAsFavIDNumber').prop('disabled', true);
+                $('#duitNowSetAsFavIDNumber').val("012-3456789");
+                $('#duitNowEditBtn1').show();
+                $('#duitNowEditBtn2').show();
+                $('#duitNowEditBtn3').show();
+                $('#duitNowCancelBtn1').hide();
+                $('#duitNowCancelBtn2').hide();
+                $('#duitNowCancelBtn3').hide();
+
+
+            })
+
+            $('#addToFavBack').on('click', function () {
+
+                receiptModal.show();
+                setAsFavModal.hide();
+            })
+
+            $('#duitNowAddToFavBack').on('click', function () {
+
+                duitNowReceiptModal.show();
+                duitNowSetAsFavModal.hide();
+            });
+
+
+            // $("#emailCheckbox").on('change', function () {
+
+            //     if (this.checked) {
+
+            //         $('#emailCheckboxes').attr('disabled', false);
+
+
+            //     } else {
+
+            //         $('#emailCheckboxes').attr('disabled', true);
+
+            //     }
+            // });
+
+
+            // $("#duitNowEmailCheckbox").on('change', function () {
+
+            //     if (this.checked) {
+
+            //         $('#duitNowEmailCheckboxes').attr('disabled', false);
+
+
+            //     } else {
+
+            //         $('#duitNowEmailCheckboxes').attr('disabled', true);
+
+            //     }
+            // });
+
+
+            // $("#smsCheckbox").on('change', function () {
+
+            //     if (this.checked) {
+
+            //         $('#smsCheckboxes').attr('disabled', false);
+            //     } else {
+
+            //         $('#smsCheckboxes').attr('disabled', true);
+
+            //     }
+            // })
+
+            // $("#duitNowSmsCheckbox").on('change', function () {
+
+            //     if (this.checked) {
+
+            //         $('#duitNowSmsCheckboxes').attr('disabled', false);
+            //     } else {
+
+            //         $('#duitNowSmsCheckboxes').attr('disabled', true);
+
+            //     }
+            // })
+
+            $('#doTransfer').on('click', function () {
+
+
+
+                // $('#newAccountNo').hide();
+                $('#firstPage').attr('hidden', true);
+                $('#firstOtherAcc').attr('hidden', false);
+
+            });
+
+            $('#doOwnTransfer').on('click', function () {
+
+                $('#firstOwnAcc').attr('hidden', false);
+                $('#secondOwnAcc').attr('hidden', true);
+                $('#firstPage').attr('hidden', true);
+                $('#firstOtherAcc').attr('hidden', true);
+                $('#firstDuitNowPage').attr('hidden', true);
+                $('#firstRecipientId').attr('hidden', true);
+
+            });
+
+
+            $('#doDuitNowTransfer').on('click', function () {
+                $('#firstDuitNowPage').attr('hidden', true);
+                $('#firstRecipientId').attr('hidden', false);
+                $('#firstPage').attr('hidden', true);
+            });
+
+            // $('#doDuitNowTransfer').on('click', function () {
+
+
+            //     $(this).attr("href", "sendMoneyDuitNow.html");
+
+
+            // });
+
+
+            $(document).ready(function () {
+                // Defining the local dataset
+                var items = ['Happy Birthday', 'Car Payment', 'Lunch', 'Groceries', 'Smartwatch', 'Gaming console',
+                    'Dinner'
+                ];
+
+                // Constructing the suggestion engine
+                var items = new Bloodhound({
+                    datumTokenizer: Bloodhound.tokenizers.whitespace,
+                    queryTokenizer: Bloodhound.tokenizers.whitespace,
+                    local: items
+                });
+
+                // Initializing the typeahead
+                $('.typeahead').typeahead({
+                    hint: true,
+                    highlight: true,
+                    /* Enable substring highlighting */
+                    minLength: 1 /* Specify minimum characters required for showing result */
+                }, {
+                    name: 'items',
+                    source: items
+                });
+            });
+
+
+            // $('#recipientNames').show();
+            // $('#recipientAccountType').show();
+            // $('#recipientNotification').show();
+            $('#theTransferMethods').attr('hidden', true);
+
+            $(".dropdown ul li").on('click', function () {
+
+                // var value = $('dropdown ul li:selected').attr('value');
+                var value = $(this).attr('value');
+                if (value == "PublicBank") {
+                    $('#checkBoxDiv').attr('hidden', true);
+                    $('#recipientNames').attr('hidden', true);
+                    $('#recipientAccountType').hide();
+                    $('#recipientNotification').show();
+                    $('#theTransferMethods').attr('hidden', true);
+                    $('#theTransferMethodsDisplay').attr('hidden', true);
+                    $('#recipientAccountTypeDisplay').attr('hidden', true);
+                    $('#recipientNamesDisplay').attr('hidden', true);
+                }
+
+
+                else {
+                    $('#recipientAccountType').show();
+                    $('#recipientNotification').show();
+                    $('#theTransferMethods').attr('hidden', false);
+
+                    if (value == "BangkokBank") {
+                        $('#checkBoxDiv').attr('hidden', true);
+                        $('#recipientNames').attr('hidden', false);
+                        $('#duitNowTransferOption').attr('hidden', true);
+                        $('#interbankGiroOption').attr('hidden', false);
+                        $('#theTransferMethodsDisplay').attr('hidden', false);
+                        $('#recipientAccountTypeDisplay').attr('hidden', false);
+                        $('#recipientNamesDisplay').attr('hidden', false);
+                        $('.transferSelect').eq(1).trigger("click");
+                    }
+                    else {
+                        $('#checkBoxDiv').attr('hidden', false);
+                        $('#recipientNames').attr('hidden', true);
+                        $('#duitNowTransferOption').attr('hidden', false);
+                        $('#interbankGiroOption').attr('hidden', true);
+                        $('#theTransferMethodsDisplay').attr('hidden', false);
+                        $('#recipientAccountTypeDisplay').attr('hidden', false);
+                        $('#recipientNamesDisplay').attr('hidden', true);
+                        $('.transferSelect').eq(0).trigger("click");
+                    }
+
+                }
+
+
+            });
+
 
             $('#duitNowMobile').hide();
             $('#duitNowIC').hide();
@@ -5889,719 +6421,511 @@
             $('#duitNowPassportNumber').hide();
             $('#duitNowArmyPoliceID').hide();
             $('#duitNowBusinessRegNum').hide();
-            $("#duitNowRecurrTransactionTimes").hide();
-            $("#duitNowRecurrTransactionType").removeClass("col-sm-5 float-sm-start");
-            $("#duitNowRecurrTransactionType").addClass("col-sm-12");
-            $('#duitNowForm')[0].reset();
-        });
-
-        var bankName;
-        $('#myUL li').click(function () {
-            $('#receipientName').val($(this).find('#favName').text());
-            $('#accNumber').val($(this).find('#favAccNum').text());
-
-            var selectedAccType = $(this).find('#favAccType').text();
-
-            $('#accTypeSelect').val(selectedAccType).attr("selected", "selected");
-
-            bankName = $(this).find('#favBank').text();
-
-            $(".dropdown ul li").filter("[value=" + bankName + "]").trigger("click");
-        });
-
-        $('#firstNext').removeClass('disabled');
-
-        $('#firstDuitNowNext').removeClass('disabled');
 
 
-        $('#firstNext').on('click', function () {
-
-            $('#secondPage').attr('hidden', true);
-            $('#thirdPage').attr('hidden', false);
+            $('#duitNowTypes').on('change', function () {
 
 
-        })
+                switch (this.value) {
 
-        $('#firstDuitNowNext').on('click', function () {
+                    case 'defaultSel':
+                        $('#duitNowMobile').hide();
+                        $('#duitNowIC').hide();
+                        $('#duitNowPassportCountry').hide();
+                        $('#duitNowPassportNumber').hide();
+                        $('#duitNowArmyPoliceID').hide();
+                        $('#duitNowBusinessRegNum').hide();
+                        break;
+                    case 'mobileNum':
+                        $('#duitNowMobile').show();
+                        $('#duitNowIC').hide();
+                        $('#duitNowPassportCountry').hide();
+                        $('#duitNowPassportNumber').hide();
+                        $('#duitNowArmyPoliceID').hide();
+                        $('#duitNowBusinessRegNum').hide();
+                        break;
+                    case 'icNum':
+                        $('#duitNowIC').show();
+                        $('#duitNowMobile').hide();
+                        $('#duitNowPassportCountry').hide();
+                        $('#duitNowPassportNumber').hide();
+                        $('#duitNowArmyPoliceID').hide();
+                        $('#duitNowBusinessRegNum').hide();
+                        break;
 
-            $('#secondDuitNowPage').attr('hidden', true);
-            $('#thirdDuitNowPage').attr('hidden', false);
+                    case 'passport':
+                        $('#duitNowMobile').hide();
+                        $('#duitNowIC').hide();
+                        $('#duitNowPassportCountry').show();
+                        $('#duitNowPassportNumber').show();
+                        $('#duitNowArmyPoliceID').hide();
+                        $('#duitNowBusinessRegNum').hide();
+                        break;
+                    case 'armyPoliceID':
+                        $('#duitNowMobile').hide();
+                        $('#duitNowIC').hide();
+                        $('#duitNowPassportCountry').hide();
+                        $('#duitNowPassportNumber').hide();
+                        $('#duitNowArmyPoliceID').show();
+                        $('#duitNowBusinessRegNum').hide();
+                        break;
 
+                    case 'businessRegNum':
+                        $('#duitNowMobile').hide();
+                        $('#duitNowIC').hide();
+                        $('#duitNowPassportCountry').hide();
+                        $('#duitNowPassportNumber').hide();
+                        $('#duitNowArmyPoliceID').hide();
+                        $('#duitNowBusinessRegNum').show();
+                        break;
 
-        })
-
-
-        $('#secondNext').on('click', function () {
-
-            Swal.fire({
-                title: 'Do you want to proceed the transaction?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonText: 'Confirm',
-                allowOutsideClick: false,
-                customClass: {
-                    title: 'alertFontStyle'
                 }
-            }).then((result) => {
-
-                if (result.isConfirmed) {
-                    Swal.fire({
-                        title: 'Your transaction has been submitted!',
-                        icon: 'success',
-                        customClass: {
-                            confirmButton: 'btn-okay',
-                            title: 'alertFontStyle'
-                        }
-                    }).then(function () {
-                        confirmationModal.hide();
-                        receiptModal.show();
-                        // $('#flexSwitchCheckChecked1').prop('checked', false);
-                        // setAsFavModal.show();
-                        // $('#exampleModalToggle2').show();
-                    });
-                }
-            })
-        });
-
-        $('#setAsFavNext').on('click', function () {
-
-            receiptModal.hide();
-            setAsFavModal.show();
-            $('.switchFav').hide();
-            $('#setAsFavReceipientName').prop('disabled', true);
-            $('#setAsFavReceipientName').val("John Doe");
-            $('#setAsFavAccNumber').prop('disabled', true);
-            $('#setAsFavAccNumber').val("12345678985215");
-            $('#editBtn1').show();
-            $('#editBtn2').show();
-            $('#cancelBtn1').hide();
-            $('#cancelBtn2').hide();
-
-
-        })
-
-        $('#duitNowSetAsFavNext').on('click', function () {
-
-            duitNowReceiptModal.hide();
-            duitNowSetAsFavModal.show();
-            $('.switchFav').hide();
-            $('#duitNowSetAsFavReceipientName').prop('disabled', true);
-            $('#duitNowSetAsFavReceipientName').val("John Doe");
-            $('#duitNowSetAsFavIDType').prop('disabled', true);
-            // $('#duitNowSetAsFavIDType').val() =="mobileNum";
-            var duitNowFavIDSelect = "mobileNum";
-            $("#duitNowSetAsFavIDType option[value='" + duitNowFavIDSelect + "']").attr('selected', 'selected');
-            $('#duitNowSetAsFavIDNumber').prop('disabled', true);
-            $('#duitNowSetAsFavIDNumber').val("012-3456789");
-            $('#duitNowEditBtn1').show();
-            $('#duitNowEditBtn2').show();
-            $('#duitNowEditBtn3').show();
-            $('#duitNowCancelBtn1').hide();
-            $('#duitNowCancelBtn2').hide();
-            $('#duitNowCancelBtn3').hide();
-
-
-        })
-
-        $('#addToFavBack').on('click', function () {
-
-            receiptModal.show();
-            setAsFavModal.hide();
-        })
-
-        $('#duitNowAddToFavBack').on('click', function () {
-
-            duitNowReceiptModal.show();
-            duitNowSetAsFavModal.hide();
-        })
-
-        $('#secondDuitNowNext').on('click', function () {
-
-            Swal.fire({
-                title: 'Do you want to proceed the transaction?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonText: 'Confirm',
-                allowOutsideClick: false,
-                customClass: {
-                    title: 'alertFontStyle'
-                }
-            }).then((result) => {
-
-                if (result.isConfirmed) {
-                    Swal.fire({
-                        title: 'Your transaction has been submitted!',
-                        icon: 'success',
-                        customClass: {
-                            confirmButton: 'btn-okay',
-                            title: 'alertFontStyle'
-                        }
-                    }).then(function () {
-                        duitNowConfirmationModal.hide();
-                        duitNowReceiptModal.show();
-                        // $('#flexSwitchCheckChecked2').prop('checked', false);
-                        // $('#duitNowExampleModalToggle2').show();
-                    });
-                }
-            })
-        });
-
-
-        $("#emailCheckbox").on('change', function () {
-
-            if (this.checked) {
-
-                $('#emailCheckboxes').attr('disabled', false);
-
-
-            } else {
-
-                $('#emailCheckboxes').attr('disabled', true);
-
-            }
-        });
-
-
-        $("#duitNowEmailCheckbox").on('change', function () {
-
-            if (this.checked) {
-
-                $('#duitNowEmailCheckboxes').attr('disabled', false);
-
-
-            } else {
-
-                $('#duitNowEmailCheckboxes').attr('disabled', true);
-
-            }
-        });
-
-
-        $("#smsCheckbox").on('change', function () {
-
-            if (this.checked) {
-
-                $('#smsCheckboxes').attr('disabled', false);
-            } else {
-
-                $('#smsCheckboxes').attr('disabled', true);
-
-            }
-        })
-
-        $("#duitNowSmsCheckbox").on('change', function () {
-
-            if (this.checked) {
-
-                $('#duitNowSmsCheckboxes').attr('disabled', false);
-            } else {
-
-                $('#duitNowSmsCheckboxes').attr('disabled', true);
-
-            }
-        })
-
-        $('#doTransfer').on('click', function () {
-
-
-
-            // $('#newAccountNo').hide();
-            $('#firstPage').attr('hidden', true);
-            $('#secondPage').attr('hidden', false);
-
-        });
-
-        $('#doDuitNowTransfer').on('click', function () {
-
-
-            $('#firstDuitNowPage').attr('hidden', true);
-            $('#secondDuitNowPage').attr('hidden', false);
-            $('#firstPage').attr('hidden', true);
-            $('#secondPage').attr('hidden', true);
-
-        });
-
-        // $('#doDuitNowTransfer').on('click', function () {
-
-
-        //     $(this).attr("href", "sendMoneyDuitNow.html");
-
-
-        // });
-
-
-        $(document).ready(function () {
-            // Defining the local dataset
-            var items = ['Happy Birthday', 'Car Payment', 'Lunch', 'Groceries', 'Smartwatch', 'Gaming console',
-                'Dinner'
-            ];
-
-            // Constructing the suggestion engine
-            var items = new Bloodhound({
-                datumTokenizer: Bloodhound.tokenizers.whitespace,
-                queryTokenizer: Bloodhound.tokenizers.whitespace,
-                local: items
             });
 
-            // Initializing the typeahead
-            $('.typeahead').typeahead({
-                hint: true,
-                highlight: true,
-                /* Enable substring highlighting */
-                minLength: 1 /* Specify minimum characters required for showing result */
-            }, {
-                name: 'items',
-                source: items
-            });
-        });
+            $('#secondDuitNowBack').on('click', function () {
 
+                $("#firstRecipientId").attr('hidden', false);
+                $("#secondRecipientId").attr('hidden', true);
+            })
 
-        // $('#receipientNames').show();
-        // $('#receipientAccountType').show();
-        // $('#receipientNotification').show();
 
-        $(".dropdown ul li").on('click', function (e) {
+            $("#transferMethods").on('change', function () {
 
-            // var value = $('dropdown ul li:selected').attr('value');
-            var value = $(this).attr('value');
+                var ibgTrans = $("#transferMethods option:selected").val() == "IBG Transfer";
+                // console.log("This is IBG Transfer " + ibgTrans);
+                var defaultTransSelect = $("#transferMethods option:selected").val() == "Please select";
+                // console.log("This is default select " + defaultTransSelect);
 
-            if (value == "PublicBank") {
+                if (ibgTrans || defaultTransSelect) {
 
-                $('#receipientNames').hide();
-                $('#receipientAccountType').hide();
-                $('#receipientNotification').hide();
+                    $("#duitNowTransferMessage").hide();
+                } else {
 
-            } else {
+                    $("#duitNowTransferMessage").show();
+                }
 
-                $('#receipientNames').show();
-                $('#receipientAccountType').show();
-                $('#receipientNotification').show();
-            }
+            })
 
+            $('#fourthNext').on('click', function () {
 
-        });
+                // $('#firstPage').attr(location.reload(true));
+                $('#firstPage').attr('hidden', false);
+                $('#firstOtherAcc').attr('hidden', true);
+                $('#secondOtherAcc').attr('hidden', true);
+            })
 
 
+            $('#fourthDuitNowNext').on('click', function () {
 
-        var selectTimes = document.getElementById("otherReccurTranTimesSelect");
-        for (let i = 1; i <= 60; i++)
-            selectTimes.innerHTML += "<option>" + i + "</option>";
+                // $('#firstPage').attr(location.reload(true));
+                $('#firstPage').attr('hidden', false);
+                $('#firstRecipientId').attr('hidden', true);
+                $('#secondRecipientId').attr('hidden', true);
+                $('#firstOtherAcc').attr('hidden', true);
+                $('#secondOtherAcc').attr('hidden', true);
+            })
 
-        $("#otherReccurTransactionTimes").hide();
-        $("#otherReccurTransactionType").removeClass("col-sm-5 float-sm-start");
-        $("#otherReccurTransactionType").addClass("col-sm-12");
-        $("#otherReccurTranSelect").on('change', function () {
-
-            console.log($(this).children("option:selected").val() == "None");
-
-            if ($(this).children("option:selected").val() == "None") {
-
-                $("#otherReccurTransactionTimes").hide();
-                $("#otherReccurTransactionType").removeClass("col-sm-5 float-sm-start");
-                $("#otherReccurTransactionType").addClass("col-sm-12");
-            } else {
-
-                $("#otherReccurTransactionTimes").show();
-                $("#otherReccurTransactionType").removeClass("col-sm-12");
-                $("#otherReccurTransactionType").addClass("col-sm-5 float-sm-start").css("margin-right", "16.5%");
-            }
-
-
-
-        })
-
-        var selectDuitNowTimes = document.getElementById("recipientIDReccurTranTimesSelect");
-        for (let i = 1; i <= 60; i++)
-            selectDuitNowTimes.innerHTML += "<option>" + i + "</option>";
-
-        $("#recipientIDReccurTransactionTimes").hide();
-        $("#recipientIDReccurTransactionType").removeClass("col-sm-5 float-sm-start");
-        $("#recipientIDReccurTransactionType").addClass("col-sm-12");
-        $("#recipientIDReccurTranSelect").on('change', function () {
-
-            console.log($(this).children("option:selected").val() == "None");
-
-            if ($(this).children("option:selected").val() == "None") {
-
-                $("#recipientIDReccurTransactionTimes").hide();
-                $("#recipientIDReccurTransactionType").removeClass("col-sm-5 float-sm-start");
-                $("#recipientIDReccurTransactionType").addClass("col-sm-12");
-            } else {
-
-                $("#recipientIDReccurTransactionTimes").show();
-                $("#recipientIDReccurTransactionType").removeClass("col-sm-12");
-                $("#recipientIDReccurTransactionType").addClass("col-sm-5 float-sm-start").css("margin-right",
-                    "16.5%");
-            }
-        })
-
-
-        $('#duitNowMobile').hide();
-        $('#duitNowIC').hide();
-        $('#duitNowPassportCountry').hide();
-        $('#duitNowPassportNumber').hide();
-        $('#duitNowArmyPoliceID').hide();
-        $('#duitNowBusinessRegNum').hide();
-
-
-        $('#duitNowTypes').on('change', function () {
-
-
-            switch (this.value) {
-
-                case 'defaultSel':
-                    $('#duitNowMobile').hide();
-                    $('#duitNowIC').hide();
-                    $('#duitNowPassportCountry').hide();
-                    $('#duitNowPassportNumber').hide();
-                    $('#duitNowArmyPoliceID').hide();
-                    $('#duitNowBusinessRegNum').hide();
-                    break;
-                case 'mobileNum':
-                    $('#duitNowMobile').show();
-                    $('#duitNowIC').hide();
-                    $('#duitNowPassportCountry').hide();
-                    $('#duitNowPassportNumber').hide();
-                    $('#duitNowArmyPoliceID').hide();
-                    $('#duitNowBusinessRegNum').hide();
-                    break;
-                case 'icNum':
-                    $('#duitNowIC').show();
-                    $('#duitNowMobile').hide();
-                    $('#duitNowPassportCountry').hide();
-                    $('#duitNowPassportNumber').hide();
-                    $('#duitNowArmyPoliceID').hide();
-                    $('#duitNowBusinessRegNum').hide();
-                    break;
-
-                case 'passport':
-                    $('#duitNowMobile').hide();
-                    $('#duitNowIC').hide();
-                    $('#duitNowPassportCountry').show();
-                    $('#duitNowPassportNumber').show();
-                    $('#duitNowArmyPoliceID').hide();
-                    $('#duitNowBusinessRegNum').hide();
-                    break;
-                case 'armyPoliceID':
-                    $('#duitNowMobile').hide();
-                    $('#duitNowIC').hide();
-                    $('#duitNowPassportCountry').hide();
-                    $('#duitNowPassportNumber').hide();
-                    $('#duitNowArmyPoliceID').show();
-                    $('#duitNowBusinessRegNum').hide();
-                    break;
-
-                case 'businessRegNum':
-                    $('#duitNowMobile').hide();
-                    $('#duitNowIC').hide();
-                    $('#duitNowPassportCountry').hide();
-                    $('#duitNowPassportNumber').hide();
-                    $('#duitNowArmyPoliceID').hide();
-                    $('#duitNowBusinessRegNum').show();
-                    break;
-
-            }
-        });
-
-        $('#secondDuitNowBack').on('click', function () {
-
-            $("#secondDuitNowPage").attr('hidden', false);
-            $("#thirdDuitNowPage").attr('hidden', true);
-        })
-
-
-        $("#transferMethods").on('change', function () {
-
-            var ibgTrans = $("#transferMethods option:selected").val() == "IBG Transfer";
-            // console.log("This is IBG Transfer " + ibgTrans);
-            var defaultTransSelect = $("#transferMethods option:selected").val() == "Please select";
-            // console.log("This is default select " + defaultTransSelect);
-
-            if (ibgTrans || defaultTransSelect) {
-
-                $("#duitNowTransferMessage").hide();
-            } else {
-
-                $("#duitNowTransferMessage").show();
-            }
-
-        })
-
-        $('#fourthNext').on('click', function () {
-
-            // $('#firstPage').attr(location.reload(true));
-            $('#firstPage').attr('hidden', false);
-            $('#secondPage').attr('hidden', true);
-            $('#thirdPage').attr('hidden', true);
-        })
-
-
-        $('#fourthDuitNowNext').on('click', function () {
-
-            // $('#firstPage').attr(location.reload(true));
-            $('#firstPage').attr('hidden', false);
-            $('#secondDuitNowPage').attr('hidden', true);
-            $('#thirdDuitNowPage').attr('hidden', true);
-            $('#secondPage').attr('hidden', true);
-            $('#thirdPage').attr('hidden', true);
-        })
-
-        $('#cancelBtn1').hide();
-        $('#cancelBtn2').hide();
-        $('#duitNowCancelBtn1').hide();
-        $('#duitNowCancelBtn2').hide();
-        $('#duitNowCancelBtn3').hide();
-        $("#editBtn1").click(function () {
-            $(this).hide();
-            $(this).siblings('#cancelBtn1').show();
-            $('#setAsFavReceipientName').prop('disabled', false);
-
-        });
-
-        $("#editBtn2").click(function () {
-            $(this).hide();
-            $(this).siblings('#cancelBtn2').show();
-            $('#setAsFavAccNumber').prop('disabled', false);
-
-        });
-
-
-
-        $("#cancelBtn1").click(function () {
-            $(this).hide();
-            $(this).siblings('#editBtn1').show();
-            $('#setAsFavReceipientName').prop('disabled', true);
-        });
-
-        $("#cancelBtn2").click(function () {
-            $(this).hide();
-            $(this).siblings('#editBtn2').show();
-            $('#setAsFavAccNumber').prop('disabled', true);
-        });
-
-        $("#duitNowEditBtn1").click(function () {
-            $(this).hide();
-            $(this).siblings('#duitNowCancelBtn1').show();
-            $('#duitNowSetAsFavReceipientName').prop('disabled', false);
-
-        });
-
-        $("#duitNowEditBtn2").click(function () {
-            $(this).hide();
-            $(this).siblings('#duitNowCancelBtn2').show();
-            $('#duitNowSetAsFavIDType').prop('disabled', false);
-
-        });
-
-        $("#duitNowEditBtn3").click(function () {
-            $(this).hide();
-            $(this).siblings('#duitNowCancelBtn3').show();
-            $('#duitNowSetAsFavIDNumber').prop('disabled', false);
-
-        });
-
-
-
-        $("#duitNowCancelBtn1").click(function () {
-            $(this).hide();
-            $(this).siblings('#duitNowEditBtn1').show();
-            $('#duitNowSetAsFavReceipientName').prop('disabled', true);
-        });
-
-        $("#duitNowCancelBtn2").click(function () {
-            $(this).hide();
-            $(this).siblings('#duitNowEditBtn2').show();
-            $('#duitNowSetAsFavIDType').prop('disabled', true);
-        });
-
-        $("#duitNowCancelBtn3").click(function () {
-            $(this).hide();
-            $(this).siblings('#duitNowEditBtn3').show();
-            $('#duitNowSetAsFavIDNumber').prop('disabled', true);
-        });
-
-
-
-        $('#confirmAddToFav').click(function () {
-
-            setAsFavNames = $('#setAsFavReceipientName').val();
-            setAsFavAccNums = $('#setAsFavAccNumber').val();
-            console.log(setAsFavNames);
-            console.log(setAsFavAccNums);
-            $('#firstPage').attr('hidden', false);
-            $('#secondPage').attr('hidden', true);
-            $('#thirdPage').attr('hidden', true);
-            // $('#firstPage').attr(location.reload(true));
-            // console.log($('#myUL').append('<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-7"><h6 class="mb-2" id="favName">John</h6><p class="text-muted mb-0" id="favAccNum">48928492248732</p><p id="favAccType" hidden>Credit / Debit Card</p><p id="favBank" hidden>BSN</p></div><div class="col-12 mt-lg-n4"><img src="~/Images/WebsiteImages/pb_logo.png"class="img-fluid float-end" style="max-width:100px;" /></div></div></li></a>'));
-            $('#myUL').append(
-                '<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-7"><h6 class="mb-2" id="favName">' +
-                setAsFavNames + '</h6><p class="text-muted mb-0" id="favAccNum">' + setAsFavAccNums +
-                '</p><p id="favAccType" hidden>Credit / Debit Card</p><p id="favBank" hidden>BSN</p></div><div class="col-12 mt-lg-n4"><img src="~/Images/WebsiteImages/pb_logo.png"class="img-fluid float-end" style="max-width:100px;" /></div></div></li></a>'
-            );
-
-
-        });
-
-
-
-        $('#duitNowConfirmAddToFav').click(function () {
-
-            duitNowSetAsFavNames = $('#duitNowSetAsFavReceipientName').val();
-            duitNowSetAsFavIDNum = $('#duitNowSetAsFavIDNumber').val();
-            console.log(duitNowSetAsFavNames);
-            console.log(duitNowSetAsFavIDNum);
-            $('#firstPage').attr('hidden', false);
-            $('#firstDuitNowPage').attr('hidden', true);
-            $('#secondDuitNowPage').attr('hidden', true);
-            $('#thirdDuitNowPage').attr('hidden', true);
-            $('#secondPage').attr('hidden', true);
-            $('#thirdPage').attr('hidden', true);
-            $('#myUL').append(
-                '<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-7"><h6 class="mb-2" id="favName">' +
-                duitNowSetAsFavNames + '</h6><p class="text-muted mb-0" id="favAccNum">' +
-                duitNowSetAsFavIDNum +
-                '</p><p id="favAccType" hidden>Credit / Debit Card</p><p id="favBank" hidden>BSN</p></div><div class="col-12 mt-lg-n4"><img src="~/Images/WebsiteImages/pb_logo.png"class="img-fluid float-end" style="max-width:100px;" /></div></div></li></a>'
-            );
-
-
-        });
-
-        $('#addToFavBtn').click(function () {
-
-            setAsFavModal.show();
-            $('.switchFav').show();
-            $('#setAsFavReceipientName').prop('disabled', false);
-            $('#setAsFavReceipientName').val("");
-            $('#setAsFavAccNumber').prop('disabled', false);
-            $('#setAsFavAccNumber').val("");
-            $('#duitNowSetAsFavReceipientName').prop('disabled', false);
-            $('#duitNowSetAsFavReceipientName').val("");
-            $('#duitNowSetAsFavIDType').prop('disabled', false);
-            // $('#duitNowSetAsFavIDType').val =="defaultSel";
-            $("#duitNowSetAsFavIDType option:selected").removeAttr("selected");
-            var duitNowFavIDSelect2 = "defaultSel";
-            $("#duitNowSetAsFavIDType option[value='" + duitNowFavIDSelect2 + "']").attr('selected',
-                'selected');
-            $('#duitNowSetAsFavIDNumber').prop('disabled', false);
-            $('#duitNowSetAsFavIDNumber').val("");
-            $('#editBtn1').hide();
-            $('#editBtn2').hide();
-            $('#duitNowEditBtn1').hide();
-            $('#duitNowEditBtn2').hide();
-            $('#duitNowEditBtn3').hide();
             $('#cancelBtn1').hide();
             $('#cancelBtn2').hide();
             $('#duitNowCancelBtn1').hide();
             $('#duitNowCancelBtn2').hide();
             $('#duitNowCancelBtn3').hide();
+            $("#editBtn1").click(function () {
+                $(this).hide();
+                $(this).siblings('#cancelBtn1').show();
+                $('#setAsFavRecipientName').prop('disabled', false);
+
+            });
+
+            $("#editBtn2").click(function () {
+                $(this).hide();
+                $(this).siblings('#cancelBtn2').show();
+                $('#setAsFavAccNumber').prop('disabled', false);
+
+            });
+
+
+
+            $("#cancelBtn1").click(function () {
+                $(this).hide();
+                $(this).siblings('#editBtn1').show();
+                $('#setAsFavRecipientName').prop('disabled', true);
+            });
+
+            $("#cancelBtn2").click(function () {
+                $(this).hide();
+                $(this).siblings('#editBtn2').show();
+                $('#setAsFavAccNumber').prop('disabled', true);
+            });
+
+            $("#duitNowEditBtn1").click(function () {
+                $(this).hide();
+                $(this).siblings('#duitNowCancelBtn1').show();
+                $('#duitNowSetAsFavRecipientName').prop('disabled', false);
+
+            });
+
+            $("#duitNowEditBtn2").click(function () {
+                $(this).hide();
+                $(this).siblings('#duitNowCancelBtn2').show();
+                $('#duitNowSetAsFavIDType').prop('disabled', false);
+
+            });
+
+            $("#duitNowEditBtn3").click(function () {
+                $(this).hide();
+                $(this).siblings('#duitNowCancelBtn3').show();
+                $('#duitNowSetAsFavIDNumber').prop('disabled', false);
+
+            });
+
+
+
+            $("#duitNowCancelBtn1").click(function () {
+                $(this).hide();
+                $(this).siblings('#duitNowEditBtn1').show();
+                $('#duitNowSetAsFavRecipientName').prop('disabled', true);
+            });
+
+            $("#duitNowCancelBtn2").click(function () {
+                $(this).hide();
+                $(this).siblings('#duitNowEditBtn2').show();
+                $('#duitNowSetAsFavIDType').prop('disabled', true);
+            });
+
+            $("#duitNowCancelBtn3").click(function () {
+                $(this).hide();
+                $(this).siblings('#duitNowEditBtn3').show();
+                $('#duitNowSetAsFavIDNumber').prop('disabled', true);
+            });
+
+
+
+            $('#confirmAddToFav').click(function () {
+
+                setAsFavNames = $('#setAsFavRecipientName').val();
+                setAsFavAccNums = $('#setAsFavAccNumber').val();
+                console.log(setAsFavNames);
+                console.log(setAsFavAccNums);
+                $('#firstPage').attr('hidden', false);
+                $('#firstOtherAcc').attr('hidden', true);
+                $('#secondOtherAcc').attr('hidden', true);
+                // $('#firstPage').attr(location.reload(true));
+                // console.log($('#myUL').append('<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-7"><h6 class="mb-2" id="favNickname">John</h6><p class="text-muted mb-0" id="favAccNum">48928492248732</p><p id="favAccType" hidden>Credit / Debit Card</p><p id="favBankVal" hidden>BSN</p></div><div class="col-12 mt-lg-n4"><img src="~/Images/WebsiteImages/pb_logo.png"class="img-fluid float-end" style="max-width:100px;" /></div></div></li></a>'));
+                $('#myUL').append(
+                    '<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-7"><h6 class="mb-2" id="favNickname">' +
+                    setAsFavNames + '</h6><p class="text-muted mb-0" id="favAccNum">' + setAsFavAccNums +
+                    '</p><p id="favAccType" hidden>Credit Card</p><p id="favBankVal" hidden>BSN</p></div><div class="col-12 mt-lg-n4"><img src="~/Images/WebsiteImages/pb_logo.png"class="img-fluid float-end" style="max-width:100px;" /></div></div></li></a>'
+                );
+
+
+            });
+
+
+
+            $('#duitNowConfirmAddToFav').click(function () {
+
+                duitNowSetAsFavNames = $('#duitNowSetAsFavRecipientName').val();
+                duitNowSetAsFavIDNum = $('#duitNowSetAsFavIDNumber').val();
+                console.log(duitNowSetAsFavNames);
+                console.log(duitNowSetAsFavIDNum);
+                $('#firstPage').attr('hidden', false);
+                $('#firstDuitNowPage').attr('hidden', true);
+                $('#firstRecipientId').attr('hidden', true);
+                $('#secondRecipientId').attr('hidden', true);
+                $('#firstOtherAcc').attr('hidden', true);
+                $('#secondOtherAcc').attr('hidden', true);
+                $('#myUL').append(
+                    '<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-7"><h6 class="mb-2" id="favNickname">' +
+                    duitNowSetAsFavNames + '</h6><p class="text-muted mb-0" id="favAccNum">' +
+                    duitNowSetAsFavIDNum +
+                    '</p><p id="favAccType" hidden>Credit Card</p><p id="favBankVal" hidden>BSN</p></div><div class="col-12 mt-lg-n4"><img src="~/Images/WebsiteImages/pb_logo.png"class="img-fluid float-end" style="max-width:100px;" /></div></div></li></a>'
+                );
+
+
+            });
+
+            // $('#setAsFavRecipientName').prop('disabled', true);
+            // $('#setAsFavAccNumber').prop('disabled', true);
+            // $('#duitNowSetAsFavRecipientName').prop('disabled', true);
+            // $('#duitNowSetAsFavIDType').prop('disabled', true);
+            // $('#duitNowSetAsFavIDNumber').prop('disabled', true);
+            // $('#editBtn1').show();
+            // $('#editBtn2').show();
+            // $('#duitNowEditBtn1').show();
+            // $('#duitNowEditBtn2').show();
+            // $('#duitNowEditBtn3').show();
+
+            $('#addToFavBtn').click(function () {
+
+                setAsFavModal.show();
+                $('.switchFav').show();
+                $('#setAsFavRecipientName').prop('disabled', false);
+                $('#setAsFavRecipientName').val("");
+                $('#setAsFavAccNumber').prop('disabled', false);
+                $('#setAsFavAccNumber').val("");
+                $('#duitNowSetAsFavRecipientName').prop('disabled', false);
+                $('#duitNowSetAsFavRecipientName').val("");
+                $('#duitNowSetAsFavIDType').prop('disabled', false);
+                // $('#duitNowSetAsFavIDType').val =="defaultSel";
+                $("#duitNowSetAsFavIDType option:selected").removeAttr("selected");
+                var duitNowFavIDSelect2 = "defaultSel";
+                $("#duitNowSetAsFavIDType option[value='" + duitNowFavIDSelect2 + "']").attr('selected',
+                    'selected');
+                $('#duitNowSetAsFavIDNumber').prop('disabled', false);
+                $('#duitNowSetAsFavIDNumber').val("");
+                $('#editBtn1').hide();
+                $('#editBtn2').hide();
+                $('#duitNowEditBtn1').hide();
+                $('#duitNowEditBtn2').hide();
+                $('#duitNowEditBtn3').hide();
+                $('#cancelBtn1').hide();
+                $('#cancelBtn2').hide();
+                $('#duitNowCancelBtn1').hide();
+                $('#duitNowCancelBtn2').hide();
+                $('#duitNowCancelBtn3').hide();
+                $('#flexSwitchCheckChecked1').prop('checked', false);
+                $('#flexSwitchCheckChecked2').prop('checked', false);
+
+            })
+
+
             $('#flexSwitchCheckChecked1').prop('checked', false);
             $('#flexSwitchCheckChecked2').prop('checked', false);
+            $('#flexSwitchCheckChecked1').on('change', function () {
 
-        })
+                if ($(this).prop("checked") == true) {
+                    // receiptModal.show();
+                    // duitNowReceiptModal.hide();
+                    setAsFavNames = $('#setAsFavRecipientName').val();
+                    setAsFavAccNums = $('#setAsFavAccNumber').val();
+                    $('#myUL').append(
+                        '<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-7"><h6 class="mb-2 text-dark" id="favNickname">' +
+                        setAsFavNames + '</h6><p class="text-muted mb-0" id="favAccNum">' + setAsFavAccNums +
+                        '</p><p id="favAccType" hidden>Credit Card</p><p id="favBankVal" hidden>BSN</p></div><div class="col-12 mt-lg-n4"><img src="@System.Configuration.ConfigurationManager.AppSettings["Baseurl"]/Images/Banks/pb-logo-text.png" class="img-fluid float-end" style="max-width:100px;" /><span class="col-1 ms-3 me-5 float-end btn btn-danger btn-sm deleteFav" ><i class="far fa-times-circle pe-2"></i>Delete</span><span class="col-1 float-end btn btn-warning btn-sm editFav"><i class="far fa-edit pe-2"></i>Edit</span></div></div></li></a>');
 
+                } else if ($(this).prop("checked") == false) {
+                    $('#myUL').children().last().remove();
 
-        $('#flexSwitchCheckChecked1').prop('checked', false);
-        $('#flexSwitchCheckChecked2').prop('checked', false);
-        $('#flexSwitchCheckChecked1').on('change', function () {
-
-            if ($(this).prop("checked") == true) {
-                // receiptModal.show();
-                // duitNowReceiptModal.hide();
-                setAsFavNames = $('#setAsFavReceipientName').val();
-                setAsFavAccNums = $('#setAsFavAccNumber').val();
-                $('#myUL').append(
-                    '<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-7"><h6 class="mb-2 text-dark" id="favName">' +
-                    setAsFavNames + '</h6><p class="text-muted mb-0" id="favAccNum">' + setAsFavAccNums +
-                    '</p><p id="favAccType" hidden>Credit / Debit Card</p><p id="favBank" hidden>BSN</p></div><div class="col-12 mt-lg-n4"><img src="@System.Configuration.ConfigurationManager.AppSettings["Baseurl"]/Images/Banks/pb-logo-text.png" class="img-fluid float-end" style="max-width:100px;" /><span class="col-1 ms-3 me-5 float-end btn btn-danger btn-sm deleteFav" ><i class="far fa-times-circle pe-2"></i>Delete</span><span class="col-1 float-end btn btn-warning btn-sm editFav"><i class="far fa-edit pe-2"></i>Edit</span></div></div></li></a>');
-
-            } else if ($(this).prop("checked") == false) {
-                $('#myUL').children().last().remove();
-
-            }
-
-        })
-        $('#flexSwitchCheckChecked2').on('change', function () {
-
-            if ($(this).prop("checked") == true) {
-                // receiptModal.show();
-                // duitNowReceiptModal.hide();
-                setAsFavNames = $('#setAsFavReceipientName').val();
-                setAsFavAccNums = $('#setAsFavAccNumber').val();
-                $('#myUL').append(
-                    '<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-7"><h6 class="mb-2 text-dark" id="favName">' +
-                    setAsFavNames + '</h6><p class="text-muted mb-0" id="favAccNum">' + setAsFavAccNums +
-                    '</p><p id="favAccType" hidden>Credit / Debit Card</p><p id="favBank" hidden>BSN</p></div><div class="col-12 mt-lg-n4"><i class="fad fa-mobile-alt fa-swap-opacity float-end text-primary" style="font-size:25px;"></i><span class="col-1 ms-3 me-5 float-end btn btn-danger btn-sm deleteFav" style="margin-right: 18.5% !important;"><i class="far fa-times-circle pe-2"></i>Delete</span><span class="col-1 float-end btn btn-warning btn-sm editFav"><i class="far fa-edit pe-2"></i>Edit</span></div></div></li></a>');
-
-            } else if ($(this).prop("checked") == false) {
-                $('#myUL').children().last().remove();
-
-            }
-
-        })
-
-
-
-        var bankFavs;
-        $('#editBankList li').click(function () {
-
-            bankFavs = $(this).attr('value');
-
-        })
-        var editFavNode;
-        $(document).on('click', '.editFav', function () {
-            editFavModal.show();
-
-            editFavNode = $(this);
-            $('#editFavReceipientName').val(editFavNode.parent().prev().find("#favName").text());
-            $('#editFavAccNumber').val(editFavNode.parent().prev().find("#favAccNum").text());
-
-            $('#editConfirmBtn').click(function () {
-                editFavNode.parent().prev().find("#favName").html($('#editFavReceipientName').val());
-                editFavNode.parent().prev().find("#favAccNum").html($('#editFavAccNumber').val());
-            })
-        })
-
-        var editFavNodeDuitNow;
-        $(document).on('click', '.editFavModalDuitNow', function () {
-            editFavModalDuitNow.show();
-            editFavNodeDuitNow = $(this);
-            $('#editFavReceipientNameDuitNow').val(editFavNodeDuitNow.parent().prev().find("#favName").text());
-            $('#editFavAccNumberDuitNow').val(editFavNodeDuitNow.parent().prev().find("#favAccNum").text());
-
-            $('#editConfirmBtn').click(function () {
-                editFavNodeDuitNow.parent().prev().find("#favName").html($('#editFavReceipientNameDuitNow').val());
-                editFavNodeDuitNow.parent().prev().find("#favAccNum").html($('#editFavAccNumberDuitNow').val());
-            })
-        })
-        var currentNode;
-        $(document).on('click', '.deleteFav', function () {
-            currentNode = $(this);
-            Swal.fire({
-                title: 'Do you want to proceed to remove the favourite?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonText: 'Confirm',
-                allowOutsideClick: false,
-                customClass: {
-                    title: 'alertFontStyle'
                 }
-            }).then((result) => {
 
-                if (result.isConfirmed) {
+            })
+            $('#flexSwitchCheckChecked2').on('change', function () {
+
+                if ($(this).prop("checked") == true) {
+                    // receiptModal.show();
+                    // duitNowReceiptModal.hide();
+                    setAsFavNames = $('#setAsFavRecipientName').val();
+                    setAsFavAccNums = $('#setAsFavAccNumber').val();
+                    $('#myUL').append(
+                        '<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-7"><h6 class="mb-2 text-dark" id="favNickname">' +
+                        setAsFavNames + '</h6><p class="text-muted mb-0" id="favAccNum">' + setAsFavAccNums +
+                        '</p><p id="favAccType" hidden>Credit Card</p><p id="favBankVal" hidden>BSN</p></div><div class="col-12 mt-lg-n4"><i class="fad fa-mobile-alt fa-swap-opacity float-end text-primary" style="font-size:25px;"></i><span class="col-1 ms-3 me-5 float-end btn btn-danger btn-sm deleteFav" style="margin-right: 18.5% !important;"><i class="far fa-times-circle pe-2"></i>Delete</span><span class="col-1 float-end btn btn-warning btn-sm editFav"><i class="far fa-edit pe-2"></i>Edit</span></div></div></li></a>');
+
+                } else if ($(this).prop("checked") == false) {
+                    $('#myUL').children().last().remove();
+
+                }
+
+            })
+
+
+
+            var bankFavs;
+            $('#editBankList li').click(function () {
+
+                bankFavs = $(this).attr('value');
+
+            })
+
+
+            $('.closeFav').on('click', function () {
+
+
+                editFavModal.hide();
+            });
+
+            var editFavNode;
+            $(document).on('click', '.editFav', function () {
+                editFavModal.show();
+                editFavNode = $(this);
+                $('#editFavRecipientName').val(editFavNode.parent().prev().children().find("#favName").text());
+                $('#editFavNickname').val(editFavNode.parent().prev().children().find("#favNickname").text());
+                $('#editFavRecipientBank').val(editFavNode.parent().prev().children().find("#favBank").text());
+                $('#editFavAccNumber').val(editFavNode.parent().prev().children().find("#favAccNum").text());
+                $('#editFavDuitNowNumber').val(editFavNode.parent().prev().children().find("#favAccNum").text());
+
+
+                if (editFavNode.parent().prev().children().find("#favName").text() == "Agnes" || editFavNode.parent().prev().children().find("#favName").text() == "Billy" || editFavNode.parent().prev().children().find("#favName").text() == "Robert" || editFavNode.parent().prev().children().find("#favName").text() == "John Lim") {
+
+                    $('#editDuitNowNoDiv').attr('hidden', false);
+                    $("#editRecipientBankDiv").attr('hidden', true);
+                    $('#editAccountNoDiv').attr('hidden', true);
+                    $('#editFavDuitNowNumberLabel').html(editFavNode.parent().prev().children().find("#favIDLabel").text());
+                }
+                else {
+
+                    $('#editDuitNowNoDiv').attr('hidden', true);
+                    $('#editAccountNoDiv').attr('hidden', false);
+                    $("#editRecipientBankDiv").attr('hidden', false);
+
+
+
+                }
+
+                $('#editConfirmBtn').click(function () {
                     Swal.fire({
-                        title: 'The favourite has been deleted successfully!',
+                        title: 'Selected favourite updated!',
                         icon: 'success',
                         customClass: {
                             confirmButton: 'btn-okay',
                             title: 'alertFontStyle'
                         }
                     }).then(function () {
-                        currentNode.parent().parent().parent().parent().remove();
+
+                        editFavNode.parent().prev().children().find("#favNickname").html($('#editFavNickname').val());
+                        editFavNode.parent().prev().children().find("#favAccNum").html($('#editFavAccNumber').val());
+                        editFavNode.parent().prev().children().find("#favAccNum").html($('#editFavDuitNowNumber').val());
+                        editFavModal.hide();
                     });
-                }
+
+
+                })
             })
 
-        })
+            // var editFavNodeDuitNow;
+            // $(document).on('click', '.editFavModalDuitNow', function () {
+            //     editFavModalDuitNow.show();
+            //     editFavNodeDuitNow = $(this);
+            //     $('#editFavRecipientNameDuitNow').val(editFavNodeDuitNow.parent().prev().find("#favNickname").text());
+            //     $('#editFavAccNumberDuitNow').val(editFavNodeDuitNow.parent().prev().find("#favAccNum").text());
 
-        var bankPicsArr = ["images/pblogo.png", "images/maybanklogo.png", "images/cimblogo.png", "images/bsnlogo.png"];
+            //     $('#editConfirmBtn').click(function () {
+            //         editFavNodeDuitNow.parent().prev().find("#favNickname").html($('#editFavRecipientNameDuitNow').val());
+            //         editFavNodeDuitNow.parent().prev().find("#favAccNum").html($('#editFavAccNumberDuitNow').val());
+            //     })
+            // })
+            $(document).on('click', '.deleteFav', function () {
+
+                Swal.fire({
+                    title: 'Are you sure to remove the selected favourite?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Confirm',
+                    allowOutsideClick: false,
+                    customClass: {
+                        title: 'alertFontStyle'
+                    }
+                }).then((result) => {
+
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: 'Selected favourite removed!',
+                            icon: 'success',
+                            customClass: {
+                                confirmButton: 'btn-okay',
+                                title: 'alertFontStyle'
+                            }
+                        }).then(function () {
+                            editFavNode.parent().parent().parent().parent().remove();
+                            editFavModal.hide();
+                        });
+                    }
+                })
+
+            });
+
+            var bankPicsArr = ["images/corporation/pbb.png", "images/maybank.png", "images/cimb.png", "images/banksimpanannasional.png"];
+
+
+
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl)
+            });
+
+            $('#transferMethodInfoPopUp').on('click', function () {
+                console.log("wassup");
+                ibgInfoModal.show();
+            });
+
+            // $(".duitNowTransferSelect").on('click', function () {
+
+            //     $(".interbankGiroSelect").unbind("click");
+            //     $(this).parent().removeClass("bg-white");
+            //     $(this).parent().css("background-color", "#d64354");
+            //     $(".duitNowText").removeClass("text-danger");
+            //     $(".duitNowText").addClass("text-light");
+
+
+
+            // })
+
+            // $(".interbankGiroSelect").on('click', function () {
+
+            //     $(".duitNowTransferSelect").unbind("click");
+            //     $(this).parent().removeClass("bg-white");
+            //     $(this).parent().css("background-color", "#d64354");
+            //     $(".interbankText").removeClass("text-danger");
+            //     $(".interbankText").addClass("text-light");
+
+
+
+            // })
+
+            function changeTransferMethodStyle(element) {
+                element.parent().removeClass("bg-white");
+                element.parent().css("background-color", "#d64354");
+                element.find(".transferText").removeClass("text-danger");
+                element.find(".transferText").addClass("text-light");
+
+            }
+
+            function revertTransferMethodStyle(element) {
+                element.parent().addClass("bg-white");
+                element.parent().css("background-color", "#fff");
+                element.find(".transferText").addClass("text-danger");
+                element.find(".transferText").removeClass("text-light");
+            }
+
+            $(".transferSelect").click(function () {
+
+                $(".transferSelect").each(function () {
+                    revertTransferMethodStyle($(this));
+                });
+                changeTransferMethodStyle($(this));
+
+                if ($(this).parent().parent('#interbankGiroOption').length) {
+                    $(".ibgInfoIcon").removeClass("text-danger");
+                    $(".ibgInfoIcon").addClass("text-light");
+                }
+                else {
+                    $(".ibgInfoIcon").addClass("text-danger");
+                    $(".ibgInfoIcon").removeClass("text-light");
+                }
+            });
+
+            $("#duitNowPayToAccountSetAsFav").on('click', function () {
+
+                $("#myUL").append('<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-2 d-flex align-items-center justify-content-center"><i class="fa fa-mobile-alt fa-swap-opacity float-end text-primary"style="font-size:25px;"></i></div><div class="col-8 ps-2"><div class="row"><h6 class="col-4 text-black" id="favNickname">Ahmad</h6></div><div class="row"><p id="favName" hidden>Ahmad</p><p class="text-muted mb-0 small" id="favAccNum">34357658902378</p><p class="text-muted mb-0 small" id="favIDType">ACCOUNT NO.</p><p id="favAccType" hidden>Savings / Current</p><p id="favBankVal" hidden>PublicBank</p><p id="favBank" hidden>PUBLIC BANK BERHAD</p></div></div><div class="col-2 d-flex align-items-center text-center"><span class="mx-2 btn btn-sm editFav"><i class="far fa-edit pe-5 pe-sm-2 pe-md-2 pe-lg-2 pe-xl-5 fa-lg"></i></span></div></div></li></a >')
+            })
+
+            $("#duitNowSetAsFav").on('click', function () {
+
+                $("#myUL").append('<a href="#"><li><div class="row bg-white shadow-sm p-3 rounded-8 mt-2"><div class="col-2 d-flex align-items-center justify-content-center"><img src="images/corporation/pbb.png" class="img-fluid float-end"style="max-width:35px;" id="favAccBankPic" /></div><div class="col-8 ps-2"><div class="row"><h6 class="col-4 text-black" id="favNickname">John Lim</h6></div><div class="row"><p id="favName" hidden>John Lim</p><p class="text-muted mb-0 small" id="favAccNum">012-3213255</p><p class="text-muted mb-0 small" id="favIDType">MOBILE NO.</p><p id="favIDLabel" hidden>Mobile No.</p><p id="favAccType" hidden>Savings / Current</p><p id="favBankVal" hidden>PublicBank</p><p id="favBank" hidden>PUBLIC BANK BERHAD</p></div></div><div class="col-2 d-flex align-items-center text-center"><span class="mx-2 btn btn-sm editFav"><i class="far fa-edit pe-5 pe-sm-2 pe-md-2 pe-lg-2 pe-xl-5 fa-lg"></i></span></div></div></li></a >')
+            })
+
+
+
+
+    //hide show
+
+
+
+
 </script>
