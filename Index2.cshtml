@@ -1,45 +1,36 @@
-﻿<div class="container-fluid gx-0 gx-lg-0 p-lg-5 p-4 ">
-    <div class="row  pb-2 pb-lg-4 border-bottom">
+<div class="container-fluid gx-0 gx-lg-0 p-lg-5 p-3 ">
+    <div class="row pb-2 pb-lg-4 border-bottom ps-lg-5 ps-0 ps-xl-0">
         <div class="col-12">
             <div class="row mt-lg-3 h-100">
                 <div class="col-12">
                     <div class="row justify-content-between">
-                        <div class="col-12 col-xl-5 col-lg-10 ps-3 mb-4 mb-lg-1">
-                            <div class="row position-relative h-100">
-                                <div class="col-12 ps-4">
-                                    <h1 class="mb-0">Welcome, Puvanan</h1>
-                                    <p class="mb-lg-0 text-muted">Your last login was on Friday, 29 Oct 2021 at 11:26:33</p>
+                        <div class="col-12 col-xl-5 col-lg-10 ps-3 pb-4 pb-lg-1 border-bottom-sm">
+                            <div class="row position-relative justify-content-end h-auto text-center text-lg-start">
+                                <div class="col-lg-3 pt-lg-2 col-12 order-0 order-lg-0 position-relative my-auto">
+                                    <img class="img-thumbnail img-fluid rounded-circle img-profile" src="~/Images/WebDecoratives/011-boy-3.png" />
                                 </div>
-
-                                <div class="col-lg-4 col-3 position-relative">
-                                    <img src="~/Images/WebDecoratives/profilesetting.svg" class="img-fluid position-absolute" @*style="left: 158px;top: -102px;opacity: .7;width: 420px;"*@ />
-                                    <img src="~/Images/WebDecoratives/011-boy-3.png" class="img-fluid position-absolute" style="width:135px;top:10%; left:20%;" @*style="left: 158px;top: -102px;opacity: .7;width: 420px;"*@ />
-                                </div>
-                                <div class="col-lg-7 col-8 pt-3 ps-lg-0 ps-5" style="z-index:1;">
-                                    <p>You can update your mailing address and personal details for us to communicate with you in a better way.</p>
+                                <div class="col-lg-9 col-12 order-1 order-lg-1 ps-lg-4 mb-lg-3 mb-0 pt-2 pt-lg-5">
+                                    <h1 class="mb-0 sm-medium">Welcome, Puvanan</h1>
+                                    <p class="mb-0 text-muted sm-small">Your last login was on Friday, 29 Oct 2021 at 11:26:33</p>
+                                    <p class="sm-small mb-lg-3 mb-0 d-none d-lg-block">You can update your mailing address and personal details for us to communicate with you in a better way.</p>
                                     <a href="@Url.Action("ManageProfile","Home")" class="btn btn-outline-primary mt-3"> Profile Settings </a>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-xl-7 col-12 ps-lg-5 pt-3 pb-3">
                             <div class="row">
-                                <h3 style="font-family: 'Gilroy-Bold', serif;margin-bottom: -10px;font-size: 80px;line-height: 2.4rem;color: rgba(0,0,0,0.10);">Accounts</h3>
-                                <h4 class="px-3">Click on the type of account that you would like to know more on</h4>
+                                <h3 class="title">Accounts</h3>
+                                <h4>Click on the type of account that you would like to know more on</h4>
                                 <div class="col-12 col-xl-6 mt-3">
                                     <div class="rounded-8 shadow-sm p-1 bg-white accounts">
                                         <a href="#">
 
                                             <div class="row h-100 px-3">
                                                 <div class="col-2 my-auto px-2 bg-light-2 rounded-8 text-center" style="max-width:50px;padding:12px;">
-                                                    <i class="fas fa-id-card text-primary"></i>
+                                                    <i class="fad fa-id-card text-primary"></i>
                                                 </div>
-                                                <div class="col-7 my-auto">
-                                                    <h6 class="">Savings & Current Account</h6>
-                                                </div>
-                                                <div class="col-3 my-auto">
-                                                    <h6 class="small mb-0 pt-3 text-end"></h6>
-                                                    <p class="smaller text-end pb-3"></p>
+                                                <div class="col-10 my-auto">
+                                                    <h6>Savings & Current Account</h6>
                                                 </div>
                                             </div>
                                         </a>
@@ -51,17 +42,13 @@
 
                                             <div class="row h-100 px-3">
                                                 <div class="col-2 my-auto px-2 bg-light-2 rounded-8  text-center" style="max-width:50px;padding:12px;">
-                                                    <i class="fas fa-coins text-primary"></i>
+                                                    <i class="fad fa-money-check-alt text-primary"></i>
 
                                                 </div>
-                                                <div class="col-6 my-auto ">
-                                                    <h6 class="">Fixed Deposit / Islamic Term Deposit</h6>
+                                                <div class="col-10 my-auto ">
+                                                    <h6>Fixed Deposit / Islamic Term Deposit</h6>
                                                     @*<p class="smaller text-muted">1234 5677 4512 4566</p>*@
                                                 </div>
-                                                <div class="col-4 my-auto">
-                                                    <h6 class="small mb-0 pt-3 text-end"></h6>
-                                                    <p class="smaller text-end pb-3"></p>
-                                                </div>
                                             </div>
                                         </a>
 
@@ -73,16 +60,11 @@
 
                                             <div class="row h-100 px-3">
                                                 <div class="col-2 my-auto px-2 bg-light-2 rounded-8  text-center" style="max-width:50px;padding:12px;">
-                                                    <i class="fas fa-credit-card text-primary"></i>
+                                                    <i class="fad fa-credit-card text-primary"></i>
 
                                                 </div>
-                                                <div class="col-6 my-auto ">
+                                                <div class="col-10 my-auto ">
                                                     <h6>PB Cards</h6>
-                                                    @*<p class="smaller text-muted">1234 5677 4512 4566</p>*@
-                                                </div>
-                                                <div class="col-4 my-auto">
-                                                    <h6 class="small mb-0 pt-3 text-end"></h6>
-                                                    <p class="smaller text-end pb-3"></p>
                                                 </div>
                                             </div>
                                         </a>
@@ -93,15 +75,10 @@
                                         <a href="#">
                                             <div class="row h-100 px-3">
                                                 <div class="col-2 my-auto px-2 bg-light-2 rounded-8  text-center" style="max-width:50px;padding:12px;">
-                                                    <i class="fas fa-chart-pie text-primary"></i>
+                                                    <i class="fad fa-donate fa-swap-opacity text-primary"></i>
                                                 </div>
-                                                <div class="col-6 my-auto ">
-                                                    <h6 class="">Loans & Financing</h6>
-                                                    @*<p class="smaller text-muted">1234 5677 4512 4566</p>*@
-                                                </div>
-                                                <div class="col-4 my-auto">
-                                                    <h6 class="small mb-0 pt-3 text-end"></h6>
-                                                    <p class="smaller text-end pb-3"></p>
+                                                <div class="col-10 my-auto ">
+                                                    <h6>Loans & Financing</h6>
                                                 </div>
                                             </div>
                                         </a>
@@ -112,40 +89,27 @@
                                         <a href="#">
                                             <div class="row h-100 px-3">
                                                 <div class="col-2 my-auto px-2 bg-light-2 rounded-8  text-center" style="max-width:50px;padding:12px;">
-                                                    <i class="fas fa-chart-pie text-primary"></i>
+                                                    <i class="fad fa-hand-holding fa-swap-opacity text-primary"></i>
                                                 </div>
-                                                <div class="col-6 my-auto ">
-                                                    <h6 class="">Gold Investment</h6>
-                                                    @*<p class="smaller text-muted">1234 5677 4512 4566</p>*@
-                                                </div>
-                                                <div class="col-4 my-auto">
-                                                    <h6 class="small mb-0 pt-3 text-end"></h6>
-                                                    <p class="smaller text-end pb-3"></p>
+                                                <div class="col-10 my-auto ">
+                                                    <h6>Gold Investment</h6>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
-                                @*<div class="col-12 col-xl-6 mt-auto text-center">
-                                    <a class="text-decoration-underline text-dark  text-muted d-lg-none d-block pb-3"><h6>View All</h6></a>
-                                    <a href="@Url.Action("AccountSummary","Home")" class="btn btn-primary d-lg-inline-block d-none "> View All </a>
-                                </div>*@
                             </div>
-
                         </div>
-
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
     <div class="row mt-4 justify-content-around">
         <div class="col-lg-7 col-12 pe-lg-5 ">
             <div class="row">
                 <div class="col-12">
-                    <h3 style="font-family: 'Gilroy-Bold', serif;margin-bottom: -5px;font-size: 80px;line-height: 2.4rem;color: rgba(0,0,0,0.10);">Discover</h3>
+                    <h3 class="title">Discover</h3>
                     <h4 class="">Our Latest News</h4>
                 </div>
             </div>
@@ -153,13 +117,13 @@
                 <div class="col-lg-8 col-12 text-center text-lg-start mb-lg-0 mb-5">
                     <a class="d-block text-decoration-none " href="#">
                         <div class="p-">
-                            <img src="~/Images/Advertisment/news1.jpg" style="width:500px" class="img-fluid" alt="Illustration">
+                            <img src="~/Images/Advertisment/news1.jpg" style="width:500px" class="img-fluid shadow" alt="Illustration">
                         </div>
                     </a>
 
                 </div>
                 <div class="col-lg-4 col-12 text-start my-auto border-end">
-                    <p>You can update your mailing address and personal details for us to communicate with you in a better way. (Dummy Text)</p>
+                    <p >You can update your mailing address and personal details for us to communicate with you in a better way. (Dummy Text)</p>
                     <a href="https://www.pbebank.com/" class="btn btn-outline-primary d-lg-inline-block d-none "> Read More </a>
                 </div>
 
@@ -195,7 +159,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-12 order-md-1 pt-2 "><img class="d-block mx-auto" style="margin-top:-3.5rem" src="~/Images/WebDecoratives/mobile.png" width="255" alt="Mobile app"></div>
+                                <div class="col-md-12 order-md-1 pt-2 "><img class="d-block mx-auto ads-mobile" src="~/Images/WebDecoratives/mobile.png" width="255" alt="Mobile app"></div>
                             </div>
                         </div>
                     </section>
@@ -207,11 +171,37 @@
     </div>
 </div>
 
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="polite" aria-atomic="true">
+        <div class="toast-header">
+            <i class="fad fa-exclamation-circle pe-2"></i>
+            <strong class="me-auto">Suggestions</strong>
+            <small>11 mins ago</small>
+            <button type="button" data-bs-dismiss="toast" class="btn-close-white btn-close" aria-label="Close">
+                @*<i class="fad fa-times text-white"></i>*@
+            </button>
+        </div>
+        <div class="toast-body">
+            <div class="row">
+                <div class="col-12">
+                    Hi, would you like to convert your passbook saving accounts to statement saving accounts?
+                </div>
+                <div class="col-12 pt-3 text-center">
+                    <a class="btn btn-sm btn-outline-primary " href="@Url.Action("ConvertStatement")">
+                        Bring me there
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @Scripts.Render("~/bundles/jquery")
-@*@Scripts.Render("~/bundles/js")*@
+@Scripts.Render("~/bundles/js")
 <script>
     $(document).ready(function () {
-        $('.nav-link').each(function () {
+        $('.toast').toast({ autohide: false });
+        $('.toast').toast('show');
+        $('.menu').each(function () {
             $(this).removeClass('active');
         });
         $('.homeMenu').addClass('active');
